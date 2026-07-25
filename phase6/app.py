@@ -4,6 +4,7 @@ Companion UI — Phase 6.
 Run with: streamlit run app.py
 """
 
+import hashlib
 import os
 import sys
 
@@ -45,9 +46,8 @@ load_dotenv(os.path.join(_ROOT, ".env"))
 
 from agent import TravelAgent, State
 from tts import TTS
-from stt import PHRASE_TIME_LIMIT_SEC
 from delivery import deliver_itinerary
-from voice_input import try_capture_mic_audio, try_transcribe_audio
+from voice_input import try_transcribe_wav_bytes
 from citation_format import format_citation_label
 from stop_format import format_opening_hours, format_display_name
 from feasibility import check_day_balance
@@ -68,31 +68,14 @@ CATEGORY_ICON = {
 # licensed stock image this project doesn't have a budget for.
 HERO_IMAGE_URL = "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg"
 
-# Listening / transcribing displays (user request, 2026-07-16): a prominent
-# "the app is listening to you" indicator, shown right under the mic button
-# (via `listening_slot`, declared before the column split so it anchors under
-# the input rather than at the page bottom — see the note there). Uses the
-# same self-contained inline @keyframes convention as R-21's recording dot and
-# R-30's idle mic pulse (styling we fully control, never fragile selectors into
-# Streamlit's internal DOM). The animated equalizer bars + pulsing mic read
-# unmistakably as "actively hearing you" — a clearer, better-placed successor
-# to the prior small red "● Recording" dot, not a second indicator beside it.
-_LISTENING_BANNER = f"""
-<div style="border:2px solid #C2540C; background:rgba(194,84,12,0.10);
-     border-radius:12px; padding:10px 16px; margin:4px 0 12px;
-     display:flex; align-items:center; gap:14px; justify-content:center; flex-wrap:wrap;">
-  <span style="display:inline-flex; align-items:flex-end; gap:3px; height:22px;">
-    <span style="width:4px;height:9px;background:#C2540C;border-radius:2px;transform-origin:bottom;animation:lsn-eq 0.9s ease-in-out infinite;"></span>
-    <span style="width:4px;height:18px;background:#C2540C;border-radius:2px;transform-origin:bottom;animation:lsn-eq 0.9s ease-in-out 0.15s infinite;"></span>
-    <span style="width:4px;height:13px;background:#C2540C;border-radius:2px;transform-origin:bottom;animation:lsn-eq 0.9s ease-in-out 0.30s infinite;"></span>
-    <span style="width:4px;height:20px;background:#C2540C;border-radius:2px;transform-origin:bottom;animation:lsn-eq 0.9s ease-in-out 0.45s infinite;"></span>
-  </span>
-  <span style="font-weight:700; color:#C2540C; font-size:1.1rem;">🎙️ Listening…</span>
-  <span style="opacity:0.75; font-size:0.9rem;">speak now — up to 5s to start, up to {PHRASE_TIME_LIMIT_SEC}s of speech</span>
-</div>
-<style>@keyframes lsn-eq {{0%,100%{{transform:scaleY(0.35);}} 50%{{transform:scaleY(1);}}}}</style>
-"""
-
+# Transcribing display (user request, 2026-07-16): a prominent indicator
+# shown right under the input (via `listening_slot`, declared before the
+# column split so it anchors under the input rather than at the page bottom
+# — see the note there), covering the Groq Whisper round-trip after a
+# browser-recorded clip (st.audio_input(), see the voice-input block below)
+# comes back. No separate "Listening…" banner — st.audio_input() renders
+# its own native recording/waveform UI in the browser, so a second
+# hand-rolled "listening" indicator here would just duplicate it.
 _TRANSCRIBING_BANNER = """
 <div style="border:2px solid #1971c2; background:rgba(25,113,194,0.10);
      border-radius:12px; padding:10px 16px; margin:4px 0 12px;
@@ -269,6 +252,21 @@ with toggle_col:
         help="Plays right here in your browser after each reply.",
     )
 
+# Voice input: st.audio_input() records from the BROWSER's microphone via
+# the viewer's own device, unlike the old sr.Microphone()-based capture
+# (phase3/stt.py's capture_mic_audio(), still used by the local CLI path)
+# which opens whatever mic is attached to the machine *running the Python
+# process* -- fine locally where that's the same machine, but meaningless
+# on a remote host like Streamlit Community Cloud, which has no physical
+# mic for a remote visitor's voice to reach. This works identically either
+# way, since the browser is always the one capturing audio now.
+#
+# Lives outside st.form(): a form only surfaces its widgets' values to
+# Python on submit, but there's no separate "submit" gesture for a voice
+# clip -- it should transcribe and send itself the moment recording stops,
+# the same way the old mic button triggered its own top-level `if` block
+# below (rather than needing Send clicked afterward).
+#
 # Round 3 QA (UX3-3, "Team-Waypoint-QA-Round3-and-UXUI-Benchmark.md"): the
 # full onboarding-sized input block (pulsing glyph + full-width mic CTA +
 # a whole secondary row for text) was still rendering at full size even
@@ -282,33 +280,32 @@ with toggle_col:
 # visual size changes, matching how much real estate voice needs to
 # *invite* a first-time user vs. serve a returning one who already knows
 # it's there.
+if not agent.itinerary:
+    # R-29/UX-27: the mic is the dominant control on a first-time screen. A
+    # small pulsing mic glyph above it (R-32/UX-30) gives voice a visual
+    # "idle, listening for you" presence even before it's pressed, closing
+    # the gap where voice previously only appeared as transient spinners
+    # during an already-started capture.
+    st.markdown(
+        '<div style="text-align:center; margin-bottom:2px;">'
+        '<span style="display:inline-block; font-size:1.4rem; '
+        'animation: r30-idle-pulse 2.2s ease-in-out infinite;">🎙️</span></div>'
+        '<style>@keyframes r30-idle-pulse '
+        '{0%{opacity:0.55; transform:scale(1);} 50%{opacity:1; transform:scale(1.18);} '
+        '100%{opacity:0.55; transform:scale(1);}}</style>',
+        unsafe_allow_html=True,
+    )
+    st.caption("🎤 Tap to talk — tell me about your trip")
+    mic_audio = st.audio_input("Tap to talk", label_visibility="collapsed", key="mic_input")
+    # R-29/R-33: text stays fully visible and one action away — never
+    # hidden behind an extra click, never harder to reach — just visually
+    # secondary to the mic above it.
+    st.caption("...or type instead:")
+else:
+    mic_audio = st.audio_input("Tap to talk", label_visibility="collapsed", key="mic_input")
+
 with st.form("message_form", clear_on_submit=True):
     if not agent.itinerary:
-        # R-29/UX-27: the mic is now the single dominant control — full width,
-        # alone on its own row, brand-colored (type="primary") — instead of a
-        # pixel-identical twin of Send sharing a half-width column. A small
-        # pulsing mic glyph above it (R-32/UX-30) gives voice a visual
-        # "idle, listening for you" presence even before it's pressed, closing
-        # the gap where voice previously only appeared as transient spinners
-        # during an already-started capture.
-        st.markdown(
-            '<div style="text-align:center; margin-bottom:2px;">'
-            '<span style="display:inline-block; font-size:1.4rem; '
-            'animation: r30-idle-pulse 2.2s ease-in-out infinite;">🎙️</span></div>'
-            '<style>@keyframes r30-idle-pulse '
-            '{0%{opacity:0.55; transform:scale(1);} 50%{opacity:1; transform:scale(1.18);} '
-            '100%{opacity:0.55; transform:scale(1);}}</style>',
-            unsafe_allow_html=True,
-        )
-        mic_clicked = st.form_submit_button(
-            "🎤  Tap to talk — tell me about your trip",
-            use_container_width=True, type="primary",
-        )
-        # R-29/R-33: text stays fully visible and one action away — never
-        # hidden behind an extra click, never harder to reach — just visually
-        # secondary to the mic above it (a caption instead of a bold label, a
-        # narrower Send button beside it instead of a co-equal half row).
-        st.caption("...or type instead:")
         text_cols = st.columns([5, 1])
         user_text = text_cols[0].text_input(
             "Type your trip", placeholder="Plan a 2-day trip to Delhi, I like food and history...",
@@ -316,25 +313,21 @@ with st.form("message_form", clear_on_submit=True):
         )
         send_clicked = text_cols[1].form_submit_button("Send", use_container_width=True)
     else:
-        compact_cols = st.columns([1, 5, 1])
-        mic_clicked = compact_cols[0].form_submit_button(
-            "🎤", use_container_width=True, type="primary", help="Tap to talk",
-        )
-        user_text = compact_cols[1].text_input(
+        text_cols = st.columns([5, 1])
+        user_text = text_cols[0].text_input(
             "Ask or edit", placeholder="Ask or edit your itinerary — \"make day 1 more relaxed\", \"what if it rains?\"",
             label_visibility="collapsed",
         )
-        send_clicked = compact_cols[2].form_submit_button("Send", use_container_width=True)
+        send_clicked = text_cols[1].form_submit_button("Send", use_container_width=True)
 
-# User request (2026-07-16): the "listening" display renders into this slot,
-# declared HERE — directly beneath the input area and, crucially, BEFORE the
-# st.columns() split below. A Streamlit placeholder anchors where it's
-# *declared*, so this sits right under the mic button (above the fold, where
-# the user is looking). The prior recording dot/spinner lived inside the
-# `if mic_clicked:` block further down, which runs at top level AFTER
-# st.columns() — and so surfaced at the very bottom of the page (the same
-# render-order quirk documented for the input area above). Declaring the slot
-# here is what puts the listening feedback in a suitable location.
+# User request (2026-07-16): the "transcribing" display renders into this
+# slot, declared HERE — directly beneath the input area and, crucially,
+# BEFORE the st.columns() split below. A Streamlit placeholder anchors where
+# it's *declared*, so this sits right under the mic input (above the fold,
+# where the user is looking). The `if mic_audio is not None:` block further
+# down that writes into it runs at top level AFTER st.columns() — and would
+# otherwise surface at the very bottom of the page (the same render-order
+# quirk documented for the input area above) without this.
 listening_slot = st.empty()
 
 # User request (2026-07-17): a permanent right-hand transcript pane —
@@ -424,36 +417,29 @@ def _send(text: str) -> None:
 if send_clicked and user_text.strip():
     _send(user_text)
 
-if mic_clicked:
-    # User request (2026-07-16): a prominent "listening" display at a suitable
-    # location — rendered into `listening_slot` (declared above, before the
-    # column split) so it appears directly under the mic button the user just
-    # tapped, not at the bottom of the page where the old top-level recording
-    # dot/spinner surfaced. Streamlit flushes a placeholder write to the
-    # browser as the script runs, so the banner is visible during the blocking
-    # capture below — exactly how the prior `rec_indicator` markdown worked.
-    #
-    # Preserves R-20's two distinct phases (Listening while the mic records,
-    # then Transcribing during the Groq Whisper round-trip) and R-21's
-    # self-contained pulse — just relocated and made prominent, and all mic
-    # feedback (including any error) now stays in this one on-screen spot
-    # rather than scattering warnings to the page bottom.
-    listening_slot.markdown(_LISTENING_BANNER, unsafe_allow_html=True)
-    audio, error = try_capture_mic_audio()
-    if error:
-        listening_slot.warning(error)
-    else:
+if mic_audio is not None:
+    # st.audio_input()'s value persists across reruns until a new clip is
+    # recorded — without this fingerprint check, every unrelated rerun
+    # (e.g. clicking Send, reordering a stop) would re-transcribe and
+    # re-send the SAME old clip again. Only act on a genuinely new one.
+    _audio_bytes = mic_audio.getvalue()
+    _audio_fp = hashlib.md5(_audio_bytes).hexdigest()
+    if _audio_fp != st.session_state.get("_last_mic_fingerprint"):
+        st.session_state["_last_mic_fingerprint"] = _audio_fp
+        # User request (2026-07-16): a prominent "transcribing" display at a
+        # suitable location — rendered into `listening_slot` (declared above,
+        # before the column split) so it appears directly under the input the
+        # user just recorded into, not at the bottom of the page. No separate
+        # "Listening…" phase here (R-20's original two-phase design) since
+        # st.audio_input() already shows its own native recording/waveform UI
+        # in the browser while capturing — this banner only covers the Groq
+        # Whisper round-trip afterward.
         listening_slot.markdown(_TRANSCRIBING_BANNER, unsafe_allow_html=True)
-        heard, error, possibly_truncated = try_transcribe_audio(audio)
+        heard, error = try_transcribe_wav_bytes(_audio_bytes)
         if error:
             listening_slot.warning(error)
         else:
             listening_slot.empty()
-            if possibly_truncated:
-                # R-20/QA-10: input ran right up to the phrase limit — very
-                # likely still mid-sentence when capture cut off. Better to
-                # say so than silently send a clipped request to the agent.
-                st.caption("⏱️ Your input may have been cut off — feel free to add more in your next message.")
             _send(heard)
 
 # --------------------------------------------------------------------------- #

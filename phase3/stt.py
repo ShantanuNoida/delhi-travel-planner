@@ -171,6 +171,41 @@ class STT:
             print(f"  [STT error] {e}")
             return ("", "transcription_failed", False)
 
+    def transcribe_wav_bytes(self, wav_bytes: bytes) -> tuple[str, str | None]:
+        """
+        Transcribes a WAV clip captured by the browser (st.audio_input() in
+        phase6/app.py) instead of the server-side sr.Microphone() path
+        above. A remote host has no physical microphone for
+        capture_mic_audio()/transcribe_audio() to open, but a
+        browser-recorded clip arrives as plain bytes regardless of where
+        the server runs. No possibly_truncated concept here — the browser
+        recording has no server-imposed phrase-time cap; the user controls
+        start/stop themselves.
+
+        Returns (transcript, failure_reason) — failure_reason is None on
+        success, "no_speech" on an empty transcript, "transcription_failed"
+        on a Groq API error.
+        """
+        from config import get_stt_client
+
+        try:
+            client = get_stt_client()
+            buf = io.BytesIO(wav_bytes)
+            buf.name = "audio.wav"
+            lang = (self.language or "en").split("-")[0]
+            resp = client.audio.transcriptions.create(
+                model=GROQ_WHISPER_MODEL,
+                file=buf,
+                language=lang,
+            )
+            text = resp.text.strip()
+            if text:
+                print(f"[You]: {text}")
+            return (text, None if text else "no_speech")
+        except Exception as e:
+            print(f"  [STT error] {e}")
+            return ("", "transcription_failed")
+
     def _transcribe_groq(self, audio) -> str:
         from config import get_stt_client
 

@@ -66,6 +66,27 @@ def try_transcribe_audio(audio, stt_factory=None) -> tuple[str, str | None, bool
         return ("", _MSG_TRANSCRIPTION_FAILED, False)
 
 
+def try_transcribe_wav_bytes(wav_bytes, stt_factory=None) -> tuple[str, str | None]:
+    """
+    Transcribes a browser-recorded clip (st.audio_input() in app.py) — the
+    remote-host-compatible counterpart to try_capture_mic_audio() +
+    try_transcribe_audio() above, which open the SERVER's microphone and
+    have nothing to capture on a host with no physical mic attached (e.g.
+    Streamlit Community Cloud). Returns (transcript, error_message).
+    """
+    try:
+        stt = _make_stt_factory(stt_factory)()
+        text, reason = stt.transcribe_wav_bytes(wav_bytes)
+        if reason == "no_speech":
+            return ("", _MSG_NO_SPEECH)
+        if reason == "transcription_failed":
+            return ("", _MSG_TRANSCRIPTION_FAILED)
+        return (text, None)
+    except Exception as e:
+        print(f"  [voice_input error] {e}")  # server-side only — never shown to the user
+        return ("", _MSG_TRANSCRIPTION_FAILED)
+
+
 def try_listen_via_mic(stt_factory=None) -> tuple[str, str | None, bool]:
     """
     Attempt to capture one spoken utterance.
