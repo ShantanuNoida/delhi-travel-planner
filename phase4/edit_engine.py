@@ -85,6 +85,28 @@ def _is_cost_constraint(constraint: str) -> bool:
     return any(w in c for w in _COST_CONSTRAINT_WORDS)
 
 
+# Live-usage report ("swapping a place with another is not working
+# properly"): a constraint like "something else"/"another one" carries no
+# real category information, so it was being searched for literally --
+# poi_search_logic() has no INTEREST_MAP entry for the phrase "something
+# else," so every candidate came back fallback-flagged and got filtered
+# out, producing the generic "couldn't find a suitable replacement" message
+# for what should be an easy, common request ("swap the market on day 1 for
+# something else"). These phrases mean "same kind of place, just a
+# different one" -- the old stop's own category is the obvious, correct
+# search target instead of the literal vague text.
+_VAGUE_REPLACEMENT_PHRASES = (
+    "something else", "somewhere else", "anything else", "another one",
+    "a different one", "something different", "a different option",
+    "another option", "other option", "different", "another",
+)
+
+
+def _is_vague_replacement_constraint(constraint: str) -> bool:
+    c = (constraint or "").strip().lower()
+    return c in _VAGUE_REPLACEMENT_PHRASES
+
+
 # --------------------------------------------------------------------------- #
 # Helpers
 # --------------------------------------------------------------------------- #
@@ -239,7 +261,7 @@ def _all_scheduled_stops(itin: dict) -> list[dict]:
     return [s for key in _all_day_keys(itin) for slot in DAY_SLOTS for s in itin[key][slot]]
 
 
-def _find_stop_by_name(itin: dict, name: str) -> tuple[str, str, int] | None:
+def _find_stop_by_name(itin: dict, name: str, preferred_day_keys: list[str] | None = None) -> tuple[str, str, int] | None:
     """Live-usage report ("swapping a place with another is not working
     well"): locate a specific scheduled stop by name, wherever it actually
     sits (day/slot/position) -- so a request like "swap Humayun's Tomb for
@@ -247,10 +269,33 @@ def _find_stop_by_name(itin: dict, name: str) -> tuple[str, str, int] | None:
     Exact case-insensitive match wins immediately; a substring match is only
     trusted when it's UNAMBIGUOUS (exactly one candidate) -- ambiguous
     partial matches return None rather than risk swapping the wrong one of
-    several similarly-named stops."""
+    several similarly-named stops.
+
+    preferred_day_keys: when the caller already knows which day was named
+    (target_day != "all"), pass its resolved day_keys here -- used only to
+    disambiguate the category-word fallback below when it would otherwise
+    be ambiguous across the whole trip; never overrides a real name match.
+    """
     target = (name or "").strip().lower()
     if not target:
         return None
+
+    # Real repro ("Replace the restaurant on day 2 evening with a different
+    # one" -> target_stop_name="restaurant"): a bare category word is not a
+    # specific place name, but the substring check below would still match
+    # it against any OTHER stop's name that happens to contain that word --
+    # e.g. an OSM record literally named "NATRAJ restaurant". That silently
+    # resolved to the wrong stop on a completely different day/slot than the
+    # one actually declared, which apply_edit() then applied for real before
+    # Phase 5's edit-correctness check caught the drift and rolled back the
+    # whole edit -- a confusing failure for what should have been a normal
+    # swap. A bare single-word category term must always go through the
+    # dedicated category-word resolution below instead of the substring
+    # heuristic, which exists for genuine partial *names* ("Humayun's" for
+    # "Humayun's Tomb"), not category words.
+    bare_words = [w for w in re.findall(r"[a-z]+", target) if w not in ("the", "a", "an")]
+    is_bare_category_word = len(bare_words) == 1 and bare_words[0].rstrip("s") in _CATEGORY_WORDS
+
     exact, partial = [], []
     for key in _all_day_keys(itin):
         for slot in DAY_SLOTS:
@@ -260,7 +305,7 @@ def _find_stop_by_name(itin: dict, name: str) -> tuple[str, str, int] | None:
                     continue
                 if stop_name == target:
                     exact.append((key, slot, idx))
-                elif target in stop_name or stop_name in target:
+                elif not is_bare_category_word and (target in stop_name or stop_name in target):
                     partial.append((key, slot, idx))
     if exact:
         return exact[0]
@@ -273,23 +318,24 @@ def _find_stop_by_name(itin: dict, name: str) -> tuple[str, str, int] | None:
     # target_stop_name="the market", which matched nothing by name, fell
     # back to the old broad "all slots" behavior, and swapped an unrelated
     # restaurant instead of the actual market. If stripping leading
-    # articles/trailing plurals leaves a real OSM category word, and
-    # exactly one scheduled stop anywhere in the trip has that category,
-    # resolve to it -- unambiguous only (more than one same-category stop
-    # returns None), the same conservative principle as the substring
-    # fallback above.
-    words = [w for w in re.findall(r"[a-z]+", target) if w not in ("the", "a", "an")]
-    if len(words) == 1:
-        cat = words[0].rstrip("s")
-        if cat in _CATEGORY_WORDS:
-            matches = [
-                (key, slot, idx)
-                for key in _all_day_keys(itin) for slot in DAY_SLOTS
-                for idx, stop in enumerate(itin[key][slot])
-                if stop.get("category") == cat
-            ]
-            if len(matches) == 1:
-                return matches[0]
+    # articles/trailing plurals leaves a real OSM category word, resolve it
+    # -- preferring a match within the day the user already named (if any)
+    # so "the market on day 1" doesn't go ambiguous just because a different
+    # day also has a market; only unambiguous either way, never guessed.
+    if is_bare_category_word:
+        cat = bare_words[0].rstrip("s")
+        all_matches = [
+            (key, slot, idx)
+            for key in _all_day_keys(itin) for slot in DAY_SLOTS
+            for idx, stop in enumerate(itin[key][slot])
+            if stop.get("category") == cat
+        ]
+        if preferred_day_keys:
+            scoped = [m for m in all_matches if m[0] in preferred_day_keys]
+            if len(scoped) == 1:
+                return scoped[0]
+        if len(all_matches) == 1:
+            return all_matches[0]
     return None
 
 
@@ -329,7 +375,7 @@ def _apply_swap(itin: dict, day_keys: list[str], target_slot: str, constraint: s
     # not on the itinerary), so this only ever narrows scope, never breaks
     # the existing day/slot-based path.
     target_idx = None
-    located = _find_stop_by_name(itin, target_stop_name) if target_stop_name else None
+    located = _find_stop_by_name(itin, target_stop_name, preferred_day_keys=day_keys) if target_stop_name else None
     if located:
         day_key, resolved_slot, target_idx = located
         day_keys = [day_key]
@@ -361,10 +407,20 @@ def _apply_swap(itin: dict, day_keys: list[str], target_slot: str, constraint: s
                 continue
             idx = target_idx if target_idx is not None else len(day[slot]) - 1
             old_stop = day[slot][idx]
+            # "swap the market for something else" etc.: the old stop's own
+            # category IS what "something else" means here -- see
+            # _is_vague_replacement_constraint's comment for the real repro.
+            # Computed per-slot (not once, up top) since it depends on
+            # old_stop, which is only known once we're inside this loop.
+            slot_constraint = (
+                old_stop.get("category", norm_constraint)
+                if _is_vague_replacement_constraint(constraint)
+                else norm_constraint
+            )
             # R-41 (finding M1): a specific named place is tried first; the
             # category/interest search only ever fills in behind it.
-            named_candidates = _named_place_candidates(city, norm_constraint)
-            category_candidates = poi_search_logic(city, [norm_constraint or "indoor"], top_n=10)
+            named_candidates = _named_place_candidates(city, slot_constraint)
+            category_candidates = poi_search_logic(city, [slot_constraint or "indoor"], top_n=10)
             named_ids = {c["osm_id"] for c in named_candidates}
             candidates = named_candidates + [c for c in category_candidates if c["osm_id"] not in named_ids]
             # R-41 (Itinerary edit commands QA, finding H1): dedup against

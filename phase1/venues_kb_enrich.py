@@ -128,9 +128,10 @@ def _best_match(venue: dict, pois: list[dict]) -> dict | None:
 def enrich_pois_with_venues_kb(pois: list[dict], venues: list[dict] | None = None) -> tuple[list[dict], int]:
     """
     Adds kb_entry_fee/kb_visit_duration_min/kb_best_time_to_visit/
-    kb_suitable_for to POIs with a confident fuzzy-name + category match.
-    Returns (enriched_pois, match_count). Never removes or invents a POI —
-    the KB has no coordinates, so it can only enrich what OSM already found.
+    kb_suitable_for/kb_why_famous to POIs with a confident fuzzy-name +
+    category match. Returns (enriched_pois, match_count). Never removes or
+    invents a POI — the KB has no coordinates, so it can only enrich what
+    OSM already found.
     """
     if venues is None:
         venues = parse_venues()
@@ -150,6 +151,15 @@ def enrich_pois_with_venues_kb(pois: list[dict], venues: list[dict] | None = Non
             match["kb_best_time_to_visit"] = venue["best_time_to_visit"]
         if venue["suitable_for"]:
             match["kb_suitable_for"] = venue["suitable_for"]
+        # Live-usage report ("why is this venue included" should give a
+        # 3-4 line importance/popularity answer): the KB's own "Why It Is
+        # Famous" prose was already parsed (venues_kb_loader.py) and chunked
+        # into the RAG corpus, but never attached directly to the matching
+        # POI record the way kb_entry_fee etc. are -- so a "why" question
+        # depended on RAG retrieval luck instead of this reliable, already-
+        # curated ground truth. Mirrors the existing kb_* fields exactly.
+        if venue["why_famous"]:
+            match["kb_why_famous"] = venue["why_famous"]
         match["kb_matched"] = True
         match_count += 1
 

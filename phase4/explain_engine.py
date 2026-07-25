@@ -78,6 +78,31 @@ def _is_cost_question(q_lower: str) -> bool:
     if "ticket" in q_lower:
         return not any(w in q_lower for w in _BOOKING_INTENT_WORDS)
     return False
+# Live-usage report ("why is a venue included -- give 3-4 lines on its
+# importance/popularity"): questions like "why did you pick X" were already
+# routed to a real, grounded answer (_explain_poi -> RAG), but the generic
+# _synthesize_answer prompt caps every answer at 2-3 sentences regardless of
+# question type, and isn't specifically told to focus on importance/fame
+# when that's what's being asked. Detected separately from the generic
+# _extract_poi_name "pick/choose/include" regex (which only extracts WHICH
+# place the question is about) so _direct_kb_answer can answer straight from
+# the curated kb_why_famous field (venues_kb_loader.py's "Why It Is Famous"
+# section) when present, and _synthesize_answer can be told to write longer,
+# importance-focused prose when it isn't.
+WHY_INCLUDED_KEYWORDS = (
+    "why did you pick", "why did you choose", "why did you select",
+    "why did you include", "why is this included", "why is it included",
+    "why include", "why was this included", "what's special about",
+    "whats special about", "why is this important", "why is it important",
+    "why is this popular", "why is it popular", "why is this famous",
+    "why is it famous", "importance of", "significance of", "why visit",
+)
+
+
+def _is_why_included_question(q_lower: str) -> bool:
+    return any(kw in q_lower for kw in WHY_INCLUDED_KEYWORDS)
+
+
 BEST_TIME_KEYWORDS = ("best time", "when should", "when to visit", "when to go", "what time", "time of day")
 SUITABILITY_KEYWORDS = ("suitable", "suited", "appropriate for", "good for", "elderly", "senior", "kids",
                          "children", "family", "solo travel", "wheelchair", "accessib", "disab")
@@ -152,9 +177,23 @@ def _hits_to_citations(hits: list[dict]) -> list[dict]:
     return citations
 
 
-def _synthesize_answer(query: str, hits: list[dict]) -> str | None:
+def _synthesize_answer(query: str, hits: list[dict], focus_on_importance: bool = False) -> str | None:
     """Returns None (not a raised exception) on an empty/None completion --
-    see L1's fix note on _synthesize_or_no_source below for why."""
+    see L1's fix note on _synthesize_or_no_source below for why.
+
+    focus_on_importance: set for "why did you pick/include this" style
+    questions on a stop with no kb_why_famous field to answer from directly
+    (_direct_kb_answer) -- the generic 2-3 sentence cap produced answers
+    that were accurate but too thin for what was actually asked (a real
+    live-usage report). Only changes the length/framing instruction; still
+    grounded in ONLY the same provided excerpts as every other answer."""
+    length_instruction = (
+        "Answer in 3-4 sentences, focusing specifically on this place's historical/cultural "
+        "importance and its popularity with visitors — why it's a notable, worthwhile stop, "
+        "not just what it is."
+        if focus_on_importance else
+        "Answer the user's question in 2-3 concise sentences."
+    )
     context = "\n\n".join(f"[{h['article_title']}]: {h['text']}" for h in hits)
     client = get_llm_client()
     resp = client.chat.completions.create(
@@ -162,7 +201,7 @@ def _synthesize_answer(query: str, hits: list[dict]) -> str | None:
         temperature=0,
         messages=[
             {"role": "system", "content": (
-                "Answer the user's question in 2-3 concise sentences, using ONLY the provided "
+                f"{length_instruction} Use ONLY the provided "
                 "source excerpts as your factual basis. Do not invent facts that are not present "
                 "in the excerpts. State the answer directly and naturally, as you would explain "
                 "it to a traveler in person — never mention 'the provided text/excerpts/source' "
@@ -290,11 +329,11 @@ def _append_unbookable_caveat(answer: str) -> str:
     return answer
 
 
-def _synthesize_or_no_source(query: str, hits: list[dict], citations: list[dict]) -> dict:
+def _synthesize_or_no_source(query: str, hits: list[dict], citations: list[dict], focus_on_importance: bool = False) -> dict:
     """Shared by every RAG-answer call site: synthesize from real hits, but
     downgrade to the standard honest no-source response if the model's own
     answer amounts to "I don't actually know this" (see H1 note above)."""
-    answer = _synthesize_answer(query, hits)
+    answer = _synthesize_answer(query, hits, focus_on_importance=focus_on_importance)
     if answer is None:
         # L1 ("Itinerary edit commands QA.md" Part 6): the LLM occasionally
         # returns an empty/None completion (observed ~1% of real Phase 2 QA
@@ -304,7 +343,7 @@ def _synthesize_or_no_source(query: str, hits: list[dict], citations: list[dict]
         # phase3/agent.py. One retry resolves it in every case observed so
         # far; only fall through to the honest no-source response if the
         # retry also comes back empty.
-        answer = _synthesize_answer(query, hits)
+        answer = _synthesize_answer(query, hits, focus_on_importance=focus_on_importance)
     if not answer or _is_denial(answer):
         return _no_source_response()
     answer = _append_unbookable_caveat(answer)
@@ -402,6 +441,15 @@ def _direct_kb_answer(query: str, stop: dict) -> dict | None:
         "source_url": citation["source_url"],
         "source": citation.get("source", "delhi_tourist_venues_kb"),
     }] if citation else []
+
+    if _is_why_included_question(q_lower) and stop.get("kb_why_famous"):
+        # The KB's "Why It Is Famous" prose is already real, curated,
+        # multi-sentence writing about the venue's historical/cultural
+        # importance and popularity (see delhi_tourist_venues_kb.md) --
+        # used verbatim rather than re-synthesized, since it's already
+        # accurate ground truth, not a source excerpt that needs an LLM to
+        # extract an answer from.
+        return {"answer": stop["kb_why_famous"], "citations": citations, "grounded": bool(citation)}
 
     if _is_cost_question(q_lower) and stop.get("kb_entry_fee"):
         answer = f"{name}'s entry fee: {stop['kb_entry_fee']}"
@@ -516,7 +564,10 @@ def _explain_poi(query: str, itinerary: dict | None) -> dict:
     hits = _rag_query(poi_name, n_results=3)
     if not hits:
         return _no_source_response()
-    return _synthesize_or_no_source(query, hits, _hits_to_citations(hits[:2]))
+    return _synthesize_or_no_source(
+        query, hits, _hits_to_citations(hits[:2]),
+        focus_on_importance=_is_why_included_question(query.lower()),
+    )
 
 
 def _explain_safety(query: str) -> dict:
