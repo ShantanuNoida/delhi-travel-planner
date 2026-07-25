@@ -21,6 +21,18 @@ import pandas as pd
 import pydeck as pdk
 import streamlit as st
 
+# On Streamlit Community Cloud, secrets pasted into the dashboard land in
+# st.secrets, not the process environment — but config.py and every phase
+# module read keys via os.getenv(), so mirror them into os.environ before
+# anything below imports those modules. Locally, .streamlit/secrets.toml
+# doesn't exist, so st.secrets is just empty and this is a no-op; .env
+# (loaded below) covers local dev instead.
+try:
+    for _key, _value in st.secrets.items():
+        os.environ.setdefault(_key, str(_value))
+except Exception:
+    pass
+
 _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, _ROOT)
 sys.path.insert(0, os.path.join(_ROOT, "phase2"))

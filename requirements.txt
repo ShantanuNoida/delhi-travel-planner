@@ -1,0 +1,30 @@
+# Consolidated dependency file for Streamlit Community Cloud (and any other
+# host that expects one requirements.txt at the repo root). Cloud always
+# treats the repo root as the working directory, even though the app's
+# entrypoint is phase6/app.py — see the per-phase requirements.txt files for
+# local/offline-only dev dependencies not needed to *run* the deployed app.
+#
+# Deliberately excludes phase1's offline indexing deps (chromadb,
+# sentence-transformers, beautifulsoup4, nltk, tqdm) — the live app reads
+# pre-built phase1/data/{pois,chunks,citation_index}.json instead of
+# querying ChromaDB or running embeddings at request time. Rebuilding the
+# index is a local dev task; install phase1/requirements.txt for that.
+#
+# Also excludes pyaudio, pyttsx3, pygame — server-side mic capture and
+# local-speaker TTS playback, both meaningless on a remote host (there's no
+# "server microphone" that belongs to a remote user, and TTS output already
+# goes through edge-tts + st.audio() for in-browser playback, not pygame).
+# The app already degrades these to "please use the text box instead" on
+# any failure (phase6/voice_input.py), so dropping them from the cloud
+# install just avoids a fragile pyaudio/PortAudio build for a feature that
+# couldn't work remotely regardless.
+streamlit>=1.35.0
+python-docx>=1.1.0
+pandas>=2.0.0
+pydeck>=0.9.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+openai>=1.0.0
+edge-tts>=7.0.0
+SpeechRecognition>=3.10.0
+mcp>=1.0.0
