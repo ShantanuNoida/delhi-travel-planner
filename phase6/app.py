@@ -295,14 +295,26 @@ if not agent.itinerary:
         '100%{opacity:0.55; transform:scale(1);}}</style>',
         unsafe_allow_html=True,
     )
-    st.caption("🎤 Tap to talk — tell me about your trip")
-    mic_audio = st.audio_input("Tap to talk", label_visibility="collapsed", key="mic_input")
+    # User request (2026-07-25): st.audio_input()'s own record button is a
+    # single unlabeled icon that toggles start/stop -- not obviously two
+    # actions at a glance. Streamlit doesn't expose separate, independently
+    # labeled "Speak"/"End" buttons for this widget (its internal UI isn't
+    # customizable), so this caption spells out the same tap-once/tap-again
+    # interaction in words instead.
+    st.caption("🎤 Tap once to start speaking, tap again to end")
+    mic_audio = st.audio_input(
+        "Tap to talk", label_visibility="collapsed", key="mic_input",
+        help="Tap once to start speaking, tap again to end and transcribe.",
+    )
     # R-29/R-33: text stays fully visible and one action away — never
     # hidden behind an extra click, never harder to reach — just visually
     # secondary to the mic above it.
     st.caption("...or type instead:")
 else:
-    mic_audio = st.audio_input("Tap to talk", label_visibility="collapsed", key="mic_input")
+    mic_audio = st.audio_input(
+        "Tap to talk", label_visibility="collapsed", key="mic_input",
+        help="Tap once to start speaking, tap again to end and transcribe.",
+    )
 
 with st.form("message_form", clear_on_submit=True):
     if not agent.itinerary:
