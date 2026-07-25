@@ -4,11 +4,25 @@
 # entrypoint is phase6/app.py — see the per-phase requirements.txt files for
 # local/offline-only dev dependencies not needed to *run* the deployed app.
 #
-# Deliberately excludes phase1's offline indexing deps (chromadb,
-# sentence-transformers, beautifulsoup4, nltk, tqdm) — the live app reads
-# pre-built phase1/data/{pois,chunks,citation_index}.json instead of
-# querying ChromaDB or running embeddings at request time. Rebuilding the
-# index is a local dev task; install phase1/requirements.txt for that.
+# Excludes beautifulsoup4/nltk -- genuinely offline-only, used by
+# phase1/scraper.py and phase1/chunker.py to build the index, never
+# imported by anything the live app calls. Rebuilding the index from
+# scratch is a local dev task; install phase1/requirements.txt for that.
+#
+# chromadb, sentence-transformers, and tqdm ARE needed live, despite being
+# part of the same "Phase 1 indexing" module set -- real bug found via a
+# live Cloud deploy (ModuleNotFoundError: No module named 'chromadb'):
+# phase2/poi_search.py and itinerary_builder.py never touch ChromaDB (they
+# read the pre-built pois.json/citation_index.json directly, as originally
+# assumed), but phase4/explain_engine.py's RAG-question path
+# (_rag_query -> phase1/embedder.py's query()) does -- it embeds the
+# user's question at request time and searches the persisted
+# phase1/data/chroma/ store, for any "why/what/how" question that isn't
+# already answered directly from a stop's kb_* fields. Any question that
+# reaches that path (most of them) crashed outright without this.
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+tqdm>=4.65.0
 #
 # Also excludes pyaudio, pyttsx3, pygame — server-side mic capture and
 # local-speaker TTS playback, both meaningless on a remote host (there's no
