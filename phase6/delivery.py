@@ -1,7 +1,8 @@
 """
 Orchestrates itinerary delivery: itinerary JSON -> .pdf -> email.
 Always saves a local copy of the document; email is best-effort and falls
-back gracefully (with a clear reason) when SMTP isn't configured.
+back gracefully (with a clear reason) when neither n8n nor SMTP is
+configured.
 """
 
 import os
@@ -9,7 +10,7 @@ import re
 from datetime import datetime
 
 from pdf_generator import build_itinerary_pdf
-from email_sender import send_email_with_attachment
+from email_sender import send_email_via_n8n, send_email_with_attachment
 
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "generated")
 
@@ -47,13 +48,23 @@ def deliver_itinerary(
     with open(file_path, "wb") as f:
         f.write(doc_bytes)
 
-    result = send_email_with_attachment(
-        to_email=email,
-        subject="Your New Delhi Itinerary",
-        body="Attached is your day-wise New Delhi travel itinerary. Enjoy your trip!",
-        attachment_bytes=doc_bytes,
-        attachment_filename=filename,
+    email_subject = "Your New Delhi Itinerary"
+    email_body = "Attached is your day-wise New Delhi travel itinerary. Enjoy your trip!"
+
+    # Try n8n first (the architecture doc's original webhook -> PDF -> email
+    # design), falling back to direct SMTP if N8N_WEBHOOK_URL isn't set or
+    # the request fails -- so a working SMTP setup is never just discarded
+    # in favor of an n8n workflow that might be down or misconfigured.
+    result = send_email_via_n8n(
+        to_email=email, subject=email_subject, body=email_body,
+        attachment_bytes=doc_bytes, attachment_filename=filename,
     )
+    if not result["sent"]:
+        print(f"  [delivery] n8n email send failed: {result['reason']}")
+        result = send_email_with_attachment(
+            to_email=email, subject=email_subject, body=email_body,
+            attachment_bytes=doc_bytes, attachment_filename=filename,
+        )
 
     if result["sent"]:
         message = f"Your itinerary has been sent to {email}."
