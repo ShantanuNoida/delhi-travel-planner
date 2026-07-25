@@ -1,6 +1,6 @@
 # AI Evaluation Rubric — Voice-First AI Travel Planner (New Delhi)
 
-Scored against the 6-category rubric provided, using real evidence from the codebase, test suites, and Team Waypoint's QA rounds (`Itinerary edit commands QA.md`, `Golden-Dataset-and-Evaluation-Rubric.md`). Every score below cites the specific file, test, or run it's based on — including honest, low scores where the project made a deliberate scope tradeoff or where a real gap was found. A rubric that only ever scores high isn't a credible rubric.
+Scored against the 6-category rubric provided, using real evidence from the codebase, test suites, and Team Waypoint's QA rounds (`Itinerary edit commands QA.md`). Every score below cites the specific file, test, or run it's based on — including honest, low scores where the project made a deliberate scope tradeoff or where a real gap was found. A rubric that only ever scores high isn't a credible rubric.
 
 ---
 
@@ -20,7 +20,7 @@ Scored against the 6-category rubric provided, using real evidence from the code
 
 ## Golden Dataset
 
-The evidence cited throughout this rubric — "20 golden itineraries," "300 real edit commands," "197-entry citation index," and similar — draws on one fixed, real reference dataset, generated once by the actual app and reused unmodified across every QA round since. Full detail: `Golden-Dataset-and-Evaluation-Rubric.md`.
+The evidence cited throughout this rubric — "20 golden itineraries," "300 real edit commands," "197-entry citation index," and similar — draws on one fixed, real reference dataset, generated once by the actual app and reused unmodified across every QA round since.
 
 ### Underlying data sources
 
@@ -61,7 +61,31 @@ Generated once by the real scheduler (`poi_search_logic()` → `itinerary_builde
 | 19 | Religion + Architecture + Culture | 2 | moderate | religion, architecture, culture |
 | 20 | Food + History + Nature + Shopping | 3 | moderate | food, history, nature, shopping |
 
-**Composition rationale:** 5 single-interest + 15 multi-interest (2-4 combined interests); 11 two-day + 9 three-day trips; all 3 pace tiers (relaxed/moderate/intensive) represented; every one of the app's 9 interest themes (food, history, culture, nature, art, shopping, architecture, family, religion) appears in at least 2 itineraries. This set underlies both Phase 1's 300 real edit commands and Phase 2's 300 real questions, plus the ~35 fresh-phrasing commands/questions in the post-fix recheck — full per-day/per-stop detail and the complete adversarial test suite live in `Golden-Dataset-and-Evaluation-Rubric.md`.
+**Composition rationale:** 5 single-interest + 15 multi-interest (2-4 combined interests); 11 two-day + 9 three-day trips; all 3 pace tiers (relaxed/moderate/intensive) represented; every one of the app's 9 interest themes (food, history, culture, nature, art, shopping, architecture, family, religion) appears in at least 2 itineraries. This set underlies both Phase 1's 300 real edit commands and Phase 2's 300 real questions, plus the ~35 fresh-phrasing commands/questions in the post-fix recheck.
+
+### Adversarial test suite run against the golden dataset
+
+Every case below was run for real against the live app (real Gemini classifier calls, real RAG lookups) — none simulated. Grouped by what each class of test is designed to break.
+
+| # | Category | Adversarial probe | Real example used | Expected behavior | Result (post-fix) |
+|---|---|---|---|---|---|
+| A1 | Known-absent place | Name a real, well-known Delhi landmark that is genuinely absent from the OSM extract | "Replace the Day 1 evening stop with Connaught Place" | Honest, sourced decline — never a silent no-op, never a fabricated add | ✅ 20/20 |
+| A2 | Known-absent place, natural phrasing | Same as A1, with a trailing generic noun ("mall"/"market") that breaks naive exact-key matching | "Add Select Citywalk mall to Day 2" | Same honest decline as the exact-name case | ✅ 20/20 (post H3-P1 fix) |
+| A3 | Known-absent place, fresh names (recheck) | Different absent-place entries, different phrasing, to test generalization | "Add INA Market to Day 1", "Swap Day 2 evening for Sarojini Nagar Market" | Honest decline with each entry's own correct message | ✅ both, confirmed in the fresh recheck |
+| A4 | Invalid day reference | Reference a day number that doesn't exist in this trip | "Make Day 4 more relaxed" on a 2-day trip | Clean rejection, no crash, no silent no-op | ✅ 20/20 |
+| A5 | No-referent vague command | A command that names nothing searchable | "Remove the boring stop from Day 1" | Routed to `relax` (drop lowest-relevance stop), never a hallucinated match for "boring" | ✅ 20/20 |
+| A6 | Fully vague, no actionable signal | No day/slot/edit-type signal at all | "Make the whole trip more fun." | Previewed + confirmation requested before a multi-day change commits (not silent) | ✅ (M2-P1 fix); confirmed again with fresh phrasing in recheck |
+| A7 | Themed-constraint phrasing stress test | Natural-language category requests using words outside the original literal vocabulary | "one famous local food place", "a history spot", "a nice place to eat", "a cultural spot" | Resolves to the correct category, not a silent no-op | ✅ (H2-P1 fix + "eat"/"dining" gap fix from the recheck) |
+| A8 | Vague-referent question (hallucination trap) | A question with no place information to extract | "Why did you pick this place?" | Asks which place, rather than guessing and hallucinating a generic answer | ✅ 20/20 |
+| A9 | Unanswerable-with-current-data question | A question the app has no data source for at all (no hotel/lodging is tracked anywhere) | "Is `<real venue>` within walking distance of my hotel?" | Honest "I don't know" — never a fabricated distance or invented hotel location | ✅ 20/20, 0 fabricated |
+| A10 | Venue-name / classifier-vocabulary collision (EDIT axis) | A real venue's own name happens to match the classifier's own trigger vocabulary | "What are some alternatives to Make My Lagan on Day 2?" ("Make My Lagan" starts with "Make," the classifier's own EDIT example verb) | Classified as a question (`EXPLAIN`), not a silent `EDIT` | ✅ (H3-P2 fix); 6/6 on repeated fresh-phrasing recheck |
+| A11 | Venue-name / classifier-vocabulary collision (NEW_PLAN axis) | Same real venue's name additionally echoes an unrelated real-world brand ("Make My Lagan" ≈ "Make My Wedding" ≈ MakeMyTrip) | "Give me some alternatives besides Make My Lagan" | Classified `EXPLAIN`, not `NEW_PLAN` (discard-the-plan) | ✅ fixed; was `NEW_PLAN` 5/6 times pre-fix, now `EXPLAIN` 6/6 |
+| A12 | Denial-disguised-as-grounded | A RAG hit clears the relevance floor but doesn't actually cover the specific fact asked | "What if it rains on Day 1?" / "How do I get from X to Y?" on itineraries with thin corpus coverage | Answer that denies knowledge must be labeled `grounded: False` with no citations, not dressed up as sourced | ✅ (H1-P2 fix); 82/82 real recorded denial cases now correctly downgraded |
+| A13 | Real-but-unbookable recommendation | An "alternatives" answer names a real, accurately-cited Delhi place absent from the app's own bookable POI dataset | "What could I do instead of visiting Chandni Chowk?" → names Dariba Kalan (real, not in the 5,078-POI set) | Honest caveat appended, without altering the answer's actual content | ✅ (M1-P2 fix); 22/24 real cases correctly caveated, 2/24 correctly not (both contain a genuinely bookable POI as a substring) |
+| A14 | KB ground-truth available but unused | A stop carries exact structured fee/timing/suitability data that a naive RAG-only path can miss | "How much does it cost to visit Sunder Nursery?" (real, exact `kb_entry_fee` on the stop) | Answer directly from the itinerary's own attached data, cited | ✅ (H2-P2 fix); 21/21 real cases now correctly answered |
+| A15 | Rare empty-LLM-completion resilience | The completion API occasionally returns empty content | (production condition, not user-phrasable) | One silent retry, then an honest no-source fallback — never an unhandled crash | ✅ (L1-P2 fix); verified via both real-run observation (~1% real occurrence rate) and deterministic monkeypatch replay |
+
+**Totals:** 15 adversarial categories, spanning both the edit surface (Phase 1: 300 real commands across the 20 golden itineraries) and the question/explain surface (Phase 2: 300 real questions across the same 20 itineraries), plus a further ~35 fresh, differently-phrased commands/questions in the post-fix recheck. Full transcripts: `phase7_qa/results/itinerary_*.json`, `phase7_qa/results/phase2_itinerary_*.json`, `phase7_qa/results/_recheck_log.json`.
 
 ---
 
@@ -165,4 +189,4 @@ A flat high score across every category would have been easy to write and would 
 
 ---
 
-*Compiled by Team Waypoint from the real codebase, live test runs, and the project's own QA history (`Itinerary edit commands QA.md`, `Golden-Dataset-and-Evaluation-Rubric.md`).*
+*Compiled by Team Waypoint from the real codebase, live test runs, and the project's own QA history (`Itinerary edit commands QA.md`).*
