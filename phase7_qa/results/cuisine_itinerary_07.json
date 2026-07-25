@@ -1,0 +1,455 @@
+{
+  "spec": {
+    "id": 7,
+    "days": 4,
+    "pace": "moderate",
+    "cuisine": "Mexican",
+    "cuisine_phrase": "I'm really craving Mexican food on this trip",
+    "category_interests": [
+      "family"
+    ],
+    "opening_message": "I'm planning a 4-day trip to Delhi, moderate pace. I'm really craving Mexican food on this trip. I'm also interested in family."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "cuisine",
+    "family"
+  ],
+  "extracted_constraints": {
+    "dietary": "Mexican food"
+  },
+  "num_days_extracted": 4,
+  "pace_extracted": "moderate",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/220385654",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "lat": 28.5932862,
+          "lon": 77.2506455,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+          "wikidata_qid": "Q189648",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Humayun%20Tomb%20UNESCO%20world%20heritage%20site.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or golden hour before sunset; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "couples",
+            "photographers",
+            "families",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/1556467803",
+          "name": "Good Earth",
+          "category": "restaurant",
+          "lat": 28.5995254,
+          "lon": 77.226395,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 13,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "11:13 AM",
+          "meal": "meal ~11:13 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        },
+        {
+          "osm_id": "way/80950088",
+          "name": "Safdarjung's Tomb",
+          "category": "park",
+          "lat": 28.5895758,
+          "lon": 77.2108004,
+          "opening_hours": "unknown",
+          "visit_duration_min": 60,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/safdarjang_tomb.jsp",
+          "wikidata_qid": "Q375624",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomb%20of%20Safdar%20Jang%20in%20Delhi%20%2810%29.jpg",
+          "travel_time_from_prev_min": 14,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:29 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/7282286731",
+          "name": "Khan Market",
+          "category": "restaurant",
+          "lat": 28.6022446,
+          "lon": 77.2291281,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.2,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Palika Maternity Hospital",
+        "distance_km": 1.55
+      },
+      "nearest_pharmacy": {
+        "name": "Anand Drug Store",
+        "distance_km": 0.64
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 0.8
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q17064086",
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "cuisine": "chicken;kebab;curry;indian",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/264863907",
+          "name": "Red Fort",
+          "category": "monument",
+          "lat": 28.6557242,
+          "lon": 77.2407427,
+          "opening_hours": "unknown",
+          "visit_duration_min": 180,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/red_fort.jsp",
+          "wikidata_qid": "Q45957",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹50; foreign nationals approx. ₹550–₹600; museum circuit ticketed additionally; children under 15 free at ASI monuments. Verify locally.",
+          "kb_best_time_to_visit": "Morning at opening to beat crowds; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "photographers",
+            "first-time visitors",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/7018886724",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6584227,
+          "lon": 77.2303375,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q5071227",
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "3:10 PM",
+          "meal": "meal ~3:10 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/11601332069",
+          "name": "Guru Kirpa Restaurant",
+          "category": "restaurant",
+          "lat": 28.6562798,
+          "lon": 77.2329761,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "total_hours": 6.8,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Kasturba Hospital",
+        "distance_km": 0.59
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 0.87
+      },
+      "nearest_metro_station": {
+        "name": "Lal Quila",
+        "distance_km": 0.35
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "way/369140381",
+          "name": "Qutab Minar",
+          "category": "monument",
+          "lat": 28.5244171,
+          "lon": 77.1854503,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "https://www.delhitourism.gov.in/delhitourism/tourist_place/qutab_minar.jsp",
+          "wikidata_qid": "Q187635",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Madrasa%20and%20tomb%20of%20Alauddin%20Khalji%202.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/5236666021",
+          "name": "Napoli Pizza",
+          "category": "restaurant",
+          "lat": 28.5464509,
+          "lon": 77.1970758,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 15,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:45 AM",
+          "meal": "meal ~10:45 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/11264482804",
+          "name": "Deer park",
+          "category": "park",
+          "lat": 28.5606297,
+          "lon": 77.2004942,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March",
+          "kb_suitable_for": [
+            "families",
+            "kids",
+            "joggers",
+            "photographers",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/10047612517",
+          "name": "Sumona",
+          "category": "restaurant",
+          "lat": 28.5421683,
+          "lon": 77.1862089,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 13,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:43 PM",
+          "meal": "meal ~1:43 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/10047592016",
+          "name": "Aahar",
+          "category": "restaurant",
+          "lat": 28.5421331,
+          "lon": 77.1861903,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.22,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Satyam Medical Centre",
+        "distance_km": 0.5
+      },
+      "nearest_pharmacy": {
+        "name": "Baba Nanak Medicos",
+        "distance_km": 0.92
+      },
+      "nearest_metro_station": {
+        "name": "IIT Delhi",
+        "distance_km": 0.55
+      }
+    },
+    "day_4": {
+      "morning": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/13688643551",
+          "name": "Xero Degrees",
+          "category": "restaurant",
+          "lat": 28.6277983,
+          "lon": 77.374926,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/6592733292",
+          "name": "storypay",
+          "category": "restaurant",
+          "lat": 28.6295889,
+          "lon": 77.3763121,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 3.75,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Fortis Hospital",
+        "distance_km": 0.59
+      },
+      "nearest_pharmacy": {
+        "name": "Apollo Pharmacy",
+        "distance_km": 1.49
+      },
+      "nearest_metro_station": {
+        "name": "Noida Electronic City",
+        "distance_km": 0.49
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 12,
+    "matched_cuisine": [],
+    "unmatched_cuisine": [
+      [
+        "Karim's",
+        "chicken;kebab;curry;indian"
+      ]
+    ],
+    "no_cuisine_tag": [
+      "Good Earth",
+      "Indian Accent",
+      "Khan Market",
+      "Chandni Chowk",
+      "Guru Kirpa Restaurant",
+      "Napoli Pizza",
+      "Sumona",
+      "Aahar",
+      "Bukhara",
+      "Xero Degrees",
+      "storypay"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "family"
+    ],
+    "missing": []
+  }
+}

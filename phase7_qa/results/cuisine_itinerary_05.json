@@ -1,0 +1,377 @@
+{
+  "spec": {
+    "id": 5,
+    "days": 3,
+    "pace": "moderate",
+    "cuisine": "Chinese",
+    "cuisine_phrase": "Chinese food is my favorite, I want to eat a lot of it",
+    "category_interests": [
+      "shopping",
+      "religion"
+    ],
+    "opening_message": "I'm planning a 3-day trip to Delhi, moderate pace. Chinese food is my favorite, I want to eat a lot of it. I'm also interested in shopping and religion."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "food",
+    "shopping",
+    "religion"
+  ],
+  "extracted_constraints": {},
+  "num_days_extracted": 3,
+  "pace_extracted": "moderate",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/442156777",
+          "name": "Janpath New Mini Market",
+          "category": "market",
+          "lat": 28.6290954,
+          "lon": 77.2181663,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon; October–March (open-air stalls)",
+          "kb_suitable_for": [
+            "budget travellers",
+            "shoppers",
+            "souvenir hunters",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "way/97230896",
+          "name": "Jama Masjid",
+          "category": "mosque",
+          "lat": 28.6352233,
+          "lon": 77.2455574,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March; avoid Friday midday",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers",
+            "spiritual travellers"
+          ],
+          "travel_time_from_prev_min": 15,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:45 AM"
+        },
+        {
+          "osm_id": "node/13721755512",
+          "name": "Xero Degrees",
+          "category": "restaurant",
+          "lat": 28.625251,
+          "lon": 77.2343446,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "12:03 PM",
+          "meal": "meal ~12:03 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/370569205",
+          "name": "Qila-i-Khuna Mosque",
+          "category": "mosque",
+          "lat": 28.6097216,
+          "lon": 77.2448151,
+          "opening_hours": "unknown",
+          "visit_duration_min": 45,
+          "relevance_score": 0.77,
+          "fallback": false,
+          "wikidata_qid": "Q19895556",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Qila%20Kuhna%20Masjid%20inside%20Puran%20Qila%2C%20Delhi.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM"
+        },
+        {
+          "osm_id": "node/11937020351",
+          "name": "Himachal Bhawan Dining Hall",
+          "category": "restaurant",
+          "lat": 28.6260814,
+          "lon": 77.2330264,
+          "opening_hours": "Mo-Su 08:00-22:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 12,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "5:57 PM",
+          "meal": "meal ~5:57 PM"
+        }
+      ],
+      "total_hours": 7.75,
+      "date": "",
+      "nearest_hospital": {
+        "name": "NGO Lok Kalyan Samiti",
+        "distance_km": 1.18
+      },
+      "nearest_pharmacy": {
+        "name": "Youplus",
+        "distance_km": 2.26
+      },
+      "nearest_metro_station": {
+        "name": "Mandi House",
+        "distance_km": 0.68
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/11245413981",
+          "name": "SAYA Status Mall",
+          "category": "market",
+          "lat": 28.5117841,
+          "lon": 77.3842239,
+          "opening_hours": "24/7",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/11394393343",
+          "name": "Pacific D21 Mall",
+          "category": "market",
+          "lat": 28.5526381,
+          "lon": 77.0583823,
+          "opening_hours": "Mo-Su 11:00-21:30",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM"
+        }
+      ],
+      "total_hours": 4.25,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Escorts Heart Institute",
+        "distance_km": 0.24
+      },
+      "nearest_pharmacy": {
+        "name": "Apna Chemist",
+        "distance_km": 0.46
+      },
+      "nearest_metro_station": {
+        "name": "Sukhdev Vihar",
+        "distance_km": 0.34
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "market",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "way/352491543",
+          "name": "St Luke's church",
+          "category": "church",
+          "lat": 28.5698513,
+          "lon": 77.2273023,
+          "opening_hours": "unknown",
+          "visit_duration_min": 30,
+          "relevance_score": 0.77,
+          "fallback": false,
+          "website": "http://www.saintlukeschurch.com/",
+          "wikidata_qid": "Q7589756",
+          "travel_time_from_prev_min": 11,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:41 AM"
+        },
+        {
+          "osm_id": "node/2416151557",
+          "name": "The Habitat Hub",
+          "category": "restaurant",
+          "lat": 28.589224,
+          "lon": 77.225738,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 12,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "11:23 AM",
+          "meal": "meal ~11:23 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/11132123003",
+          "name": "Guppy",
+          "category": "restaurant",
+          "lat": 28.5847048,
+          "lon": 77.2238058,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 13,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:43 PM",
+          "meal": "meal ~1:43 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q17064086",
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "cuisine": "chicken;kebab;curry;indian",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.73,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Palika Maternity Hospital",
+        "distance_km": 0.75
+      },
+      "nearest_pharmacy": {
+        "name": "Anand Drug Store",
+        "distance_km": 1.22
+      },
+      "nearest_metro_station": {
+        "name": "Jawaharlal Nehru Stadium",
+        "distance_km": 0.73
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 7,
+    "matched_cuisine": [],
+    "unmatched_cuisine": [
+      [
+        "Karim's",
+        "chicken;kebab;curry;indian"
+      ]
+    ],
+    "no_cuisine_tag": [
+      "Xero Degrees",
+      "Indian Accent",
+      "Himachal Bhawan Dining Hall",
+      "Bukhara",
+      "The Habitat Hub",
+      "Guppy"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "shopping",
+      "religion"
+    ],
+    "missing": []
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "spec": {
+    "id": 3,
+    "label": "Culture + History",
+    "interests": [
+      "culture",
+      "history"
+    ],
+    "days": 2,
+    "pace": "moderate"
+  },
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/220385654",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "lat": 28.5932862,
+          "lon": 77.2506455,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+          "wikidata_qid": "Q189648",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Humayun%20Tomb%20UNESCO%20world%20heritage%20site.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or golden hour before sunset; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "couples",
+            "photographers",
+            "families",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/5297002821",
+          "name": "Masala House",
+          "category": "restaurant",
+          "lat": 28.6026965,
+          "lon": 77.2410926,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "11:10 AM",
+          "meal": "meal ~11:10 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/973075081",
+          "name": "Purana Qila",
+          "category": "monument",
+          "lat": 28.6093705,
+          "lon": 77.2441983,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/purana_quila.jsp",
+          "wikidata_qid": "Q1151529",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Entrance%20of%20the%20Archaeological%20Museum%2C%20Purana%20Qila%20%2802%29.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹20–₹25; foreign nationals approx. ₹200–₹300; museum, boating and shows ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Late afternoon; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "couples",
+            "photographers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/3424254864",
+          "name": "Nathu Sweets",
+          "category": "restaurant",
+          "lat": 28.6025805,
+          "lon": 77.2409575,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "2:10 PM",
+          "meal": "meal ~2:10 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/12387964701",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.5911564,
+          "lon": 77.2436745,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 8.08,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 1.52
+      },
+      "nearest_pharmacy": {
+        "name": "Chemist Shop",
+        "distance_km": 0.91
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 1.49
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/264863907",
+          "name": "Red Fort",
+          "category": "monument",
+          "lat": 28.6557242,
+          "lon": 77.2407427,
+          "opening_hours": "unknown",
+          "visit_duration_min": 180,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/red_fort.jsp",
+          "wikidata_qid": "Q45957",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹50; foreign nationals approx. ₹550–₹600; museum circuit ticketed additionally; children under 15 free at ASI monuments. Verify locally.",
+          "kb_best_time_to_visit": "Morning at opening to beat crowds; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "photographers",
+            "first-time visitors",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/4628544689",
+          "name": "Gulati",
+          "category": "restaurant",
+          "lat": 28.6078499,
+          "lon": 77.2300673,
+          "opening_hours": "Mo-Su 12:00-24:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 30,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "12:30 PM",
+          "meal": "meal ~12:30 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/10250904256",
+          "name": "Ichiban",
+          "category": "restaurant",
+          "lat": 28.6077837,
+          "lon": 77.2298805,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 23,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "12:53 PM",
+          "meal": "meal ~12:53 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/10250892907",
+          "name": "Have more",
+          "category": "restaurant",
+          "lat": 28.6077919,
+          "lon": 77.2297742,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.63,
+      "date": "",
+      "nearest_hospital": {
+        "name": "NGO Lok Kalyan Samiti",
+        "distance_km": 1.26
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 2.16
+      },
+      "nearest_metro_station": {
+        "name": "Mandi House",
+        "distance_km": 0.66
+      }
+    }
+  }
+}

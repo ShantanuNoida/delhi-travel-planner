@@ -1,0 +1,255 @@
+{
+  "spec": {
+    "id": 1,
+    "label": "History + Nature + Shopping",
+    "interests": [
+      "history",
+      "nature",
+      "shopping"
+    ],
+    "days": 2,
+    "pace": "intensive"
+  },
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/1127484002",
+          "name": "Sunder Nursery",
+          "category": "park",
+          "lat": 28.5968532,
+          "lon": 77.2474305,
+          "opening_hours": "Mo-Su 07:00-22:00",
+          "visit_duration_min": 180,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q15628824",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sunder%20Nursery%20%28Garden%29.jpg",
+          "kb_entry_fee": "Approx. ₹50 (Indian adults), ₹25 (children); foreign nationals approx. ₹200–₹300; annual passes available. Verify locally.",
+          "kb_best_time_to_visit": "Mornings and golden hour; October–March; Sunday mornings for the farmers' market",
+          "kb_suitable_for": [
+            "families",
+            "couples",
+            "photographers",
+            "picnickers",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12387964701",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.5911564,
+          "lon": 77.2436745,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "12:10 PM",
+          "meal": "meal ~12:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/220385654",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "lat": 28.5932862,
+          "lon": 77.2506455,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+          "wikidata_qid": "Q189648",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Humayun%20Tomb%20UNESCO%20world%20heritage%20site.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or golden hour before sunset; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "couples",
+            "photographers",
+            "families",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "2:10 PM",
+          "meal": "meal ~2:10 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/11207796365",
+          "name": "Bhola dhaba",
+          "category": "restaurant",
+          "lat": 28.5836613,
+          "lon": 77.2460571,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 9.08,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 0.73
+      },
+      "nearest_pharmacy": {
+        "name": "Chemist Shop",
+        "distance_km": 0.17
+      },
+      "nearest_metro_station": {
+        "name": "Jangpura",
+        "distance_km": 1.08
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "monument",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 18,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:48 AM"
+        },
+        {
+          "osm_id": "node/14002488862",
+          "name": "Bobachee",
+          "category": "restaurant",
+          "lat": 28.568261,
+          "lon": 77.2177804,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "12:28 PM",
+          "meal": "meal ~12:28 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/11264482804",
+          "name": "Deer park",
+          "category": "park",
+          "lat": 28.5606297,
+          "lon": 77.2004942,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March",
+          "kb_suitable_for": [
+            "families",
+            "kids",
+            "joggers",
+            "photographers",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/13997784683",
+          "name": "Moti Mahal Delux",
+          "category": "restaurant",
+          "lat": 28.5683968,
+          "lon": 77.2191782,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 11,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:41 PM",
+          "meal": "meal ~1:41 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/12022954306",
+          "name": "Make My Lagan",
+          "category": "restaurant",
+          "lat": 28.5682868,
+          "lon": 77.2209969,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 8.9,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Manav Medicare Centre",
+        "distance_km": 0.37
+      },
+      "nearest_pharmacy": {
+        "name": "Agroha Medicos",
+        "distance_km": 0.17
+      },
+      "nearest_metro_station": {
+        "name": "South Extension",
+        "distance_km": 0.28
+      }
+    }
+  }
+}

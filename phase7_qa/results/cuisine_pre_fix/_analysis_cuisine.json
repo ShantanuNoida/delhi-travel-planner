@@ -1,0 +1,68 @@
+{
+  "total": 30,
+  "built": 30,
+  "feasibility_pass": 30,
+  "grounding_pass": 30,
+  "total_restaurants": 228,
+  "total_matched": 0,
+  "total_unmatched": 0,
+  "total_no_tag": 228,
+  "itins_with_zero_match": 30,
+  "in_constraints_dietary": 30,
+  "in_interests": 0,
+  "itins_with_category_gap": 8,
+  "missing_category_breakdown": {
+    "art": 5,
+    "religion": 3
+  },
+  "by_cuisine": {
+    "North Indian": {
+      "total": 20,
+      "matched": 0
+    },
+    "South Indian": {
+      "total": 27,
+      "matched": 0
+    },
+    "Thai": {
+      "total": 20,
+      "matched": 0
+    },
+    "Continental": {
+      "total": 26,
+      "matched": 0
+    },
+    "Chinese": {
+      "total": 20,
+      "matched": 0
+    },
+    "Italian": {
+      "total": 23,
+      "matched": 0
+    },
+    "Mexican": {
+      "total": 21,
+      "matched": 0
+    },
+    "Japanese": {
+      "total": 13,
+      "matched": 0
+    },
+    "Korean": {
+      "total": 18,
+      "matched": 0
+    },
+    "Bengali": {
+      "total": 12,
+      "matched": 0
+    },
+    "Punjabi": {
+      "total": 13,
+      "matched": 0
+    },
+    "Mughlai": {
+      "total": 15,
+      "matched": 0
+    }
+  }
+}

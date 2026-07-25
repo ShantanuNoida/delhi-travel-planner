@@ -1,0 +1,2035 @@
+{
+  "spec": {
+    "id": 16,
+    "label": "Shopping + Food",
+    "interests": [
+      "shopping",
+      "food"
+    ],
+    "days": 2,
+    "pace": "moderate"
+  },
+  "initial_itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        },
+        {
+          "osm_id": "way/1182839787",
+          "name": "Buddh Bazar",
+          "category": "market",
+          "lat": 28.6222476,
+          "lon": 77.2914319,
+          "opening_hours": "We 16:30-22:30",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 44,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:59 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        },
+        {
+          "osm_id": "way/302534538",
+          "name": "V3S Mall",
+          "category": "market",
+          "lat": 28.6372006,
+          "lon": 77.2865082,
+          "opening_hours": "Mo-Su 11:00-23:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 29,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:37 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.85,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Walia Nursing Home",
+        "distance_km": 0.39
+      },
+      "nearest_pharmacy": {
+        "name": "Jagdamba chemist",
+        "distance_km": 0.15
+      },
+      "nearest_metro_station": {
+        "name": "Nirman Vihar",
+        "distance_km": 0.37
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/442156777",
+          "name": "Janpath New Mini Market",
+          "category": "market",
+          "lat": 28.6290954,
+          "lon": 77.2181663,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon; October–March (open-air stalls)",
+          "kb_suitable_for": [
+            "budget travellers",
+            "shoppers",
+            "souvenir hunters",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 25,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:55 AM",
+          "meal": "meal ~10:55 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/80442501",
+          "name": "Khan Market",
+          "category": "market",
+          "lat": 28.600192,
+          "lon": 77.2266065,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon and evening; year-round",
+          "kb_suitable_for": [
+            "foodies",
+            "shoppers",
+            "couples",
+            "book lovers",
+            "upscale travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/1966254717",
+          "name": "Andhra Bhawan Canteen",
+          "category": "restaurant",
+          "lat": 28.6169212,
+          "lon": 77.225998,
+          "opening_hours": "Mo-Su 08:00-22:00, 00:00-15:00, 07:30-22:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "2:10 PM",
+          "meal": "meal ~2:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/2591114289",
+          "name": "Indian Coffee House",
+          "category": "restaurant",
+          "lat": 28.6306895,
+          "lon": 77.2160507,
+          "opening_hours": "08:30-21:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.83,
+      "date": "",
+      "nearest_hospital": {
+        "name": "General Williams Hospital",
+        "distance_km": 1.59
+      },
+      "nearest_pharmacy": {
+        "name": "Youplus",
+        "distance_km": 1.47
+      },
+      "nearest_metro_station": {
+        "name": "Central Secretariat",
+        "distance_km": 1.26
+      }
+    }
+  },
+  "initial_itinerary_summary": {
+    "day_1": {
+      "total_hours": 7.85,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Buddh Bazar",
+          "category": "market",
+          "arrival_time": "10:59 AM",
+          "travel_min": 44
+        },
+        {
+          "slot": "afternoon",
+          "name": "Karim's",
+          "category": "restaurant",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "V3S Mall",
+          "category": "market",
+          "arrival_time": "1:37 PM",
+          "travel_min": 29
+        },
+        {
+          "slot": "evening",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    },
+    "day_2": {
+      "total_hours": 7.83,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Janpath New Mini Market",
+          "category": "market",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "arrival_time": "10:55 AM",
+          "travel_min": 25
+        },
+        {
+          "slot": "afternoon",
+          "name": "Khan Market",
+          "category": "market",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Andhra Bhawan Canteen",
+          "category": "restaurant",
+          "arrival_time": "2:10 PM",
+          "travel_min": 10
+        },
+        {
+          "slot": "evening",
+          "name": "Indian Coffee House",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    }
+  },
+  "final_itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/220385654",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "lat": 28.5932862,
+          "lon": 77.2506455,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+          "wikidata_qid": "Q189648",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Humayun%20Tomb%20UNESCO%20world%20heritage%20site.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or golden hour before sunset; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "couples",
+            "photographers",
+            "families",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/80442501",
+          "name": "Khan Market",
+          "category": "market",
+          "lat": 28.600192,
+          "lon": 77.2266065,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon and evening; year-round",
+          "kb_suitable_for": [
+            "foodies",
+            "shoppers",
+            "couples",
+            "book lovers",
+            "upscale travellers"
+          ],
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "travel_time_from_prev_min": 0
+        },
+        {
+          "osm_id": "node/2591114289",
+          "name": "Indian Coffee House",
+          "category": "restaurant",
+          "lat": 28.6306895,
+          "lon": 77.2160507,
+          "opening_hours": "08:30-21:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "2:19 PM",
+          "meal": "meal ~2:19 PM",
+          "travel_time_from_prev_min": 19
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/10250904256",
+          "name": "Ichiban",
+          "category": "restaurant",
+          "lat": 28.6077837,
+          "lon": 77.2298805,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 6.82,
+      "date": "",
+      "nearest_hospital": {
+        "name": "General Williams Hospital",
+        "distance_km": 2.42
+      },
+      "nearest_pharmacy": {
+        "name": "Youplus",
+        "distance_km": 0.88
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 0.65
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "evening": [],
+      "total_hours": 2.38,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Taravati Hospital",
+        "distance_km": 0.52
+      },
+      "nearest_pharmacy": {
+        "name": "Apollo Pharmacy",
+        "distance_km": 0.39
+      },
+      "nearest_metro_station": {
+        "name": "IP Extension",
+        "distance_km": 0.78
+      }
+    }
+  },
+  "final_itinerary_summary": {
+    "day_1": {
+      "total_hours": 6.82,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Khan Market",
+          "category": "market",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Indian Coffee House",
+          "category": "restaurant",
+          "arrival_time": "2:19 PM",
+          "travel_min": 19
+        },
+        {
+          "slot": "evening",
+          "name": "Ichiban",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    },
+    "day_2": {
+      "total_hours": 2.38,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Karim's",
+          "category": "restaurant",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "n": 1,
+      "command": "Make Day 1 more relaxed.",
+      "category": "pacing",
+      "probe": "relax_vague_quantity",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 1,
+        "target_slot": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Make Day 1 more relaxed."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Buddh Bazar to free up time.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.62,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "1:37 PM",
+              "travel_min": 29
+            },
+            {
+              "slot": "evening",
+              "name": "Chandni Chowk",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.83,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Indian Accent",
+              "category": "restaurant",
+              "arrival_time": "10:55 AM",
+              "travel_min": 25
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Andhra Bhawan Canteen",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 2,
+      "command": "Day 2 feels too packed — take one thing out of the evening.",
+      "category": "pacing",
+      "probe": "relax_specific_slot",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 2,
+        "target_slot": "evening"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "evening",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Day 2 feels too packed — take one thing out of the evening."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "This day is already light — nothing to remove.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.62,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "1:37 PM",
+              "travel_min": 29
+            },
+            {
+              "slot": "evening",
+              "name": "Chandni Chowk",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.83,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Indian Accent",
+              "category": "restaurant",
+              "arrival_time": "10:55 AM",
+              "travel_min": 25
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Andhra Bhawan Canteen",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 3,
+      "command": "Day 2 is a lot — can you lighten it up somehow?",
+      "category": "pacing",
+      "probe": "relax_vague_phrasing",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 2,
+        "target_slot": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Day 2 is a lot — can you lighten it up somehow?"
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Andhra Bhawan Canteen to free up time.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.62,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "1:37 PM",
+              "travel_min": 29
+            },
+            {
+              "slot": "evening",
+              "name": "Chandni Chowk",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Indian Accent",
+              "category": "restaurant",
+              "arrival_time": "10:55 AM",
+              "travel_min": 25
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 4,
+      "command": "Swap the Day 1 evening plan to something indoors.",
+      "category": "swap",
+      "probe": "swap_indoor",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "indoor"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "evening",
+          "edit_type": "swap",
+          "constraint": "indoors"
+        },
+        "query": "Swap the Day 1 evening plan to something indoors."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Chandni Chowk → Shanker's International Doll Museum.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.23,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "1:37 PM",
+              "travel_min": 29
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Indian Accent",
+              "category": "restaurant",
+              "arrival_time": "10:55 AM",
+              "travel_min": 25
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 5,
+      "command": "Swap the Day 2 morning plan to something outdoors.",
+      "category": "swap",
+      "probe": "swap_outdoor",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 2,
+        "target_slot": "morning",
+        "constraint": "outdoor"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "morning",
+          "edit_type": "swap",
+          "constraint": "outdoors"
+        },
+        "query": "Swap the Day 2 morning plan to something outdoors."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Indian Accent → Humayun's Tomb.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.23,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "1:37 PM",
+              "travel_min": 29
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 25
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 6,
+      "command": "Swap Day 2 afternoon for a history spot instead.",
+      "category": "swap",
+      "probe": "swap_theme_category",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 2,
+        "target_slot": "afternoon",
+        "constraint": "history"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "afternoon",
+          "edit_type": "swap",
+          "constraint": "history spot"
+        },
+        "query": "Swap Day 2 afternoon for a history spot instead."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a suitable replacement for that swap.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.23,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "1:37 PM",
+              "travel_min": 29
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 25
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 7,
+      "command": "Replace the Day 1 evening stop with Connaught Place.",
+      "category": "swap",
+      "probe": "swap_known_absent_place",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "Connaught Place",
+        "note": "Connaught Place is a documented KNOWN_ABSENT_POPULAR_PLACES entry -- app should honestly decline, not silently substitute."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "evening",
+          "edit_type": "swap",
+          "constraint": "Connaught Place"
+        },
+        "query": "Replace the Day 1 evening stop with Connaught Place."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "I don't have a real, mappable record of Connaught Place in my data (it's absent from the OpenStreetMap extract this planner uses) — I can't honestly add it. Khan Market or Janpath are real, verified alternatives nearby if you'd like one of those instead.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.23,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "1:37 PM",
+              "travel_min": 29
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 25
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 8,
+      "command": "Add one famous local food place to Day 1.",
+      "category": "add",
+      "probe": "add_food_famous",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "food"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "famous local food place"
+        },
+        "query": "Add one famous local food place to Day 1."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a new place matching that request.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.23,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "1:37 PM",
+              "travel_min": 29
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 25
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 9,
+      "command": "Add a religion stop somewhere in the trip.",
+      "category": "add",
+      "probe": "add_theme_any_day",
+      "expected": {
+        "edit_type": "add",
+        "target_day": "all",
+        "target_slot": "evening",
+        "constraint": "religion"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "religion stop"
+        },
+        "query": "Add a religion stop somewhere in the trip."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a new place matching that request.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.23,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "1:37 PM",
+              "travel_min": 29
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 25
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 10,
+      "command": "Add Select Citywalk mall to Day 2.",
+      "category": "add",
+      "probe": "add_known_absent_place",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 2,
+        "constraint": "Select Citywalk",
+        "note": "Select Citywalk is a documented KNOWN_ABSENT_POPULAR_PLACES entry -- app should honestly decline."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "Select Citywalk mall"
+        },
+        "query": "Add Select Citywalk mall to Day 2."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a new place matching that request.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.23,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "1:37 PM",
+              "travel_min": 29
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 25
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 11,
+      "command": "Remove Janpath New Mini Market from Day 2.",
+      "category": "remove",
+      "probe": "remove_real_named_stop",
+      "expected": {
+        "edit_type": "remove",
+        "target_day": 2,
+        "constraint": "Janpath New Mini Market"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "remove",
+          "constraint": "Janpath New Mini Market"
+        },
+        "query": "Remove Janpath New Mini Market from Day 2."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Removed Janpath New Mini Market from the itinerary.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.23,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "1:37 PM",
+              "travel_min": 29
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.67,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 25
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 12,
+      "command": "Remove the boring stop from Day 1.",
+      "category": "remove",
+      "probe": "remove_vague_no_referent",
+      "expected": {
+        "edit_type": "remove or relax (ambiguous)",
+        "target_day": 1,
+        "note": "'boring' names nothing searchable -- correct behavior is an honest 'couldn't find a match' or classification as relax, not a hallucinated removal."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Remove the boring stop from Day 1."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed V3S Mall to free up time.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.67,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 25
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 13,
+      "command": "Reduce travel time between stops.",
+      "category": "logistics",
+      "probe": "reduce_travel_whole_trip",
+      "expected": {
+        "edit_type": "reduce_travel",
+        "target_day": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "reduce_travel",
+          "constraint": ""
+        },
+        "query": "Reduce travel time between stops."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Re-clustered your stops to minimize travel time between them.",
+      "changed_days": [
+        "day_1",
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 8.3,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Gulati",
+              "category": "restaurant",
+              "arrival_time": "11:14 AM",
+              "travel_min": 14
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "2:19 PM",
+              "travel_min": 19
+            },
+            {
+              "slot": "evening",
+              "name": "Ichiban",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.63,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Krishna Dhaba",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 14,
+      "command": "Make Day 4 more relaxed.",
+      "category": "edge_case",
+      "probe": "invalid_day_reference",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 4,
+        "note": "Day 4 does not exist in a 2-day trip -- app should reject cleanly, not crash or silently no-op without explanation."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 4,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Make Day 4 more relaxed."
+      },
+      "edit_result_ok": false,
+      "edit_result_message": "Day 4 doesn't exist in this itinerary.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 8.3,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Gulati",
+              "category": "restaurant",
+              "arrival_time": "11:14 AM",
+              "travel_min": 14
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "2:19 PM",
+              "travel_min": 19
+            },
+            {
+              "slot": "evening",
+              "name": "Ichiban",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.63,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Krishna Dhaba",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 15,
+      "command": "Make the whole trip more fun.",
+      "category": "edge_case",
+      "probe": "vague_no_actionable_edit_type",
+      "expected": {
+        "edit_type": "ambiguous",
+        "target_day": "all",
+        "note": "No day/slot/edit-type signal at all -- tests whether the classifier defaults sensibly or misfires (e.g. defaulting to 'swap' with an empty/nonsense constraint)."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Make the whole trip more fun."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Gulati, Krishna Dhaba to free up time.",
+      "changed_days": [
+        "day_1",
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 6.82,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Indian Coffee House",
+              "category": "restaurant",
+              "arrival_time": "2:19 PM",
+              "travel_min": 19
+            },
+            {
+              "slot": "evening",
+              "name": "Ichiban",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 2.38,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Bukhara",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

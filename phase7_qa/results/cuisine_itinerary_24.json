@@ -1,0 +1,290 @@
+{
+  "spec": {
+    "id": 24,
+    "days": 2,
+    "pace": "intensive",
+    "cuisine": "Mughlai",
+    "cuisine_phrase": "I'm a big fan of Mughlai food",
+    "category_interests": [
+      "religion",
+      "nature"
+    ],
+    "opening_message": "I'm planning a 2-day trip to Delhi, intensive pace. I'm a big fan of Mughlai food. I'm also interested in religion and nature."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "cuisine",
+    "religion",
+    "nature"
+  ],
+  "extracted_constraints": {},
+  "num_days_extracted": 2,
+  "pace_extracted": "intensive",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/1127484002",
+          "name": "Sunder Nursery",
+          "category": "park",
+          "lat": 28.5968532,
+          "lon": 77.2474305,
+          "opening_hours": "Mo-Su 07:00-22:00",
+          "visit_duration_min": 180,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q15628824",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sunder%20Nursery%20%28Garden%29.jpg",
+          "kb_entry_fee": "Approx. ₹50 (Indian adults), ₹25 (children); foreign nationals approx. ₹200–₹300; annual passes available. Verify locally.",
+          "kb_best_time_to_visit": "Mornings and golden hour; October–March; Sunday mornings for the farmers' market",
+          "kb_suitable_for": [
+            "families",
+            "couples",
+            "photographers",
+            "picnickers",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/10576179041",
+          "name": "Anglow",
+          "category": "restaurant",
+          "lat": 28.6002956,
+          "lon": 77.2272837,
+          "opening_hours": "Mon-Su 12:00-00:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 11,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "12:11 PM",
+          "meal": "meal ~12:11 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        },
+        {
+          "osm_id": "way/80442502",
+          "name": "Lodhi Gardens",
+          "category": "park",
+          "lat": 28.5934806,
+          "lon": 77.2195624,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "website": "https://delhitourism.gov.in//delhitourism/tourist_place/lodi_tomb.jsp",
+          "wikidata_qid": "Q2985076",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lodhi%20Gardens%20on%20a%20sunny%20day.jpg",
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March; February–March for blooms",
+          "kb_suitable_for": [
+            "couples",
+            "families",
+            "joggers",
+            "photographers",
+            "elderly",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:25 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/80442501",
+          "name": "Khan Market",
+          "category": "restaurant",
+          "lat": 28.600192,
+          "lon": 77.2266065,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon and evening; year-round",
+          "kb_suitable_for": [
+            "foodies",
+            "shoppers",
+            "couples",
+            "book lovers",
+            "upscale travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 9.85,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Palika Maternity Hospital",
+        "distance_km": 1.71
+      },
+      "nearest_pharmacy": {
+        "name": "Anand Drug Store",
+        "distance_km": 0.58
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 0.69
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q17064086",
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "cuisine": "chicken;kebab;curry;indian",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/400921719",
+          "name": "Akshardham",
+          "category": "temple",
+          "lat": 28.6125148,
+          "lon": 77.2773592,
+          "opening_hours": "Tu-Su 09:30-18:30",
+          "visit_duration_min": 300,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "website": "http://www.akshardham.com",
+          "wikidata_qid": "Q1849858",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akshardham%20Delhi.jpg",
+          "kb_entry_fee": "Temple entry free for all; exhibitions approx. ₹250 (adults), ₹150 (children 4–11), free for children under 4; water show ticketed separately (approx. ₹100–₹150). Verify locally.",
+          "kb_best_time_to_visit": "Late afternoon into evening (to include the water show); October–March for pleasant weather",
+          "kb_suitable_for": [
+            "families",
+            "kids",
+            "elderly",
+            "spiritual travellers",
+            "architecture enthusiasts",
+            "first-time visitors"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/2106114484",
+          "name": "Moti Mahal",
+          "category": "restaurant",
+          "lat": 28.6468875,
+          "lon": 77.2399805,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 29,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "5:29 PM",
+          "meal": "meal ~5:29 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q3236763",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 9.12,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Dehli Hospital",
+        "distance_km": 0.11
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 2.59
+      },
+      "nearest_metro_station": {
+        "name": "Delhi Gate",
+        "distance_km": 0.54
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 6,
+    "matched_cuisine": [
+      "Karim's"
+    ],
+    "unmatched_cuisine": [],
+    "no_cuisine_tag": [
+      "Anglow",
+      "Indian Accent",
+      "Khan Market",
+      "Moti Mahal",
+      "Chandni Chowk"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "religion",
+      "nature"
+    ],
+    "missing": []
+  }
+}

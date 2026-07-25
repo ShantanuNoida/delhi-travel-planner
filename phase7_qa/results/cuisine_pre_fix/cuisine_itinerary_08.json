@@ -1,0 +1,213 @@
+{
+  "spec": {
+    "id": 8,
+    "days": 2,
+    "pace": "relaxed",
+    "cuisine": "Japanese",
+    "cuisine_phrase": "I'd love to try some Japanese cuisine",
+    "category_interests": [
+      "religion",
+      "nature"
+    ],
+    "opening_message": "I'm planning a 2-day trip to Delhi, relaxed pace. I'd love to try some Japanese cuisine. I'm also interested in religion and nature."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "culture",
+    "history",
+    "nature",
+    "food"
+  ],
+  "extracted_constraints": {
+    "dietary": "Japanese cuisine"
+  },
+  "num_days_extracted": 2,
+  "pace_extracted": "relaxed",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/1127484002",
+          "name": "Sunder Nursery",
+          "category": "park",
+          "lat": 28.5968532,
+          "lon": 77.2474305,
+          "opening_hours": "Mo-Su 07:00-22:00",
+          "visit_duration_min": 180,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q15628824",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sunder%20Nursery%20%28Garden%29.jpg",
+          "kb_entry_fee": "Approx. ₹50 (Indian adults), ₹25 (children); foreign nationals approx. ₹200–₹300; annual passes available. Verify locally.",
+          "kb_best_time_to_visit": "Mornings and golden hour; October–March; Sunday mornings for the farmers' market",
+          "kb_suitable_for": [
+            "families",
+            "couples",
+            "photographers",
+            "picnickers",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12387964701",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.5911564,
+          "lon": 77.2436745,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "12:10 PM",
+          "meal": "meal ~12:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [],
+      "total_hours": 5.67,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 1.03
+      },
+      "nearest_pharmacy": {
+        "name": "Chemist Shop",
+        "distance_km": 0.19
+      },
+      "nearest_metro_station": {
+        "name": "Jawaharlal Nehru Stadium",
+        "distance_km": 1.06
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/264863907",
+          "name": "Red Fort",
+          "category": "monument",
+          "lat": 28.6557242,
+          "lon": 77.2407427,
+          "opening_hours": "unknown",
+          "visit_duration_min": 180,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/red_fort.jsp",
+          "wikidata_qid": "Q45957",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹50; foreign nationals approx. ₹550–₹600; museum circuit ticketed additionally; children under 15 free at ASI monuments. Verify locally.",
+          "kb_best_time_to_visit": "Morning at opening to beat crowds; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "photographers",
+            "first-time visitors",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/7018886724",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6584227,
+          "lon": 77.2303375,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q5071227",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 5.5,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Makkar Multispeciality Hospital",
+        "distance_km": 0.24
+      },
+      "nearest_pharmacy": {
+        "name": "Prem medical store",
+        "distance_km": 0.6
+      },
+      "nearest_metro_station": {
+        "name": "Nirman Vihar",
+        "distance_km": 0.91
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 4,
+    "matched_cuisine": [],
+    "unmatched_cuisine": [],
+    "no_cuisine_tag": [
+      "Karim's",
+      "Indian Accent",
+      "Chandni Chowk",
+      "Bukhara"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "nature"
+    ],
+    "missing": [
+      "religion"
+    ]
+  }
+}

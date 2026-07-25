@@ -1,0 +1,371 @@
+{
+  "spec": {
+    "id": 13,
+    "days": 3,
+    "pace": "intensive",
+    "cuisine": "North Indian",
+    "cuisine_phrase": "I'd love to try some North Indian cuisine",
+    "category_interests": [
+      "shopping"
+    ],
+    "opening_message": "I'm planning a 3-day trip to Delhi, intensive pace. I'd love to try some North Indian cuisine. I'm also interested in shopping."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "food",
+    "shopping"
+  ],
+  "extracted_constraints": {
+    "dietary": "North Indian cuisine"
+  },
+  "num_days_extracted": 3,
+  "pace_extracted": "intensive",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "market",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/14002488862",
+          "name": "Bobachee",
+          "category": "restaurant",
+          "lat": 28.568261,
+          "lon": 77.2177804,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/1831954639",
+          "name": "Green Park Market",
+          "category": "market",
+          "lat": 28.5556739,
+          "lon": 77.2021428,
+          "opening_hours": "Tu off",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 22,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:52 PM"
+        },
+        {
+          "osm_id": "node/13997784683",
+          "name": "Moti Mahal Delux",
+          "category": "restaurant",
+          "lat": 28.5683968,
+          "lon": 77.2191782,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 12,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "3:34 PM",
+          "meal": "meal ~3:34 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/12022954306",
+          "name": "Make My Lagan",
+          "category": "restaurant",
+          "lat": 28.5682868,
+          "lon": 77.2209969,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 8.98,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Manav Medicare Centre",
+        "distance_km": 0.44
+      },
+      "nearest_pharmacy": {
+        "name": "Agroha Medicos",
+        "distance_km": 0.2
+      },
+      "nearest_metro_station": {
+        "name": "South Extension",
+        "distance_km": 0.29
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/442156777",
+          "name": "Janpath New Mini Market",
+          "category": "market",
+          "lat": 28.6290954,
+          "lon": 77.2181663,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon; October–March (open-air stalls)",
+          "kb_suitable_for": [
+            "budget travellers",
+            "shoppers",
+            "souvenir hunters",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "is_hidden_gem": true
+        },
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q17064086",
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 15,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:45 AM",
+          "meal": "meal ~10:45 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q3236763",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        },
+        {
+          "osm_id": "way/80442501",
+          "name": "Khan Market",
+          "category": "market",
+          "lat": 28.600192,
+          "lon": 77.2266065,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon and evening; year-round",
+          "kb_suitable_for": [
+            "foodies",
+            "shoppers",
+            "couples",
+            "book lovers",
+            "upscale travellers"
+          ],
+          "travel_time_from_prev_min": 34,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:49 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.95,
+      "date": "",
+      "nearest_hospital": {
+        "name": "NGO Lok Kalyan Samiti",
+        "distance_km": 1.01
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 1.54
+      },
+      "nearest_metro_station": {
+        "name": "Mandi House",
+        "distance_km": 0.44
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/302534538",
+          "name": "V3S Mall",
+          "category": "market",
+          "lat": 28.6372006,
+          "lon": 77.2865082,
+          "opening_hours": "Mo-Su 11:00-23:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/843324604",
+          "name": "Pizza Hut",
+          "category": "restaurant",
+          "lat": 28.5917336,
+          "lon": 77.3484898,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 44,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "2:14 PM",
+          "meal": "meal ~2:14 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/11245413981",
+          "name": "SAYA Status Mall",
+          "category": "market",
+          "lat": 28.5117841,
+          "lon": 77.3842239,
+          "opening_hours": "24/7",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM"
+        }
+      ],
+      "total_hours": 6.23,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Prakash Hospital Pvt Ltd",
+        "distance_km": 0.4
+      },
+      "nearest_pharmacy": {
+        "name": "Krishna Medicos",
+        "distance_km": 1.37
+      },
+      "nearest_metro_station": {
+        "name": "Noida City Centre",
+        "distance_km": 1.76
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 8,
+    "matched_cuisine": [],
+    "unmatched_cuisine": [],
+    "no_cuisine_tag": [
+      "Bobachee",
+      "Moti Mahal Delux",
+      "Make My Lagan",
+      "Karim's",
+      "Chandni Chowk",
+      "Indian Accent",
+      "Bukhara",
+      "Pizza Hut"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "shopping"
+    ],
+    "missing": []
+  }
+}

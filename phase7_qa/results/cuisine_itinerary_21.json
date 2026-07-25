@@ -1,0 +1,446 @@
+{
+  "spec": {
+    "id": 21,
+    "days": 4,
+    "pace": "moderate",
+    "cuisine": "Korean",
+    "cuisine_phrase": "I love Korean food",
+    "category_interests": [
+      "shopping",
+      "religion"
+    ],
+    "opening_message": "I'm planning a 4-day trip to Delhi, moderate pace. I love Korean food. I'm also interested in shopping and religion."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "cuisine",
+    "shopping",
+    "religion"
+  ],
+  "extracted_constraints": {
+    "dietary": "Korean food"
+  },
+  "num_days_extracted": 4,
+  "pace_extracted": "moderate",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/97230896",
+          "name": "Jama Masjid",
+          "category": "mosque",
+          "lat": 28.6352233,
+          "lon": 77.2455574,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March; avoid Friday midday",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers",
+            "spiritual travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "way/1493860109",
+          "name": "Janpath Old Mini Market",
+          "category": "market",
+          "lat": 28.6290518,
+          "lon": 77.2188985,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 15,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:23 AM"
+        },
+        {
+          "osm_id": "node/1563325307",
+          "name": "Bengali Sweet House",
+          "category": "restaurant",
+          "lat": 28.629465,
+          "lon": 77.2318985,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "12:03 PM",
+          "meal": "meal ~12:03 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/370569205",
+          "name": "Qila-i-Khuna Mosque",
+          "category": "mosque",
+          "lat": 28.6097216,
+          "lon": 77.2448151,
+          "opening_hours": "unknown",
+          "visit_duration_min": 45,
+          "relevance_score": 0.77,
+          "fallback": false,
+          "wikidata_qid": "Q19895556",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Qila%20Kuhna%20Masjid%20inside%20Puran%20Qila%2C%20Delhi.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/3250376814",
+          "name": "Shimtur",
+          "category": "restaurant",
+          "lat": 28.6414451,
+          "lon": 77.2132453,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.6,
+          "fallback": false,
+          "cuisine": "korean",
+          "travel_time_from_prev_min": 26,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:11 PM",
+          "meal": "meal ~1:11 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/6224257207",
+          "name": "Triveni Terrace Cafe",
+          "category": "restaurant",
+          "lat": 28.627319,
+          "lon": 77.2326929,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.98,
+      "date": "",
+      "nearest_hospital": {
+        "name": "NGO Lok Kalyan Samiti",
+        "distance_km": 0.74
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 1.47
+      },
+      "nearest_metro_station": {
+        "name": "Mandi House",
+        "distance_km": 0.45
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "market",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "way/352491543",
+          "name": "St Luke's church",
+          "category": "church",
+          "lat": 28.5698513,
+          "lon": 77.2273023,
+          "opening_hours": "unknown",
+          "visit_duration_min": 30,
+          "relevance_score": 0.77,
+          "fallback": false,
+          "website": "http://www.saintlukeschurch.com/",
+          "wikidata_qid": "Q7589756",
+          "travel_time_from_prev_min": 11,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:41 AM"
+        },
+        {
+          "osm_id": "node/6793339982",
+          "name": "Pizza Hut",
+          "category": "restaurant",
+          "lat": 28.5628638,
+          "lon": 77.2248731,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "11:21 AM",
+          "meal": "meal ~11:21 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/11101285439",
+          "name": "Kori's Korean Dining",
+          "category": "restaurant",
+          "lat": 28.5505643,
+          "lon": 77.2349723,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.6,
+          "fallback": false,
+          "cuisine": "korean",
+          "travel_time_from_prev_min": 11,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:41 PM",
+          "meal": "meal ~1:41 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/11155711194",
+          "name": "Pop Seoul",
+          "category": "restaurant",
+          "lat": 28.5499884,
+          "lon": 77.2351267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.6,
+          "fallback": false,
+          "cuisine": "asian;korean",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.78,
+      "date": "",
+      "nearest_hospital": {
+        "name": "MCW Defence Colony",
+        "distance_km": 0.79
+      },
+      "nearest_pharmacy": {
+        "name": "Bharat Medical Store",
+        "distance_km": 0.76
+      },
+      "nearest_metro_station": {
+        "name": "Moolchand",
+        "distance_km": 0.61
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "node/12775105205",
+          "name": "Gang-Talk",
+          "category": "restaurant",
+          "lat": 28.6012334,
+          "lon": 77.3223695,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.6,
+          "fallback": false,
+          "cuisine": "italian;international;chinese;burger;dumplings;korean;pasta;pizza",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/13464132685",
+          "name": "Food Plaza",
+          "category": "restaurant",
+          "lat": 28.6012031,
+          "lon": 77.32235,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/12176320272",
+          "name": "Domino's",
+          "category": "restaurant",
+          "lat": 28.6012197,
+          "lon": 77.3225099,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 3.75,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Dharamshila Hospital",
+        "distance_km": 0.82
+      },
+      "nearest_pharmacy": {
+        "name": "Ganpati Chemist Cosmetic Opticals",
+        "distance_km": 0.5
+      },
+      "nearest_metro_station": {
+        "name": "Trilokpuri Sanjay Lake",
+        "distance_km": 1.9
+      }
+    },
+    "day_4": {
+      "morning": [
+        {
+          "osm_id": "way/24618045",
+          "name": "Metro Walk Mall",
+          "category": "market",
+          "lat": 28.7238803,
+          "lon": 77.1140537,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q6824770",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/87354076",
+          "name": "Saint James' Anglican Church",
+          "category": "church",
+          "lat": 28.6657462,
+          "lon": 77.2310777,
+          "opening_hours": "Mo-Fr 08:30-20:00",
+          "visit_duration_min": 45,
+          "relevance_score": 0.79,
+          "fallback": false,
+          "wikidata_qid": "Q2985087",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/St.james%20b.jpg",
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Weekday mornings for a quiet visit; year-round",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/1835582815",
+          "name": "Gung the palace",
+          "category": "restaurant",
+          "lat": 28.4692697,
+          "lon": 77.0623996,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.6,
+          "fallback": false,
+          "cuisine": "korean",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "total_hours": 3.5,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Behl Hospital",
+        "distance_km": 0.53
+      },
+      "nearest_pharmacy": {
+        "name": "Zeelab Pharmacy",
+        "distance_km": 2.5
+      },
+      "nearest_metro_station": {
+        "name": "Naraina Vihar",
+        "distance_km": 0.53
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 10,
+    "matched_cuisine": [
+      "Shimtur",
+      "Kori's Korean Dining",
+      "Pop Seoul",
+      "Gang-Talk",
+      "Gung the palace"
+    ],
+    "unmatched_cuisine": [],
+    "no_cuisine_tag": [
+      "Bengali Sweet House",
+      "Triveni Terrace Cafe",
+      "Pizza Hut",
+      "Food Plaza",
+      "Domino's"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "shopping",
+      "religion"
+    ],
+    "missing": []
+  }
+}

@@ -1,0 +1,904 @@
+{
+  "spec": {
+    "id": 5,
+    "label": "Religion-only pilgrimage",
+    "interests": [
+      "religion"
+    ],
+    "days": 3,
+    "pace": "moderate"
+  },
+  "itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/97230896",
+          "name": "Jama Masjid",
+          "category": "mosque",
+          "lat": 28.6352233,
+          "lon": 77.2455574,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March; avoid Friday midday",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers",
+            "spiritual travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "way/111695183",
+          "name": "Gurdwara Bangla Sahib",
+          "category": "gurdwara",
+          "lat": 28.6263083,
+          "lon": 77.2090851,
+          "opening_hours": "Mo-Su 12:00-23:30",
+          "visit_duration_min": 90,
+          "relevance_score": 0.79,
+          "fallback": false,
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Early morning or evening for prayers and lit-up views; year-round",
+          "kb_suitable_for": [
+            "families",
+            "elderly",
+            "spiritual travellers",
+            "budget travellers",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 20,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:28 AM"
+        },
+        {
+          "osm_id": "node/5017491421",
+          "name": "Pizza Hut",
+          "category": "restaurant",
+          "lat": 28.6275145,
+          "lon": 77.2198691,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "12:08 PM",
+          "meal": "meal ~12:08 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/359804883",
+          "name": "Gurdwara Rakab Ganj Sahib",
+          "category": "gurdwara",
+          "lat": 28.6182322,
+          "lon": 77.2048712,
+          "opening_hours": "unknown",
+          "visit_duration_min": 45,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q5619976",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gurdwara%20Rakabganj%20Sahib%2C%20Delhi.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/11795614249",
+          "name": "Punjab Grill",
+          "category": "restaurant",
+          "lat": 28.6284596,
+          "lon": 77.2197378,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "12:55 PM",
+          "meal": "meal ~12:55 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/11795527561",
+          "name": "Gokulam",
+          "category": "restaurant",
+          "lat": 28.6289157,
+          "lon": 77.2197583,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.8,
+      "date": "",
+      "nearest_hospital": {
+        "name": "General Williams Hospital",
+        "distance_km": 0.17
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 0.75
+      },
+      "nearest_metro_station": {
+        "name": "Janpath",
+        "distance_km": 0.38
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/4234967390",
+          "name": "Kalkaji Mandir",
+          "category": "temple",
+          "lat": 28.5497752,
+          "lon": 77.2606671,
+          "opening_hours": "unknown",
+          "visit_duration_min": 45,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "website": "http://skmpsc.org/",
+          "wikidata_qid": "Q6353337",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "way/42360405",
+          "name": "Sri Sri Radha Parthasarathi Mandir",
+          "category": "temple",
+          "lat": 28.555886,
+          "lon": 77.2538679,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "kb_entry_fee": "Free; multimedia shows ticketed (approx. ₹50–₹100). Verify locally.",
+          "kb_best_time_to_visit": "Evening aarti (around 7:00 PM); festival days for atmosphere, non-festival days for calm",
+          "kb_suitable_for": [
+            "families",
+            "spiritual travellers",
+            "foodies (vegetarian)",
+            "kids",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "9:55 AM"
+        },
+        {
+          "osm_id": "node/12334507511",
+          "name": "Thalairaj Biryani",
+          "category": "restaurant",
+          "lat": 28.5552036,
+          "lon": 77.2432534,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "12:05 PM",
+          "meal": "meal ~12:05 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/12334507509",
+          "name": "California Burrito",
+          "category": "restaurant",
+          "lat": 28.5551516,
+          "lon": 77.2432111,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "12:40 PM",
+          "meal": "meal ~12:40 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/352491543",
+          "name": "St Luke's church",
+          "category": "church",
+          "lat": 28.5698513,
+          "lon": 77.2273023,
+          "opening_hours": "unknown",
+          "visit_duration_min": 30,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "website": "http://www.saintlukeschurch.com/",
+          "wikidata_qid": "Q7589756",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM"
+        },
+        {
+          "osm_id": "node/11131967579",
+          "name": "Konfidential",
+          "category": "restaurant",
+          "lat": 28.5539381,
+          "lon": 77.2411272,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 12,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "5:42 PM",
+          "meal": "meal ~5:42 PM"
+        }
+      ],
+      "total_hours": 7.7,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Apollo Spectra Hospitals",
+        "distance_km": 0.38
+      },
+      "nearest_pharmacy": {
+        "name": "Globe Medicos",
+        "distance_km": 0.53
+      },
+      "nearest_metro_station": {
+        "name": "Kailash Colony",
+        "distance_km": 0.32
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "node/1038357043",
+          "name": "Sunehri Masjid",
+          "category": "mosque",
+          "lat": 28.6504594,
+          "lon": 77.2396485,
+          "opening_hours": "unknown",
+          "visit_duration_min": 45,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q16900896",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sunehri%20Masjid%20in%20Delhi.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "way/223903623",
+          "name": "Moti Masjid",
+          "category": "mosque",
+          "lat": 28.6568482,
+          "lon": 77.2431423,
+          "opening_hours": "unknown",
+          "visit_duration_min": 45,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q2991448",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fuerte%20Rojo%20Delhi%203.JPG",
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "9:55 AM"
+        },
+        {
+          "osm_id": "way/265824668",
+          "name": "Gurdwara Sis Ganj Sahib",
+          "category": "gurdwara",
+          "lat": 28.6559559,
+          "lon": 77.2324212,
+          "opening_hours": "unknown",
+          "visit_duration_min": 45,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q5620491",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gurdwara%20sis%20ganj.jpg",
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "10:50 AM"
+        },
+        {
+          "osm_id": "node/11601332069",
+          "name": "Guru Kirpa Restaurant",
+          "category": "restaurant",
+          "lat": 28.6562798,
+          "lon": 77.2329761,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "11:45 AM",
+          "meal": "meal ~11:45 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/265824671",
+          "name": "Shahi Sunehri Masjid",
+          "category": "mosque",
+          "lat": 28.6560608,
+          "lon": 77.231903,
+          "opening_hours": "unknown",
+          "visit_duration_min": 45,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q16900897",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sunehri%20Masjid%2C%20Chandni%20Chowk%2C%20Delhi.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "way/320348680",
+          "name": "St Stephens Church",
+          "category": "church",
+          "lat": 28.6591341,
+          "lon": 77.2232554,
+          "opening_hours": "unknown",
+          "visit_duration_min": 30,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "website": "http://www.ststephenshospital.org/about.php",
+          "wikidata_qid": "Q7591739",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/St%20Stephen%27s%20Church%20on%20Church%20Mission%20Marg.jpg",
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "12:55 PM"
+        },
+        {
+          "osm_id": "node/12639638609",
+          "name": "बाबू राम देवी दयाल",
+          "category": "restaurant",
+          "lat": 28.6560917,
+          "lon": 77.23067,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "1:35 PM",
+          "meal": "meal ~1:35 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/2106110096",
+          "name": "Pandit Kanhaiya Lal Durga Prashad Dixit Paranthe Wala",
+          "category": "restaurant",
+          "lat": 28.6560678,
+          "lon": 77.2303749,
+          "opening_hours": "unknown",
+          "visit_duration_min": 60,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.83,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Kasturba Hospital",
+        "distance_km": 0.73
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 0.72
+      },
+      "nearest_metro_station": {
+        "name": "Chandni Chowk",
+        "distance_km": 0.39
+      }
+    }
+  },
+  "steps": [
+    {
+      "n": 1,
+      "command": "Why did you pick Jama Masjid for Day 1?",
+      "category": "justification",
+      "probe": "why_named_stop",
+      "target_stop": "Jama Masjid",
+      "expected": {
+        "note": "Should reference the actual scheduled stop, grounded in real source data or an honest no-source admission -- not a generic answer about 'this area'."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why did you pick Jama Masjid for Day 1?"
+      },
+      "answer": {
+        "answer": "Jama Masjid was chosen because it is one of the largest mosques in India, commissioned by Mughal emperor Shah Jahan, and its position facing the Red Fort anchors the historic core of Old Delhi.",
+        "citations": [
+          {
+            "source_title": "Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 2,
+      "command": "Why is Gurdwara Bangla Sahib scheduled in the morning instead of another time of day?",
+      "category": "justification",
+      "probe": "why_slot_timing",
+      "target_stop": "Gurdwara Bangla Sahib",
+      "expected": {
+        "note": "Tests whether the app can justify slot placement, or honestly says it doesn't have a specific reason for the exact slot."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why is Gurdwara Bangla Sahib scheduled in the morning instead of another time of day?"
+      },
+      "answer": {
+        "answer": "Early morning is recommended for visiting Gurdwara Bangla Sahib so you can experience the prayers.",
+        "citations": [
+          {
+            "source_title": "Gurudwara Bangla Sahib",
+            "source_url": "local-kb://delhi_tourist_venues_kb#gurudwara-bangla-sahib",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Purana Qila (Old Fort)",
+            "source_url": "local-kb://delhi_tourist_venues_kb#purana-qila-old-fort",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 3,
+      "command": "Why did you pick this place?",
+      "category": "justification",
+      "probe": "why_vague_referent",
+      "target_stop": null,
+      "expected": {
+        "note": "No place named ('this place') -- correct behavior is to ask which place, not guess and hallucinate a generic answer (R-18/F-13 fix from earlier work)."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why did you pick this place?"
+      },
+      "answer": {
+        "answer": "Which place are you asking about? Your itinerary includes: Jama Masjid, Gurdwara Bangla Sahib, Pizza Hut, Gurdwara Rakab Ganj Sahib, Punjab Grill, Gokulam.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 4,
+      "command": "What if it rains on Day 1?",
+      "category": "contingency",
+      "probe": "weather_rain",
+      "target_stop": null,
+      "expected": {
+        "note": "Should surface indoor-alternative / weather guidance grounded in real source data."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What if it rains on Day 1?"
+      },
+      "answer": {
+        "answer": "The provided sources do not contain any information about what to do if it rains on Day 1.",
+        "citations": [
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 5,
+      "command": "What happens to my plan if Pizza Hut is closed for a public holiday?",
+      "category": "contingency",
+      "probe": "closure_holiday",
+      "target_stop": "Pizza Hut",
+      "expected": {
+        "note": "No dataset field encodes holiday closures -- correct behavior is an honest no-verified-source answer, not a fabricated closure schedule."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What happens to my plan if Pizza Hut is closed for a public holiday?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 6,
+      "command": "What are some alternatives to Kalkaji Mandir on Day 2?",
+      "category": "alternatives",
+      "probe": "alt_for_named_stop",
+      "target_stop": "Kalkaji Mandir",
+      "expected": {
+        "note": "Any alternative places named in the answer should be real (checkable against the POI dataset), not invented."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What are some alternatives to Kalkaji Mandir on Day 2?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 7,
+      "command": "If Sri Sri Radha Parthasarathi Mandir turns out to be too crowded, what else could I do instead?",
+      "category": "alternatives",
+      "probe": "alt_crowds",
+      "target_stop": "Sri Sri Radha Parthasarathi Mandir",
+      "expected": {
+        "note": "Crowd-avoidance framing of the same alternatives probe -- checks the app doesn't just pattern-match the word 'alternative'."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "If Sri Sri Radha Parthasarathi Mandir turns out to be too crowded, what else could I do instead?"
+      },
+      "answer": {
+        "answer": "You can visit Swaminarayan Akshardham, which features a central dome with murtis of deities like Radha-Krishna, alongside exhibits, a large-format theatre, a boat ride, and a musical fountain. Alternatively, you can visit Gurudwara Bangla Sahib, a prominent Sikh gurudwara featuring a sacred tank, continuous prayer recitations, and a community kitchen serving free vegetarian meals.",
+        "citations": [
+          {
+            "source_title": "Chandni Chowk",
+            "source_url": "https://en.wikipedia.org/wiki/Chandni_Chowk",
+            "source": "wikipedia"
+          },
+          {
+            "source_title": "Gurudwara Bangla Sahib",
+            "source_url": "local-kb://delhi_tourist_venues_kb#gurudwara-bangla-sahib",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 8,
+      "command": "What other activities can I do on Day 2 if I have extra time?",
+      "category": "expansion",
+      "probe": "expand_day",
+      "target_stop": null,
+      "expected": {
+        "note": "Should suggest real, groundable options -- not vague filler."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What other activities can I do on Day 2 if I have extra time?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 9,
+      "command": "Is there anything interesting near Jama Masjid that isn't on the itinerary?",
+      "category": "expansion",
+      "probe": "expand_near_stop",
+      "target_stop": "Jama Masjid",
+      "expected": {
+        "note": "Tests location-aware expansion; the dataset has no real geo-proximity RAG lookup, so an honest no-source answer is acceptable -- a fabricated nearby landmark is not."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is there anything interesting near Jama Masjid that isn't on the itinerary?"
+      },
+      "answer": {
+        "answer": "Jama Masjid is surrounded by the vibrant bazaars and food lanes of the walled city. Additionally, visitors can climb the southern minaret for panoramic views over Old Delhi.",
+        "citations": [
+          {
+            "source_title": "Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 10,
+      "command": "How much does it cost to visit Jama Masjid?",
+      "category": "practicalities",
+      "probe": "cost_named_stop",
+      "target_stop": "Jama Masjid",
+      "expected": {
+        "note": "Checkable fact when the stop carries kb_entry_fee (dataset says: 'Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally.')",
+        "kb_entry_fee": "Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "How much does it cost to visit Jama Masjid?"
+      },
+      "answer": {
+        "answer": "Entering Jama Masjid is free. However, if you wish to take photos or videos, it costs approximately ₹200–₹300, and climbing the southern minaret costs about ₹100.",
+        "citations": [
+          {
+            "source_title": "Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 11,
+      "command": "What's the best time of day to visit Jama Masjid?",
+      "category": "practicalities",
+      "probe": "best_time_named_stop",
+      "target_stop": "Jama Masjid",
+      "expected": {
+        "note": "Checkable fact when the stop carries kb_best_time_to_visit (dataset says: 'Early morning or late afternoon; October–March; avoid Friday midday')",
+        "kb_best_time_to_visit": "Early morning or late afternoon; October–March; avoid Friday midday"
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What's the best time of day to visit Jama Masjid?"
+      },
+      "answer": {
+        "answer": "The best time to visit Jama Masjid is during the early morning or late afternoon, as well as between October and March. You should plan to avoid Friday midday for your visit.",
+        "citations": [
+          {
+            "source_title": "Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 12,
+      "command": "How do I get from Thalairaj Biryani to California Burrito?",
+      "category": "practicalities",
+      "probe": "travel_between_stops",
+      "target_stop": "Thalairaj Biryani -> California Burrito",
+      "expected": {
+        "note": "Itinerary already computes travel_mode_from_prev/travel_time_from_prev_min between consecutive stops -- answer should be consistent with that data when the two stops are adjacent.",
+        "travel_mode_from_prev": "auto",
+        "travel_time_from_prev_min": 10,
+        "adjacent": false
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "How do I get from Thalairaj Biryani to California Burrito?"
+      },
+      "answer": {
+        "answer": "The provided excerpts do not contain any information about Thalairaj Biryani or California Burrito, so there are no details available to explain how to travel between them.",
+        "citations": [
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Delhi/New Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi/New_Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 13,
+      "command": "Is Jama Masjid suitable for elderly travellers?",
+      "category": "suitability",
+      "probe": "suitability_elderly",
+      "target_stop": "Jama Masjid",
+      "expected": {
+        "note": "Checkable when the stop carries kb_suitable_for (dataset says: ['history buffs', 'photographers', 'solo travellers', 'budget travellers', 'spiritual travellers'])",
+        "kb_suitable_for": [
+          "history buffs",
+          "photographers",
+          "solo travellers",
+          "budget travellers",
+          "spiritual travellers"
+        ]
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is Jama Masjid suitable for elderly travellers?"
+      },
+      "answer": {
+        "answer": "Jama Masjid is located about 300 to 500 meters (a 5-minute walk) from the nearest metro station and can be accessed using cycle-rickshaws or autos. While the mosque features a large courtyard and gates, visitors can also climb the ticketed southern minaret for views over Old Delhi.",
+        "citations": [
+          {
+            "source_title": "Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 14,
+      "command": "Is this itinerary suitable for a family with young kids?",
+      "category": "suitability",
+      "probe": "suitability_family_whole_trip",
+      "target_stop": null,
+      "expected": {
+        "note": "Whole-trip suitability question, no single named place -- tests whether the app can reason across the itinerary or honestly declines rather than answering about one arbitrary stop."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is this itinerary suitable for a family with young kids?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 15,
+      "command": "Is St Luke's church within walking distance of my hotel?",
+      "category": "edge_case",
+      "probe": "unanswerable_missing_context",
+      "target_stop": "St Luke's church",
+      "expected": {
+        "note": "No hotel/lodging location is tracked anywhere in the app -- correct behavior is an honest 'I don't know where you're staying' answer, not a fabricated walking distance or an invented hotel location."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is St Luke's church within walking distance of my hotel?"
+      },
+      "answer": {
+        "answer": "I cannot answer whether St Luke's church is within walking distance of your hotel, as the provided information does not mention St Luke's church or your hotel.",
+        "citations": [
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    }
+  ]
+}

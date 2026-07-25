@@ -1,0 +1,10 @@
+.env
+.env.local
+*.bak
+__pycache__/
+*.pyc
+*.log
+phase6/generated/
+phase6/image_cache/
+scratchpad/
+.claude/

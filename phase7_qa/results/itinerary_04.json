@@ -1,0 +1,2091 @@
+{
+  "spec": {
+    "id": 4,
+    "label": "Shopping-only spree",
+    "interests": [
+      "shopping"
+    ],
+    "days": 2,
+    "pace": "moderate"
+  },
+  "initial_itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "market",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12440473687",
+          "name": "Nazeer Foods",
+          "category": "restaurant",
+          "lat": 28.6441692,
+          "lon": 77.2401768,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/302534538",
+          "name": "V3S Mall",
+          "category": "market",
+          "lat": 28.6372006,
+          "lon": 77.2865082,
+          "opening_hours": "Mo-Su 11:00-23:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/13734392101",
+          "name": "Asharti BBQ Nights",
+          "category": "restaurant",
+          "lat": 28.6442529,
+          "lon": 77.2400509,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 25,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:55 PM",
+          "meal": "meal ~1:55 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/2106114484",
+          "name": "Moti Mahal",
+          "category": "restaurant",
+          "lat": 28.6468875,
+          "lon": 77.2399805,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.33,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Dehli Hospital",
+        "distance_km": 0.5
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 2.46
+      },
+      "nearest_metro_station": {
+        "name": "Delhi Gate",
+        "distance_km": 0.99
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "market",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12040093924",
+          "name": "Barbeque Nation",
+          "category": "restaurant",
+          "lat": 28.5682188,
+          "lon": 77.2216909,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/12022954306",
+          "name": "Make My Lagan",
+          "category": "restaurant",
+          "lat": 28.5682868,
+          "lon": 77.2209969,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:40 PM",
+          "meal": "meal ~1:40 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/13997784683",
+          "name": "Moti Mahal Delux",
+          "category": "restaurant",
+          "lat": 28.5683968,
+          "lon": 77.2191782,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.08,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Manav Medicare Centre",
+        "distance_km": 0.24
+      },
+      "nearest_pharmacy": {
+        "name": "Agroha Medicos",
+        "distance_km": 0.27
+      },
+      "nearest_metro_station": {
+        "name": "South Extension",
+        "distance_km": 0.17
+      }
+    }
+  },
+  "initial_itinerary_summary": {
+    "day_1": {
+      "total_hours": 7.33,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Chandni Chowk",
+          "category": "market",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Nazeer Foods",
+          "category": "restaurant",
+          "arrival_time": "10:40 AM",
+          "travel_min": 10
+        },
+        {
+          "slot": "afternoon",
+          "name": "V3S Mall",
+          "category": "market",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Asharti BBQ Nights",
+          "category": "restaurant",
+          "arrival_time": "1:55 PM",
+          "travel_min": 25
+        },
+        {
+          "slot": "evening",
+          "name": "Moti Mahal",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    },
+    "day_2": {
+      "total_hours": 7.08,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Dilli Haat",
+          "category": "market",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Barbeque Nation",
+          "category": "restaurant",
+          "arrival_time": "10:40 AM",
+          "travel_min": 10
+        },
+        {
+          "slot": "afternoon",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Make My Lagan",
+          "category": "restaurant",
+          "arrival_time": "1:40 PM",
+          "travel_min": 10
+        },
+        {
+          "slot": "evening",
+          "name": "Moti Mahal Delux",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    }
+  },
+  "final_itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/13997784683",
+          "name": "Moti Mahal Delux",
+          "category": "restaurant",
+          "lat": 28.5683968,
+          "lon": 77.2191782,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/302534538",
+          "name": "V3S Mall",
+          "category": "market",
+          "lat": 28.6372006,
+          "lon": 77.2865082,
+          "opening_hours": "Mo-Su 11:00-23:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "travel_time_from_prev_min": 0
+        },
+        {
+          "osm_id": "node/11207796365",
+          "name": "Bhola dhaba",
+          "category": "restaurant",
+          "lat": 28.5836613,
+          "lon": 77.2460571,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 40,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "7:10 PM",
+          "meal": "meal ~7:10 PM"
+        }
+      ],
+      "total_hours": 6.17,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 0.9
+      },
+      "nearest_pharmacy": {
+        "name": "Life Line Medicos",
+        "distance_km": 0.34
+      },
+      "nearest_metro_station": {
+        "name": "Jangpura",
+        "distance_km": 0.42
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/220385654",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "lat": 28.5932862,
+          "lon": 77.2506455,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+          "wikidata_qid": "Q189648",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Humayun%20Tomb%20UNESCO%20world%20heritage%20site.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or golden hour before sunset; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "couples",
+            "photographers",
+            "families",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "market",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "travel_time_from_prev_min": 0
+        },
+        {
+          "osm_id": "node/11937020351",
+          "name": "Himachal Bhawan Dining Hall",
+          "category": "restaurant",
+          "lat": 28.6260814,
+          "lon": 77.2330264,
+          "opening_hours": "Mo-Su 08:00-22:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 18,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:48 PM",
+          "meal": "meal ~1:48 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/6224257207",
+          "name": "Triveni Terrace Cafe",
+          "category": "restaurant",
+          "lat": 28.627319,
+          "lon": 77.2326929,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 6.3,
+      "date": "",
+      "nearest_hospital": {
+        "name": "NGO Lok Kalyan Samiti",
+        "distance_km": 0.51
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 2.09
+      },
+      "nearest_metro_station": {
+        "name": "Mandi House",
+        "distance_km": 0.23
+      }
+    }
+  },
+  "final_itinerary_summary": {
+    "day_1": {
+      "total_hours": 6.17,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Moti Mahal Delux",
+          "category": "restaurant",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "evening",
+          "name": "V3S Mall",
+          "category": "market",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "evening",
+          "name": "Bhola dhaba",
+          "category": "restaurant",
+          "arrival_time": "7:10 PM",
+          "travel_min": 40
+        }
+      ]
+    },
+    "day_2": {
+      "total_hours": 6.3,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Chandni Chowk",
+          "category": "market",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Himachal Bhawan Dining Hall",
+          "category": "restaurant",
+          "arrival_time": "1:48 PM",
+          "travel_min": 18
+        },
+        {
+          "slot": "evening",
+          "name": "Triveni Terrace Cafe",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "n": 1,
+      "command": "Make Day 1 more relaxed.",
+      "category": "pacing",
+      "probe": "relax_vague_quantity",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 1,
+        "target_slot": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Make Day 1 more relaxed."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Nazeer Foods to free up time.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.92,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Asharti BBQ Nights",
+              "category": "restaurant",
+              "arrival_time": "1:55 PM",
+              "travel_min": 25
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.08,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Barbeque Nation",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 2,
+      "command": "Day 2 feels too packed — take one thing out of the evening.",
+      "category": "pacing",
+      "probe": "relax_specific_slot",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 2,
+        "target_slot": "evening"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "evening",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Day 2 feels too packed — take one thing out of the evening."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "This day is already light — nothing to remove.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.92,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Asharti BBQ Nights",
+              "category": "restaurant",
+              "arrival_time": "1:55 PM",
+              "travel_min": 25
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.08,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Barbeque Nation",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 3,
+      "command": "Day 2 is a lot — can you lighten it up somehow?",
+      "category": "pacing",
+      "probe": "relax_vague_phrasing",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 2,
+        "target_slot": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Day 2 is a lot — can you lighten it up somehow?"
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Barbeque Nation to free up time.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.92,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Asharti BBQ Nights",
+              "category": "restaurant",
+              "arrival_time": "1:55 PM",
+              "travel_min": 25
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.67,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 4,
+      "command": "Swap the Day 1 evening plan to something indoors.",
+      "category": "swap",
+      "probe": "swap_indoor",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "indoor"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "evening",
+          "edit_type": "swap",
+          "constraint": "indoors"
+        },
+        "query": "Swap the Day 1 evening plan to something indoors."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Moti Mahal → Shanker's International Doll Museum.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.53,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Asharti BBQ Nights",
+              "category": "restaurant",
+              "arrival_time": "1:55 PM",
+              "travel_min": 25
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.67,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 5,
+      "command": "Swap the Day 2 morning plan to something outdoors.",
+      "category": "swap",
+      "probe": "swap_outdoor",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 2,
+        "target_slot": "morning",
+        "constraint": "outdoor"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "morning",
+          "edit_type": "swap",
+          "constraint": "outdoors"
+        },
+        "query": "Swap the Day 2 morning plan to something outdoors."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Dilli Haat → Humayun's Tomb.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.53,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Asharti BBQ Nights",
+              "category": "restaurant",
+              "arrival_time": "1:55 PM",
+              "travel_min": 25
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 6,
+      "command": "Swap Day 2 afternoon for a food spot instead.",
+      "category": "swap",
+      "probe": "swap_theme_category",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 2,
+        "target_slot": "afternoon",
+        "constraint": "food"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "afternoon",
+          "edit_type": "swap",
+          "constraint": "food spot"
+        },
+        "query": "Swap Day 2 afternoon for a food spot instead."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a suitable replacement for that swap.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.53,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Asharti BBQ Nights",
+              "category": "restaurant",
+              "arrival_time": "1:55 PM",
+              "travel_min": 25
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 7,
+      "command": "Replace the Day 1 evening stop with Connaught Place.",
+      "category": "swap",
+      "probe": "swap_known_absent_place",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "Connaught Place",
+        "note": "Connaught Place is a documented KNOWN_ABSENT_POPULAR_PLACES entry -- app should honestly decline, not silently substitute."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "evening",
+          "edit_type": "swap",
+          "constraint": "Connaught Place"
+        },
+        "query": "Replace the Day 1 evening stop with Connaught Place."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "I don't have a real, mappable record of Connaught Place in my data (it's absent from the OpenStreetMap extract this planner uses) — I can't honestly add it. Khan Market or Janpath are real, verified alternatives nearby if you'd like one of those instead.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.53,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Asharti BBQ Nights",
+              "category": "restaurant",
+              "arrival_time": "1:55 PM",
+              "travel_min": 25
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 8,
+      "command": "Add one famous local food place to Day 1.",
+      "category": "add",
+      "probe": "add_food_famous",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "food"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "famous local food place"
+        },
+        "query": "Add one famous local food place to Day 1."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a new place matching that request.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.53,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Asharti BBQ Nights",
+              "category": "restaurant",
+              "arrival_time": "1:55 PM",
+              "travel_min": 25
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 9,
+      "command": "Add a religion stop somewhere in the trip.",
+      "category": "add",
+      "probe": "add_theme_any_day",
+      "expected": {
+        "edit_type": "add",
+        "target_day": "all",
+        "target_slot": "evening",
+        "constraint": "religion"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "religion stop"
+        },
+        "query": "Add a religion stop somewhere in the trip."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a new place matching that request.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.53,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Asharti BBQ Nights",
+              "category": "restaurant",
+              "arrival_time": "1:55 PM",
+              "travel_min": 25
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 10,
+      "command": "Add Select Citywalk mall to Day 2.",
+      "category": "add",
+      "probe": "add_known_absent_place",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 2,
+        "constraint": "Select Citywalk",
+        "note": "Select Citywalk is a documented KNOWN_ABSENT_POPULAR_PLACES entry -- app should honestly decline."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "Select Citywalk mall"
+        },
+        "query": "Add Select Citywalk mall to Day 2."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a new place matching that request.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.53,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Asharti BBQ Nights",
+              "category": "restaurant",
+              "arrival_time": "1:55 PM",
+              "travel_min": 25
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 11,
+      "command": "Remove Dilli Haat from Day 2.",
+      "category": "remove",
+      "probe": "remove_real_named_stop",
+      "expected": {
+        "edit_type": "remove",
+        "target_day": 2,
+        "constraint": "Dilli Haat"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "remove",
+          "constraint": "Dilli Haat"
+        },
+        "query": "Remove Dilli Haat from Day 2."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find anything matching 'Dilli Haat' to remove.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.53,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Asharti BBQ Nights",
+              "category": "restaurant",
+              "arrival_time": "1:55 PM",
+              "travel_min": 25
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 12,
+      "command": "Remove the boring stop from Day 1.",
+      "category": "remove",
+      "probe": "remove_vague_no_referent",
+      "expected": {
+        "edit_type": "remove or relax (ambiguous)",
+        "target_day": 1,
+        "note": "'boring' names nothing searchable -- correct behavior is an honest 'couldn't find a match' or classification as relax, not a hallucinated removal."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Remove the boring stop from Day 1."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Asharti BBQ Nights to free up time.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.87,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 13,
+      "command": "Reduce travel time between stops.",
+      "category": "logistics",
+      "probe": "reduce_travel_whole_trip",
+      "expected": {
+        "edit_type": "reduce_travel",
+        "target_day": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "reduce_travel",
+          "constraint": ""
+        },
+        "query": "Reduce travel time between stops."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Re-clustered your stops to minimize travel time between them.",
+      "changed_days": [
+        "day_1",
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 7.58,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Bhola dhaba",
+              "category": "restaurant",
+              "arrival_time": "7:10 PM",
+              "travel_min": 40
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.9,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Xero Degrees",
+              "category": "restaurant",
+              "arrival_time": "11:21 AM",
+              "travel_min": 21
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Himachal Bhawan Dining Hall",
+              "category": "restaurant",
+              "arrival_time": "1:48 PM",
+              "travel_min": 18
+            },
+            {
+              "slot": "evening",
+              "name": "Triveni Terrace Cafe",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 14,
+      "command": "Make Day 4 more relaxed.",
+      "category": "edge_case",
+      "probe": "invalid_day_reference",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 4,
+        "note": "Day 4 does not exist in a 2-day trip -- app should reject cleanly, not crash or silently no-op without explanation."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 4,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Make Day 4 more relaxed."
+      },
+      "edit_result_ok": false,
+      "edit_result_message": "Day 4 doesn't exist in this itinerary.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 7.58,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Bhola dhaba",
+              "category": "restaurant",
+              "arrival_time": "7:10 PM",
+              "travel_min": 40
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.9,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Xero Degrees",
+              "category": "restaurant",
+              "arrival_time": "11:21 AM",
+              "travel_min": 21
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Himachal Bhawan Dining Hall",
+              "category": "restaurant",
+              "arrival_time": "1:48 PM",
+              "travel_min": 18
+            },
+            {
+              "slot": "evening",
+              "name": "Triveni Terrace Cafe",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 15,
+      "command": "Make the whole trip more fun.",
+      "category": "edge_case",
+      "probe": "vague_no_actionable_edit_type",
+      "expected": {
+        "edit_type": "ambiguous",
+        "target_day": "all",
+        "note": "No day/slot/edit-type signal at all -- tests whether the classifier defaults sensibly or misfires (e.g. defaulting to 'swap' with an empty/nonsense constraint)."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Make the whole trip more fun."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Make My Lagan, Xero Degrees to free up time.",
+      "changed_days": [
+        "day_1",
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 6.17,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "V3S Mall",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Bhola dhaba",
+              "category": "restaurant",
+              "arrival_time": "7:10 PM",
+              "travel_min": 40
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.3,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Himachal Bhawan Dining Hall",
+              "category": "restaurant",
+              "arrival_time": "1:48 PM",
+              "travel_min": 18
+            },
+            {
+              "slot": "evening",
+              "name": "Triveni Terrace Cafe",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

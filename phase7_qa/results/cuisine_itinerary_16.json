@@ -1,0 +1,354 @@
+{
+  "spec": {
+    "id": 16,
+    "days": 2,
+    "pace": "moderate",
+    "cuisine": "Continental",
+    "cuisine_phrase": "I love Continental food",
+    "category_interests": [
+      "religion"
+    ],
+    "opening_message": "I'm planning a 2-day trip to Delhi, moderate pace. I love Continental food. I'm also interested in religion."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "religion"
+  ],
+  "extracted_constraints": {},
+  "num_days_extracted": 2,
+  "pace_extracted": "moderate",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/97230896",
+          "name": "Jama Masjid",
+          "category": "mosque",
+          "lat": 28.6352233,
+          "lon": 77.2455574,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March; avoid Friday midday",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers",
+            "spiritual travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/11795614249",
+          "name": "Punjab Grill",
+          "category": "restaurant",
+          "lat": 28.6284596,
+          "lon": 77.2197378,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "10:52 AM",
+          "meal": "meal ~10:52 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/111695183",
+          "name": "Gurdwara Bangla Sahib",
+          "category": "gurdwara",
+          "lat": 28.6263083,
+          "lon": 77.2090851,
+          "opening_hours": "Mo-Su 12:00-23:30",
+          "visit_duration_min": 90,
+          "relevance_score": 0.79,
+          "fallback": false,
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Early morning or evening for prayers and lit-up views; year-round",
+          "kb_suitable_for": [
+            "families",
+            "elderly",
+            "spiritual travellers",
+            "budget travellers",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/11795527561",
+          "name": "Gokulam",
+          "category": "restaurant",
+          "lat": 28.6289157,
+          "lon": 77.2197583,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:40 PM",
+          "meal": "meal ~1:40 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/359804883",
+          "name": "Gurdwara Rakab Ganj Sahib",
+          "category": "gurdwara",
+          "lat": 28.6182322,
+          "lon": 77.2048712,
+          "opening_hours": "unknown",
+          "visit_duration_min": 45,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q5619976",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gurdwara%20Rakabganj%20Sahib%2C%20Delhi.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM"
+        },
+        {
+          "osm_id": "node/6161987878",
+          "name": "Hard Rock Cafe",
+          "category": "restaurant",
+          "lat": 28.6291307,
+          "lon": 77.2197582,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "5:55 PM",
+          "meal": "meal ~5:55 PM"
+        }
+      ],
+      "total_hours": 7.63,
+      "date": "",
+      "nearest_hospital": {
+        "name": "General Williams Hospital",
+        "distance_km": 0.18
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 0.72
+      },
+      "nearest_metro_station": {
+        "name": "Janpath",
+        "distance_km": 0.41
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/1038357043",
+          "name": "Sunehri Masjid",
+          "category": "mosque",
+          "lat": 28.6504594,
+          "lon": 77.2396485,
+          "opening_hours": "unknown",
+          "visit_duration_min": 45,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q16900896",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sunehri%20Masjid%20in%20Delhi.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "way/265824668",
+          "name": "Gurdwara Sis Ganj Sahib",
+          "category": "gurdwara",
+          "lat": 28.6559559,
+          "lon": 77.2324212,
+          "opening_hours": "unknown",
+          "visit_duration_min": 52,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q5620491",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gurdwara%20sis%20ganj.jpg",
+          "kb_entry_fee": "Free (langar also free, available 24 hours)",
+          "kb_best_time_to_visit": "Early morning or evening; year-round",
+          "kb_suitable_for": [
+            "spiritual travellers",
+            "budget travellers",
+            "history buffs",
+            "families",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "9:55 AM"
+        },
+        {
+          "osm_id": "way/44141648",
+          "name": "Fatehpuri Masjid",
+          "category": "mosque",
+          "lat": 28.6566802,
+          "lon": 77.22263,
+          "opening_hours": "unknown",
+          "visit_duration_min": 30,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q1110101",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fatehpuri%20Masjid%20in%20Delhi%2019.jpg",
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Morning, combined with a Chandni Chowk walk; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "budget travellers",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "10:57 AM"
+        },
+        {
+          "osm_id": "way/320348680",
+          "name": "St Stephens Church",
+          "category": "church",
+          "lat": 28.6591341,
+          "lon": 77.2232554,
+          "opening_hours": "unknown",
+          "visit_duration_min": 30,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "website": "http://www.ststephenshospital.org/about.php",
+          "wikidata_qid": "Q7591739",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/St%20Stephen%27s%20Church%20on%20Church%20Mission%20Marg.jpg",
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "11:37 AM"
+        },
+        {
+          "osm_id": "node/10969310415",
+          "name": "Chaska Ram",
+          "category": "restaurant",
+          "lat": 28.6564617,
+          "lon": 77.2303249,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "12:17 PM",
+          "meal": "meal ~12:17 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/87354076",
+          "name": "Saint James' Anglican Church",
+          "category": "church",
+          "lat": 28.6657462,
+          "lon": 77.2310777,
+          "opening_hours": "Mo-Fr 08:30-20:00",
+          "visit_duration_min": 45,
+          "relevance_score": 0.79,
+          "fallback": false,
+          "wikidata_qid": "Q2985087",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/St.james%20b.jpg",
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Weekday mornings for a quiet visit; year-round",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/2106110096",
+          "name": "Pandit Kanhaiya Lal Durga Prashad Dixit Paranthe Wala",
+          "category": "restaurant",
+          "lat": 28.6560678,
+          "lon": 77.2303749,
+          "opening_hours": "unknown",
+          "visit_duration_min": 60,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "12:55 PM",
+          "meal": "meal ~12:55 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/12639638609",
+          "name": "बाबू राम देवी दयाल",
+          "category": "restaurant",
+          "lat": 28.6560917,
+          "lon": 77.23067,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.7,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Kasturba Hospital",
+        "distance_km": 0.99
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 0.43
+      },
+      "nearest_metro_station": {
+        "name": "Chandni Chowk",
+        "distance_km": 0.15
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 6,
+    "matched_cuisine": [],
+    "unmatched_cuisine": [],
+    "no_cuisine_tag": [
+      "Punjab Grill",
+      "Gokulam",
+      "Hard Rock Cafe",
+      "Chaska Ram",
+      "Pandit Kanhaiya Lal Durga Prashad Dixit Paranthe Wala",
+      "बाबू राम देवी दयाल"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "religion"
+    ],
+    "missing": []
+  }
+}

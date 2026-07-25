@@ -1,0 +1,2743 @@
+{
+  "spec": {
+    "id": 4,
+    "label": "Architecture + History + Shopping",
+    "interests": [
+      "architecture",
+      "history",
+      "shopping"
+    ],
+    "days": 3,
+    "pace": "relaxed"
+  },
+  "initial_itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/220385654",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "lat": 28.5932862,
+          "lon": 77.2506455,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+          "wikidata_qid": "Q189648",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Humayun%20Tomb%20UNESCO%20world%20heritage%20site.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or golden hour before sunset; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "couples",
+            "photographers",
+            "families",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/5297002821",
+          "name": "Masala House",
+          "category": "restaurant",
+          "lat": 28.6026965,
+          "lon": 77.2410926,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "11:10 AM",
+          "meal": "meal ~11:10 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/3424254864",
+          "name": "Nathu Sweets",
+          "category": "restaurant",
+          "lat": 28.6025805,
+          "lon": 77.2409575,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 17,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:09 PM",
+          "meal": "meal ~1:09 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/4628544689",
+          "name": "Gulati",
+          "category": "restaurant",
+          "lat": 28.6078499,
+          "lon": 77.2300673,
+          "opening_hours": "Mo-Su 12:00-24:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 6.2,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 1.86
+      },
+      "nearest_pharmacy": {
+        "name": "Chemist Shop",
+        "distance_km": 1.14
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 1.13
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12821028241",
+          "name": "Agasi",
+          "category": "restaurant",
+          "lat": 28.5672316,
+          "lon": 77.246967,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/44827278",
+          "name": "Lotus Temple",
+          "category": "monument",
+          "lat": 28.5533567,
+          "lon": 77.2586109,
+          "opening_hours": "Tu-Su 09:00-17:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "website": "http://bahaihouseofworship.in",
+          "wikidata_qid": "Q940843",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lotus%20temple%20daytime.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/6112993602",
+          "name": "The Golden Dragon",
+          "category": "restaurant",
+          "lat": 28.5670744,
+          "lon": 77.2464398,
+          "opening_hours": "Mo-Su 12:00-23:30",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:40 PM",
+          "meal": "meal ~1:40 PM"
+        }
+      ],
+      "evening": [],
+      "total_hours": 5.83,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Parivar Sewa Sansthan",
+        "distance_km": 0.36
+      },
+      "nearest_pharmacy": {
+        "name": "Healthy Life Pharmacy",
+        "distance_km": 0.26
+      },
+      "nearest_metro_station": {
+        "name": "Vinobapuri",
+        "distance_km": 0.22
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "way/264863907",
+          "name": "Red Fort",
+          "category": "monument",
+          "lat": 28.6557242,
+          "lon": 77.2407427,
+          "opening_hours": "unknown",
+          "visit_duration_min": 180,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/red_fort.jsp",
+          "wikidata_qid": "Q45957",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹50; foreign nationals approx. ₹550–₹600; museum circuit ticketed additionally; children under 15 free at ASI monuments. Verify locally.",
+          "kb_best_time_to_visit": "Morning at opening to beat crowds; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "photographers",
+            "first-time visitors",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/11601332069",
+          "name": "Guru Kirpa Restaurant",
+          "category": "restaurant",
+          "lat": 28.6562798,
+          "lon": 77.2329761,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "12:10 PM",
+          "meal": "meal ~12:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/12639638609",
+          "name": "बाबू राम देवी दयाल",
+          "category": "restaurant",
+          "lat": 28.6560917,
+          "lon": 77.23067,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [],
+      "total_hours": 5.67,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Kasturba Hospital",
+        "distance_km": 0.7
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 0.89
+      },
+      "nearest_metro_station": {
+        "name": "Lal Quila",
+        "distance_km": 0.24
+      }
+    }
+  },
+  "initial_itinerary_summary": {
+    "day_1": {
+      "total_hours": 6.2,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Masala House",
+          "category": "restaurant",
+          "arrival_time": "11:10 AM",
+          "travel_min": 10
+        },
+        {
+          "slot": "afternoon",
+          "name": "Nathu Sweets",
+          "category": "restaurant",
+          "arrival_time": "1:09 PM",
+          "travel_min": 17
+        },
+        {
+          "slot": "evening",
+          "name": "Gulati",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    },
+    "day_2": {
+      "total_hours": 5.83,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Agasi",
+          "category": "restaurant",
+          "arrival_time": "10:40 AM",
+          "travel_min": 10
+        },
+        {
+          "slot": "afternoon",
+          "name": "Lotus Temple",
+          "category": "monument",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "The Golden Dragon",
+          "category": "restaurant",
+          "arrival_time": "1:40 PM",
+          "travel_min": 10
+        }
+      ]
+    },
+    "day_3": {
+      "total_hours": 5.67,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Red Fort",
+          "category": "monument",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Guru Kirpa Restaurant",
+          "category": "restaurant",
+          "arrival_time": "12:10 PM",
+          "travel_min": 10
+        },
+        {
+          "slot": "afternoon",
+          "name": "बाबू राम देवी दयाल",
+          "category": "restaurant",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        }
+      ]
+    }
+  },
+  "final_itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/220385654",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "lat": 28.5932862,
+          "lon": 77.2506455,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+          "wikidata_qid": "Q189648",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Humayun%20Tomb%20UNESCO%20world%20heritage%20site.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or golden hour before sunset; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "couples",
+            "photographers",
+            "families",
+            "elderly"
+          ],
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/6161987883",
+          "name": "Local",
+          "category": "restaurant",
+          "lat": 28.6298758,
+          "lon": 77.2210617,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.6,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [],
+      "total_hours": 3.25,
+      "date": "",
+      "nearest_hospital": {
+        "name": "NGO Lok Kalyan Samiti",
+        "distance_km": 2.31
+      },
+      "nearest_pharmacy": {
+        "name": "Youplus",
+        "distance_km": 1.15
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 0.91
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "market",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        }
+      ],
+      "afternoon": [],
+      "evening": [
+        {
+          "osm_id": "node/13647468722",
+          "name": "Wazwan",
+          "category": "restaurant",
+          "lat": 28.5734349,
+          "lon": 77.2070709,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 2.75,
+      "date": "",
+      "nearest_hospital": {
+        "name": "VMMC & SAFDARJANG HOSPITAL",
+        "distance_km": 0.52
+      },
+      "nearest_pharmacy": {
+        "name": "Chemist",
+        "distance_km": 0.3
+      },
+      "nearest_metro_station": {
+        "name": "Dilli Haat - INA (Pink Line)",
+        "distance_km": 0.06
+      }
+    },
+    "day_3": {
+      "morning": [],
+      "afternoon": [],
+      "evening": [
+        {
+          "osm_id": "node/10969310415",
+          "name": "Chaska Ram",
+          "category": "restaurant",
+          "lat": 28.6564617,
+          "lon": 77.2303249,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 1.25,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Kasturba Hospital",
+        "distance_km": 0.89
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 0.47
+      },
+      "nearest_metro_station": {
+        "name": "Chandni Chowk",
+        "distance_km": 0.25
+      }
+    }
+  },
+  "final_itinerary_summary": {
+    "day_1": {
+      "total_hours": 3.25,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Local",
+          "category": "restaurant",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        }
+      ]
+    },
+    "day_2": {
+      "total_hours": 2.75,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Dilli Haat",
+          "category": "market",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "evening",
+          "name": "Wazwan",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    },
+    "day_3": {
+      "total_hours": 1.25,
+      "stops": [
+        {
+          "slot": "evening",
+          "name": "Chaska Ram",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "n": 1,
+      "command": "Make Day 1 more relaxed.",
+      "category": "pacing",
+      "probe": "relax_vague_quantity",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 1,
+        "target_slot": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Masala House to free up time.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.78,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "1:09 PM",
+              "travel_min": 17
+            },
+            {
+              "slot": "evening",
+              "name": "Gulati",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.83,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Agasi",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lotus Temple",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "The Golden Dragon",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 5.67,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Guru Kirpa Restaurant",
+              "category": "restaurant",
+              "arrival_time": "12:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 2,
+      "command": "Day 3 feels too packed — take one thing out of the evening.",
+      "category": "pacing",
+      "probe": "relax_specific_slot",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 3,
+        "target_slot": "evening"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 3,
+          "target_slot": "evening",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Day 3's evening already has just 0 stops — nothing to trim there.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.78,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "1:09 PM",
+              "travel_min": 17
+            },
+            {
+              "slot": "evening",
+              "name": "Gulati",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.83,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Agasi",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lotus Temple",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "The Golden Dragon",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 5.67,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Guru Kirpa Restaurant",
+              "category": "restaurant",
+              "arrival_time": "12:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 3,
+      "command": "Day 2 is a lot — can you lighten it up somehow?",
+      "category": "pacing",
+      "probe": "relax_vague_phrasing",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 2,
+        "target_slot": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Agasi to free up time.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.78,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "1:09 PM",
+              "travel_min": 17
+            },
+            {
+              "slot": "evening",
+              "name": "Gulati",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 4.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lotus Temple",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "The Golden Dragon",
+              "category": "restaurant",
+              "arrival_time": "1:40 PM",
+              "travel_min": 10
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 5.67,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Guru Kirpa Restaurant",
+              "category": "restaurant",
+              "arrival_time": "12:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 4,
+      "command": "Make the whole trip more relaxed, please.",
+      "category": "pacing",
+      "probe": "relax_whole_trip",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": "all",
+        "target_slot": "all",
+        "note": "Whole-trip relax (distinct from per-day) -- every day should end up lighter, not just day 1."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Nathu Sweets, The Golden Dragon, Guru Kirpa Restaurant to free up time.",
+      "changed_days": [
+        "day_1",
+        "day_2",
+        "day_3"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Gulati",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lotus Temple",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 5,
+      "command": "Swap the Day 1 evening plan to something indoors.",
+      "category": "swap",
+      "probe": "swap_indoor",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "indoor"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "evening",
+          "edit_type": "swap",
+          "constraint": "indoors"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Gulati → Noor.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lotus Temple",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 6,
+      "command": "Swap the Day 3 morning plan to something outdoors.",
+      "category": "swap",
+      "probe": "swap_outdoor",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 3,
+        "target_slot": "morning",
+        "constraint": "outdoor"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 3,
+          "target_slot": "morning",
+          "edit_type": "swap",
+          "constraint": "outdoors"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Red Fort → Sunder Nursery.",
+      "changed_days": [
+        "day_3"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lotus Temple",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 7,
+      "command": "Swap Day 2 afternoon for a food spot instead.",
+      "category": "swap",
+      "probe": "swap_theme_category",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 2,
+        "target_slot": "afternoon",
+        "constraint": "food"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "afternoon",
+          "edit_type": "swap",
+          "constraint": "food spot"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Lotus Temple → Dilli Haat.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 8,
+      "command": "Swap the Day 2 morning stop for something free of charge.",
+      "category": "swap",
+      "probe": "swap_free_of_charge",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 2,
+        "target_slot": "morning",
+        "constraint": "free",
+        "note": "No dataset field tracks a 'free' filter directly -- tests whether the app honestly declines/falls back sensibly rather than silently ignoring the cost constraint."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "morning",
+          "edit_type": "swap",
+          "constraint": "free of charge"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a suitable replacement for that swap.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 9,
+      "command": "Add one famous local food place to Day 1.",
+      "category": "add",
+      "probe": "add_food_famous",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "food"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "famous local food place"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Added Local to day 1 evening.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": false,
+        "issues": [
+          {
+            "day": 1,
+            "problem": "travel to Local takes 69 min (> 45 min)",
+            "suggestion": "re-cluster stops geographically to cut travel time"
+          }
+        ]
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.65,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 69
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 10,
+      "command": "Add a religion stop somewhere in the trip.",
+      "category": "add",
+      "probe": "add_theme_any_day",
+      "expected": {
+        "edit_type": "add",
+        "target_day": "all",
+        "target_slot": "evening",
+        "constraint": "religion"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "religion stop"
+        },
+        "query": null
+      },
+      "edit_result_ok": false,
+      "edit_result_message": "That would push day 2 over the 6.0h budget. I can replace an existing stop instead, or move this to another day — want me to do that?",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": false,
+        "issues": [
+          {
+            "day": 1,
+            "problem": "travel to Local takes 69 min (> 45 min)",
+            "suggestion": "re-cluster stops geographically to cut travel time"
+          }
+        ]
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.65,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 69
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 11,
+      "command": "Add Lodhi Garden to Day 2.",
+      "category": "add",
+      "probe": "add_real_named_place",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 2,
+        "constraint": "Lodhi Garden",
+        "note": "Lodhi Garden is a REAL dataset landmark not currently on this itinerary -- app should be able to add it (or give a grounded reason it can't, e.g. day full), not hallucinate/decline dishonestly."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "Lodhi Garden"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Added Lodhi Gardens to day 2 evening.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": false,
+        "issues": [
+          {
+            "day": 1,
+            "problem": "travel to Local takes 69 min (> 45 min)",
+            "suggestion": "re-cluster stops geographically to cut travel time"
+          }
+        ]
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.65,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 69
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 12,
+      "command": "Replace the Day 1 evening stop with Connaught Place.",
+      "category": "swap",
+      "probe": "swap_known_absent_place",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "Connaught Place",
+        "note": "Connaught Place is a documented KNOWN_ABSENT_POPULAR_PLACES entry -- app should honestly decline, not silently substitute."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "evening",
+          "edit_type": "swap",
+          "constraint": "Connaught Place"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "I don't have a real, mappable record of Connaught Place in my data (it's absent from the OpenStreetMap extract this planner uses) — I can't honestly add it. Khan Market or Janpath are real, verified alternatives nearby if you'd like one of those instead.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": false,
+        "issues": [
+          {
+            "day": 1,
+            "problem": "travel to Local takes 69 min (> 45 min)",
+            "suggestion": "re-cluster stops geographically to cut travel time"
+          }
+        ]
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.65,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 69
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 13,
+      "command": "Remove Lajpat Nagar Central Market from Day 2.",
+      "category": "remove",
+      "probe": "remove_real_named_stop",
+      "expected": {
+        "edit_type": "remove",
+        "target_day": 2,
+        "constraint": "Lajpat Nagar Central Market"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "remove",
+          "constraint": "Lajpat Nagar Central Market"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Removed Lajpat Nagar Central Market from the itinerary.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": false,
+        "issues": [
+          {
+            "day": 1,
+            "problem": "travel to Local takes 69 min (> 45 min)",
+            "suggestion": "re-cluster stops geographically to cut travel time"
+          }
+        ]
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.65,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 69
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.5,
+          "stops": [
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 14,
+      "command": "Remove the boring stop from Day 1.",
+      "category": "remove",
+      "probe": "remove_vague_no_referent",
+      "expected": {
+        "edit_type": "remove or relax (ambiguous)",
+        "target_day": 1,
+        "note": "'boring' names nothing searchable -- correct behavior is an honest 'couldn't find a match', not a hallucinated removal."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Noor to free up time.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": false,
+        "issues": [
+          {
+            "day": 1,
+            "problem": "travel to Local takes 69 min (> 45 min)",
+            "suggestion": "re-cluster stops geographically to cut travel time"
+          }
+        ]
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.4,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 69
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.5,
+          "stops": [
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 15,
+      "command": "Reduce travel time between stops.",
+      "category": "logistics",
+      "probe": "reduce_travel_whole_trip",
+      "expected": {
+        "edit_type": "reduce_travel",
+        "target_day": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "reduce_travel",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Re-clustered your stops to minimize travel time between them.",
+      "changed_days": [
+        "day_1",
+        "day_2",
+        "day_3"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.98,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Gulati",
+              "category": "restaurant",
+              "arrival_time": "11:14 AM",
+              "travel_min": 14
+            },
+            {
+              "slot": "afternoon",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Ichiban",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Uttarakhand Food Stall",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Meghalaya Food & Momos",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Wazwan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 3.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Pandit Kanhaiya Lal Durga Prashad Dixit Paranthe Wala",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Chaska Ram",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 16,
+      "command": "Add Select Citywalk mall to Day 1.",
+      "category": "add",
+      "probe": "add_known_absent_place",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 1,
+        "constraint": "Select Citywalk",
+        "note": "Select Citywalk is a documented KNOWN_ABSENT_POPULAR_PLACES entry -- app should honestly decline."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "Select Citywalk mall"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "I don't have a real, mappable record of Select Citywalk in my data — I can't honestly add it. Khan Market is a real, verified alternative if you're looking for a shopping stop.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.98,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Gulati",
+              "category": "restaurant",
+              "arrival_time": "11:14 AM",
+              "travel_min": 14
+            },
+            {
+              "slot": "afternoon",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Ichiban",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Uttarakhand Food Stall",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Meghalaya Food & Momos",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Wazwan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 3.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Pandit Kanhaiya Lal Durga Prashad Dixit Paranthe Wala",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Chaska Ram",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 17,
+      "command": "Swap the order of Day 1's morning and afternoon plans.",
+      "category": "reorder",
+      "probe": "reorder_slots_same_day",
+      "expected": {
+        "edit_type": "unsupported or reorder",
+        "target_day": 1,
+        "note": "No reorder-within-day capability is documented in the edit engine -- correct behavior is an honest 'can't do that yet', not a silent no-op presented as success or a corrupted schedule."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "swap",
+          "constraint": "swap morning and afternoon plans"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a suitable replacement for that swap.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.98,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Gulati",
+              "category": "restaurant",
+              "arrival_time": "11:14 AM",
+              "travel_min": 14
+            },
+            {
+              "slot": "afternoon",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Ichiban",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Uttarakhand Food Stall",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Meghalaya Food & Momos",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Wazwan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 3.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Pandit Kanhaiya Lal Durga Prashad Dixit Paranthe Wala",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Chaska Ram",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 18,
+      "command": "Make Day 5 more relaxed.",
+      "category": "edge_case",
+      "probe": "invalid_day_reference",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 5,
+        "note": "Day 5 does not exist in a 3-day trip -- app should reject cleanly, not crash or silently no-op without explanation."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 5,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": false,
+      "edit_result_message": "Day 5 doesn't exist in this itinerary.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.98,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Gulati",
+              "category": "restaurant",
+              "arrival_time": "11:14 AM",
+              "travel_min": 14
+            },
+            {
+              "slot": "afternoon",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Ichiban",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Uttarakhand Food Stall",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Meghalaya Food & Momos",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Wazwan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 3.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Pandit Kanhaiya Lal Durga Prashad Dixit Paranthe Wala",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Chaska Ram",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 19,
+      "command": "Make the whole trip more fun.",
+      "category": "edge_case",
+      "probe": "vague_no_actionable_edit_type",
+      "expected": {
+        "edit_type": "ambiguous",
+        "target_day": "all",
+        "note": "No day/slot/edit-type signal at all -- tests whether the classifier defaults sensibly or misfires."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Gulati, Uttarakhand Food Stall, बाबू राम देवी दयाल to free up time.",
+      "changed_days": [
+        "day_1",
+        "day_2",
+        "day_3"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Ichiban",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 4.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Meghalaya Food & Momos",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Wazwan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 2.25,
+          "stops": [
+            {
+              "slot": "afternoon",
+              "name": "Pandit Kanhaiya Lal Durga Prashad Dixit Paranthe Wala",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Chaska Ram",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 20,
+      "command": "asldkjf change something idk maybe swap a thing??",
+      "category": "edge_case",
+      "probe": "gibberish_low_signal_input",
+      "expected": {
+        "edit_type": "unclear",
+        "target_day": "unknown",
+        "note": "Near-gibberish, low-signal phrasing -- app should not crash and should either ask for clarification or make a conservative, clearly-labeled guess rather than silently mutating the itinerary with no explanation."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Ichiban, Meghalaya Food & Momos, Pandit Kanhaiya Lal Durga Prashad Dixit Paranthe Wala to free up time.",
+      "changed_days": [
+        "day_1",
+        "day_2",
+        "day_3"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 2.75,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Wazwan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 1.25,
+          "stops": [
+            {
+              "slot": "evening",
+              "name": "Chaska Ram",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

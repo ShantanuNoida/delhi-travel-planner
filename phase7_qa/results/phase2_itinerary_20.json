@@ -1,0 +1,755 @@
+{
+  "spec": {
+    "id": 20,
+    "label": "Food + History + Nature + Shopping",
+    "interests": [
+      "food",
+      "history",
+      "nature",
+      "shopping"
+    ],
+    "days": 3,
+    "pace": "moderate"
+  },
+  "itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/1127484002",
+          "name": "Sunder Nursery",
+          "category": "park",
+          "lat": 28.5968532,
+          "lon": 77.2474305,
+          "opening_hours": "Mo-Su 07:00-22:00",
+          "visit_duration_min": 180,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q15628824",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sunder%20Nursery%20%28Garden%29.jpg",
+          "kb_entry_fee": "Approx. ₹50 (Indian adults), ₹25 (children); foreign nationals approx. ₹200–₹300; annual passes available. Verify locally.",
+          "kb_best_time_to_visit": "Mornings and golden hour; October–March; Sunday mornings for the farmers' market",
+          "kb_suitable_for": [
+            "families",
+            "couples",
+            "photographers",
+            "picnickers",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12387964701",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.5911564,
+          "lon": 77.2436745,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "12:10 PM",
+          "meal": "meal ~12:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/3424254864",
+          "name": "Nathu Sweets",
+          "category": "restaurant",
+          "lat": 28.6025805,
+          "lon": 77.2409575,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 6.92,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 1.23
+      },
+      "nearest_pharmacy": {
+        "name": "Chemist Shop",
+        "distance_km": 0.45
+      },
+      "nearest_metro_station": {
+        "name": "Jawaharlal Nehru Stadium",
+        "distance_km": 1.18
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "monument",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 18,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:48 AM"
+        },
+        {
+          "osm_id": "node/5484875022",
+          "name": "Kalamata",
+          "category": "restaurant",
+          "lat": 28.5626341,
+          "lon": 77.2688626,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 34,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "12:52 PM",
+          "meal": "meal ~12:52 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/1442029478",
+          "name": "Dawat Khana Restaurant",
+          "category": "restaurant",
+          "lat": 28.562363,
+          "lon": 77.2686705,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.62,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Sunrise Hospital, Faridabad",
+        "distance_km": 0.53
+      },
+      "nearest_pharmacy": {
+        "name": "Apna Chemist",
+        "distance_km": 1.48
+      },
+      "nearest_metro_station": {
+        "name": "Ashram",
+        "distance_km": 1.32
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "way/80429893",
+          "name": "Raj Ghat",
+          "category": "park",
+          "lat": 28.6447381,
+          "lon": 77.2497678,
+          "opening_hours": "unknown",
+          "visit_duration_min": 60,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/7018886724",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6584227,
+          "lon": 77.2303375,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 13,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:13 AM",
+          "meal": "meal ~10:13 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/264863907",
+          "name": "Red Fort",
+          "category": "monument",
+          "lat": 28.6557242,
+          "lon": 77.2407427,
+          "opening_hours": "unknown",
+          "visit_duration_min": 180,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/red_fort.jsp",
+          "wikidata_qid": "Q45957",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹50; foreign nationals approx. ₹550–₹600; museum circuit ticketed additionally; children under 15 free at ASI monuments. Verify locally.",
+          "kb_best_time_to_visit": "Morning at opening to beat crowds; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "photographers",
+            "first-time visitors",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/4893145422",
+          "name": "Shri Krishna Daba",
+          "category": "restaurant",
+          "lat": 28.6478146,
+          "lon": 77.2399952,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "3:10 PM",
+          "meal": "meal ~3:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/2106114484",
+          "name": "Moti Mahal",
+          "category": "restaurant",
+          "lat": 28.6468875,
+          "lon": 77.2399805,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 8.13,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Kasturba Hospital",
+        "distance_km": 0.29
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 1.55
+      },
+      "nearest_metro_station": {
+        "name": "Lal Quila",
+        "distance_km": 0.83
+      }
+    }
+  },
+  "steps": [
+    {
+      "n": 1,
+      "command": "Why did you pick Sunder Nursery for Day 1?",
+      "category": "justification",
+      "probe": "why_named_stop",
+      "target_stop": "Sunder Nursery",
+      "expected": {
+        "note": "Should reference the actual scheduled stop, grounded in real source data or an honest no-source admission -- not a generic answer about 'this area'."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why did you pick Sunder Nursery for Day 1?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 2,
+      "command": "Why is Karim's scheduled in the morning instead of another time of day?",
+      "category": "justification",
+      "probe": "why_slot_timing",
+      "target_stop": "Karim's",
+      "expected": {
+        "note": "Tests whether the app can justify slot placement, or honestly says it doesn't have a specific reason for the exact slot."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why is Karim's scheduled in the morning instead of another time of day?"
+      },
+      "answer": {
+        "answer": "Karim's is a great spot to visit in the morning because it opens around 9:00 AM, and it serves nihari, which is traditionally a breakfast dish. It also slots directly into itineraries right after a visit to Jama Masjid.",
+        "citations": [
+          {
+            "source_title": "Karim's, Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#karim-s-jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 3,
+      "command": "Why did you pick this place?",
+      "category": "justification",
+      "probe": "why_vague_referent",
+      "target_stop": null,
+      "expected": {
+        "note": "No place named ('this place') -- correct behavior is to ask which place, not guess and hallucinate a generic answer (R-18/F-13 fix from earlier work)."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why did you pick this place?"
+      },
+      "answer": {
+        "answer": "Which place are you asking about? Your itinerary includes: Sunder Nursery, Karim's, Indian Accent, Nathu Sweets, Lajpat Nagar Central Market, Dilli Haat.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 4,
+      "command": "What if it rains on Day 1?",
+      "category": "contingency",
+      "probe": "weather_rain",
+      "target_stop": null,
+      "expected": {
+        "note": "Should surface indoor-alternative / weather guidance grounded in real source data."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What if it rains on Day 1?"
+      },
+      "answer": {
+        "answer": "I cannot answer your question because the provided source excerpts do not contain any information about rain on Day 1.",
+        "citations": [
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 5,
+      "command": "What happens to my plan if Indian Accent is closed for a public holiday?",
+      "category": "contingency",
+      "probe": "closure_holiday",
+      "target_stop": "Indian Accent",
+      "expected": {
+        "note": "No dataset field encodes holiday closures -- correct behavior is an honest no-verified-source answer, not a fabricated closure schedule."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What happens to my plan if Indian Accent is closed for a public holiday?"
+      },
+      "answer": {
+        "answer": "The provided excerpts do not contain any information about a restaurant named Indian Accent or what happens if it is closed for a public holiday.",
+        "citations": [
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 6,
+      "command": "What are some alternatives to Kalamata on Day 2?",
+      "category": "alternatives",
+      "probe": "alt_for_named_stop",
+      "target_stop": "Kalamata",
+      "expected": {
+        "note": "Any alternative places named in the answer should be real (checkable against the POI dataset), not invented."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What are some alternatives to Kalamata on Day 2?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 7,
+      "command": "If Bukhara turns out to be too crowded, what else could I do instead?",
+      "category": "alternatives",
+      "probe": "alt_crowds",
+      "target_stop": "Bukhara",
+      "expected": {
+        "note": "Crowd-avoidance framing of the same alternatives probe -- checks the app doesn't just pattern-match the word 'alternative'."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "If Bukhara turns out to be too crowded, what else could I do instead?"
+      },
+      "answer": {
+        "answer": "The provided excerpts do not contain any information about Bukhara.",
+        "citations": [
+          {
+            "source_title": "Chandni Chowk",
+            "source_url": "https://en.wikipedia.org/wiki/Chandni_Chowk",
+            "source": "wikipedia"
+          },
+          {
+            "source_title": "Swaminarayan Akshardham (Delhi)",
+            "source_url": "https://en.wikipedia.org/wiki/Swaminarayan_Akshardham_(Delhi)",
+            "source": "wikipedia"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 8,
+      "command": "What other activities can I do on Day 2 if I have extra time?",
+      "category": "expansion",
+      "probe": "expand_day",
+      "target_stop": null,
+      "expected": {
+        "note": "Should suggest real, groundable options -- not vague filler."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What other activities can I do on Day 2 if I have extra time?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 9,
+      "command": "Is there anything interesting near Sunder Nursery that isn't on the itinerary?",
+      "category": "expansion",
+      "probe": "expand_near_stop",
+      "target_stop": "Sunder Nursery",
+      "expected": {
+        "note": "Tests location-aware expansion; the dataset has no real geo-proximity RAG lookup, so an honest no-source answer is acceptable -- a fabricated nearby landmark is not."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is there anything interesting near Sunder Nursery that isn't on the itinerary?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 10,
+      "command": "How much does it cost to visit Sunder Nursery?",
+      "category": "practicalities",
+      "probe": "cost_named_stop",
+      "target_stop": "Sunder Nursery",
+      "expected": {
+        "note": "Checkable fact when the stop carries kb_entry_fee (dataset says: 'Approx. ₹50 (Indian adults), ₹25 (children); foreign nationals approx. ₹200–₹300; annual passes available. Verify locally.')",
+        "kb_entry_fee": "Approx. ₹50 (Indian adults), ₹25 (children); foreign nationals approx. ₹200–₹300; annual passes available. Verify locally."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "How much does it cost to visit Sunder Nursery?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 11,
+      "command": "What's the best time of day to visit Sunder Nursery?",
+      "category": "practicalities",
+      "probe": "best_time_named_stop",
+      "target_stop": "Sunder Nursery",
+      "expected": {
+        "note": "Checkable fact when the stop carries kb_best_time_to_visit (dataset says: \"Mornings and golden hour; October–March; Sunday mornings for the farmers' market\")",
+        "kb_best_time_to_visit": "Mornings and golden hour; October–March; Sunday mornings for the farmers' market"
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What's the best time of day to visit Sunder Nursery?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 12,
+      "command": "How do I get from Dawat Khana Restaurant to Raj Ghat?",
+      "category": "practicalities",
+      "probe": "travel_between_stops",
+      "target_stop": "Dawat Khana Restaurant -> Raj Ghat",
+      "expected": {
+        "note": "Itinerary already computes travel_mode_from_prev/travel_time_from_prev_min between consecutive stops -- answer should be consistent with that data when the two stops are adjacent.",
+        "travel_mode_from_prev": null,
+        "travel_time_from_prev_min": 0,
+        "adjacent": false
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "How do I get from Dawat Khana Restaurant to Raj Ghat?"
+      },
+      "answer": {
+        "answer": "Based on the provided source excerpts, there is no information explaining how to travel from Dawat Khana Restaurant to Raj Ghat.",
+        "citations": [
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          },
+          {
+            "source_title": "Karim's, Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#karim-s-jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 13,
+      "command": "Is Sunder Nursery suitable for elderly travellers?",
+      "category": "suitability",
+      "probe": "suitability_elderly",
+      "target_stop": "Sunder Nursery",
+      "expected": {
+        "note": "Checkable when the stop carries kb_suitable_for (dataset says: ['families', 'couples', 'photographers', 'picnickers', 'elderly'])",
+        "kb_suitable_for": [
+          "families",
+          "couples",
+          "photographers",
+          "picnickers",
+          "elderly"
+        ]
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is Sunder Nursery suitable for elderly travellers?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 14,
+      "command": "Is this itinerary suitable for a family with young kids?",
+      "category": "suitability",
+      "probe": "suitability_family_whole_trip",
+      "target_stop": null,
+      "expected": {
+        "note": "Whole-trip suitability question, no single named place -- tests whether the app can reason across the itinerary or honestly declines rather than answering about one arbitrary stop."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is this itinerary suitable for a family with young kids?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 15,
+      "command": "Is Chandni Chowk within walking distance of my hotel?",
+      "category": "edge_case",
+      "probe": "unanswerable_missing_context",
+      "target_stop": "Chandni Chowk",
+      "expected": {
+        "note": "No hotel/lodging location is tracked anywhere in the app -- correct behavior is an honest 'I don't know where you're staying' answer, not a fabricated walking distance or an invented hotel location."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is Chandni Chowk within walking distance of my hotel?"
+      },
+      "answer": {
+        "answer": "The provided excerpts do not contain any information about your hotel or its distance to Chandni Chowk.",
+        "citations": [
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    }
+  ]
+}

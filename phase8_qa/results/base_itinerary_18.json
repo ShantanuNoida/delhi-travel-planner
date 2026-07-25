@@ -1,0 +1,276 @@
+{
+  "spec": {
+    "id": 18,
+    "label": "Art + Food + History + Religion",
+    "interests": [
+      "art",
+      "food",
+      "history",
+      "religion"
+    ],
+    "days": 3,
+    "pace": "relaxed"
+  },
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/220385654",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "lat": 28.5932862,
+          "lon": 77.2506455,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+          "wikidata_qid": "Q189648",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Humayun%20Tomb%20UNESCO%20world%20heritage%20site.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or golden hour before sunset; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "couples",
+            "photographers",
+            "families",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12387964701",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.5911564,
+          "lon": 77.2436745,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "11:10 AM",
+          "meal": "meal ~11:10 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/11207796365",
+          "name": "Bhola dhaba",
+          "category": "restaurant",
+          "lat": 28.5836613,
+          "lon": 77.2460571,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 5.92,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 0.72
+      },
+      "nearest_pharmacy": {
+        "name": "Chemist Shop",
+        "distance_km": 0.21
+      },
+      "nearest_metro_station": {
+        "name": "Jangpura",
+        "distance_km": 0.93
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/7018886724",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6584227,
+          "lon": 77.2303375,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q5071227",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        },
+        {
+          "osm_id": "way/80429893",
+          "name": "Raj Ghat",
+          "category": "park",
+          "lat": 28.6447381,
+          "lon": 77.2497678,
+          "opening_hours": "unknown",
+          "visit_duration_min": 60,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q1210083",
+          "travel_time_from_prev_min": 13,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:28 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/4893145422",
+          "name": "Shri Krishna Daba",
+          "category": "restaurant",
+          "lat": 28.6478146,
+          "lon": 77.2399952,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/2106114484",
+          "name": "Moti Mahal",
+          "category": "restaurant",
+          "lat": 28.6468875,
+          "lon": 77.2399805,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 4.97,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Kasturba Hospital",
+        "distance_km": 0.18
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 1.6
+      },
+      "nearest_metro_station": {
+        "name": "Lal Quila",
+        "distance_km": 0.95
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/3658091545",
+          "name": "Dilli 6",
+          "category": "restaurant",
+          "lat": 28.5819064,
+          "lon": 77.3137283,
+          "opening_hours": "11:00-23:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 40,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "2:10 PM",
+          "meal": "meal ~2:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/7253664047",
+          "name": "Barbeque Nation",
+          "category": "restaurant",
+          "lat": 28.5801891,
+          "lon": 77.3151952,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 5.92,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Max Hospital",
+        "distance_km": 1.83
+      },
+      "nearest_pharmacy": {
+        "name": "Ganpati Chemist Cosmetic Opticals",
+        "distance_km": 1.65
+      },
+      "nearest_metro_station": {
+        "name": "Noida Sector 15",
+        "distance_km": 0.2
+      }
+    }
+  }
+}

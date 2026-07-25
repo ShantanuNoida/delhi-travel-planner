@@ -1,0 +1,598 @@
+[
+  {
+    "finding": "H1",
+    "phase": 1,
+    "itin": 8,
+    "command": "Change the Day 1 morning plan to something outdoors",
+    "classification": {
+      "intent": "EDIT",
+      "edit_intent": {
+        "target_day": 1,
+        "target_slot": "morning",
+        "edit_type": "swap",
+        "constraint": "outdoors"
+      },
+      "query": null
+    },
+    "edit_ok": false,
+    "edit_message": "That would push day 1 over the 10.0h budget. I can replace an existing stop instead, or move this to another day — want me to do that?",
+    "after_names": [
+      "Humayun's Tomb",
+      "Nathu Sweets",
+      "Purana Qila",
+      "Masala House",
+      "Khan Market",
+      "Indian Accent",
+      "Red Fort",
+      "Guru Kirpa Restaurant",
+      "Chandni Chowk",
+      "Sunehri Masjid",
+      "Gumbad Cafe",
+      "बाबू राम देवी दयाल"
+    ],
+    "feasibility": null,
+    "check_result": true,
+    "check_note": "edit not applied (ok=False) -- no duplicate possible either way: That would push day 1 over the 10.0h budget. I can replace an existing stop inst"
+  },
+  {
+    "finding": "H1",
+    "phase": 1,
+    "itin": 17,
+    "command": "Could you swap Day 2's afternoon for an outdoor spot instead?",
+    "classification": {
+      "intent": "EDIT",
+      "edit_intent": {
+        "target_day": 2,
+        "target_slot": "afternoon",
+        "edit_type": "swap",
+        "constraint": "outdoor spot"
+      },
+      "query": null
+    },
+    "edit_ok": false,
+    "edit_message": "That would push day 2 over the 8.0h budget. I can replace an existing stop instead, or move this to another day — want me to do that?",
+    "after_names": [
+      "Humayun's Tomb",
+      "Masala House",
+      "Purana Qila",
+      "Nathu Sweets",
+      "Karim's",
+      "Red Fort",
+      "Shri Krishna Daba",
+      "Raj Ghat",
+      "Moti Mahal",
+      "Asharti BBQ Nights",
+      "Qutab Minar",
+      "Thalairaj Biryani",
+      "Deer park",
+      "California Burrito",
+      "St. Mary's Church"
+    ],
+    "feasibility": null,
+    "check_result": true,
+    "check_note": "edit not applied (ok=False) -- no duplicate possible either way: That would push day 2 over the 8.0h budget. I can replace an existing stop inste"
+  },
+  {
+    "finding": "H2",
+    "phase": 1,
+    "itin": 1,
+    "command": "Add a nice place to eat in Day 1",
+    "classification": {
+      "intent": "EDIT",
+      "edit_intent": {
+        "target_day": 1,
+        "target_slot": "all",
+        "edit_type": "add",
+        "constraint": "nice place to eat"
+      },
+      "query": null
+    },
+    "edit_ok": true,
+    "edit_message": "Couldn't find a new place matching that request.",
+    "after_names": [
+      "Janpath New Mini Market",
+      "Indian Accent",
+      "Khan Market",
+      "Andhra Bhawan Canteen",
+      "Nando's",
+      "Bukhara",
+      "Lajpat Nagar Central Market",
+      "Dilli Haat",
+      "Karim's"
+    ],
+    "feasibility": {
+      "pass": true,
+      "issues": []
+    },
+    "check_result": false,
+    "check_note": "Couldn't find a new place matching that request."
+  },
+  {
+    "finding": "H2",
+    "phase": 1,
+    "itin": 7,
+    "command": "Swap Day 2 afternoon for a cultural spot instead",
+    "classification": {
+      "intent": "EDIT",
+      "edit_intent": {
+        "target_day": 2,
+        "target_slot": "afternoon",
+        "edit_type": "swap",
+        "constraint": "cultural spot"
+      },
+      "query": null
+    },
+    "edit_ok": true,
+    "edit_message": "Swapped: Moti Mahal → Po.",
+    "after_names": [
+      "Sunder Nursery",
+      "The Habitat Hub",
+      "Safdarjung's Tomb",
+      "Good Earth",
+      "Fat Lulu's",
+      "Raj Ghat",
+      "Shri Krishna Daba",
+      "Red Fort",
+      "Po",
+      "Asharti BBQ Nights",
+      "Nehru Park",
+      "Roast 'N' Currie",
+      "Dilli Haat",
+      "St. Mary's Church",
+      "Celebration Restaurant"
+    ],
+    "feasibility": {
+      "pass": true,
+      "issues": []
+    },
+    "check_result": true,
+    "check_note": "Swapped: Moti Mahal → Po."
+  },
+  {
+    "finding": "H2",
+    "phase": 1,
+    "itin": 4,
+    "command": "Can you include a good shopping spot somewhere in the trip?",
+    "classification": {
+      "intent": "EDIT",
+      "edit_intent": {
+        "target_day": "all",
+        "target_slot": "all",
+        "edit_type": "add",
+        "constraint": "shopping spot"
+      },
+      "query": null
+    },
+    "edit_ok": true,
+    "edit_message": "Day 2 was full, so I replaced Moti Mahal Delux with Janpath New Mini Market in evening.",
+    "after_names": [
+      "Chandni Chowk",
+      "Nazeer Foods",
+      "V3S Mall",
+      "Asharti BBQ Nights",
+      "Moti Mahal",
+      "Dilli Haat",
+      "Barbeque Nation",
+      "Lajpat Nagar Central Market",
+      "Make My Lagan",
+      "Janpath New Mini Market"
+    ],
+    "feasibility": {
+      "pass": true,
+      "issues": []
+    },
+    "check_result": true,
+    "check_note": "Day 2 was full, so I replaced Moti Mahal Delux with Janpath New Mini Market in evening."
+  },
+  {
+    "finding": "H3",
+    "phase": 1,
+    "itin": 1,
+    "command": "Add INA Market to Day 1",
+    "classification": {
+      "intent": "EDIT",
+      "edit_intent": {
+        "target_day": 1,
+        "target_slot": "all",
+        "edit_type": "add",
+        "constraint": "INA Market"
+      },
+      "query": null
+    },
+    "edit_ok": true,
+    "edit_message": "I don't have a real, mappable record of INA Market in my data — I can't honestly add it. Dilli Haat (right next to INA) or Lajpat Nagar Central Market are real, verified alternatives nearby.",
+    "after_names": [
+      "Janpath New Mini Market",
+      "Indian Accent",
+      "Khan Market",
+      "Andhra Bhawan Canteen",
+      "Nando's",
+      "Bukhara",
+      "Lajpat Nagar Central Market",
+      "Dilli Haat",
+      "Karim's"
+    ],
+    "feasibility": {
+      "pass": true,
+      "issues": []
+    },
+    "check_result": true,
+    "check_note": "I don't have a real, mappable record of INA Market in my data — I can't honestly add it. Dilli Haat (right next to INA) or Lajpat Nagar Central Market"
+  },
+  {
+    "finding": "H3",
+    "phase": 1,
+    "itin": 4,
+    "command": "Swap Day 2 evening for Sarojini Nagar Market instead",
+    "classification": {
+      "intent": "EDIT",
+      "edit_intent": {
+        "target_day": 2,
+        "target_slot": "evening",
+        "edit_type": "swap",
+        "constraint": "Sarojini Nagar Market"
+      },
+      "query": null
+    },
+    "edit_ok": true,
+    "edit_message": "I only have Sarojini Nagar as a metro station in my data, not a mappable market listing — I can't honestly add \"Sarojini Nagar Market\" as a stop. Lajpat Nagar Central Market is a real, verified alternative if you'd like that instead.",
+    "after_names": [
+      "Chandni Chowk",
+      "Nazeer Foods",
+      "V3S Mall",
+      "Asharti BBQ Nights",
+      "Moti Mahal",
+      "Dilli Haat",
+      "Barbeque Nation",
+      "Lajpat Nagar Central Market",
+      "Make My Lagan",
+      "Moti Mahal Delux"
+    ],
+    "feasibility": {
+      "pass": true,
+      "issues": []
+    },
+    "check_result": false,
+    "check_note": "I only have Sarojini Nagar as a metro station in my data, not a mappable market listing — I can't honestly add \"Sarojini Nagar Market\" as a stop. Lajp"
+  },
+  {
+    "finding": "M1(P1)",
+    "phase": 1,
+    "itin": 2,
+    "command": "Add Akshardham to Day 2",
+    "classification": {
+      "intent": "EDIT",
+      "edit_intent": {
+        "target_day": 2,
+        "target_slot": "all",
+        "edit_type": "add",
+        "constraint": "Akshardham"
+      },
+      "query": null
+    },
+    "edit_ok": false,
+    "edit_message": "That would push day 2 over the 8.0h budget. I can replace an existing stop instead, or move this to another day — want me to do that?",
+    "after_names": [
+      "Humayun's Tomb",
+      "Masala House",
+      "Purana Qila",
+      "Nathu Sweets",
+      "Karim's",
+      "Red Fort",
+      "Guru Kirpa Restaurant",
+      "बाबू राम देवी दयाल",
+      "Pandit Kanhaiya Lal Durga Prashad Dixit Paranthe Wala",
+      "Qutab Minar",
+      "Dilli Haat",
+      "Napoli Pizza",
+      "Charrdewari",
+      "Mia Bella"
+    ],
+    "feasibility": null,
+    "check_result": false,
+    "check_note": "edit rejected: That would push day 2 over the 8.0h budget. I can replace an existing stop instead, or move this to another day — want m"
+  },
+  {
+    "finding": "M1(P1)",
+    "phase": 1,
+    "itin": 7,
+    "command": "Add the National Museum to Day 1",
+    "classification": {
+      "intent": "EDIT",
+      "edit_intent": {
+        "target_day": 1,
+        "target_slot": "all",
+        "edit_type": "add",
+        "constraint": "National Museum"
+      },
+      "query": null
+    },
+    "edit_ok": false,
+    "edit_message": "That would push day 1 over the 8.0h budget. I can replace an existing stop instead, or move this to another day — want me to do that?",
+    "after_names": [
+      "Sunder Nursery",
+      "The Habitat Hub",
+      "Safdarjung's Tomb",
+      "Good Earth",
+      "Fat Lulu's",
+      "Raj Ghat",
+      "Shri Krishna Daba",
+      "Red Fort",
+      "Moti Mahal",
+      "Asharti BBQ Nights",
+      "Nehru Park",
+      "Roast 'N' Currie",
+      "Dilli Haat",
+      "St. Mary's Church",
+      "Celebration Restaurant"
+    ],
+    "feasibility": null,
+    "check_result": false,
+    "check_note": "edit rejected: That would push day 1 over the 8.0h budget. I can replace an existing stop instead, or move this to another day — want m"
+  },
+  {
+    "finding": "M2(P1)-preview",
+    "phase": 1,
+    "command": "Can you make this itinerary better overall?",
+    "check_result": true,
+    "reply": "\"Can you make this itinerary better overall?\" is a bit open-ended, so before I touch every day, here's what I'd do: Made it more relaxed — removed Karim's, Shiv Di Hatti to free up time. Want me to go ahead? (yes/no)"
+  },
+  {
+    "finding": "M2(P1)-confirm",
+    "phase": 1,
+    "command": "yes",
+    "check_result": true,
+    "reply": "Done — went ahead with that."
+  },
+  {
+    "finding": "M2(P1)-explicit-cue-regression",
+    "phase": 1,
+    "command": "This trip feels exhausting, please relax it all.",
+    "check_result": true,
+    "reply": "Made it more relaxed — removed Karim's, Shiv Di Hatti to free up time."
+  },
+  {
+    "finding": "L1",
+    "phase": 1,
+    "command": "Take out Sunder Nursery from the plan.",
+    "check_result": true,
+    "reply": "Couldn't find anything matching 'Sunder Nursery' to remove. You may have already changed or removed \"Sunder Nursery\" earlier in this session."
+  },
+  {
+    "finding": "L2",
+    "phase": 1,
+    "command": "Could you make the evening a bit lighter on Day 1?",
+    "check_result": true,
+    "message": "Day 1's evening already has just 1 stop — nothing to trim there."
+  },
+  {
+    "finding": "H1",
+    "phase": 2,
+    "itin": 1,
+    "command": "Is there a locker facility near Janpath New Mini Market?",
+    "classification": {
+      "intent": "EXPLAIN",
+      "edit_intent": null,
+      "query": "Is there a locker facility near Janpath New Mini Market?"
+    },
+    "answer": {
+      "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+      "citations": [],
+      "grounded": false
+    },
+    "check_result": true,
+    "check_note": "substantive answer (no denial to check): grounded=False :: I don't have a verified source for this — treat it as a general suggestion."
+  },
+  {
+    "finding": "H1",
+    "phase": 2,
+    "itin": 2,
+    "command": "Will there be roadwork near Humayun's Tomb this month?",
+    "classification": {
+      "intent": "EXPLAIN",
+      "edit_intent": null,
+      "query": "Will there be roadwork near Humayun's Tomb this month?"
+    },
+    "answer": {
+      "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+      "citations": [],
+      "grounded": false
+    },
+    "check_result": true,
+    "check_note": "substantive answer (no denial to check): grounded=False :: I don't have a verified source for this — treat it as a general suggestion."
+  },
+  {
+    "finding": "H2",
+    "phase": 2,
+    "itin": 2,
+    "command": "What's the ticket price for Humayun's Tomb?",
+    "classification": {
+      "intent": "EXPLAIN",
+      "edit_intent": null,
+      "query": "What's the ticket price for Humayun's Tomb?"
+    },
+    "answer": {
+      "answer": "Humayun's Tomb's entry fee: Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+      "citations": [
+        {
+          "source_title": "Humayun's Tomb",
+          "source_url": "local-kb://delhi_tourist_venues_kb#humayun-s-tomb",
+          "source": "delhi_tourist_venues_kb"
+        }
+      ],
+      "grounded": true
+    },
+    "check_result": true,
+    "check_note": "grounded=True citations=1 :: Humayun's Tomb's entry fee: Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; c"
+  },
+  {
+    "finding": "H2",
+    "phase": 2,
+    "itin": 5,
+    "command": "When is the ideal time to go to Jama Masjid?",
+    "classification": {
+      "intent": "EXPLAIN",
+      "edit_intent": null,
+      "query": "When is the ideal time to go to Jama Masjid?"
+    },
+    "answer": {
+      "answer": "The ideal time to visit Jama Masjid is during the early morning or late afternoon, between October and March. You should plan your visit to avoid Friday midday, as the mosque is closed to tourists during prayer times.",
+      "citations": [
+        {
+          "source_title": "Jama Masjid",
+          "source_url": "local-kb://delhi_tourist_venues_kb#jama-masjid",
+          "source": "delhi_tourist_venues_kb"
+        },
+        {
+          "source_title": "Hazrat Nizamuddin Dargah",
+          "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+          "source": "delhi_tourist_venues_kb"
+        }
+      ],
+      "grounded": true
+    },
+    "check_result": true,
+    "check_note": "grounded=True citations=2 :: The ideal time to visit Jama Masjid is during the early morning or late afternoon, between October a"
+  },
+  {
+    "finding": "H3",
+    "phase": 2,
+    "itin": 13,
+    "command": "What else could I try instead of Make My Lagan?",
+    "classification": {
+      "intent": "EXPLAIN",
+      "edit_intent": null,
+      "query": "What else could I try instead of Make My Lagan?"
+    },
+    "answer": {
+      "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+      "citations": [],
+      "grounded": false
+    },
+    "check_result": true,
+    "check_note": "intent=EXPLAIN"
+  },
+  {
+    "finding": "H3",
+    "phase": 2,
+    "itin": 13,
+    "command": "Any other suggestions besides Make My Lagan on day 2?",
+    "classification": {
+      "intent": "EXPLAIN",
+      "edit_intent": null,
+      "query": null
+    },
+    "answer": {
+      "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+      "citations": [],
+      "grounded": false
+    },
+    "check_result": true,
+    "check_note": "intent=EXPLAIN"
+  },
+  {
+    "finding": "M1",
+    "phase": 2,
+    "itin": 4,
+    "command": "What could I do instead of visiting Chandni Chowk?",
+    "classification": {
+      "intent": "EXPLAIN",
+      "edit_intent": null,
+      "query": null
+    },
+    "answer": {
+      "answer": "Instead of visiting Chandni Chowk, you can visit Dariba Kalan or Gali paranthe walee. (Note: I'm not able to confirm this one is in my verified, bookable list of stops for New Delhi -- let me know if you'd like me to search for something similar I can actually add to your itinerary.)",
+      "citations": [
+        {
+          "source_title": "Chandni Chowk",
+          "source_url": "https://en.wikipedia.org/wiki/Chandni_Chowk",
+          "source": "wikipedia"
+        }
+      ],
+      "grounded": true
+    },
+    "check_result": true,
+    "check_note": "caveat_fired=True :: Instead of visiting Chandni Chowk, you can visit Dariba Kalan or Gali paranthe walee. (Note: I'm not able to confirm this one is in my verified, booka"
+  },
+  {
+    "finding": "M1",
+    "phase": 2,
+    "itin": 9,
+    "command": "Give me some other options besides Lodhi Garden",
+    "classification": {
+      "intent": "EDIT",
+      "edit_intent": {
+        "target_day": "all",
+        "target_slot": "all",
+        "edit_type": "remove",
+        "constraint": "Lodhi Garden"
+      },
+      "query": null
+    },
+    "edit_ok": true,
+    "edit_message": "Couldn't find anything matching 'Lodhi Garden' to remove.",
+    "after_names": [
+      "Sunder Nursery",
+      "Karim's",
+      "Indian Accent",
+      "Raj Ghat",
+      "Shiv Di Hatti",
+      "Nehru Park",
+      "Purana Delhi Darbar"
+    ],
+    "feasibility": {
+      "pass": true,
+      "issues": []
+    },
+    "check_result": null,
+    "check_note": "not routed to EXPLAIN: {'intent': 'EDIT', 'edit_intent': {'target_day': 'all', 'target_slot': 'all', 'edit_type': 'remove', 'constraint': 'Lodhi Garden'}, 'query': None}"
+  },
+  {
+    "finding": "M2",
+    "phase": 2,
+    "itin": 2,
+    "command": "Would Humayun's Tomb work for someone in a wheelchair?",
+    "classification": {
+      "intent": "EXPLAIN",
+      "edit_intent": null,
+      "query": "Would Humayun's Tomb work for someone in a wheelchair?"
+    },
+    "answer": {
+      "answer": "Humayun's Tomb is tagged as suitable for: history buffs, couples, photographers, families, elderly.",
+      "citations": [
+        {
+          "source_title": "Humayun's Tomb",
+          "source_url": "local-kb://delhi_tourist_venues_kb#humayun-s-tomb",
+          "source": "delhi_tourist_venues_kb"
+        }
+      ],
+      "grounded": true
+    },
+    "check_result": false,
+    "check_note": "Humayun's Tomb is tagged as suitable for: history buffs, couples, photographers, families, elderly."
+  },
+  {
+    "finding": "M2",
+    "phase": 2,
+    "itin": 5,
+    "command": "Is Jama Masjid good for solo travelers?",
+    "classification": {
+      "intent": "EXPLAIN",
+      "edit_intent": null,
+      "query": "Is Jama Masjid good for solo travelers?"
+    },
+    "answer": {
+      "answer": "Yes — Jama Masjid is tagged as suitable for that: it's marked suitable for history buffs, photographers, solo travellers, budget travellers, spiritual travellers.",
+      "citations": [
+        {
+          "source_title": "Jama Masjid",
+          "source_url": "local-kb://delhi_tourist_venues_kb#jama-masjid",
+          "source": "delhi_tourist_venues_kb"
+        }
+      ],
+      "grounded": true
+    },
+    "check_result": true,
+    "check_note": "Yes — Jama Masjid is tagged as suitable for that: it's marked suitable for history buffs, photographers, solo travellers, budget travellers, spiritual"
+  }
+]

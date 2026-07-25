@@ -1,0 +1,253 @@
+{
+  "spec": {
+    "id": 19,
+    "label": "Shopping",
+    "interests": [
+      "shopping"
+    ],
+    "days": 2,
+    "pace": "intensive"
+  },
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/442156777",
+          "name": "Janpath New Mini Market",
+          "category": "market",
+          "lat": 28.6290954,
+          "lon": 77.2181663,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon; October–March (open-air stalls)",
+          "kb_suitable_for": [
+            "budget travellers",
+            "shoppers",
+            "souvenir hunters",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/11869013790",
+          "name": "Foodieez",
+          "category": "restaurant",
+          "lat": 28.6289688,
+          "lon": 77.2247681,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "market",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q3236763",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/8151189839",
+          "name": "Parikrama - The Revolving Restaurant",
+          "category": "restaurant",
+          "lat": 28.6287272,
+          "lon": 77.2229395,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 17,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:47 PM",
+          "meal": "meal ~1:47 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/80442501",
+          "name": "Khan Market",
+          "category": "market",
+          "lat": 28.600192,
+          "lon": 77.2266065,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon and evening; year-round",
+          "kb_suitable_for": [
+            "foodies",
+            "shoppers",
+            "couples",
+            "book lovers",
+            "upscale travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM"
+        },
+        {
+          "osm_id": "node/6161987883",
+          "name": "Local",
+          "category": "restaurant",
+          "lat": 28.6298758,
+          "lon": 77.2210617,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 18,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "7:18 PM",
+          "meal": "meal ~7:18 PM"
+        }
+      ],
+      "total_hours": 9.5,
+      "date": "",
+      "nearest_hospital": {
+        "name": "General Williams Hospital",
+        "distance_km": 0.63
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 0.88
+      },
+      "nearest_metro_station": {
+        "name": "Barakhambha Road",
+        "distance_km": 0.13
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "market",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/14002488862",
+          "name": "Bobachee",
+          "category": "restaurant",
+          "lat": 28.568261,
+          "lon": 77.2177804,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/1831954639",
+          "name": "Green Park Market",
+          "category": "market",
+          "lat": 28.5556739,
+          "lon": 77.2021428,
+          "opening_hours": "Tu off",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 22,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:52 PM"
+        },
+        {
+          "osm_id": "node/13997784683",
+          "name": "Moti Mahal Delux",
+          "category": "restaurant",
+          "lat": 28.5683968,
+          "lon": 77.2191782,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 12,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "3:34 PM",
+          "meal": "meal ~3:34 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/12022954306",
+          "name": "Make My Lagan",
+          "category": "restaurant",
+          "lat": 28.5682868,
+          "lon": 77.2209969,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 8.98,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Manav Medicare Centre",
+        "distance_km": 0.44
+      },
+      "nearest_pharmacy": {
+        "name": "Agroha Medicos",
+        "distance_km": 0.2
+      },
+      "nearest_metro_station": {
+        "name": "South Extension",
+        "distance_km": 0.29
+      }
+    }
+  }
+}

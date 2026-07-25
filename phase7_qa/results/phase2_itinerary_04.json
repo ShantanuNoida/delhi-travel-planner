@@ -1,0 +1,659 @@
+{
+  "spec": {
+    "id": 4,
+    "label": "Shopping-only spree",
+    "interests": [
+      "shopping"
+    ],
+    "days": 2,
+    "pace": "moderate"
+  },
+  "itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "market",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12440473687",
+          "name": "Nazeer Foods",
+          "category": "restaurant",
+          "lat": 28.6441692,
+          "lon": 77.2401768,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/302534538",
+          "name": "V3S Mall",
+          "category": "market",
+          "lat": 28.6372006,
+          "lon": 77.2865082,
+          "opening_hours": "Mo-Su 11:00-23:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/13734392101",
+          "name": "Asharti BBQ Nights",
+          "category": "restaurant",
+          "lat": 28.6442529,
+          "lon": 77.2400509,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 25,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:55 PM",
+          "meal": "meal ~1:55 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/2106114484",
+          "name": "Moti Mahal",
+          "category": "restaurant",
+          "lat": 28.6468875,
+          "lon": 77.2399805,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.33,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Dehli Hospital",
+        "distance_km": 0.5
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 2.46
+      },
+      "nearest_metro_station": {
+        "name": "Delhi Gate",
+        "distance_km": 0.99
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "market",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12040093924",
+          "name": "Barbeque Nation",
+          "category": "restaurant",
+          "lat": 28.5682188,
+          "lon": 77.2216909,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/12022954306",
+          "name": "Make My Lagan",
+          "category": "restaurant",
+          "lat": 28.5682868,
+          "lon": 77.2209969,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:40 PM",
+          "meal": "meal ~1:40 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/13997784683",
+          "name": "Moti Mahal Delux",
+          "category": "restaurant",
+          "lat": 28.5683968,
+          "lon": 77.2191782,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.08,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Manav Medicare Centre",
+        "distance_km": 0.24
+      },
+      "nearest_pharmacy": {
+        "name": "Agroha Medicos",
+        "distance_km": 0.27
+      },
+      "nearest_metro_station": {
+        "name": "South Extension",
+        "distance_km": 0.17
+      }
+    }
+  },
+  "steps": [
+    {
+      "n": 1,
+      "command": "Why did you pick Chandni Chowk for Day 1?",
+      "category": "justification",
+      "probe": "why_named_stop",
+      "target_stop": "Chandni Chowk",
+      "expected": {
+        "note": "Should reference the actual scheduled stop, grounded in real source data or an honest no-source admission -- not a generic answer about 'this area'."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why did you pick Chandni Chowk for Day 1?"
+      },
+      "answer": {
+        "answer": "Chandni Chowk is one of the oldest and busiest markets in Delhi, established in 1650 by the Mughal Emperor Shah Jahan and designed by his daughter Jahanara. Historically, it was once the grandest Indian market and a significant route for Mughal imperial processions, hosting grand displays of emperors and their entourages. Additionally, the bazaar gained renown for its thriving silver trade, earning it the moniker Silver Street.",
+        "citations": [
+          {
+            "source_title": "Chandni Chowk",
+            "source_url": "https://en.wikipedia.org/wiki/Chandni_Chowk",
+            "source": "wikipedia"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 2,
+      "command": "Why is Nazeer Foods scheduled in the morning instead of another time of day?",
+      "category": "justification",
+      "probe": "why_slot_timing",
+      "target_stop": "Nazeer Foods",
+      "expected": {
+        "note": "Tests whether the app can justify slot placement, or honestly says it doesn't have a specific reason for the exact slot."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why is Nazeer Foods scheduled in the morning instead of another time of day?"
+      },
+      "answer": {
+        "answer": "I cannot answer your question as the provided sources do not mention Nazeer Foods or why it is scheduled at a particular time of day.",
+        "citations": [
+          {
+            "source_title": "Delhi/Old Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi/Old_Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 3,
+      "command": "Why did you pick this place?",
+      "category": "justification",
+      "probe": "why_vague_referent",
+      "target_stop": null,
+      "expected": {
+        "note": "No place named ('this place') -- correct behavior is to ask which place, not guess and hallucinate a generic answer (R-18/F-13 fix from earlier work)."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why did you pick this place?"
+      },
+      "answer": {
+        "answer": "Which place are you asking about? Your itinerary includes: Chandni Chowk, Nazeer Foods, V3S Mall, Asharti BBQ Nights, Moti Mahal, Dilli Haat.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 4,
+      "command": "What if it rains on Day 1?",
+      "category": "contingency",
+      "probe": "weather_rain",
+      "target_stop": null,
+      "expected": {
+        "note": "Should surface indoor-alternative / weather guidance grounded in real source data."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What if it rains on Day 1?"
+      },
+      "answer": {
+        "answer": "The provided sources do not contain information about what to do if it rains on Day 1.",
+        "citations": [
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 5,
+      "command": "What happens to my plan if V3S Mall is closed for a public holiday?",
+      "category": "contingency",
+      "probe": "closure_holiday",
+      "target_stop": "V3S Mall",
+      "expected": {
+        "note": "No dataset field encodes holiday closures -- correct behavior is an honest no-verified-source answer, not a fabricated closure schedule."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What happens to my plan if V3S Mall is closed for a public holiday?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 6,
+      "command": "What are some alternatives to Barbeque Nation on Day 2?",
+      "category": "alternatives",
+      "probe": "alt_for_named_stop",
+      "target_stop": "Barbeque Nation",
+      "expected": {
+        "note": "Any alternative places named in the answer should be real (checkable against the POI dataset), not invented."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What are some alternatives to Barbeque Nation on Day 2?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 7,
+      "command": "If Lajpat Nagar Central Market turns out to be too crowded, what else could I do instead?",
+      "category": "alternatives",
+      "probe": "alt_crowds",
+      "target_stop": "Lajpat Nagar Central Market",
+      "expected": {
+        "note": "Crowd-avoidance framing of the same alternatives probe -- checks the app doesn't just pattern-match the word 'alternative'."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "If Lajpat Nagar Central Market turns out to be too crowded, what else could I do instead?"
+      },
+      "answer": {
+        "answer": "You can explore alternative shopping markets in the area like Khanna Market, Khan Market, and Meherchand Market, or visit Chandni Chowk, one of India's largest wholesale markets. Additionally, you can check out nearby places of interest such as the Sai Baba Temple of Lodhi Road, the 16th-century Tomb of Sikander Lodhi in Lodhi Gardens, the India Habitat Centre, or the historic Red Fort.",
+        "citations": [
+          {
+            "source_title": "Delhi/New Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi/New_Delhi",
+            "source": "wikivoyage"
+          },
+          {
+            "source_title": "Chandni Chowk",
+            "source_url": "https://en.wikipedia.org/wiki/Chandni_Chowk",
+            "source": "wikipedia"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 8,
+      "command": "What other activities can I do on Day 2 if I have extra time?",
+      "category": "expansion",
+      "probe": "expand_day",
+      "target_stop": null,
+      "expected": {
+        "note": "Should suggest real, groundable options -- not vague filler."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What other activities can I do on Day 2 if I have extra time?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 9,
+      "command": "Is there anything interesting near Chandni Chowk that isn't on the itinerary?",
+      "category": "expansion",
+      "probe": "expand_near_stop",
+      "target_stop": "Chandni Chowk",
+      "expected": {
+        "note": "Tests location-aware expansion; the dataset has no real geo-proximity RAG lookup, so an honest no-source answer is acceptable -- a fabricated nearby landmark is not."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is there anything interesting near Chandni Chowk that isn't on the itinerary?"
+      },
+      "answer": {
+        "answer": "Near Chandni Chowk, you can visit interesting spots like Dariba Kalan and Gali paranthe walee. Additional nearby sites include the Shri Digambar Jain Lal Mandir Bird Hospital, Shri Shiv Navgrah Mandir Dham, and Shri Gauri Shankar Mandir.",
+        "citations": [
+          {
+            "source_title": "Chandni Chowk",
+            "source_url": "https://en.wikipedia.org/wiki/Chandni_Chowk",
+            "source": "wikipedia"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 10,
+      "command": "How much does it cost to visit Asharti BBQ Nights?",
+      "category": "practicalities",
+      "probe": "cost_named_stop",
+      "target_stop": "Asharti BBQ Nights",
+      "expected": {
+        "note": "Checkable fact when the stop carries kb_entry_fee (no KB fee on this stop -- honest no-source expected)",
+        "kb_entry_fee": null
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "How much does it cost to visit Asharti BBQ Nights?"
+      },
+      "answer": {
+        "answer": "I am sorry, but the provided excerpts do not contain any information about the cost or existence of Asharti BBQ Nights.",
+        "citations": [
+          {
+            "source_title": "Delhi/Old Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi/Old_Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 11,
+      "command": "What's the best time of day to visit Moti Mahal?",
+      "category": "practicalities",
+      "probe": "best_time_named_stop",
+      "target_stop": "Moti Mahal",
+      "expected": {
+        "note": "Checkable fact when the stop carries kb_best_time_to_visit (no KB field -- honest no-source expected)",
+        "kb_best_time_to_visit": null
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What's the best time of day to visit Moti Mahal?"
+      },
+      "answer": {
+        "answer": "Moti Mahal was a twin building located at the northern edge of the Red Fort that was demolished during or shortly after the 1857 rebellion. Because it no longer exists, there is no visiting time available for it.",
+        "citations": [
+          {
+            "source_title": "Red Fort",
+            "source_url": "https://en.wikipedia.org/wiki/Red_Fort",
+            "source": "wikipedia"
+          },
+          {
+            "source_title": "Hauz Khas Village & Hauz Khas Complex",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hauz-khas-village-hauz-khas-complex",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 12,
+      "command": "How do I get from Make My Lagan to Moti Mahal Delux?",
+      "category": "practicalities",
+      "probe": "travel_between_stops",
+      "target_stop": "Make My Lagan -> Moti Mahal Delux",
+      "expected": {
+        "note": "Itinerary already computes travel_mode_from_prev/travel_time_from_prev_min between consecutive stops -- answer should be consistent with that data when the two stops are adjacent.",
+        "travel_mode_from_prev": null,
+        "travel_time_from_prev_min": 0,
+        "adjacent": false
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "How do I get from Make My Lagan to Moti Mahal Delux?"
+      },
+      "answer": {
+        "answer": "I am sorry, but the provided sources do not contain any information about how to travel from Make My Lagan to Moti Mahal Delux.",
+        "citations": [
+          {
+            "source_title": "Red Fort",
+            "source_url": "https://en.wikipedia.org/wiki/Red_Fort",
+            "source": "wikipedia"
+          },
+          {
+            "source_title": "Hauz Khas Village & Hauz Khas Complex",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hauz-khas-village-hauz-khas-complex",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 13,
+      "command": "Is Dilli Haat suitable for elderly travellers?",
+      "category": "suitability",
+      "probe": "suitability_elderly",
+      "target_stop": "Dilli Haat",
+      "expected": {
+        "note": "Checkable when the stop carries kb_suitable_for (no KB field -- honest no-source expected)",
+        "kb_suitable_for": null
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is Dilli Haat suitable for elderly travellers?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 14,
+      "command": "Is this itinerary suitable for a family with young kids?",
+      "category": "suitability",
+      "probe": "suitability_family_whole_trip",
+      "target_stop": null,
+      "expected": {
+        "note": "Whole-trip suitability question, no single named place -- tests whether the app can reason across the itinerary or honestly declines rather than answering about one arbitrary stop."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is this itinerary suitable for a family with young kids?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 15,
+      "command": "Is Chandni Chowk within walking distance of my hotel?",
+      "category": "edge_case",
+      "probe": "unanswerable_missing_context",
+      "target_stop": "Chandni Chowk",
+      "expected": {
+        "note": "No hotel/lodging location is tracked anywhere in the app -- correct behavior is an honest 'I don't know where you're staying' answer, not a fabricated walking distance or an invented hotel location."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is Chandni Chowk within walking distance of my hotel?"
+      },
+      "answer": {
+        "answer": "I am unable to answer whether Chandni Chowk is within walking distance of your hotel, as the provided information does not mention your hotel's location.",
+        "citations": [
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    }
+  ]
+}

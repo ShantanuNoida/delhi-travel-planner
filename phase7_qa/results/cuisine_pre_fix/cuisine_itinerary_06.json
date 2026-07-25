@@ -1,0 +1,408 @@
+{
+  "spec": {
+    "id": 6,
+    "days": 3,
+    "pace": "intensive",
+    "cuisine": "Italian",
+    "cuisine_phrase": "I love Italian food",
+    "category_interests": [
+      "architecture",
+      "history"
+    ],
+    "opening_message": "I'm planning a 3-day trip to Delhi, intensive pace. I love Italian food. I'm also interested in architecture and history."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "food",
+    "culture",
+    "history"
+  ],
+  "extracted_constraints": {
+    "dietary": "Italian food"
+  },
+  "num_days_extracted": 3,
+  "pace_extracted": "intensive",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/220385654",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "lat": 28.5932862,
+          "lon": 77.2506455,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+          "wikidata_qid": "Q189648",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Humayun%20Tomb%20UNESCO%20world%20heritage%20site.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or golden hour before sunset; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "couples",
+            "photographers",
+            "families",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/3424254864",
+          "name": "Nathu Sweets",
+          "category": "restaurant",
+          "lat": 28.6025805,
+          "lon": 77.2409575,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "11:10 AM",
+          "meal": "meal ~11:10 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        },
+        {
+          "osm_id": "node/7282286731",
+          "name": "Khan Market",
+          "category": "market",
+          "lat": 28.6022446,
+          "lon": 77.2291281,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:25 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/361709652",
+          "name": "India Gate",
+          "category": "monument",
+          "lat": 28.6129323,
+          "lon": 77.2294919,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "wikidata_qid": "Q245347",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/India%20Gate%20in%20New%20Delhi%2003-2016.jpg",
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Evening after sunset for illumination; October–March; very crowded on weekends and national holidays",
+          "kb_suitable_for": [
+            "families",
+            "kids",
+            "couples",
+            "budget travellers",
+            "photographers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM"
+        },
+        {
+          "osm_id": "node/5297002821",
+          "name": "Masala House",
+          "category": "restaurant",
+          "lat": 28.6026965,
+          "lon": 77.2410926,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "7:10 PM",
+          "meal": "meal ~7:10 PM"
+        }
+      ],
+      "total_hours": 9.75,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 1.95
+      },
+      "nearest_pharmacy": {
+        "name": "Anand Drug Store",
+        "distance_km": 1.06
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 0.9
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/7018886724",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6584227,
+          "lon": 77.2303375,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q5071227",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q17064086",
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        },
+        {
+          "osm_id": "way/264863907",
+          "name": "Red Fort",
+          "category": "monument",
+          "lat": 28.6557242,
+          "lon": 77.2407427,
+          "opening_hours": "unknown",
+          "visit_duration_min": 180,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/red_fort.jsp",
+          "wikidata_qid": "Q45957",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹50; foreign nationals approx. ₹550–₹600; museum circuit ticketed additionally; children under 15 free at ASI monuments. Verify locally.",
+          "kb_best_time_to_visit": "Morning at opening to beat crowds; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "photographers",
+            "first-time visitors",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "1:18 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/351418767",
+          "name": "National Gandhi Museum",
+          "category": "museum",
+          "lat": 28.6388114,
+          "lon": 77.2458521,
+          "opening_hours": "Mo-Su 09:30-17:30",
+          "visit_duration_min": 120,
+          "relevance_score": 0.79,
+          "fallback": false,
+          "website": "http://www.gandhimuseum.org",
+          "wikidata_qid": "Q2991098",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gandhi%20Bedroom.JPG",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM"
+        },
+        {
+          "osm_id": "node/6743603886",
+          "name": "Fish Point",
+          "category": "restaurant",
+          "lat": 28.6497142,
+          "lon": 77.2343609,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "7:10 PM",
+          "meal": "meal ~7:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "total_hours": 8.97,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Kasturba Hospital",
+        "distance_km": 0.12
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 1.29
+      },
+      "nearest_metro_station": {
+        "name": "Lal Quila",
+        "distance_km": 0.79
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/400921719",
+          "name": "Akshardham",
+          "category": "temple",
+          "lat": 28.6125148,
+          "lon": 77.2773592,
+          "opening_hours": "Tu-Su 09:30-18:30",
+          "visit_duration_min": 300,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "website": "http://www.akshardham.com",
+          "wikidata_qid": "Q1849858",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akshardham%20Delhi.jpg",
+          "kb_entry_fee": "Temple entry free for all; exhibitions approx. ₹250 (adults), ₹150 (children 4–11), free for children under 4; water show ticketed separately (approx. ₹100–₹150). Verify locally.",
+          "kb_best_time_to_visit": "Late afternoon into evening (to include the water show); October–March for pleasant weather",
+          "kb_suitable_for": [
+            "families",
+            "kids",
+            "elderly",
+            "spiritual travellers",
+            "architecture enthusiasts",
+            "first-time visitors"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/9827506500",
+          "name": "Kuki Kathi Junction",
+          "category": "restaurant",
+          "lat": 28.6117272,
+          "lon": 77.3358126,
+          "opening_hours": "Mo-Su 16:00-23:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 31,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "5:31 PM",
+          "meal": "meal ~5:31 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/3523110671",
+          "name": "Bikaner",
+          "category": "restaurant",
+          "lat": 28.6116229,
+          "lon": 77.3357988,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 9.27,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Malik Nursing Home",
+        "distance_km": 0.54
+      },
+      "nearest_pharmacy": {
+        "name": "Davaindia generic pharmacy",
+        "distance_km": 1.52
+      },
+      "nearest_metro_station": {
+        "name": "Trilokpuri Sanjay Lake",
+        "distance_km": 2.08
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 9,
+    "matched_cuisine": [],
+    "unmatched_cuisine": [],
+    "no_cuisine_tag": [
+      "Nathu Sweets",
+      "Indian Accent",
+      "Masala House",
+      "Chandni Chowk",
+      "Karim's",
+      "Fish Point",
+      "Bukhara",
+      "Kuki Kathi Junction",
+      "Bikaner"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "architecture",
+      "history"
+    ],
+    "missing": []
+  }
+}

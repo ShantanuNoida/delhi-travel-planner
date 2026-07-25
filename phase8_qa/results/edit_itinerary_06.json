@@ -1,0 +1,1958 @@
+{
+  "spec": {
+    "id": 6,
+    "label": "Family + Nature",
+    "interests": [
+      "family",
+      "nature"
+    ],
+    "days": 2,
+    "pace": "relaxed"
+  },
+  "initial_itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/1127484002",
+          "name": "Sunder Nursery",
+          "category": "park",
+          "lat": 28.5968532,
+          "lon": 77.2474305,
+          "opening_hours": "Mo-Su 07:00-22:00",
+          "visit_duration_min": 180,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q15628824",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sunder%20Nursery%20%28Garden%29.jpg",
+          "kb_entry_fee": "Approx. ₹50 (Indian adults), ₹25 (children); foreign nationals approx. ₹200–₹300; annual passes available. Verify locally.",
+          "kb_best_time_to_visit": "Mornings and golden hour; October–March; Sunday mornings for the farmers' market",
+          "kb_suitable_for": [
+            "families",
+            "couples",
+            "photographers",
+            "picnickers",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12387964701",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.5911564,
+          "lon": 77.2436745,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "12:10 PM",
+          "meal": "meal ~12:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [],
+      "total_hours": 5.67,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 1.03
+      },
+      "nearest_pharmacy": {
+        "name": "Chemist Shop",
+        "distance_km": 0.19
+      },
+      "nearest_metro_station": {
+        "name": "Jawaharlal Nehru Stadium",
+        "distance_km": 1.06
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/80429893",
+          "name": "Raj Ghat",
+          "category": "park",
+          "lat": 28.6447381,
+          "lon": 77.2497678,
+          "opening_hours": "unknown",
+          "visit_duration_min": 60,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q1210083",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12020183807",
+          "name": "Shiv Di Hatti",
+          "category": "restaurant",
+          "lat": 28.6612679,
+          "lon": 77.2869428,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 22,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:22 AM",
+          "meal": "meal ~10:22 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/158122667",
+          "name": "Nehru Park",
+          "category": "park",
+          "lat": 28.6660132,
+          "lon": 77.3235208,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Early morning; concert evenings (check NDMC event listings); October–March",
+          "kb_suitable_for": [
+            "joggers",
+            "families",
+            "music lovers",
+            "elderly",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/13669907139",
+          "name": "Purana Delhi Darbar",
+          "category": "restaurant",
+          "lat": 28.6628199,
+          "lon": 77.2835227,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 21,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:51 PM",
+          "meal": "meal ~1:51 PM"
+        }
+      ],
+      "evening": [],
+      "total_hours": 5.72,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Shri Ram Singh Hospital",
+        "distance_km": 0.26
+      },
+      "nearest_pharmacy": {
+        "name": "Kanak Homoeo Pharmacy",
+        "distance_km": 0.29
+      },
+      "nearest_metro_station": {
+        "name": "Krishna Nagar",
+        "distance_km": 0.42
+      }
+    }
+  },
+  "initial_itinerary_summary": {
+    "day_1": {
+      "total_hours": 5.67,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Sunder Nursery",
+          "category": "park",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Karim's",
+          "category": "restaurant",
+          "arrival_time": "12:10 PM",
+          "travel_min": 10
+        },
+        {
+          "slot": "afternoon",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        }
+      ]
+    },
+    "day_2": {
+      "total_hours": 5.72,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Raj Ghat",
+          "category": "park",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Shiv Di Hatti",
+          "category": "restaurant",
+          "arrival_time": "10:22 AM",
+          "travel_min": 22
+        },
+        {
+          "slot": "afternoon",
+          "name": "Nehru Park",
+          "category": "park",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Purana Delhi Darbar",
+          "category": "restaurant",
+          "arrival_time": "1:51 PM",
+          "travel_min": 21
+        }
+      ]
+    }
+  },
+  "final_itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/1127484002",
+          "name": "Sunder Nursery",
+          "category": "park",
+          "lat": 28.5968532,
+          "lon": 77.2474305,
+          "opening_hours": "Mo-Su 07:00-22:00",
+          "visit_duration_min": 180,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q15628824",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sunder%20Nursery%20%28Garden%29.jpg",
+          "kb_entry_fee": "Approx. ₹50 (Indian adults), ₹25 (children); foreign nationals approx. ₹200–₹300; annual passes available. Verify locally.",
+          "kb_best_time_to_visit": "Mornings and golden hour; October–March; Sunday mornings for the farmers' market",
+          "kb_suitable_for": [
+            "families",
+            "couples",
+            "photographers",
+            "picnickers",
+            "elderly"
+          ],
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "afternoon": [],
+      "evening": [],
+      "total_hours": 3.0,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 1.03
+      },
+      "nearest_pharmacy": {
+        "name": "Chemist Shop",
+        "distance_km": 0.19
+      },
+      "nearest_metro_station": {
+        "name": "Jawaharlal Nehru Stadium",
+        "distance_km": 1.06
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "market",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        }
+      ],
+      "afternoon": [],
+      "evening": [
+        {
+          "osm_id": "node/13647468722",
+          "name": "Wazwan",
+          "category": "restaurant",
+          "lat": 28.5734349,
+          "lon": 77.2070709,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 2.75,
+      "date": "",
+      "nearest_hospital": {
+        "name": "VMMC & SAFDARJANG HOSPITAL",
+        "distance_km": 0.52
+      },
+      "nearest_pharmacy": {
+        "name": "Chemist",
+        "distance_km": 0.3
+      },
+      "nearest_metro_station": {
+        "name": "Dilli Haat - INA (Pink Line)",
+        "distance_km": 0.06
+      }
+    }
+  },
+  "final_itinerary_summary": {
+    "day_1": {
+      "total_hours": 3.0,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Sunder Nursery",
+          "category": "park",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        }
+      ]
+    },
+    "day_2": {
+      "total_hours": 2.75,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Dilli Haat",
+          "category": "market",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "evening",
+          "name": "Wazwan",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "n": 1,
+      "command": "Make Day 1 more relaxed.",
+      "category": "pacing",
+      "probe": "relax_vague_quantity",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 1,
+        "target_slot": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Karim's to free up time.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Indian Accent",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.72,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Raj Ghat",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Shiv Di Hatti",
+              "category": "restaurant",
+              "arrival_time": "10:22 AM",
+              "travel_min": 22
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nehru Park",
+              "category": "park",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Delhi Darbar",
+              "category": "restaurant",
+              "arrival_time": "1:51 PM",
+              "travel_min": 21
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 2,
+      "command": "Day 2 feels too packed — take one thing out of the evening.",
+      "category": "pacing",
+      "probe": "relax_specific_slot",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 2,
+        "target_slot": "evening"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "evening",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Day 2's evening already has just 0 stops — nothing to trim there.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Indian Accent",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.72,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Raj Ghat",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Shiv Di Hatti",
+              "category": "restaurant",
+              "arrival_time": "10:22 AM",
+              "travel_min": 22
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nehru Park",
+              "category": "park",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Delhi Darbar",
+              "category": "restaurant",
+              "arrival_time": "1:51 PM",
+              "travel_min": 21
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 3,
+      "command": "Day 2 is a lot — can you lighten it up somehow?",
+      "category": "pacing",
+      "probe": "relax_vague_phrasing",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 2,
+        "target_slot": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Shiv Di Hatti to free up time.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Indian Accent",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 4.1,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Raj Ghat",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nehru Park",
+              "category": "park",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Delhi Darbar",
+              "category": "restaurant",
+              "arrival_time": "1:51 PM",
+              "travel_min": 21
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 4,
+      "command": "Make the whole trip more relaxed, please.",
+      "category": "pacing",
+      "probe": "relax_whole_trip",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": "all",
+        "target_slot": "all",
+        "note": "Whole-trip relax (distinct from per-day) -- every day should end up lighter, not just day 1."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Indian Accent, Purana Delhi Darbar to free up time.",
+      "changed_days": [
+        "day_1",
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 2.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Raj Ghat",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nehru Park",
+              "category": "park",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 5,
+      "command": "Swap the Day 1 evening plan to something indoors.",
+      "category": "swap",
+      "probe": "swap_indoor",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "indoor"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "evening",
+          "edit_type": "swap",
+          "constraint": "indoors"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a suitable replacement for that swap.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 2.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Raj Ghat",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nehru Park",
+              "category": "park",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 6,
+      "command": "Swap the Day 2 morning plan to something outdoors.",
+      "category": "swap",
+      "probe": "swap_outdoor",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 2,
+        "target_slot": "morning",
+        "constraint": "outdoor"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "morning",
+          "edit_type": "swap",
+          "constraint": "outdoors"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Raj Ghat → Humayun's Tomb.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nehru Park",
+              "category": "park",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 7,
+      "command": "Swap Day 2 afternoon for a food spot instead.",
+      "category": "swap",
+      "probe": "swap_theme_category",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 2,
+        "target_slot": "afternoon",
+        "constraint": "food"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "afternoon",
+          "edit_type": "swap",
+          "constraint": "food spot"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Nehru Park → Dilli Haat.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 8,
+      "command": "Swap the Day 2 morning stop for something free of charge.",
+      "category": "swap",
+      "probe": "swap_free_of_charge",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 2,
+        "target_slot": "morning",
+        "constraint": "free",
+        "note": "No dataset field tracks a 'free' filter directly -- tests whether the app honestly declines/falls back sensibly rather than silently ignoring the cost constraint."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "morning",
+          "edit_type": "swap",
+          "constraint": "free of charge"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a suitable replacement for that swap.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 9,
+      "command": "Add one famous local food place to Day 1.",
+      "category": "add",
+      "probe": "add_food_famous",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "food"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "famous local food place"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Added Local to day 1 evening.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 10,
+      "command": "Add a religion stop somewhere in the trip.",
+      "category": "add",
+      "probe": "add_theme_any_day",
+      "expected": {
+        "edit_type": "add",
+        "target_day": "all",
+        "target_slot": "evening",
+        "constraint": "religion"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "religion stop"
+        },
+        "query": null
+      },
+      "edit_result_ok": false,
+      "edit_result_message": "That would push day 2 over the 6.0h budget. I can replace an existing stop instead, or move this to another day — want me to do that?",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 11,
+      "command": "Add Lodhi Garden to Day 2.",
+      "category": "add",
+      "probe": "add_real_named_place",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 2,
+        "constraint": "Lodhi Garden",
+        "note": "Lodhi Garden is a REAL dataset landmark not currently on this itinerary -- app should be able to add it (or give a grounded reason it can't, e.g. day full), not hallucinate/decline dishonestly."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "Lodhi Garden"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Added Lodhi Gardens to day 2 evening.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 12,
+      "command": "Replace the Day 1 evening stop with Connaught Place.",
+      "category": "swap",
+      "probe": "swap_known_absent_place",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "Connaught Place",
+        "note": "Connaught Place is a documented KNOWN_ABSENT_POPULAR_PLACES entry -- app should honestly decline, not silently substitute."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "evening",
+          "edit_type": "swap",
+          "constraint": "Connaught Place"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "I don't have a real, mappable record of Connaught Place in my data (it's absent from the OpenStreetMap extract this planner uses) — I can't honestly add it. Khan Market or Janpath are real, verified alternatives nearby if you'd like one of those instead.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 13,
+      "command": "Remove Raj Ghat from Day 2.",
+      "category": "remove",
+      "probe": "remove_real_named_stop",
+      "expected": {
+        "edit_type": "remove",
+        "target_day": 2,
+        "constraint": "Raj Ghat"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "remove",
+          "constraint": "Raj Ghat"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find anything matching 'Raj Ghat' to remove.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 14,
+      "command": "Remove the boring stop from Day 1.",
+      "category": "remove",
+      "probe": "remove_vague_no_referent",
+      "expected": {
+        "edit_type": "remove or relax (ambiguous)",
+        "target_day": 1,
+        "note": "'boring' names nothing searchable -- correct behavior is an honest 'couldn't find a match', not a hallucinated removal."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Local to free up time.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.5,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 15,
+      "command": "Reduce travel time between stops.",
+      "category": "logistics",
+      "probe": "reduce_travel_whole_trip",
+      "expected": {
+        "edit_type": "reduce_travel",
+        "target_day": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "reduce_travel",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Re-clustered your stops to minimize travel time between them.",
+      "changed_days": [
+        "day_1",
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.67,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Indian Accent",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Uttarakhand Food Stall",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Meghalaya Food & Momos",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Wazwan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 16,
+      "command": "Add Select Citywalk mall to Day 1.",
+      "category": "add",
+      "probe": "add_known_absent_place",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 1,
+        "constraint": "Select Citywalk",
+        "note": "Select Citywalk is a documented KNOWN_ABSENT_POPULAR_PLACES entry -- app should honestly decline."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "Select Citywalk mall"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "I don't have a real, mappable record of Select Citywalk in my data — I can't honestly add it. Khan Market is a real, verified alternative if you're looking for a shopping stop.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.67,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Indian Accent",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Uttarakhand Food Stall",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Meghalaya Food & Momos",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Wazwan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 17,
+      "command": "Swap the order of Day 1's morning and afternoon plans.",
+      "category": "reorder",
+      "probe": "reorder_slots_same_day",
+      "expected": {
+        "edit_type": "unsupported or reorder",
+        "target_day": 1,
+        "note": "No reorder-within-day capability is documented in the edit engine -- correct behavior is an honest 'can't do that yet', not a silent no-op presented as success or a corrupted schedule."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "swap",
+          "constraint": "swap morning and afternoon plans"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a suitable replacement for that swap.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.67,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Indian Accent",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Uttarakhand Food Stall",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Meghalaya Food & Momos",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Wazwan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 18,
+      "command": "Make Day 4 more relaxed.",
+      "category": "edge_case",
+      "probe": "invalid_day_reference",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 4,
+        "note": "Day 4 does not exist in a 2-day trip -- app should reject cleanly, not crash or silently no-op without explanation."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 4,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": false,
+      "edit_result_message": "Day 4 doesn't exist in this itinerary.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.67,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Karim's",
+              "category": "restaurant",
+              "arrival_time": "12:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Indian Accent",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Uttarakhand Food Stall",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Meghalaya Food & Momos",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Wazwan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 19,
+      "command": "Make the whole trip more fun.",
+      "category": "edge_case",
+      "probe": "vague_no_actionable_edit_type",
+      "expected": {
+        "edit_type": "ambiguous",
+        "target_day": "all",
+        "note": "No day/slot/edit-type signal at all -- tests whether the classifier defaults sensibly or misfires."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Karim's, Uttarakhand Food Stall to free up time.",
+      "changed_days": [
+        "day_1",
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Indian Accent",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 4.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Meghalaya Food & Momos",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Wazwan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 20,
+      "command": "asldkjf change something idk maybe swap a thing??",
+      "category": "edge_case",
+      "probe": "gibberish_low_signal_input",
+      "expected": {
+        "edit_type": "unclear",
+        "target_day": "unknown",
+        "note": "Near-gibberish, low-signal phrasing -- app should not crash and should either ask for clarification or make a conservative, clearly-labeled guess rather than silently mutating the itinerary with no explanation."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Indian Accent, Meghalaya Food & Momos to free up time.",
+      "changed_days": [
+        "day_1",
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 3.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Sunder Nursery",
+              "category": "park",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 2.75,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Wazwan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

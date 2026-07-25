@@ -1,0 +1,2934 @@
+{
+  "spec": {
+    "id": 14,
+    "label": "Architecture + Religion",
+    "interests": [
+      "architecture",
+      "religion"
+    ],
+    "days": 3,
+    "pace": "moderate"
+  },
+  "initial_itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/97230896",
+          "name": "Jama Masjid",
+          "category": "mosque",
+          "lat": 28.6352233,
+          "lon": 77.2455574,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March; avoid Friday midday",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers",
+            "spiritual travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/5297002821",
+          "name": "Masala House",
+          "category": "restaurant",
+          "lat": 28.6026965,
+          "lon": 77.2410926,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 20,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:28 AM",
+          "meal": "meal ~10:28 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/973075081",
+          "name": "Purana Qila",
+          "category": "monument",
+          "lat": 28.6093705,
+          "lon": 77.2441983,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/purana_quila.jsp",
+          "wikidata_qid": "Q1151529",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Entrance%20of%20the%20Archaeological%20Museum%2C%20Purana%20Qila%20%2802%29.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹20–₹25; foreign nationals approx. ₹200–₹300; museum, boating and shows ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Late afternoon; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "couples",
+            "photographers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/3424254864",
+          "name": "Nathu Sweets",
+          "category": "restaurant",
+          "lat": 28.6025805,
+          "lon": 77.2409575,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "2:10 PM",
+          "meal": "meal ~2:10 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/4628544689",
+          "name": "Gulati",
+          "category": "restaurant",
+          "lat": 28.6078499,
+          "lon": 77.2300673,
+          "opening_hours": "Mo-Su 12:00-24:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.38,
+      "date": "",
+      "nearest_hospital": {
+        "name": "NGO Lok Kalyan Samiti",
+        "distance_km": 2.04
+      },
+      "nearest_pharmacy": {
+        "name": "Youplus",
+        "distance_km": 1.77
+      },
+      "nearest_metro_station": {
+        "name": "Supreme Court",
+        "distance_km": 1.34
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/264863907",
+          "name": "Red Fort",
+          "category": "monument",
+          "lat": 28.6557242,
+          "lon": 77.2407427,
+          "opening_hours": "unknown",
+          "visit_duration_min": 180,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/red_fort.jsp",
+          "wikidata_qid": "Q45957",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹50; foreign nationals approx. ₹550–₹600; museum circuit ticketed additionally; children under 15 free at ASI monuments. Verify locally.",
+          "kb_best_time_to_visit": "Morning at opening to beat crowds; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "photographers",
+            "first-time visitors",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/11601332069",
+          "name": "Guru Kirpa Restaurant",
+          "category": "restaurant",
+          "lat": 28.6562798,
+          "lon": 77.2329761,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "12:10 PM",
+          "meal": "meal ~12:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/223903623",
+          "name": "Moti Masjid",
+          "category": "mosque",
+          "lat": 28.6568482,
+          "lon": 77.2431423,
+          "opening_hours": "unknown",
+          "visit_duration_min": 45,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q2991448",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fuerte%20Rojo%20Delhi%203.JPG",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/11645782069",
+          "name": "Gumbad Cafe",
+          "category": "restaurant",
+          "lat": 28.6516779,
+          "lon": 77.2327739,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "12:55 PM",
+          "meal": "meal ~12:55 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/12639638609",
+          "name": "बाबू राम देवी दयाल",
+          "category": "restaurant",
+          "lat": 28.6560917,
+          "lon": 77.23067,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.83,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Kasturba Hospital",
+        "distance_km": 0.61
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 1.02
+      },
+      "nearest_metro_station": {
+        "name": "Lal Quila",
+        "distance_km": 0.25
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "monument",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "way/369140381",
+          "name": "Qutab Minar",
+          "category": "monument",
+          "lat": 28.5244171,
+          "lon": 77.1854503,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "https://www.delhitourism.gov.in/delhitourism/tourist_place/qutab_minar.jsp",
+          "wikidata_qid": "Q187635",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Madrasa%20and%20tomb%20of%20Alauddin%20Khalji%202.jpg",
+          "travel_time_from_prev_min": 32,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "11:02 AM"
+        },
+        {
+          "osm_id": "node/5236666021",
+          "name": "Napoli Pizza",
+          "category": "restaurant",
+          "lat": 28.5464509,
+          "lon": 77.1970758,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 15,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "12:47 PM",
+          "meal": "meal ~12:47 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/12068146296",
+          "name": "Charrdewari",
+          "category": "restaurant",
+          "lat": 28.5535416,
+          "lon": 77.1944536,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/5443361421",
+          "name": "Mia Bella",
+          "category": "restaurant",
+          "lat": 28.5535373,
+          "lon": 77.1941882,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.53,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Cygnus Orthocare Hospital",
+        "distance_km": 0.49
+      },
+      "nearest_pharmacy": {
+        "name": "R R Chemist",
+        "distance_km": 1.25
+      },
+      "nearest_metro_station": {
+        "name": "IIT Delhi",
+        "distance_km": 0.37
+      }
+    }
+  },
+  "initial_itinerary_summary": {
+    "day_1": {
+      "total_hours": 7.38,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Jama Masjid",
+          "category": "mosque",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Masala House",
+          "category": "restaurant",
+          "arrival_time": "10:28 AM",
+          "travel_min": 20
+        },
+        {
+          "slot": "afternoon",
+          "name": "Purana Qila",
+          "category": "monument",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Nathu Sweets",
+          "category": "restaurant",
+          "arrival_time": "2:10 PM",
+          "travel_min": 10
+        },
+        {
+          "slot": "evening",
+          "name": "Gulati",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    },
+    "day_2": {
+      "total_hours": 7.83,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Red Fort",
+          "category": "monument",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Guru Kirpa Restaurant",
+          "category": "restaurant",
+          "arrival_time": "12:10 PM",
+          "travel_min": 10
+        },
+        {
+          "slot": "afternoon",
+          "name": "Moti Masjid",
+          "category": "mosque",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Gumbad Cafe",
+          "category": "restaurant",
+          "arrival_time": "12:55 PM",
+          "travel_min": 10
+        },
+        {
+          "slot": "evening",
+          "name": "बाबू राम देवी दयाल",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    },
+    "day_3": {
+      "total_hours": 7.53,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Dilli Haat",
+          "category": "monument",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Qutab Minar",
+          "category": "monument",
+          "arrival_time": "11:02 AM",
+          "travel_min": 32
+        },
+        {
+          "slot": "morning",
+          "name": "Napoli Pizza",
+          "category": "restaurant",
+          "arrival_time": "12:47 PM",
+          "travel_min": 15
+        },
+        {
+          "slot": "afternoon",
+          "name": "Charrdewari",
+          "category": "restaurant",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "evening",
+          "name": "Mia Bella",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    }
+  },
+  "final_itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/97230896",
+          "name": "Jama Masjid",
+          "category": "mosque",
+          "lat": 28.6352233,
+          "lon": 77.2455574,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March; avoid Friday midday",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers",
+            "spiritual travellers"
+          ],
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/973075081",
+          "name": "Purana Qila",
+          "category": "monument",
+          "lat": 28.6093705,
+          "lon": 77.2441983,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/purana_quila.jsp",
+          "wikidata_qid": "Q1151529",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Entrance%20of%20the%20Archaeological%20Museum%2C%20Purana%20Qila%20%2802%29.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹20–₹25; foreign nationals approx. ₹200–₹300; museum, boating and shows ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Late afternoon; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "couples",
+            "photographers"
+          ],
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "travel_time_from_prev_min": 0
+        },
+        {
+          "osm_id": "node/11937020351",
+          "name": "Himachal Bhawan Dining Hall",
+          "category": "restaurant",
+          "lat": 28.6260814,
+          "lon": 77.2330264,
+          "opening_hours": "Mo-Su 08:00-22:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 12,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "2:12 PM",
+          "meal": "meal ~2:12 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/6224257207",
+          "name": "Triveni Terrace Cafe",
+          "category": "restaurant",
+          "lat": 28.627319,
+          "lon": 77.2326929,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 5.83,
+      "date": "",
+      "nearest_hospital": {
+        "name": "NGO Lok Kalyan Samiti",
+        "distance_km": 0.58
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 2.26
+      },
+      "nearest_metro_station": {
+        "name": "Mandi House",
+        "distance_km": 0.38
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "monument",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "travel_time_from_prev_min": 0
+        },
+        {
+          "osm_id": "way/369140381",
+          "name": "Qutab Minar",
+          "category": "monument",
+          "lat": 28.5244171,
+          "lon": 77.1854503,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "https://www.delhitourism.gov.in/delhitourism/tourist_place/qutab_minar.jsp",
+          "wikidata_qid": "Q187635",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Madrasa%20and%20tomb%20of%20Alauddin%20Khalji%202.jpg",
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "11:02 AM",
+          "travel_time_from_prev_min": 32
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/5443361421",
+          "name": "Mia Bella",
+          "category": "restaurant",
+          "lat": 28.5535373,
+          "lon": 77.1941882,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/12068146296",
+          "name": "Charrdewari",
+          "category": "restaurant",
+          "lat": 28.5535416,
+          "lon": 77.1944536,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "total_hours": 6.03,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Cygnus Orthocare Hospital",
+        "distance_km": 0.66
+      },
+      "nearest_pharmacy": {
+        "name": "R R Chemist",
+        "distance_km": 1.08
+      },
+      "nearest_metro_station": {
+        "name": "IIT Delhi",
+        "distance_km": 0.52
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "way/223903623",
+          "name": "Moti Masjid",
+          "category": "mosque",
+          "lat": 28.6568482,
+          "lon": 77.2431423,
+          "opening_hours": "unknown",
+          "visit_duration_min": 45,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q2991448",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Fuerte%20Rojo%20Delhi%203.JPG",
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/12639638609",
+          "name": "बाबू राम देवी दयाल",
+          "category": "restaurant",
+          "lat": 28.6560917,
+          "lon": 77.23067,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/11601332069",
+          "name": "Guru Kirpa Restaurant",
+          "category": "restaurant",
+          "lat": 28.6562798,
+          "lon": 77.2329761,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 3.25,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Kasturba Hospital",
+        "distance_km": 0.61
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 0.91
+      },
+      "nearest_metro_station": {
+        "name": "Lal Quila",
+        "distance_km": 0.3
+      }
+    }
+  },
+  "final_itinerary_summary": {
+    "day_1": {
+      "total_hours": 5.83,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Jama Masjid",
+          "category": "mosque",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Purana Qila",
+          "category": "monument",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Himachal Bhawan Dining Hall",
+          "category": "restaurant",
+          "arrival_time": "2:12 PM",
+          "travel_min": 12
+        },
+        {
+          "slot": "evening",
+          "name": "Triveni Terrace Cafe",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    },
+    "day_2": {
+      "total_hours": 6.03,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Dilli Haat",
+          "category": "monument",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Qutab Minar",
+          "category": "monument",
+          "arrival_time": "11:02 AM",
+          "travel_min": 32
+        },
+        {
+          "slot": "afternoon",
+          "name": "Mia Bella",
+          "category": "restaurant",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "evening",
+          "name": "Charrdewari",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    },
+    "day_3": {
+      "total_hours": 3.25,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Moti Masjid",
+          "category": "mosque",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "बाबू राम देवी दयाल",
+          "category": "restaurant",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "evening",
+          "name": "Guru Kirpa Restaurant",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "n": 1,
+      "command": "Make Day 1 more relaxed.",
+      "category": "pacing",
+      "probe": "relax_vague_quantity",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 1,
+        "target_slot": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Make Day 1 more relaxed."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Masala House to free up time.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.8,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Gulati",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.83,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Guru Kirpa Restaurant",
+              "category": "restaurant",
+              "arrival_time": "12:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "12:55 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 7.53,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Napoli Pizza",
+              "category": "restaurant",
+              "arrival_time": "12:47 PM",
+              "travel_min": 15
+            },
+            {
+              "slot": "afternoon",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 2,
+      "command": "Day 3 feels too packed — take one thing out of the evening.",
+      "category": "pacing",
+      "probe": "relax_specific_slot",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 3,
+        "target_slot": "evening"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 3,
+          "target_slot": "evening",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Day 3 feels too packed — take one thing out of the evening."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "This day is already light — nothing to remove.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.8,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Gulati",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.83,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Guru Kirpa Restaurant",
+              "category": "restaurant",
+              "arrival_time": "12:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "12:55 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 7.53,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Napoli Pizza",
+              "category": "restaurant",
+              "arrival_time": "12:47 PM",
+              "travel_min": 15
+            },
+            {
+              "slot": "afternoon",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 3,
+      "command": "Day 2 is a lot — can you lighten it up somehow?",
+      "category": "pacing",
+      "probe": "relax_vague_phrasing",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 2,
+        "target_slot": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Day 2 is a lot — can you lighten it up somehow?"
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Guru Kirpa Restaurant to free up time.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.8,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Gulati",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "12:55 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 7.53,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Napoli Pizza",
+              "category": "restaurant",
+              "arrival_time": "12:47 PM",
+              "travel_min": 15
+            },
+            {
+              "slot": "afternoon",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 4,
+      "command": "Swap the Day 1 evening plan to something indoors.",
+      "category": "swap",
+      "probe": "swap_indoor",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "indoor"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "evening",
+          "edit_type": "swap",
+          "constraint": "indoors"
+        },
+        "query": "Swap the Day 1 evening plan to something indoors."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Gulati → Shanker's International Doll Museum.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "12:55 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 7.53,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Napoli Pizza",
+              "category": "restaurant",
+              "arrival_time": "12:47 PM",
+              "travel_min": 15
+            },
+            {
+              "slot": "afternoon",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 5,
+      "command": "Swap the Day 3 morning plan to something outdoors.",
+      "category": "swap",
+      "probe": "swap_outdoor",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 3,
+        "target_slot": "morning",
+        "constraint": "outdoor"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 3,
+          "target_slot": "morning",
+          "edit_type": "swap",
+          "constraint": "outdoors"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Napoli Pizza → Humayun's Tomb.",
+      "changed_days": [
+        "day_3"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "12:55 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 8.28,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 15
+            },
+            {
+              "slot": "afternoon",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 6,
+      "command": "Swap Day 2 afternoon for a food spot instead.",
+      "category": "swap",
+      "probe": "swap_theme_category",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 2,
+        "target_slot": "afternoon",
+        "constraint": "food"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "afternoon",
+          "edit_type": "swap",
+          "constraint": "food spot"
+        },
+        "query": "Swap Day 2 afternoon for a food spot instead."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a suitable replacement for that swap.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "12:55 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 8.28,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 15
+            },
+            {
+              "slot": "afternoon",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 7,
+      "command": "Replace the Day 1 evening stop with Connaught Place.",
+      "category": "swap",
+      "probe": "swap_known_absent_place",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "Connaught Place",
+        "note": "Connaught Place is a documented KNOWN_ABSENT_POPULAR_PLACES entry -- app should honestly decline, not silently substitute."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "evening",
+          "edit_type": "swap",
+          "constraint": "Connaught Place"
+        },
+        "query": "Replace the Day 1 evening stop with Connaught Place."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "I don't have a real, mappable record of Connaught Place in my data (it's absent from the OpenStreetMap extract this planner uses) — I can't honestly add it. Khan Market or Janpath are real, verified alternatives nearby if you'd like one of those instead.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "12:55 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 8.28,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 15
+            },
+            {
+              "slot": "afternoon",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 8,
+      "command": "Add one famous local food place to Day 1.",
+      "category": "add",
+      "probe": "add_food_famous",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "food"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "famous local food place"
+        },
+        "query": "Add one famous local food place to Day 1."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a new place matching that request.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "12:55 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 8.28,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 15
+            },
+            {
+              "slot": "afternoon",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 9,
+      "command": "Add a family stop somewhere in the trip.",
+      "category": "add",
+      "probe": "add_theme_any_day",
+      "expected": {
+        "edit_type": "add",
+        "target_day": "all",
+        "target_slot": "evening",
+        "constraint": "family"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "family stop"
+        },
+        "query": "Add a family stop somewhere in the trip."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a new place matching that request.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "12:55 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 8.28,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 15
+            },
+            {
+              "slot": "afternoon",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 10,
+      "command": "Add Select Citywalk mall to Day 2.",
+      "category": "add",
+      "probe": "add_known_absent_place",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 2,
+        "constraint": "Select Citywalk",
+        "note": "Select Citywalk is a documented KNOWN_ABSENT_POPULAR_PLACES entry -- app should honestly decline."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "Select Citywalk mall"
+        },
+        "query": "Add Select Citywalk mall to Day 2."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a new place matching that request.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Red Fort",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "12:55 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 8.28,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 15
+            },
+            {
+              "slot": "afternoon",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 11,
+      "command": "Remove Red Fort from Day 2.",
+      "category": "remove",
+      "probe": "remove_real_named_stop",
+      "expected": {
+        "edit_type": "remove",
+        "target_day": 2,
+        "constraint": "Red Fort"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "remove",
+          "constraint": "Red Fort"
+        },
+        "query": "Remove Red Fort from Day 2."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Removed Red Fort from the itinerary.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.42,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Nathu Sweets",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.42,
+          "stops": [
+            {
+              "slot": "afternoon",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "12:55 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 8.28,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 15
+            },
+            {
+              "slot": "afternoon",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 12,
+      "command": "Remove the boring stop from Day 1.",
+      "category": "remove",
+      "probe": "remove_vague_no_referent",
+      "expected": {
+        "edit_type": "remove or relax (ambiguous)",
+        "target_day": 1,
+        "note": "'boring' names nothing searchable -- correct behavior is an honest 'couldn't find a match' or classification as relax, not a hallucinated removal."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Remove the boring stop from Day 1."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Nathu Sweets to free up time.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 4.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Shanker's International Doll Museum",
+              "category": "museum",
+              "arrival_time": null,
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 3.42,
+          "stops": [
+            {
+              "slot": "afternoon",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "12:55 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 8.28,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 15
+            },
+            {
+              "slot": "afternoon",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 13,
+      "command": "Reduce travel time between stops.",
+      "category": "logistics",
+      "probe": "reduce_travel_whole_trip",
+      "expected": {
+        "edit_type": "reduce_travel",
+        "target_day": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "reduce_travel",
+          "constraint": ""
+        },
+        "query": "Reduce travel time between stops."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Re-clustered your stops to minimize travel time between them.",
+      "changed_days": [
+        "day_1",
+        "day_2",
+        "day_3"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 7.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Xero Degrees",
+              "category": "restaurant",
+              "arrival_time": "10:18 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Himachal Bhawan Dining Hall",
+              "category": "restaurant",
+              "arrival_time": "2:12 PM",
+              "travel_min": 12
+            },
+            {
+              "slot": "evening",
+              "name": "Triveni Terrace Cafe",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.58,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Lama Kitchen Himalayan Cook House",
+              "category": "restaurant",
+              "arrival_time": "12:50 PM",
+              "travel_min": 18
+            },
+            {
+              "slot": "afternoon",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 4.67,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "9:55 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Guru Kirpa Restaurant",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 14,
+      "command": "Make Day 5 more relaxed.",
+      "category": "edge_case",
+      "probe": "invalid_day_reference",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 5,
+        "note": "Day 5 does not exist in a 3-day trip -- app should reject cleanly, not crash or silently no-op without explanation."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 5,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Make Day 5 more relaxed."
+      },
+      "edit_result_ok": false,
+      "edit_result_message": "Day 5 doesn't exist in this itinerary.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 7.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Xero Degrees",
+              "category": "restaurant",
+              "arrival_time": "10:18 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Himachal Bhawan Dining Hall",
+              "category": "restaurant",
+              "arrival_time": "2:12 PM",
+              "travel_min": 12
+            },
+            {
+              "slot": "evening",
+              "name": "Triveni Terrace Cafe",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.58,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "morning",
+              "name": "Lama Kitchen Himalayan Cook House",
+              "category": "restaurant",
+              "arrival_time": "12:50 PM",
+              "travel_min": 18
+            },
+            {
+              "slot": "afternoon",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 4.67,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Gumbad Cafe",
+              "category": "restaurant",
+              "arrival_time": "9:55 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Guru Kirpa Restaurant",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 15,
+      "command": "Make the whole trip more fun.",
+      "category": "edge_case",
+      "probe": "vague_no_actionable_edit_type",
+      "expected": {
+        "edit_type": "ambiguous",
+        "target_day": "all",
+        "note": "No day/slot/edit-type signal at all -- tests whether the classifier defaults sensibly or misfires (e.g. defaulting to 'swap' with an empty/nonsense constraint)."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": "Make the whole trip more fun."
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Xero Degrees, Lama Kitchen Himalayan Cook House, Gumbad Cafe to free up time.",
+      "changed_days": [
+        "day_1",
+        "day_2",
+        "day_3"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 5.83,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Jama Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Purana Qila",
+              "category": "monument",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Himachal Bhawan Dining Hall",
+              "category": "restaurant",
+              "arrival_time": "2:12 PM",
+              "travel_min": 12
+            },
+            {
+              "slot": "evening",
+              "name": "Triveni Terrace Cafe",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.03,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "monument",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Qutab Minar",
+              "category": "monument",
+              "arrival_time": "11:02 AM",
+              "travel_min": 32
+            },
+            {
+              "slot": "afternoon",
+              "name": "Mia Bella",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Charrdewari",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_3": {
+          "total_hours": 3.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Moti Masjid",
+              "category": "mosque",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "बाबू राम देवी दयाल",
+              "category": "restaurant",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Guru Kirpa Restaurant",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

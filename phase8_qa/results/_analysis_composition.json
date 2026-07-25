@@ -1,0 +1,973 @@
+{
+  "results": [
+    {
+      "spec_id": 1,
+      "label": "History + Nature + Shopping",
+      "interests": [
+        "history",
+        "nature",
+        "shopping"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 5,
+          "categories": {
+            "park": 1,
+            "restaurant": 3,
+            "monument": 1
+          },
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "total_stops": 6,
+          "categories": {
+            "market": 1,
+            "monument": 1,
+            "restaurant": 3,
+            "park": 1
+          },
+          "restaurant_share": 0.5
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 3,
+          "total_stops": 6,
+          "restaurant_share": 0.5
+        }
+      ]
+    },
+    {
+      "spec_id": 2,
+      "label": "Shopping",
+      "interests": [
+        "shopping"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 4,
+          "categories": {
+            "market": 1,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.75
+        },
+        {
+          "day": "day_2",
+          "total_stops": 4,
+          "categories": {
+            "market": 2,
+            "restaurant": 2
+          },
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_3",
+          "total_stops": 4,
+          "categories": {
+            "market": 1,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.75
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 3,
+          "total_stops": 4,
+          "restaurant_share": 0.75
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 2,
+          "total_stops": 4,
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_3",
+          "restaurant_count": 3,
+          "total_stops": 4,
+          "restaurant_share": 0.75
+        }
+      ]
+    },
+    {
+      "spec_id": 3,
+      "label": "Culture + History",
+      "interests": [
+        "culture",
+        "history"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 5,
+          "categories": {
+            "monument": 2,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "total_stops": 4,
+          "categories": {
+            "monument": 1,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.75
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 3,
+          "total_stops": 4,
+          "restaurant_share": 0.75
+        }
+      ]
+    },
+    {
+      "spec_id": 4,
+      "label": "Architecture + History + Shopping",
+      "interests": [
+        "architecture",
+        "history",
+        "shopping"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 4,
+          "categories": {
+            "monument": 1,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.75
+        },
+        {
+          "day": "day_2",
+          "total_stops": 4,
+          "categories": {
+            "market": 1,
+            "restaurant": 2,
+            "monument": 1
+          },
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_3",
+          "total_stops": 3,
+          "categories": {
+            "monument": 1,
+            "restaurant": 2
+          },
+          "restaurant_share": 0.67
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 3,
+          "total_stops": 4,
+          "restaurant_share": 0.75
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 2,
+          "total_stops": 4,
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_3",
+          "restaurant_count": 2,
+          "total_stops": 3,
+          "restaurant_share": 0.67
+        }
+      ]
+    },
+    {
+      "spec_id": 5,
+      "label": "Family",
+      "interests": [
+        "family"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 4,
+          "categories": {
+            "monument": 1,
+            "restaurant": 2,
+            "park": 1
+          },
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_2",
+          "total_stops": 3,
+          "categories": {
+            "monument": 1,
+            "restaurant": 2
+          },
+          "restaurant_share": 0.67
+        },
+        {
+          "day": "day_3",
+          "total_stops": 4,
+          "categories": {
+            "park": 1,
+            "restaurant": 2,
+            "monument": 1
+          },
+          "restaurant_share": 0.5
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 2,
+          "total_stops": 4,
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 2,
+          "total_stops": 3,
+          "restaurant_share": 0.67
+        },
+        {
+          "day": "day_3",
+          "restaurant_count": 2,
+          "total_stops": 4,
+          "restaurant_share": 0.5
+        }
+      ]
+    },
+    {
+      "spec_id": 6,
+      "label": "Family + Nature",
+      "interests": [
+        "family",
+        "nature"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 3,
+          "categories": {
+            "park": 1,
+            "restaurant": 2
+          },
+          "restaurant_share": 0.67
+        },
+        {
+          "day": "day_2",
+          "total_stops": 4,
+          "categories": {
+            "park": 2,
+            "restaurant": 2
+          },
+          "restaurant_share": 0.5
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 2,
+          "total_stops": 3,
+          "restaurant_share": 0.67
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 2,
+          "total_stops": 4,
+          "restaurant_share": 0.5
+        }
+      ]
+    },
+    {
+      "spec_id": 7,
+      "label": "Food + Nature",
+      "interests": [
+        "food",
+        "nature"
+      ],
+      "food_interest_stated": true,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 5,
+          "categories": {
+            "park": 1,
+            "restaurant": 3,
+            "market": 1
+          },
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "total_stops": 7,
+          "categories": {
+            "market": 1,
+            "restaurant": 3,
+            "park": 3
+          },
+          "restaurant_share": 0.43
+        },
+        {
+          "day": "day_3",
+          "total_stops": 6,
+          "categories": {
+            "park": 3,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.5
+        }
+      ],
+      "meal_overfill_flags": []
+    },
+    {
+      "spec_id": 8,
+      "label": "Family",
+      "interests": [
+        "family"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 5,
+          "categories": {
+            "monument": 1,
+            "restaurant": 3,
+            "park": 1
+          },
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "total_stops": 6,
+          "categories": {
+            "monument": 2,
+            "restaurant": 3,
+            "park": 1
+          },
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_3",
+          "total_stops": 5,
+          "categories": {
+            "park": 3,
+            "monument": 1,
+            "restaurant": 1
+          },
+          "restaurant_share": 0.2
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 3,
+          "total_stops": 6,
+          "restaurant_share": 0.5
+        }
+      ]
+    },
+    {
+      "spec_id": 9,
+      "label": "Family + History + Nature",
+      "interests": [
+        "family",
+        "history",
+        "nature"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 5,
+          "categories": {
+            "park": 2,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "total_stops": 5,
+          "categories": {
+            "monument": 1,
+            "restaurant": 3,
+            "park": 1
+          },
+          "restaurant_share": 0.6
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        }
+      ]
+    },
+    {
+      "spec_id": 10,
+      "label": "Culture",
+      "interests": [
+        "culture"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 5,
+          "categories": {
+            "monument": 2,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "total_stops": 5,
+          "categories": {
+            "monument": 1,
+            "restaurant": 3,
+            "church": 1
+          },
+          "restaurant_share": 0.6
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        }
+      ]
+    },
+    {
+      "spec_id": 11,
+      "label": "Culture + Food",
+      "interests": [
+        "culture",
+        "food"
+      ],
+      "food_interest_stated": true,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 6,
+          "categories": {
+            "monument": 2,
+            "restaurant": 3,
+            "market": 1
+          },
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_2",
+          "total_stops": 6,
+          "categories": {
+            "restaurant": 3,
+            "church": 1,
+            "monument": 1,
+            "market": 1
+          },
+          "restaurant_share": 0.5
+        }
+      ],
+      "meal_overfill_flags": []
+    },
+    {
+      "spec_id": 12,
+      "label": "Architecture",
+      "interests": [
+        "architecture"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 5,
+          "categories": {
+            "monument": 2,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "total_stops": 5,
+          "categories": {
+            "monument": 1,
+            "restaurant": 3,
+            "mosque": 1
+          },
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_3",
+          "total_stops": 5,
+          "categories": {
+            "monument": 2,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.6
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_3",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        }
+      ]
+    },
+    {
+      "spec_id": 13,
+      "label": "Architecture + Shopping",
+      "interests": [
+        "architecture",
+        "shopping"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 5,
+          "categories": {
+            "monument": 2,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "total_stops": 5,
+          "categories": {
+            "market": 1,
+            "monument": 1,
+            "restaurant": 2,
+            "church": 1
+          },
+          "restaurant_share": 0.4
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        }
+      ]
+    },
+    {
+      "spec_id": 14,
+      "label": "Architecture + History + Shopping",
+      "interests": [
+        "architecture",
+        "history",
+        "shopping"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 5,
+          "categories": {
+            "monument": 2,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "total_stops": 6,
+          "categories": {
+            "market": 1,
+            "monument": 1,
+            "restaurant": 3,
+            "church": 1
+          },
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_3",
+          "total_stops": 5,
+          "categories": {
+            "monument": 1,
+            "restaurant": 3,
+            "church": 1
+          },
+          "restaurant_share": 0.6
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 3,
+          "total_stops": 6,
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_3",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        }
+      ]
+    },
+    {
+      "spec_id": 15,
+      "label": "Nature + Religion + Shopping",
+      "interests": [
+        "nature",
+        "religion",
+        "shopping"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 3,
+          "categories": {
+            "park": 1,
+            "restaurant": 2
+          },
+          "restaurant_share": 0.67
+        },
+        {
+          "day": "day_2",
+          "total_stops": 4,
+          "categories": {
+            "market": 1,
+            "restaurant": 2,
+            "park": 1
+          },
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_3",
+          "total_stops": 4,
+          "categories": {
+            "park": 1,
+            "market": 1,
+            "restaurant": 2
+          },
+          "restaurant_share": 0.5
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 2,
+          "total_stops": 3,
+          "restaurant_share": 0.67
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 2,
+          "total_stops": 4,
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_3",
+          "restaurant_count": 2,
+          "total_stops": 4,
+          "restaurant_share": 0.5
+        }
+      ]
+    },
+    {
+      "spec_id": 16,
+      "label": "Architecture + Nature",
+      "interests": [
+        "architecture",
+        "nature"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 5,
+          "categories": {
+            "park": 2,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "total_stops": 6,
+          "categories": {
+            "park": 1,
+            "monument": 1,
+            "restaurant": 3,
+            "church": 1
+          },
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_3",
+          "total_stops": 5,
+          "categories": {
+            "park": 1,
+            "restaurant": 3,
+            "monument": 1
+          },
+          "restaurant_share": 0.6
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 3,
+          "total_stops": 6,
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_3",
+          "restaurant_count": 3,
+          "total_stops": 5,
+          "restaurant_share": 0.6
+        }
+      ]
+    },
+    {
+      "spec_id": 17,
+      "label": "Food",
+      "interests": [
+        "food"
+      ],
+      "food_interest_stated": true,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 4,
+          "categories": {
+            "market": 1,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.75
+        },
+        {
+          "day": "day_2",
+          "total_stops": 4,
+          "categories": {
+            "market": 2,
+            "restaurant": 2
+          },
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_3",
+          "total_stops": 4,
+          "categories": {
+            "restaurant": 3,
+            "market": 1
+          },
+          "restaurant_share": 0.75
+        }
+      ],
+      "meal_overfill_flags": []
+    },
+    {
+      "spec_id": 18,
+      "label": "Art + Food + History + Religion",
+      "interests": [
+        "art",
+        "food",
+        "history",
+        "religion"
+      ],
+      "food_interest_stated": true,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 4,
+          "categories": {
+            "monument": 1,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.75
+        },
+        {
+          "day": "day_2",
+          "total_stops": 4,
+          "categories": {
+            "restaurant": 3,
+            "park": 1
+          },
+          "restaurant_share": 0.75
+        },
+        {
+          "day": "day_3",
+          "total_stops": 4,
+          "categories": {
+            "restaurant": 3,
+            "market": 1
+          },
+          "restaurant_share": 0.75
+        }
+      ],
+      "meal_overfill_flags": []
+    },
+    {
+      "spec_id": 19,
+      "label": "Shopping",
+      "interests": [
+        "shopping"
+      ],
+      "food_interest_stated": false,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 6,
+          "categories": {
+            "market": 3,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_2",
+          "total_stops": 6,
+          "categories": {
+            "market": 3,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.5
+        }
+      ],
+      "meal_overfill_flags": [
+        {
+          "day": "day_1",
+          "restaurant_count": 3,
+          "total_stops": 6,
+          "restaurant_share": 0.5
+        },
+        {
+          "day": "day_2",
+          "restaurant_count": 3,
+          "total_stops": 6,
+          "restaurant_share": 0.5
+        }
+      ]
+    },
+    {
+      "spec_id": 20,
+      "label": "Architecture + Food",
+      "interests": [
+        "architecture",
+        "food"
+      ],
+      "food_interest_stated": true,
+      "days": [
+        {
+          "day": "day_1",
+          "total_stops": 4,
+          "categories": {
+            "monument": 1,
+            "restaurant": 3
+          },
+          "restaurant_share": 0.75
+        },
+        {
+          "day": "day_2",
+          "total_stops": 3,
+          "categories": {
+            "monument": 1,
+            "restaurant": 2
+          },
+          "restaurant_share": 0.67
+        },
+        {
+          "day": "day_3",
+          "total_stops": 4,
+          "categories": {
+            "market": 1,
+            "restaurant": 2,
+            "monument": 1
+          },
+          "restaurant_share": 0.5
+        }
+      ],
+      "meal_overfill_flags": []
+    }
+  ],
+  "total_meal_overfill_flags": 36,
+  "flagged_itinerary_count": 15
+}

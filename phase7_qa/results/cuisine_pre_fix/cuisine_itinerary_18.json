@@ -1,0 +1,308 @@
+{
+  "spec": {
+    "id": 18,
+    "days": 3,
+    "pace": "relaxed",
+    "cuisine": "Italian",
+    "cuisine_phrase": "I'd love to try some Italian cuisine",
+    "category_interests": [
+      "culture",
+      "shopping"
+    ],
+    "opening_message": "I'm planning a 3-day trip to Delhi, relaxed pace. I'd love to try some Italian cuisine. I'm also interested in culture and shopping."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "culture",
+    "shopping",
+    "food"
+  ],
+  "extracted_constraints": {
+    "dietary": "Italian cuisine"
+  },
+  "num_days_extracted": 3,
+  "pace_extracted": "relaxed",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/442156777",
+          "name": "Janpath New Mini Market",
+          "category": "market",
+          "lat": 28.6290954,
+          "lon": 77.2181663,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon; October–March (open-air stalls)",
+          "kb_suitable_for": [
+            "budget travellers",
+            "shoppers",
+            "souvenir hunters",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 25,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:55 AM",
+          "meal": "meal ~10:55 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/7282286731",
+          "name": "Khan Market",
+          "category": "market",
+          "lat": 28.6022446,
+          "lon": 77.2291281,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/5109833022",
+          "name": "Pindi restaurant Delhi",
+          "category": "restaurant",
+          "lat": 28.6078554,
+          "lon": 77.2296194,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "1:40 PM",
+          "meal": "meal ~1:40 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [],
+      "total_hours": 6.08,
+      "date": "",
+      "nearest_hospital": {
+        "name": "General Williams Hospital",
+        "distance_km": 2.35
+      },
+      "nearest_pharmacy": {
+        "name": "Youplus",
+        "distance_km": 0.8
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 0.61
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/13688643551",
+          "name": "Xero Degrees",
+          "category": "restaurant",
+          "lat": 28.6277983,
+          "lon": 77.374926,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/6592733292",
+          "name": "storypay",
+          "category": "restaurant",
+          "lat": 28.6295889,
+          "lon": 77.3763121,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 3.75,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Fortis Hospital",
+        "distance_km": 0.59
+      },
+      "nearest_pharmacy": {
+        "name": "Apollo Pharmacy",
+        "distance_km": 1.49
+      },
+      "nearest_metro_station": {
+        "name": "Noida Electronic City",
+        "distance_km": 0.49
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q17064086",
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/7018886724",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6584227,
+          "lon": 77.2303375,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q5071227",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "monument",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM"
+        },
+        {
+          "osm_id": "node/8151189839",
+          "name": "Parikrama - The Revolving Restaurant",
+          "category": "restaurant",
+          "lat": 28.6287272,
+          "lon": 77.2229395,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 35,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "7:05 PM",
+          "meal": "meal ~7:05 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "total_hours": 5.72,
+      "date": "",
+      "nearest_hospital": {
+        "name": "General Williams Hospital",
+        "distance_km": 0.52
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 0.94
+      },
+      "nearest_metro_station": {
+        "name": "Barakhambha Road",
+        "distance_km": 0.29
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 8,
+    "matched_cuisine": [],
+    "unmatched_cuisine": [],
+    "no_cuisine_tag": [
+      "Indian Accent",
+      "Pindi restaurant Delhi",
+      "Bukhara",
+      "Xero Degrees",
+      "storypay",
+      "Karim's",
+      "Chandni Chowk",
+      "Parikrama - The Revolving Restaurant"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "culture",
+      "shopping"
+    ],
+    "missing": []
+  }
+}

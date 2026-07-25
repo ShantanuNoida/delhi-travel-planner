@@ -1,0 +1,184 @@
+{
+  "day_1": {
+    "morning": [
+      {
+        "osm_id": "node/7636338885",
+        "name": "Dilli Haat",
+        "category": "monument",
+        "lat": 28.6221333,
+        "lon": 77.0967834,
+        "opening_hours": "unknown",
+        "visit_duration_min": 90,
+        "relevance_score": 0.9,
+        "fallback": false,
+        "travel_time_from_prev_min": 0,
+        "travel_mode_from_prev": null,
+        "is_hidden_gem": true
+      },
+      {
+        "osm_id": "way/221487001",
+        "name": "Dilli Haat",
+        "category": "monument",
+        "lat": 28.6221025,
+        "lon": 77.0966403,
+        "opening_hours": "unknown",
+        "visit_duration_min": 90,
+        "relevance_score": 0.9,
+        "fallback": false,
+        "travel_time_from_prev_min": 10,
+        "travel_mode_from_prev": "walk"
+      }
+    ],
+    "afternoon": [
+      {
+        "osm_id": "way/103602249",
+        "name": "Safdarjung's Tomb",
+        "category": "monument",
+        "lat": 28.5892366,
+        "lon": 77.2106025,
+        "opening_hours": "unknown",
+        "visit_duration_min": 90,
+        "relevance_score": 0.9,
+        "fallback": false,
+        "travel_time_from_prev_min": 0,
+        "travel_mode_from_prev": null
+      },
+      {
+        "osm_id": "way/220385654",
+        "name": "Humayun's Tomb",
+        "category": "monument",
+        "lat": 28.5932862,
+        "lon": 77.2506455,
+        "opening_hours": "unknown",
+        "visit_duration_min": 90,
+        "relevance_score": 0.9,
+        "fallback": false,
+        "website": "http://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+        "wikidata_qid": "Q189648",
+        "travel_time_from_prev_min": 22,
+        "travel_mode_from_prev": "metro"
+      }
+    ],
+    "evening": [
+      {
+        "osm_id": "way/97230896",
+        "name": "Jama Masjid",
+        "category": "mosque",
+        "lat": 28.6352233,
+        "lon": 77.2455574,
+        "opening_hours": "unknown",
+        "visit_duration_min": 45,
+        "relevance_score": 0.9,
+        "fallback": false,
+        "travel_time_from_prev_min": 0,
+        "travel_mode_from_prev": null
+      }
+    ],
+    "total_hours": 7.28,
+    "date": "",
+    "nearest_hospital": {
+      "name": "Primus Super Specialty Hospital",
+      "distance_km": 2.15
+    },
+    "nearest_pharmacy": {
+      "name": "Sawhney Medicos",
+      "distance_km": 1.3
+    },
+    "nearest_metro_station": {
+      "name": "Dhaula Kuan",
+      "distance_km": 2.9
+    }
+  },
+  "day_2": {
+    "morning": [
+      {
+        "osm_id": "relation/3926057",
+        "name": "Jama Masjid",
+        "category": "monument",
+        "lat": 28.6506864,
+        "lon": 77.2334669,
+        "opening_hours": "Mo-Su 07:00-12:00, 13:30-18:30",
+        "visit_duration_min": 90,
+        "relevance_score": 1.0,
+        "fallback": false,
+        "website": "https://www.quran.org.in",
+        "wikidata_qid": "Q233678",
+        "travel_time_from_prev_min": 0,
+        "travel_mode_from_prev": null
+      },
+      {
+        "osm_id": "node/3268564739",
+        "name": "Chandni Chowk",
+        "category": "monument",
+        "lat": 28.6559834,
+        "lon": 77.2321937,
+        "opening_hours": "unknown",
+        "visit_duration_min": 90,
+        "relevance_score": 0.9,
+        "fallback": false,
+        "travel_time_from_prev_min": 10,
+        "travel_mode_from_prev": "walk",
+        "is_hidden_gem": true
+      }
+    ],
+    "afternoon": [
+      {
+        "osm_id": "way/264863907",
+        "name": "Red Fort",
+        "category": "monument",
+        "lat": 28.6557242,
+        "lon": 77.2407427,
+        "opening_hours": "unknown",
+        "visit_duration_min": 90,
+        "relevance_score": 0.9,
+        "fallback": false,
+        "website": "http://delhitourism.gov.in/delhitourism/tourist_place/red_fort.jsp",
+        "wikidata_qid": "Q45957",
+        "travel_time_from_prev_min": 0,
+        "travel_mode_from_prev": null
+      },
+      {
+        "osm_id": "way/1448399385",
+        "name": "Raj Ghat",
+        "category": "monument",
+        "lat": 28.6405986,
+        "lon": 77.2495043,
+        "opening_hours": "unknown",
+        "visit_duration_min": 90,
+        "relevance_score": 0.9,
+        "fallback": false,
+        "travel_time_from_prev_min": 10,
+        "travel_mode_from_prev": "auto"
+      }
+    ],
+    "evening": [
+      {
+        "osm_id": "way/44315454",
+        "name": "Dilli Haat",
+        "category": "monument",
+        "lat": 28.5731929,
+        "lon": 77.2072531,
+        "opening_hours": "Mo-Su 10:00-22:00",
+        "visit_duration_min": 90,
+        "relevance_score": 1.0,
+        "fallback": false,
+        "travel_time_from_prev_min": 0,
+        "travel_mode_from_prev": null
+      }
+    ],
+    "total_hours": 7.83,
+    "date": "",
+    "nearest_hospital": {
+      "name": "Guru Nanak Eye Hospital",
+      "distance_km": 0.34
+    },
+    "nearest_pharmacy": {
+      "name": "Nath Brothers",
+      "distance_km": 1.5
+    },
+    "nearest_metro_station": {
+      "name": "Delhi Gate",
+      "distance_km": 0.91
+    }
+  }
+}

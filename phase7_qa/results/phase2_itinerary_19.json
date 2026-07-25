@@ -1,0 +1,726 @@
+{
+  "spec": {
+    "id": 19,
+    "label": "Religion + Architecture + Culture",
+    "interests": [
+      "religion",
+      "architecture",
+      "culture"
+    ],
+    "days": 2,
+    "pace": "moderate"
+  },
+  "itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/97230896",
+          "name": "Jama Masjid",
+          "category": "mosque",
+          "lat": 28.6352233,
+          "lon": 77.2455574,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March; avoid Friday midday",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers",
+            "spiritual travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/5297002821",
+          "name": "Masala House",
+          "category": "restaurant",
+          "lat": 28.6026965,
+          "lon": 77.2410926,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 20,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:28 AM",
+          "meal": "meal ~10:28 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/973075081",
+          "name": "Purana Qila",
+          "category": "monument",
+          "lat": 28.6093705,
+          "lon": 77.2441983,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/purana_quila.jsp",
+          "wikidata_qid": "Q1151529",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Entrance%20of%20the%20Archaeological%20Museum%2C%20Purana%20Qila%20%2802%29.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹20–₹25; foreign nationals approx. ₹200–₹300; museum, boating and shows ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Late afternoon; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "couples",
+            "photographers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/3424254864",
+          "name": "Nathu Sweets",
+          "category": "restaurant",
+          "lat": 28.6025805,
+          "lon": 77.2409575,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "2:10 PM",
+          "meal": "meal ~2:10 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/4628544689",
+          "name": "Gulati",
+          "category": "restaurant",
+          "lat": 28.6078499,
+          "lon": 77.2300673,
+          "opening_hours": "Mo-Su 12:00-24:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.38,
+      "date": "",
+      "nearest_hospital": {
+        "name": "NGO Lok Kalyan Samiti",
+        "distance_km": 2.04
+      },
+      "nearest_pharmacy": {
+        "name": "Youplus",
+        "distance_km": 1.77
+      },
+      "nearest_metro_station": {
+        "name": "Supreme Court",
+        "distance_km": 1.34
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/264863907",
+          "name": "Red Fort",
+          "category": "monument",
+          "lat": 28.6557242,
+          "lon": 77.2407427,
+          "opening_hours": "unknown",
+          "visit_duration_min": 180,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/red_fort.jsp",
+          "wikidata_qid": "Q45957",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹50; foreign nationals approx. ₹550–₹600; museum circuit ticketed additionally; children under 15 free at ASI monuments. Verify locally.",
+          "kb_best_time_to_visit": "Morning at opening to beat crowds; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "photographers",
+            "first-time visitors",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/2416151557",
+          "name": "The Habitat Hub",
+          "category": "restaurant",
+          "lat": 28.589224,
+          "lon": 77.225738,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 42,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "12:42 PM",
+          "meal": "meal ~12:42 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/11132123003",
+          "name": "Guppy",
+          "category": "restaurant",
+          "lat": 28.5847048,
+          "lon": 77.2238058,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 24,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "12:54 PM",
+          "meal": "meal ~12:54 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/352491543",
+          "name": "St Luke's church",
+          "category": "church",
+          "lat": 28.5698513,
+          "lon": 77.2273023,
+          "opening_hours": "unknown",
+          "visit_duration_min": 30,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "website": "http://www.saintlukeschurch.com/",
+          "wikidata_qid": "Q7589756",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM"
+        }
+      ],
+      "total_hours": 7.1,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Palika Maternity Hospital",
+        "distance_km": 1.93
+      },
+      "nearest_pharmacy": {
+        "name": "Anand Drug Store",
+        "distance_km": 0.19
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 0.26
+      }
+    }
+  },
+  "steps": [
+    {
+      "n": 1,
+      "command": "Why did you pick Jama Masjid for Day 1?",
+      "category": "justification",
+      "probe": "why_named_stop",
+      "target_stop": "Jama Masjid",
+      "expected": {
+        "note": "Should reference the actual scheduled stop, grounded in real source data or an honest no-source admission -- not a generic answer about 'this area'."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why did you pick Jama Masjid for Day 1?"
+      },
+      "answer": {
+        "answer": "Jama Masjid is one of the largest mosques in India, featuring red sandstone and white marble, two 40-metre-high minarets, and a courtyard that holds around 25,000 worshippers. Its position facing the Red Fort anchors the historic core of Old Delhi, and it is surrounded by the lively bazaars and food lanes of the walled city.",
+        "citations": [
+          {
+            "source_title": "Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 2,
+      "command": "Why is Masala House scheduled in the morning instead of another time of day?",
+      "category": "justification",
+      "probe": "why_slot_timing",
+      "target_stop": "Masala House",
+      "expected": {
+        "note": "Tests whether the app can justify slot placement, or honestly says it doesn't have a specific reason for the exact slot."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why is Masala House scheduled in the morning instead of another time of day?"
+      },
+      "answer": {
+        "answer": "The provided text does not contain any information about Masala House or why it is scheduled in the morning.",
+        "citations": [
+          {
+            "source_title": "Delhi/New Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi/New_Delhi",
+            "source": "wikivoyage"
+          },
+          {
+            "source_title": "Purana Qila (Old Fort)",
+            "source_url": "local-kb://delhi_tourist_venues_kb#purana-qila-old-fort",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 3,
+      "command": "Why did you pick this place?",
+      "category": "justification",
+      "probe": "why_vague_referent",
+      "target_stop": null,
+      "expected": {
+        "note": "No place named ('this place') -- correct behavior is to ask which place, not guess and hallucinate a generic answer (R-18/F-13 fix from earlier work)."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why did you pick this place?"
+      },
+      "answer": {
+        "answer": "Which place are you asking about? Your itinerary includes: Jama Masjid, Masala House, Purana Qila, Nathu Sweets, Gulati, Red Fort.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 4,
+      "command": "What if it rains on Day 1?",
+      "category": "contingency",
+      "probe": "weather_rain",
+      "target_stop": null,
+      "expected": {
+        "note": "Should surface indoor-alternative / weather guidance grounded in real source data."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What if it rains on Day 1?"
+      },
+      "answer": {
+        "answer": "I am sorry, but the provided excerpts do not contain any information about what to do or what happens if it rains on Day 1.",
+        "citations": [
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 5,
+      "command": "What happens to my plan if Purana Qila is closed for a public holiday?",
+      "category": "contingency",
+      "probe": "closure_holiday",
+      "target_stop": "Purana Qila",
+      "expected": {
+        "note": "No dataset field encodes holiday closures -- correct behavior is an honest no-verified-source answer, not a fabricated closure schedule."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What happens to my plan if Purana Qila is closed for a public holiday?"
+      },
+      "answer": {
+        "answer": "Purana Qila is generally open daily from approximately 7:00 AM to 5:00 PM.",
+        "citations": [
+          {
+            "source_title": "Purana Qila (Old Fort)",
+            "source_url": "local-kb://delhi_tourist_venues_kb#purana-qila-old-fort",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Majnu ka Tilla (Tibetan Colony)",
+            "source_url": "local-kb://delhi_tourist_venues_kb#majnu-ka-tilla-tibetan-colony",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 6,
+      "command": "What are some alternatives to The Habitat Hub on Day 2?",
+      "category": "alternatives",
+      "probe": "alt_for_named_stop",
+      "target_stop": "The Habitat Hub",
+      "expected": {
+        "note": "Any alternative places named in the answer should be real (checkable against the POI dataset), not invented."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What are some alternatives to The Habitat Hub on Day 2?"
+      },
+      "answer": {
+        "answer": "Based on the provided excerpts, there are no mentions of \"The Habitat Hub\" or any alternatives specifically designated for Day 2.",
+        "citations": [
+          {
+            "source_title": "National Zoological Park (Delhi Zoo)",
+            "source_url": "local-kb://delhi_tourist_venues_kb#national-zoological-park-delhi-zoo",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Okhla Bird Sanctuary",
+            "source_url": "local-kb://delhi_tourist_venues_kb#okhla-bird-sanctuary",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 7,
+      "command": "If Guppy turns out to be too crowded, what else could I do instead?",
+      "category": "alternatives",
+      "probe": "alt_crowds",
+      "target_stop": "Guppy",
+      "expected": {
+        "note": "Crowd-avoidance framing of the same alternatives probe -- checks the app doesn't just pattern-match the word 'alternative'."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "If Guppy turns out to be too crowded, what else could I do instead?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 8,
+      "command": "What other activities can I do on Day 2 if I have extra time?",
+      "category": "expansion",
+      "probe": "expand_day",
+      "target_stop": null,
+      "expected": {
+        "note": "Should suggest real, groundable options -- not vague filler."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What other activities can I do on Day 2 if I have extra time?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 9,
+      "command": "Is there anything interesting near Jama Masjid that isn't on the itinerary?",
+      "category": "expansion",
+      "probe": "expand_near_stop",
+      "target_stop": "Jama Masjid",
+      "expected": {
+        "note": "Tests location-aware expansion; the dataset has no real geo-proximity RAG lookup, so an honest no-source answer is acceptable -- a fabricated nearby landmark is not."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is there anything interesting near Jama Masjid that isn't on the itinerary?"
+      },
+      "answer": {
+        "answer": "Jama Masjid is surrounded by the vibrant bazaars and food lanes of the walled city of Old Delhi. Visitors can also climb the southern minaret for panoramic views over the area.",
+        "citations": [
+          {
+            "source_title": "Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 10,
+      "command": "How much does it cost to visit Jama Masjid?",
+      "category": "practicalities",
+      "probe": "cost_named_stop",
+      "target_stop": "Jama Masjid",
+      "expected": {
+        "note": "Checkable fact when the stop carries kb_entry_fee (dataset says: 'Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally.')",
+        "kb_entry_fee": "Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "How much does it cost to visit Jama Masjid?"
+      },
+      "answer": {
+        "answer": "General entry to Jama Masjid is free, but there are charges if you wish to climb the southern minaret (approximately ₹100) or take photographs and videos (approximately ₹200–₹300).",
+        "citations": [
+          {
+            "source_title": "Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 11,
+      "command": "What's the best time of day to visit Jama Masjid?",
+      "category": "practicalities",
+      "probe": "best_time_named_stop",
+      "target_stop": "Jama Masjid",
+      "expected": {
+        "note": "Checkable fact when the stop carries kb_best_time_to_visit (dataset says: 'Early morning or late afternoon; October–March; avoid Friday midday')",
+        "kb_best_time_to_visit": "Early morning or late afternoon; October–March; avoid Friday midday"
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What's the best time of day to visit Jama Masjid?"
+      },
+      "answer": {
+        "answer": "The best time to visit Jama Masjid is during the early morning or late afternoon between October and March. You should also plan to avoid visiting on Friday midday.",
+        "citations": [
+          {
+            "source_title": "Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 12,
+      "command": "How do I get from St Luke's church to Jama Masjid?",
+      "category": "practicalities",
+      "probe": "travel_between_stops",
+      "target_stop": "St Luke's church -> Jama Masjid",
+      "expected": {
+        "note": "Itinerary already computes travel_mode_from_prev/travel_time_from_prev_min between consecutive stops -- answer should be consistent with that data when the two stops are adjacent.",
+        "travel_mode_from_prev": null,
+        "travel_time_from_prev_min": 0,
+        "adjacent": false
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "How do I get from St Luke's church to Jama Masjid?"
+      },
+      "answer": {
+        "answer": "To get to Jama Masjid, you can take the metro to the Jama Masjid station on the Violet Line, which is about a 5-minute walk away. You can also take a bus to the Jama Masjid bus stop on Netaji Subhash Marg, use cycle-rickshaws throughout Old Delhi, or take an auto to Netaji Subhash Marg.",
+        "citations": [
+          {
+            "source_title": "Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 13,
+      "command": "Is Jama Masjid suitable for elderly travellers?",
+      "category": "suitability",
+      "probe": "suitability_elderly",
+      "target_stop": "Jama Masjid",
+      "expected": {
+        "note": "Checkable when the stop carries kb_suitable_for (dataset says: ['history buffs', 'photographers', 'solo travellers', 'budget travellers', 'spiritual travellers'])",
+        "kb_suitable_for": [
+          "history buffs",
+          "photographers",
+          "solo travellers",
+          "budget travellers",
+          "spiritual travellers"
+        ]
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is Jama Masjid suitable for elderly travellers?"
+      },
+      "answer": {
+        "answer": "Jama Masjid features three great gates, a large courtyard, and a southern minaret that visitors can climb, but it may require some walking. The nearest metro station is about 300 to 500 meters or a 5-minute walk away, though cycle-rickshaws and autos are also available to help navigate the area.",
+        "citations": [
+          {
+            "source_title": "Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 14,
+      "command": "Is this itinerary suitable for a family with young kids?",
+      "category": "suitability",
+      "probe": "suitability_family_whole_trip",
+      "target_stop": null,
+      "expected": {
+        "note": "Whole-trip suitability question, no single named place -- tests whether the app can reason across the itinerary or honestly declines rather than answering about one arbitrary stop."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is this itinerary suitable for a family with young kids?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 15,
+      "command": "Is Masala House within walking distance of my hotel?",
+      "category": "edge_case",
+      "probe": "unanswerable_missing_context",
+      "target_stop": "Masala House",
+      "expected": {
+        "note": "No hotel/lodging location is tracked anywhere in the app -- correct behavior is an honest 'I don't know where you're staying' answer, not a fabricated walking distance or an invented hotel location."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is Masala House within walking distance of my hotel?"
+      },
+      "answer": {
+        "answer": "I'm sorry, but the provided information does not mention Masala House or where your hotel is located.",
+        "citations": [
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    }
+  ]
+}

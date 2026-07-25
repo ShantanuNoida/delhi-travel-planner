@@ -1,0 +1,232 @@
+{
+  "spec": {
+    "id": 8,
+    "days": 2,
+    "pace": "relaxed",
+    "cuisine": "Japanese",
+    "cuisine_phrase": "I'd love to try some Japanese cuisine",
+    "category_interests": [
+      "religion",
+      "nature"
+    ],
+    "opening_message": "I'm planning a 2-day trip to Delhi, relaxed pace. I'd love to try some Japanese cuisine. I'm also interested in religion and nature."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "cuisine",
+    "religion",
+    "nature"
+  ],
+  "extracted_constraints": {},
+  "num_days_extracted": 2,
+  "pace_extracted": "relaxed",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/1127484002",
+          "name": "Sunder Nursery",
+          "category": "park",
+          "lat": 28.5968532,
+          "lon": 77.2474305,
+          "opening_hours": "Mo-Su 07:00-22:00",
+          "visit_duration_min": 180,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q15628824",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sunder%20Nursery%20%28Garden%29.jpg",
+          "kb_entry_fee": "Approx. ₹50 (Indian adults), ₹25 (children); foreign nationals approx. ₹200–₹300; annual passes available. Verify locally.",
+          "kb_best_time_to_visit": "Mornings and golden hour; October–March; Sunday mornings for the farmers' market",
+          "kb_suitable_for": [
+            "families",
+            "couples",
+            "photographers",
+            "picnickers",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12387964701",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.5911564,
+          "lon": 77.2436745,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "12:10 PM",
+          "meal": "meal ~12:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [],
+      "total_hours": 5.67,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 1.03
+      },
+      "nearest_pharmacy": {
+        "name": "Chemist Shop",
+        "distance_km": 0.19
+      },
+      "nearest_metro_station": {
+        "name": "Jawaharlal Nehru Stadium",
+        "distance_km": 1.06
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/80429893",
+          "name": "Raj Ghat",
+          "category": "park",
+          "lat": 28.6447381,
+          "lon": 77.2497678,
+          "opening_hours": "unknown",
+          "visit_duration_min": 60,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q1210083",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q3236763",
+          "travel_time_from_prev_min": 11,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:11 AM",
+          "meal": "meal ~10:11 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "restaurant",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        },
+        {
+          "osm_id": "way/352491543",
+          "name": "St Luke's church",
+          "category": "church",
+          "lat": 28.5698513,
+          "lon": 77.2273023,
+          "opening_hours": "unknown",
+          "visit_duration_min": 30,
+          "relevance_score": 0.77,
+          "fallback": false,
+          "website": "http://www.saintlukeschurch.com/",
+          "wikidata_qid": "Q7589756",
+          "travel_time_from_prev_min": 11,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "6:26 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "total_hours": 5.62,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 2.71
+      },
+      "nearest_pharmacy": {
+        "name": "Luthra Chemist",
+        "distance_km": 2.49
+      },
+      "nearest_metro_station": {
+        "name": "Indraprastha",
+        "distance_km": 1.27
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 5,
+    "matched_cuisine": [],
+    "unmatched_cuisine": [],
+    "no_cuisine_tag": [
+      "Karim's",
+      "Indian Accent",
+      "Chandni Chowk",
+      "Bukhara",
+      "Dilli Haat"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "religion",
+      "nature"
+    ],
+    "missing": []
+  }
+}

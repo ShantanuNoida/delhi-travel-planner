@@ -1,0 +1,394 @@
+{
+  "spec": {
+    "id": 6,
+    "days": 3,
+    "pace": "intensive",
+    "cuisine": "Italian",
+    "cuisine_phrase": "I love Italian food",
+    "category_interests": [
+      "architecture",
+      "history"
+    ],
+    "opening_message": "I'm planning a 3-day trip to Delhi, intensive pace. I love Italian food. I'm also interested in architecture and history."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "cuisine",
+    "architecture",
+    "history"
+  ],
+  "extracted_constraints": {
+    "dietary": "Italian food"
+  },
+  "num_days_extracted": 3,
+  "pace_extracted": "intensive",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/973075081",
+          "name": "Purana Qila",
+          "category": "monument",
+          "lat": 28.6093705,
+          "lon": 77.2441983,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/purana_quila.jsp",
+          "wikidata_qid": "Q1151529",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Entrance%20of%20the%20Archaeological%20Museum%2C%20Purana%20Qila%20%2802%29.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹20–₹25; foreign nationals approx. ₹200–₹300; museum, boating and shows ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Late afternoon; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "couples",
+            "photographers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/13721755512",
+          "name": "Xero Degrees",
+          "category": "restaurant",
+          "lat": 28.625251,
+          "lon": 77.2343446,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 11,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "11:11 AM",
+          "meal": "meal ~11:11 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/361709652",
+          "name": "India Gate",
+          "category": "monument",
+          "lat": 28.6129323,
+          "lon": 77.2294919,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "wikidata_qid": "Q245347",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/India%20Gate%20in%20New%20Delhi%2003-2016.jpg",
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Evening after sunset for illumination; October–March; very crowded on weekends and national holidays",
+          "kb_suitable_for": [
+            "families",
+            "kids",
+            "couples",
+            "budget travellers",
+            "photographers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "way/97230896",
+          "name": "Jama Masjid",
+          "category": "mosque",
+          "lat": 28.6352233,
+          "lon": 77.2455574,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March; avoid Friday midday",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers",
+            "spiritual travellers"
+          ],
+          "travel_time_from_prev_min": 16,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "2:16 PM"
+        },
+        {
+          "osm_id": "node/6792923897",
+          "name": "Sorento",
+          "category": "restaurant",
+          "lat": 28.6209452,
+          "lon": 77.2180853,
+          "opening_hours": "Mo-Su 12:30-14:45, 19:00-23:45",
+          "visit_duration_min": 75,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "cuisine": "italian",
+          "travel_time_from_prev_min": 17,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "3:41 PM",
+          "meal": "meal ~3:41 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/6676143713",
+          "name": "The Art House Cafe",
+          "category": "restaurant",
+          "lat": 28.6305595,
+          "lon": 77.2212797,
+          "opening_hours": "Mo-Su 10:00-01:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "cuisine": "indian;pizza",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 9.62,
+      "date": "",
+      "nearest_hospital": {
+        "name": "NGO Lok Kalyan Samiti",
+        "distance_km": 1.04
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 1.93
+      },
+      "nearest_metro_station": {
+        "name": "Mandi House",
+        "distance_km": 0.4
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/264863907",
+          "name": "Red Fort",
+          "category": "monument",
+          "lat": 28.6557242,
+          "lon": 77.2407427,
+          "opening_hours": "unknown",
+          "visit_duration_min": 180,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/red_fort.jsp",
+          "wikidata_qid": "Q45957",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹50; foreign nationals approx. ₹550–₹600; museum circuit ticketed additionally; children under 15 free at ASI monuments. Verify locally.",
+          "kb_best_time_to_visit": "Morning at opening to beat crowds; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "photographers",
+            "first-time visitors",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/6957678141",
+          "name": "Moti Mahal Delux",
+          "category": "restaurant",
+          "lat": 28.6016675,
+          "lon": 77.186001,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 45,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "12:45 PM",
+          "meal": "meal ~12:45 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/12989819007",
+          "name": "Partition Museum",
+          "category": "museum",
+          "lat": 28.6635146,
+          "lon": 77.2330733,
+          "opening_hours": "tu-su 10:00-17:00",
+          "visit_duration_min": 120,
+          "relevance_score": 0.79,
+          "fallback": false,
+          "wikidata_qid": "Q120913042",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Partition%20Museum%2C%20Delhi.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/8499424058",
+          "name": "Black Mambaa",
+          "category": "restaurant",
+          "lat": 28.4691501,
+          "lon": 77.0636443,
+          "opening_hours": "Everyday 12:00 PM to 1:00 AM",
+          "visit_duration_min": 75,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "cuisine": "italian;indian;chinese;pizza;chicken",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 8.25,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Primus Super Specialty Hospital",
+        "distance_km": 0.49
+      },
+      "nearest_pharmacy": {
+        "name": "Sawhney Medicos",
+        "distance_km": 0.8
+      },
+      "nearest_metro_station": {
+        "name": "Dhaula Kuan",
+        "distance_km": 1.97
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "node/8529811934",
+          "name": "Chai Gupshup",
+          "category": "restaurant",
+          "lat": 28.5203046,
+          "lon": 77.2289059,
+          "opening_hours": "Mo-Su 09:00-23:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "cuisine": "pizza;tea;burger;sandwich;pasta",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/400921719",
+          "name": "Akshardham",
+          "category": "temple",
+          "lat": 28.6125148,
+          "lon": 77.2773592,
+          "opening_hours": "Tu-Su 09:30-18:30",
+          "visit_duration_min": 300,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "website": "http://www.akshardham.com",
+          "wikidata_qid": "Q1849858",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Akshardham%20Delhi.jpg",
+          "kb_entry_fee": "Temple entry free for all; exhibitions approx. ₹250 (adults), ₹150 (children 4–11), free for children under 4; water show ticketed separately (approx. ₹100–₹150). Verify locally.",
+          "kb_best_time_to_visit": "Late afternoon into evening (to include the water show); October–March for pleasant weather",
+          "kb_suitable_for": [
+            "families",
+            "kids",
+            "elderly",
+            "spiritual travellers",
+            "architecture enthusiasts",
+            "first-time visitors"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/6112993597",
+          "name": "Pind Balluchi",
+          "category": "restaurant",
+          "lat": 28.5676803,
+          "lon": 77.2472215,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 32,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "5:32 PM",
+          "meal": "meal ~5:32 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/12821028241",
+          "name": "Agasi",
+          "category": "restaurant",
+          "lat": 28.5672316,
+          "lon": 77.246967,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 9.28,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Vimhans",
+        "distance_km": 0.19
+      },
+      "nearest_pharmacy": {
+        "name": "Healthy Life Pharmacy",
+        "distance_km": 0.17
+      },
+      "nearest_metro_station": {
+        "name": "Vinobapuri",
+        "distance_km": 0.14
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 8,
+    "matched_cuisine": [
+      "Sorento",
+      "The Art House Cafe",
+      "Black Mambaa",
+      "Chai Gupshup"
+    ],
+    "unmatched_cuisine": [],
+    "no_cuisine_tag": [
+      "Xero Degrees",
+      "Moti Mahal Delux",
+      "Pind Balluchi",
+      "Agasi"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "architecture",
+      "history"
+    ],
+    "missing": []
+  }
+}

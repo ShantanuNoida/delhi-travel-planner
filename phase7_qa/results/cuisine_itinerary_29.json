@@ -1,0 +1,259 @@
+{
+  "spec": {
+    "id": 29,
+    "days": 2,
+    "pace": "relaxed",
+    "cuisine": "Chinese",
+    "cuisine_phrase": "I'm a big fan of Chinese food",
+    "category_interests": [
+      "shopping",
+      "religion"
+    ],
+    "opening_message": "I'm planning a 2-day trip to Delhi, relaxed pace. I'm a big fan of Chinese food. I'm also interested in shopping and religion."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "cuisine",
+    "shopping",
+    "religion"
+  ],
+  "extracted_constraints": {},
+  "num_days_extracted": 2,
+  "pace_extracted": "relaxed",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/97230896",
+          "name": "Jama Masjid",
+          "category": "mosque",
+          "lat": 28.6352233,
+          "lon": 77.2455574,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March; avoid Friday midday",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers",
+            "spiritual travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q17064086",
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "cuisine": "chicken;kebab;curry;indian",
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:18 AM",
+          "meal": "meal ~10:18 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q3236763",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        },
+        {
+          "osm_id": "way/370569205",
+          "name": "Qila-i-Khuna Mosque",
+          "category": "mosque",
+          "lat": 28.6097216,
+          "lon": 77.2448151,
+          "opening_hours": "unknown",
+          "visit_duration_min": 45,
+          "relevance_score": 0.77,
+          "fallback": false,
+          "wikidata_qid": "Q19895556",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Qila%20Kuhna%20Masjid%20inside%20Puran%20Qila%2C%20Delhi.jpg",
+          "travel_time_from_prev_min": 11,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "6:26 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "total_hours": 5.87,
+      "date": "",
+      "nearest_hospital": {
+        "name": "NGO Lok Kalyan Samiti",
+        "distance_km": 0.15
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 2.18
+      },
+      "nearest_metro_station": {
+        "name": "ITO",
+        "distance_km": 0.22
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/1563325267",
+          "name": "Nathus Sweets",
+          "category": "restaurant",
+          "lat": 28.6297269,
+          "lon": 77.2320267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 38,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "2:08 PM",
+          "meal": "meal ~2:08 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/12028989717",
+          "name": "Keventers",
+          "category": "restaurant",
+          "lat": 28.7151011,
+          "lon": 77.1164799,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q110654891",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 5.88,
+      "date": "",
+      "nearest_hospital": {
+        "name": "NGO Lok Kalyan Samiti",
+        "distance_km": 0.29
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 2.24
+      },
+      "nearest_metro_station": {
+        "name": "ITO",
+        "distance_km": 0.43
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 6,
+    "matched_cuisine": [],
+    "unmatched_cuisine": [
+      [
+        "Karim's",
+        "chicken;kebab;curry;indian"
+      ]
+    ],
+    "no_cuisine_tag": [
+      "Chandni Chowk",
+      "Indian Accent",
+      "Bukhara",
+      "Nathus Sweets",
+      "Keventers"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "shopping",
+      "religion"
+    ],
+    "missing": []
+  }
+}

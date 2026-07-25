@@ -1,0 +1,252 @@
+{
+  "spec": {
+    "id": 1,
+    "days": 2,
+    "pace": "relaxed",
+    "cuisine": "North Indian",
+    "cuisine_phrase": "I love North Indian food",
+    "category_interests": [
+      "history"
+    ],
+    "opening_message": "I'm planning a 2-day trip to Delhi, relaxed pace. I love North Indian food. I'm also interested in history."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "food",
+    "history"
+  ],
+  "extracted_constraints": {
+    "dietary": "North Indian"
+  },
+  "num_days_extracted": 2,
+  "pace_extracted": "relaxed",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/220385654",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "lat": 28.5932862,
+          "lon": 77.2506455,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+          "wikidata_qid": "Q189648",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Humayun%20Tomb%20UNESCO%20world%20heritage%20site.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or golden hour before sunset; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "couples",
+            "photographers",
+            "families",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/1966254717",
+          "name": "Andhra Bhawan Canteen",
+          "category": "restaurant",
+          "lat": 28.6169212,
+          "lon": 77.225998,
+          "opening_hours": "Mo-Su 08:00-22:00, 00:00-15:00, 07:30-22:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 19,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "11:19 AM",
+          "meal": "meal ~11:19 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/2591114289",
+          "name": "Indian Coffee House",
+          "category": "restaurant",
+          "lat": 28.6306895,
+          "lon": 77.2160507,
+          "opening_hours": "08:30-21:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "cuisine": "coffee_shop;indian",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/2592537223",
+          "name": "Hira Sweets",
+          "category": "restaurant",
+          "lat": 28.6353527,
+          "lon": 77.220063,
+          "opening_hours": "Mo-Su 08:00-23:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "cuisine": "pizza;indian;burger;italian;chinese;sandwich;coffee_shop",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 6.07,
+      "date": "",
+      "nearest_hospital": {
+        "name": "General Williams Hospital",
+        "distance_km": 1.29
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 1.96
+      },
+      "nearest_metro_station": {
+        "name": "Mandi House",
+        "distance_km": 0.93
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q17064086",
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "cuisine": "chicken;kebab;curry;indian",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/13721755512",
+          "name": "Xero Degrees",
+          "category": "restaurant",
+          "lat": 28.625251,
+          "lon": 77.2343446,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 35,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "2:05 PM",
+          "meal": "meal ~2:05 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/2106110096",
+          "name": "Pandit Kanhaiya Lal Durga Prashad Dixit Paranthe Wala",
+          "category": "restaurant",
+          "lat": 28.6560678,
+          "lon": 77.2303749,
+          "opening_hours": "unknown",
+          "visit_duration_min": 60,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "kb_entry_fee": "Free (lane); parathas approx. ₹60–₹150 each",
+          "kb_best_time_to_visit": "Late morning before lunch crowds; avoid peak weekend evenings",
+          "kb_suitable_for": [
+            "foodies",
+            "vegetarians",
+            "budget travellers",
+            "families",
+            "first-time visitors"
+          ],
+          "cuisine": "indian;parantha",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 5.47,
+      "date": "",
+      "nearest_hospital": {
+        "name": "NGO Lok Kalyan Samiti",
+        "distance_km": 0.66
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 1.97
+      },
+      "nearest_metro_station": {
+        "name": "Mandi House",
+        "distance_km": 0.09
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 6,
+    "matched_cuisine": [
+      "Indian Coffee House",
+      "Hira Sweets",
+      "Karim's",
+      "Pandit Kanhaiya Lal Durga Prashad Dixit Paranthe Wala"
+    ],
+    "unmatched_cuisine": [],
+    "no_cuisine_tag": [
+      "Andhra Bhawan Canteen",
+      "Xero Degrees"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "history"
+    ],
+    "missing": []
+  }
+}

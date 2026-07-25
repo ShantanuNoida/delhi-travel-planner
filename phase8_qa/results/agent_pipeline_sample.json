@@ -1,0 +1,174 @@
+[
+  {
+    "spec": {
+      "id": 1,
+      "label": "History + Nature + Shopping",
+      "interests": [
+        "history",
+        "nature",
+        "shopping"
+      ],
+      "days": 2,
+      "pace": "intensive"
+    },
+    "steps": [
+      {
+        "probe": "guard_reclassify_then_explain",
+        "command": "What are some alternatives to Sunder Nursery on Day 1?",
+        "why": "The H3 guard can reclassify this from EDIT to EXPLAIN mid-turn; agent.py then calls explain() on the result in the SAME turn -- the exact sequence that crashed live (classify_intent's query=None bug). Neither direct-call harness can ever reach this.",
+        "reply": "I don't have a verified source for this — treat it as a general suggestion.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "pending_edit_confirm_flow_preview",
+        "command": "Make the whole trip more fun.",
+        "why": "M2's pending_edit preview/confirm flow only exists in agent.py -- direct apply_edit() calls commit immediately and never exercise the yes/no gate at all.",
+        "reply": "\"Make the whole trip more fun.\" is a bit open-ended, so before I touch every day, here's what I'd do: Made it more relaxed — removed Karim's, Bobachee to free up time. Want me to go ahead? (yes/no)",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "pending_edit_confirm_flow_resolve",
+        "command": "Yes",
+        "why": "Resolves the pending_edit from the previous turn -- only meaningful as a follow-up within a real multi-turn agent session, which direct calls have no concept of.",
+        "reply": "Done — went ahead with that.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "named_stop_swap_e2e",
+        "command": "Swap Sunder Nursery for Karim's.",
+        "why": "End-to-end check of the target_stop_name fix through the REAL pipeline (classify_intent -> apply_edit -> correctness/feasibility checks -> reply), not just the isolated function.",
+        "reply": "Swapped: Sunder Nursery → Karim's.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "remove_then_reference_transparency",
+        "command": "Remove Karim's from the itinerary.",
+        "why": "Sets up the next probe -- L1's recently_changed_names tracking only exists in agent.py's session state, never in a stateless direct apply_edit() call.",
+        "reply": "Removed Karim's from the itinerary.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "remove_already_changed_transparency",
+        "command": "Remove Karim's from the itinerary.",
+        "why": "Real repro shape for L1: asking to remove something already changed this session should surface a transparent 'you may have already changed this' note, not a bare 'not found.'",
+        "reply": "Couldn't find anything matching 'Karim's' to remove. You may have already changed or removed \"Karim's\" earlier in this session.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "booking_vs_cost_e2e",
+        "command": "Do I need to book tickets in advance for Sunder Nursery?",
+        "why": "End-to-end check of the booking/cost keyword-collision fix through the real pipeline.",
+        "reply": "I don't have a verified source for this — treat it as a general suggestion.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "safety_question_e2e",
+        "command": "Would this itinerary feel safe and manageable for a solo female traveller?",
+        "why": "End-to-end check of the SAFETY_KEYWORDS-before-FEASIBILITY_KEYWORDS routing fix.",
+        "reply": "Navigating Delhi alone can be tiring and confusing due to common scams, such as taxi drivers or travel agents falsely claiming your hotel is overbooked to sell you overpriced transport. Additionally, nearly everyone handling cash—including official ticket sellers and police kiosks—is likely to shortchange you, so it is best to carry exact change. You should also pre-book your accommodation and airport pickup, especially for late-night arrivals, to ensure you have a reliable contact if you get stuck.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      }
+    ]
+  },
+  {
+    "spec": {
+      "id": 2,
+      "label": "Shopping",
+      "interests": [
+        "shopping"
+      ],
+      "days": 3,
+      "pace": "relaxed"
+    },
+    "steps": [
+      {
+        "probe": "guard_reclassify_then_explain",
+        "command": "What are some alternatives to Chandni Chowk on Day 1?",
+        "why": "The H3 guard can reclassify this from EDIT to EXPLAIN mid-turn; agent.py then calls explain() on the result in the SAME turn -- the exact sequence that crashed live (classify_intent's query=None bug). Neither direct-call harness can ever reach this.",
+        "reply": "I don't have a verified source for this — treat it as a general suggestion.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "pending_edit_confirm_flow_preview",
+        "command": "Make the whole trip more fun.",
+        "why": "M2's pending_edit preview/confirm flow only exists in agent.py -- direct apply_edit() calls commit immediately and never exercise the yes/no gate at all.",
+        "reply": "\"Make the whole trip more fun.\" is a bit open-ended, so before I touch every day, here's what I'd do: Made it more relaxed — removed Nazeer Foods, Barbeque Nation, Gym's Kook to free up time. Want me to go ahead? (yes/no)",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "pending_edit_confirm_flow_resolve",
+        "command": "Yes",
+        "why": "Resolves the pending_edit from the previous turn -- only meaningful as a follow-up within a real multi-turn agent session, which direct calls have no concept of.",
+        "reply": "Done — went ahead with that.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "named_stop_swap_e2e",
+        "command": "Swap Chandni Chowk for Nazeer Foods.",
+        "why": "End-to-end check of the target_stop_name fix through the REAL pipeline (classify_intent -> apply_edit -> correctness/feasibility checks -> reply), not just the isolated function.",
+        "reply": "Swapped: Chandni Chowk → Nazeer Foods.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "remove_then_reference_transparency",
+        "command": "Remove Nazeer Foods from the itinerary.",
+        "why": "Sets up the next probe -- L1's recently_changed_names tracking only exists in agent.py's session state, never in a stateless direct apply_edit() call.",
+        "reply": "Removed Nazeer Foods from the itinerary.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "remove_already_changed_transparency",
+        "command": "Remove Nazeer Foods from the itinerary.",
+        "why": "Real repro shape for L1: asking to remove something already changed this session should surface a transparent 'you may have already changed this' note, not a bare 'not found.'",
+        "reply": "Couldn't find anything matching 'Nazeer Foods' to remove. You may have already changed or removed \"Nazeer Foods\" earlier in this session.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "booking_vs_cost_e2e",
+        "command": "Do I need to book tickets in advance for Chandni Chowk?",
+        "why": "End-to-end check of the booking/cost keyword-collision fix through the real pipeline.",
+        "reply": "I don't have a verified source for this — treat it as a general suggestion.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      },
+      {
+        "probe": "safety_question_e2e",
+        "command": "Would this itinerary feel safe and manageable for a solo female traveller?",
+        "why": "End-to-end check of the SAFETY_KEYWORDS-before-FEASIBILITY_KEYWORDS routing fix.",
+        "reply": "We've hit today's AI usage limit — please try again later. Your itinerary so far is preserved.",
+        "crashed": false,
+        "traceback": null,
+        "generic_failure_fallback": false
+      }
+    ]
+  }
+]

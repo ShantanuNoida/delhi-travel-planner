@@ -1,0 +1,22 @@
+[server]
+# Default "watchdog" file watcher walks imported modules' file paths to decide
+# what to watch, and hits transformers' optional torchvision import along the
+# way -- logging a ModuleNotFoundError traceback on every check. "poll" just
+# stats file mtimes instead, which sidesteps that entirely (QA-5/R-6).
+fileWatcherType = "poll"
+
+[client]
+# R-26 (round 4 UX benchmark, UX-23): the default "Deploy" button + hamburger
+# menu were visible on every screen, reading as an exposed dev tool rather
+# than a shipped product. "minimal" keeps only what a user actually needs
+# (the rerun/stop controls), dropping Deploy/Settings/"Report a bug"/etc.
+toolbarMode = "minimal"
+
+[theme]
+# R-26: a deliberate accent instead of Streamlit's stock red -- a warm
+# saffron/terracotta tone (fitting the Delhi/India focus without leaning on
+# a literal flag palette) used for primary buttons, the active day tab, and
+# checked toggles. Deliberately does NOT set `base`, so light/dark still
+# follows the viewer's own system preference as before -- only the accent
+# color is opinionated, not the whole palette.
+primaryColor = "#C2540C"

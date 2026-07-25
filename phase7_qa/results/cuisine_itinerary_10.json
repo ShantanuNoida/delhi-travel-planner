@@ -1,0 +1,351 @@
+{
+  "spec": {
+    "id": 10,
+    "days": 2,
+    "pace": "intensive",
+    "cuisine": "Bengali",
+    "cuisine_phrase": "Bengali food is my favorite, I want to eat a lot of it",
+    "category_interests": [
+      "culture"
+    ],
+    "opening_message": "I'm planning a 2-day trip to Delhi, intensive pace. Bengali food is my favorite, I want to eat a lot of it. I'm also interested in culture."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "cuisine",
+    "culture"
+  ],
+  "extracted_constraints": {},
+  "num_days_extracted": 2,
+  "pace_extracted": "intensive",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/220385654",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "lat": 28.5932862,
+          "lon": 77.2506455,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+          "wikidata_qid": "Q189648",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Humayun%20Tomb%20UNESCO%20world%20heritage%20site.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or golden hour before sunset; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "couples",
+            "photographers",
+            "families",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/5297002821",
+          "name": "Masala House",
+          "category": "restaurant",
+          "lat": 28.6026965,
+          "lon": 77.2410926,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "11:10 AM",
+          "meal": "meal ~11:10 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        },
+        {
+          "osm_id": "way/361709652",
+          "name": "India Gate",
+          "category": "monument",
+          "lat": 28.6129323,
+          "lon": 77.2294919,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "wikidata_qid": "Q245347",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/India%20Gate%20in%20New%20Delhi%2003-2016.jpg",
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Evening after sunset for illumination; October–March; very crowded on weekends and national holidays",
+          "kb_suitable_for": [
+            "families",
+            "kids",
+            "couples",
+            "budget travellers",
+            "photographers"
+          ],
+          "travel_time_from_prev_min": 13,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:28 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/7282286731",
+          "name": "Khan Market",
+          "category": "restaurant",
+          "lat": 28.6022446,
+          "lon": 77.2291281,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        },
+        {
+          "osm_id": "way/97230896",
+          "name": "Jama Masjid",
+          "category": "mosque",
+          "lat": 28.6352233,
+          "lon": 77.2455574,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Entry free; photography/videography charge approx. ₹200–₹300; minaret climb approx. ₹100. Modest dress required; robes available at the gate. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March; avoid Friday midday",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers",
+            "spiritual travellers"
+          ],
+          "travel_time_from_prev_min": 22,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "6:37 PM"
+        }
+      ],
+      "total_hours": 9.63,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 2.4
+      },
+      "nearest_pharmacy": {
+        "name": "Youplus",
+        "distance_km": 1.31
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 1.06
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q17064086",
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "cuisine": "chicken;kebab;curry;indian",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        },
+        {
+          "osm_id": "way/265824668",
+          "name": "Gurdwara Sis Ganj Sahib",
+          "category": "gurdwara",
+          "lat": 28.6559559,
+          "lon": 77.2324212,
+          "opening_hours": "unknown",
+          "visit_duration_min": 52,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q5620491",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gurdwara%20sis%20ganj.jpg",
+          "kb_entry_fee": "Free (langar also free, available 24 hours)",
+          "kb_best_time_to_visit": "Early morning or evening; year-round",
+          "kb_suitable_for": [
+            "spiritual travellers",
+            "budget travellers",
+            "history buffs",
+            "families",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "10:18 AM",
+          "is_hidden_gem": true
+        },
+        {
+          "osm_id": "way/87354076",
+          "name": "Saint James' Anglican Church",
+          "category": "church",
+          "lat": 28.6657462,
+          "lon": 77.2310777,
+          "opening_hours": "Mo-Fr 08:30-20:00",
+          "visit_duration_min": 45,
+          "relevance_score": 0.79,
+          "fallback": false,
+          "wikidata_qid": "Q2985087",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/St.james%20b.jpg",
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Weekday mornings for a quiet visit; year-round",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "11:20 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/264863907",
+          "name": "Red Fort",
+          "category": "monument",
+          "lat": 28.6557242,
+          "lon": 77.2407427,
+          "opening_hours": "unknown",
+          "visit_duration_min": 180,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/red_fort.jsp",
+          "wikidata_qid": "Q45957",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹50; foreign nationals approx. ₹550–₹600; museum circuit ticketed additionally; children under 15 free at ASI monuments. Verify locally.",
+          "kb_best_time_to_visit": "Morning at opening to beat crowds; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "photographers",
+            "first-time visitors",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/7018886724",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6584227,
+          "lon": 77.2303375,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q5071227",
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "3:10 PM",
+          "meal": "meal ~3:10 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 8.75,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Chacha Nehru Bal Chikitsalaya",
+        "distance_km": 1.2
+      },
+      "nearest_pharmacy": {
+        "name": "Prem medical store",
+        "distance_km": 2.58
+      },
+      "nearest_metro_station": {
+        "name": "Delhi Gate",
+        "distance_km": 1.95
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 6,
+    "matched_cuisine": [],
+    "unmatched_cuisine": [
+      [
+        "Karim's",
+        "chicken;kebab;curry;indian"
+      ]
+    ],
+    "no_cuisine_tag": [
+      "Masala House",
+      "Indian Accent",
+      "Khan Market",
+      "Chandni Chowk",
+      "Bukhara"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "culture"
+    ],
+    "missing": []
+  }
+}

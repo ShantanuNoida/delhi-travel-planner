@@ -1,0 +1,388 @@
+{
+  "spec": {
+    "id": 19,
+    "days": 3,
+    "pace": "moderate",
+    "cuisine": "Mexican",
+    "cuisine_phrase": "I'm a big fan of Mexican food",
+    "category_interests": [
+      "nature"
+    ],
+    "opening_message": "I'm planning a 3-day trip to Delhi, moderate pace. I'm a big fan of Mexican food. I'm also interested in nature."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "cuisine",
+    "nature"
+  ],
+  "extracted_constraints": {
+    "dietary": "Mexican food"
+  },
+  "num_days_extracted": 3,
+  "pace_extracted": "moderate",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/1127484002",
+          "name": "Sunder Nursery",
+          "category": "park",
+          "lat": 28.5968532,
+          "lon": 77.2474305,
+          "opening_hours": "Mo-Su 07:00-22:00",
+          "visit_duration_min": 180,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q15628824",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sunder%20Nursery%20%28Garden%29.jpg",
+          "kb_entry_fee": "Approx. ₹50 (Indian adults), ₹25 (children); foreign nationals approx. ₹200–₹300; annual passes available. Verify locally.",
+          "kb_best_time_to_visit": "Mornings and golden hour; October–March; Sunday mornings for the farmers' market",
+          "kb_suitable_for": [
+            "families",
+            "couples",
+            "photographers",
+            "picnickers",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/3424254864",
+          "name": "Nathu Sweets",
+          "category": "restaurant",
+          "lat": 28.6025805,
+          "lon": 77.2409575,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "12:10 PM",
+          "meal": "meal ~12:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/80442501",
+          "name": "Khan Market",
+          "category": "restaurant",
+          "lat": 28.600192,
+          "lon": 77.2266065,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon and evening; year-round",
+          "kb_suitable_for": [
+            "foodies",
+            "shoppers",
+            "couples",
+            "book lovers",
+            "upscale travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.67,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 1.71
+      },
+      "nearest_pharmacy": {
+        "name": "Chemist Shop",
+        "distance_km": 0.86
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 1.01
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "restaurant",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        },
+        {
+          "osm_id": "node/11264482804",
+          "name": "Deer park",
+          "category": "park",
+          "lat": 28.5606297,
+          "lon": 77.2004942,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Early morning or late afternoon; October–March",
+          "kb_suitable_for": [
+            "families",
+            "kids",
+            "joggers",
+            "photographers",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:25 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/1385061182",
+          "name": "Saket District Park",
+          "category": "park",
+          "lat": 28.5271543,
+          "lon": 77.2095627,
+          "opening_hours": "unknown",
+          "visit_duration_min": 60,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/8529811934",
+          "name": "Chai Gupshup",
+          "category": "restaurant",
+          "lat": 28.5203046,
+          "lon": 77.2289059,
+          "opening_hours": "Mo-Su 09:00-23:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 11,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:11 PM",
+          "meal": "meal ~1:11 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/8549700903",
+          "name": "Django Meals",
+          "category": "restaurant",
+          "lat": 28.4232884,
+          "lon": 77.311025,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.6,
+          "fallback": false,
+          "cuisine": "burger;italian;chinese;pizza;mexican;chicken",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 6.6,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Mehta Hospital",
+        "distance_km": 0.27
+      },
+      "nearest_pharmacy": {
+        "name": "Rajdhani Chemist",
+        "distance_km": 0.68
+      },
+      "nearest_metro_station": {
+        "name": "Chirag Delhi",
+        "distance_km": 2.25
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "way/80429893",
+          "name": "Raj Ghat",
+          "category": "park",
+          "lat": 28.6447381,
+          "lon": 77.2497678,
+          "opening_hours": "unknown",
+          "visit_duration_min": 60,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q1210083",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "is_hidden_gem": true
+        },
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q17064086",
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "cuisine": "chicken;kebab;curry;indian",
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:10 AM",
+          "meal": "meal ~10:10 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q3236763",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/158122667",
+          "name": "Nehru Park",
+          "category": "park",
+          "lat": 28.6660132,
+          "lon": 77.3235208,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Early morning; concert evenings (check NDMC event listings); October–March",
+          "kb_suitable_for": [
+            "joggers",
+            "families",
+            "music lovers",
+            "elderly",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM"
+        },
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 41,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "7:11 PM",
+          "meal": "meal ~7:11 PM"
+        }
+      ],
+      "total_hours": 6.98,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Makkar Multispeciality Hospital",
+        "distance_km": 0.56
+      },
+      "nearest_pharmacy": {
+        "name": "Prem medical store",
+        "distance_km": 0.98
+      },
+      "nearest_metro_station": {
+        "name": "Nirman Vihar",
+        "distance_km": 1.16
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 9,
+    "matched_cuisine": [
+      "Django Meals"
+    ],
+    "unmatched_cuisine": [
+      [
+        "Karim's",
+        "chicken;kebab;curry;indian"
+      ]
+    ],
+    "no_cuisine_tag": [
+      "Nathu Sweets",
+      "Indian Accent",
+      "Khan Market",
+      "Dilli Haat",
+      "Chai Gupshup",
+      "Chandni Chowk",
+      "Bukhara"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "nature"
+    ],
+    "missing": []
+  }
+}

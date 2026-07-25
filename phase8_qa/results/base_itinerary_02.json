@@ -1,0 +1,261 @@
+{
+  "spec": {
+    "id": 2,
+    "label": "Shopping",
+    "interests": [
+      "shopping"
+    ],
+    "days": 3,
+    "pace": "relaxed"
+  },
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "market",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q3236763",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12440473687",
+          "name": "Nazeer Foods",
+          "category": "restaurant",
+          "lat": 28.6441692,
+          "lon": 77.2401768,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/13734392101",
+          "name": "Asharti BBQ Nights",
+          "category": "restaurant",
+          "lat": 28.6442529,
+          "lon": 77.2400509,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/4893145422",
+          "name": "Shri Krishna Daba",
+          "category": "restaurant",
+          "lat": 28.6478146,
+          "lon": 77.2399952,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 5.42,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Kasturba Hospital",
+        "distance_km": 0.07
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 1.53
+      },
+      "nearest_metro_station": {
+        "name": "Delhi Gate",
+        "distance_km": 1.02
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "market",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12040093924",
+          "name": "Barbeque Nation",
+          "category": "restaurant",
+          "lat": 28.5682188,
+          "lon": 77.2216909,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/12022954306",
+          "name": "Make My Lagan",
+          "category": "restaurant",
+          "lat": 28.5682868,
+          "lon": 77.2209969,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:40 PM",
+          "meal": "meal ~1:40 PM"
+        }
+      ],
+      "evening": [],
+      "total_hours": 5.83,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Manav Medicare Centre",
+        "distance_km": 0.29
+      },
+      "nearest_pharmacy": {
+        "name": "Agroha Medicos",
+        "distance_km": 0.34
+      },
+      "nearest_metro_station": {
+        "name": "South Extension",
+        "distance_km": 0.24
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "way/24618045",
+          "name": "Metro Walk Mall",
+          "category": "market",
+          "lat": 28.7238803,
+          "lon": 77.1140537,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q6824770",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/8177833575",
+          "name": "Gym's Kook",
+          "category": "restaurant",
+          "lat": 28.7185808,
+          "lon": 77.1250359,
+          "opening_hours": "Mo-Su 09:00-23:30",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/8219681122",
+          "name": "Diet Zone",
+          "category": "restaurant",
+          "lat": 28.7187798,
+          "lon": 77.1252694,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "1:40 PM",
+          "meal": "meal ~1:40 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/12754622530",
+          "name": "Anand Sagar",
+          "category": "restaurant",
+          "lat": 28.7237666,
+          "lon": 77.1275505,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 5.58,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Bhagwati Hospital",
+        "distance_km": 0.68
+      },
+      "nearest_pharmacy": {
+        "name": "Apollo Pharmacy",
+        "distance_km": 0.5
+      },
+      "nearest_metro_station": {
+        "name": "Rohini West",
+        "distance_km": 1.02
+      }
+    }
+  }
+}

@@ -1,0 +1,2842 @@
+{
+  "spec": {
+    "id": 19,
+    "label": "Shopping",
+    "interests": [
+      "shopping"
+    ],
+    "days": 2,
+    "pace": "intensive"
+  },
+  "initial_itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/442156777",
+          "name": "Janpath New Mini Market",
+          "category": "market",
+          "lat": 28.6290954,
+          "lon": 77.2181663,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon; October–March (open-air stalls)",
+          "kb_suitable_for": [
+            "budget travellers",
+            "shoppers",
+            "souvenir hunters",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/11869013790",
+          "name": "Foodieez",
+          "category": "restaurant",
+          "lat": 28.6289688,
+          "lon": 77.2247681,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "market",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q3236763",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/8151189839",
+          "name": "Parikrama - The Revolving Restaurant",
+          "category": "restaurant",
+          "lat": 28.6287272,
+          "lon": 77.2229395,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 17,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:47 PM",
+          "meal": "meal ~1:47 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/80442501",
+          "name": "Khan Market",
+          "category": "market",
+          "lat": 28.600192,
+          "lon": 77.2266065,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon and evening; year-round",
+          "kb_suitable_for": [
+            "foodies",
+            "shoppers",
+            "couples",
+            "book lovers",
+            "upscale travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM"
+        },
+        {
+          "osm_id": "node/6161987883",
+          "name": "Local",
+          "category": "restaurant",
+          "lat": 28.6298758,
+          "lon": 77.2210617,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 18,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "7:18 PM",
+          "meal": "meal ~7:18 PM"
+        }
+      ],
+      "total_hours": 9.5,
+      "date": "",
+      "nearest_hospital": {
+        "name": "General Williams Hospital",
+        "distance_km": 0.63
+      },
+      "nearest_pharmacy": {
+        "name": "Nath Brothers",
+        "distance_km": 0.88
+      },
+      "nearest_metro_station": {
+        "name": "Barakhambha Road",
+        "distance_km": 0.13
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "market",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/14002488862",
+          "name": "Bobachee",
+          "category": "restaurant",
+          "lat": 28.568261,
+          "lon": 77.2177804,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/1831954639",
+          "name": "Green Park Market",
+          "category": "market",
+          "lat": 28.5556739,
+          "lon": 77.2021428,
+          "opening_hours": "Tu off",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 22,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:52 PM"
+        },
+        {
+          "osm_id": "node/13997784683",
+          "name": "Moti Mahal Delux",
+          "category": "restaurant",
+          "lat": 28.5683968,
+          "lon": 77.2191782,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 12,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "3:34 PM",
+          "meal": "meal ~3:34 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/12022954306",
+          "name": "Make My Lagan",
+          "category": "restaurant",
+          "lat": 28.5682868,
+          "lon": 77.2209969,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 8.98,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Manav Medicare Centre",
+        "distance_km": 0.44
+      },
+      "nearest_pharmacy": {
+        "name": "Agroha Medicos",
+        "distance_km": 0.2
+      },
+      "nearest_metro_station": {
+        "name": "South Extension",
+        "distance_km": 0.29
+      }
+    }
+  },
+  "initial_itinerary_summary": {
+    "day_1": {
+      "total_hours": 9.5,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Janpath New Mini Market",
+          "category": "market",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Foodieez",
+          "category": "restaurant",
+          "arrival_time": "10:40 AM",
+          "travel_min": 10
+        },
+        {
+          "slot": "afternoon",
+          "name": "Chandni Chowk",
+          "category": "market",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Parikrama - The Revolving Restaurant",
+          "category": "restaurant",
+          "arrival_time": "1:47 PM",
+          "travel_min": 17
+        },
+        {
+          "slot": "evening",
+          "name": "Khan Market",
+          "category": "market",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "evening",
+          "name": "Local",
+          "category": "restaurant",
+          "arrival_time": "7:18 PM",
+          "travel_min": 18
+        }
+      ]
+    },
+    "day_2": {
+      "total_hours": 8.98,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Dilli Haat",
+          "category": "market",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Bobachee",
+          "category": "restaurant",
+          "arrival_time": "10:40 AM",
+          "travel_min": 10
+        },
+        {
+          "slot": "afternoon",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Green Park Market",
+          "category": "market",
+          "arrival_time": "1:52 PM",
+          "travel_min": 22
+        },
+        {
+          "slot": "afternoon",
+          "name": "Moti Mahal Delux",
+          "category": "restaurant",
+          "arrival_time": "3:34 PM",
+          "travel_min": 12
+        },
+        {
+          "slot": "evening",
+          "name": "Make My Lagan",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    }
+  },
+  "final_itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/442156777",
+          "name": "Janpath New Mini Market",
+          "category": "market",
+          "lat": 28.6290954,
+          "lon": 77.2181663,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon; October–March (open-air stalls)",
+          "kb_suitable_for": [
+            "budget travellers",
+            "shoppers",
+            "souvenir hunters",
+            "solo travellers"
+          ],
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "travel_time_from_prev_min": 0
+        },
+        {
+          "osm_id": "node/6161987883",
+          "name": "Local",
+          "category": "restaurant",
+          "lat": 28.6298758,
+          "lon": 77.2210617,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.6,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/80442501",
+          "name": "Khan Market",
+          "category": "market",
+          "lat": 28.600192,
+          "lon": 77.2266065,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon and evening; year-round",
+          "kb_suitable_for": [
+            "foodies",
+            "shoppers",
+            "couples",
+            "book lovers",
+            "upscale travellers"
+          ],
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "way/80442502",
+          "name": "Lodhi Gardens",
+          "category": "park",
+          "lat": 28.5934806,
+          "lon": 77.2195624,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM"
+        }
+      ],
+      "total_hours": 6.92,
+      "date": "",
+      "nearest_hospital": {
+        "name": "General Williams Hospital",
+        "distance_km": 1.34
+      },
+      "nearest_pharmacy": {
+        "name": "Youplus",
+        "distance_km": 1.7
+      },
+      "nearest_metro_station": {
+        "name": "Central Secretariat",
+        "distance_km": 0.91
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "market",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q3236763",
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "travel_time_from_prev_min": 0
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/4971952422",
+          "name": "Big Chill Restaurant",
+          "category": "restaurant",
+          "lat": 28.6006451,
+          "lon": 77.2275063,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 4.25,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Palika Maternity Hospital",
+        "distance_km": 1.84
+      },
+      "nearest_pharmacy": {
+        "name": "Anand Drug Store",
+        "distance_km": 0.27
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 0.38
+      }
+    }
+  },
+  "final_itinerary_summary": {
+    "day_1": {
+      "total_hours": 6.92,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Janpath New Mini Market",
+          "category": "market",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "morning",
+          "name": "Local",
+          "category": "restaurant",
+          "arrival_time": "10:40 AM",
+          "travel_min": 10
+        },
+        {
+          "slot": "afternoon",
+          "name": "Khan Market",
+          "category": "market",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "evening",
+          "name": "Lodhi Gardens",
+          "category": "park",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    },
+    "day_2": {
+      "total_hours": 4.25,
+      "stops": [
+        {
+          "slot": "morning",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "arrival_time": "9:00 AM",
+          "travel_min": 0
+        },
+        {
+          "slot": "afternoon",
+          "name": "Chandni Chowk",
+          "category": "market",
+          "arrival_time": "12:00 PM",
+          "travel_min": 0
+        },
+        {
+          "slot": "evening",
+          "name": "Big Chill Restaurant",
+          "category": "restaurant",
+          "arrival_time": "5:00 PM",
+          "travel_min": 0
+        }
+      ]
+    }
+  },
+  "steps": [
+    {
+      "n": 1,
+      "command": "Make Day 1 more relaxed.",
+      "category": "pacing",
+      "probe": "relax_vague_quantity",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 1,
+        "target_slot": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Foodieez to free up time.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 8.08,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Parikrama - The Revolving Restaurant",
+              "category": "restaurant",
+              "arrival_time": "1:47 PM",
+              "travel_min": 17
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "7:18 PM",
+              "travel_min": 18
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 8.98,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Bobachee",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Green Park Market",
+              "category": "market",
+              "arrival_time": "1:52 PM",
+              "travel_min": 22
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "3:34 PM",
+              "travel_min": 12
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 2,
+      "command": "Day 2 feels too packed — take one thing out of the evening.",
+      "category": "pacing",
+      "probe": "relax_specific_slot",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 2,
+        "target_slot": "evening"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "evening",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Day 2's evening already has just 1 stop — nothing to trim there.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 8.08,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Parikrama - The Revolving Restaurant",
+              "category": "restaurant",
+              "arrival_time": "1:47 PM",
+              "travel_min": 17
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "7:18 PM",
+              "travel_min": 18
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 8.98,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Bobachee",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Green Park Market",
+              "category": "market",
+              "arrival_time": "1:52 PM",
+              "travel_min": 22
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "3:34 PM",
+              "travel_min": 12
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 3,
+      "command": "Day 2 is a lot — can you lighten it up somehow?",
+      "category": "pacing",
+      "probe": "relax_vague_phrasing",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 2,
+        "target_slot": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Bobachee to free up time.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 8.08,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Parikrama - The Revolving Restaurant",
+              "category": "restaurant",
+              "arrival_time": "1:47 PM",
+              "travel_min": 17
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "7:18 PM",
+              "travel_min": 18
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.57,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Green Park Market",
+              "category": "market",
+              "arrival_time": "1:52 PM",
+              "travel_min": 22
+            },
+            {
+              "slot": "afternoon",
+              "name": "Moti Mahal Delux",
+              "category": "restaurant",
+              "arrival_time": "3:34 PM",
+              "travel_min": 12
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 4,
+      "command": "Make the whole trip more relaxed, please.",
+      "category": "pacing",
+      "probe": "relax_whole_trip",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": "all",
+        "target_slot": "all",
+        "note": "Whole-trip relax (distinct from per-day) -- every day should end up lighter, not just day 1."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Parikrama - The Revolving Restaurant, Moti Mahal Delux to free up time.",
+      "changed_days": [
+        "day_1",
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 6.55,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "7:18 PM",
+              "travel_min": 18
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.12,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Green Park Market",
+              "category": "market",
+              "arrival_time": "1:52 PM",
+              "travel_min": 22
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 5,
+      "command": "Swap the Day 1 evening plan to something indoors.",
+      "category": "swap",
+      "probe": "swap_indoor",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "indoor"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "evening",
+          "edit_type": "swap",
+          "constraint": "indoors"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Local → Noor.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 6.55,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 18
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.12,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Green Park Market",
+              "category": "market",
+              "arrival_time": "1:52 PM",
+              "travel_min": 22
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 6,
+      "command": "Swap the Day 2 morning plan to something outdoors.",
+      "category": "swap",
+      "probe": "swap_outdoor",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 2,
+        "target_slot": "morning",
+        "constraint": "outdoor"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "morning",
+          "edit_type": "swap",
+          "constraint": "outdoors"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Dilli Haat → Humayun's Tomb.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 6.55,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 18
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.62,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Green Park Market",
+              "category": "market",
+              "arrival_time": "1:52 PM",
+              "travel_min": 22
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 7,
+      "command": "Swap Day 2 afternoon for a food spot instead.",
+      "category": "swap",
+      "probe": "swap_theme_category",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 2,
+        "target_slot": "afternoon",
+        "constraint": "food"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "afternoon",
+          "edit_type": "swap",
+          "constraint": "food spot"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Swapped: Green Park Market → Dilli Haat.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 6.55,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 18
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.62,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 22
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 8,
+      "command": "Swap the Day 2 morning stop for something free of charge.",
+      "category": "swap",
+      "probe": "swap_free_of_charge",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 2,
+        "target_slot": "morning",
+        "constraint": "free",
+        "note": "No dataset field tracks a 'free' filter directly -- tests whether the app honestly declines/falls back sensibly rather than silently ignoring the cost constraint."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "morning",
+          "edit_type": "swap",
+          "constraint": "free of charge"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a suitable replacement for that swap.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 6.55,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 18
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.62,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 22
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 9,
+      "command": "Add one famous local food place to Day 1.",
+      "category": "add",
+      "probe": "add_food_famous",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "food"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "famous local food place"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Added Local to day 1 evening.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": false,
+        "issues": [
+          {
+            "day": 1,
+            "problem": "travel to Local takes 69 min (> 45 min)",
+            "suggestion": "re-cluster stops geographically to cut travel time"
+          }
+        ]
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 8.95,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 18
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 69
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.62,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 22
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 10,
+      "command": "Add a religion stop somewhere in the trip.",
+      "category": "add",
+      "probe": "add_theme_any_day",
+      "expected": {
+        "edit_type": "add",
+        "target_day": "all",
+        "target_slot": "evening",
+        "constraint": "religion"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "religion stop"
+        },
+        "query": null
+      },
+      "edit_result_ok": false,
+      "edit_result_message": "That would push day 2 over the 10.0h budget. I can replace an existing stop instead, or move this to another day — want me to do that?",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": false,
+        "issues": [
+          {
+            "day": 1,
+            "problem": "travel to Local takes 69 min (> 45 min)",
+            "suggestion": "re-cluster stops geographically to cut travel time"
+          }
+        ]
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 8.95,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 18
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 69
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.62,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 22
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 11,
+      "command": "Add Lodhi Garden to Day 2.",
+      "category": "add",
+      "probe": "add_real_named_place",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 2,
+        "constraint": "Lodhi Garden",
+        "note": "Lodhi Garden is a REAL dataset landmark not currently on this itinerary -- app should be able to add it (or give a grounded reason it can't, e.g. day full), not hallucinate/decline dishonestly."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "Lodhi Garden"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Added Lodhi Gardens to day 2 evening.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": false,
+        "issues": [
+          {
+            "day": 1,
+            "problem": "travel to Local takes 69 min (> 45 min)",
+            "suggestion": "re-cluster stops geographically to cut travel time"
+          }
+        ]
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 8.95,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 18
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 69
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 8.87,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 22
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 15
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 12,
+      "command": "Replace the Day 1 evening stop with Connaught Place.",
+      "category": "swap",
+      "probe": "swap_known_absent_place",
+      "expected": {
+        "edit_type": "swap",
+        "target_day": 1,
+        "target_slot": "evening",
+        "constraint": "Connaught Place",
+        "note": "Connaught Place is a documented KNOWN_ABSENT_POPULAR_PLACES entry -- app should honestly decline, not silently substitute."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "evening",
+          "edit_type": "swap",
+          "constraint": "Connaught Place"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "I don't have a real, mappable record of Connaught Place in my data (it's absent from the OpenStreetMap extract this planner uses) — I can't honestly add it. Khan Market or Janpath are real, verified alternatives nearby if you'd like one of those instead.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": false,
+        "issues": [
+          {
+            "day": 1,
+            "problem": "travel to Local takes 69 min (> 45 min)",
+            "suggestion": "re-cluster stops geographically to cut travel time"
+          }
+        ]
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 8.95,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 18
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 69
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 8.87,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Dilli Haat",
+              "category": "market",
+              "arrival_time": null,
+              "travel_min": 22
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 15
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 13,
+      "command": "Remove Dilli Haat from Day 2.",
+      "category": "remove",
+      "probe": "remove_real_named_stop",
+      "expected": {
+        "edit_type": "remove",
+        "target_day": 2,
+        "constraint": "Dilli Haat"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 2,
+          "target_slot": "all",
+          "edit_type": "remove",
+          "constraint": "Dilli Haat"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Removed Dilli Haat from the itinerary.",
+      "changed_days": [
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": false,
+        "issues": [
+          {
+            "day": 1,
+            "problem": "travel to Local takes 69 min (> 45 min)",
+            "suggestion": "re-cluster stops geographically to cut travel time"
+          }
+        ]
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 8.95,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Noor",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 18
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 69
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 15
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 14,
+      "command": "Remove the boring stop from Day 1.",
+      "category": "remove",
+      "probe": "remove_vague_no_referent",
+      "expected": {
+        "edit_type": "remove or relax (ambiguous)",
+        "target_day": 1,
+        "note": "'boring' names nothing searchable -- correct behavior is an honest 'couldn't find a match', not a hallucinated removal."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Noor to free up time.",
+      "changed_days": [
+        "day_1"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": false,
+        "issues": [
+          {
+            "day": 1,
+            "problem": "travel to Local takes 69 min (> 45 min)",
+            "suggestion": "re-cluster stops geographically to cut travel time"
+          }
+        ]
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 7.4,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": null,
+              "travel_min": 69
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.0,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Humayun's Tomb",
+              "category": "monument",
+              "arrival_time": null,
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": null,
+              "travel_min": 15
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 15,
+      "command": "Reduce travel time between stops.",
+      "category": "logistics",
+      "probe": "reduce_travel_whole_trip",
+      "expected": {
+        "edit_type": "reduce_travel",
+        "target_day": "all"
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "reduce_travel",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Re-clustered your stops to minimize travel time between them.",
+      "changed_days": [
+        "day_1",
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 9.87,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Andhra Bhawan Canteen",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Sorento",
+              "category": "restaurant",
+              "arrival_time": "7:17 PM",
+              "travel_min": 17
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.48,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Anglow",
+              "category": "restaurant",
+              "arrival_time": "2:04 PM",
+              "travel_min": 34
+            },
+            {
+              "slot": "evening",
+              "name": "Big Chill Restaurant",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 16,
+      "command": "Add Select Citywalk mall to Day 1.",
+      "category": "add",
+      "probe": "add_known_absent_place",
+      "expected": {
+        "edit_type": "add",
+        "target_day": 1,
+        "constraint": "Select Citywalk",
+        "note": "Select Citywalk is a documented KNOWN_ABSENT_POPULAR_PLACES entry -- app should honestly decline."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "add",
+          "constraint": "Select Citywalk mall"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "I don't have a real, mappable record of Select Citywalk in my data — I can't honestly add it. Khan Market is a real, verified alternative if you're looking for a shopping stop.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 9.87,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Andhra Bhawan Canteen",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Sorento",
+              "category": "restaurant",
+              "arrival_time": "7:17 PM",
+              "travel_min": 17
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.48,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Anglow",
+              "category": "restaurant",
+              "arrival_time": "2:04 PM",
+              "travel_min": 34
+            },
+            {
+              "slot": "evening",
+              "name": "Big Chill Restaurant",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 17,
+      "command": "Swap the order of Day 1's morning and afternoon plans.",
+      "category": "reorder",
+      "probe": "reorder_slots_same_day",
+      "expected": {
+        "edit_type": "unsupported or reorder",
+        "target_day": 1,
+        "note": "No reorder-within-day capability is documented in the edit engine -- correct behavior is an honest 'can't do that yet', not a silent no-op presented as success or a corrupted schedule."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 1,
+          "target_slot": "all",
+          "edit_type": "swap",
+          "constraint": "swap morning and afternoon plans"
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Couldn't find a suitable replacement for that swap.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 9.87,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Andhra Bhawan Canteen",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Sorento",
+              "category": "restaurant",
+              "arrival_time": "7:17 PM",
+              "travel_min": 17
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.48,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Anglow",
+              "category": "restaurant",
+              "arrival_time": "2:04 PM",
+              "travel_min": 34
+            },
+            {
+              "slot": "evening",
+              "name": "Big Chill Restaurant",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 18,
+      "command": "Make Day 4 more relaxed.",
+      "category": "edge_case",
+      "probe": "invalid_day_reference",
+      "expected": {
+        "edit_type": "relax",
+        "target_day": 4,
+        "note": "Day 4 does not exist in a 2-day trip -- app should reject cleanly, not crash or silently no-op without explanation."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 4,
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": false,
+      "edit_result_message": "Day 4 doesn't exist in this itinerary.",
+      "changed_days": [],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 9.87,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Andhra Bhawan Canteen",
+              "category": "restaurant",
+              "arrival_time": "2:10 PM",
+              "travel_min": 10
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Sorento",
+              "category": "restaurant",
+              "arrival_time": "7:17 PM",
+              "travel_min": 17
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 7.48,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Make My Lagan",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Anglow",
+              "category": "restaurant",
+              "arrival_time": "2:04 PM",
+              "travel_min": 34
+            },
+            {
+              "slot": "evening",
+              "name": "Big Chill Restaurant",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 19,
+      "command": "Make the whole trip more fun.",
+      "category": "edge_case",
+      "probe": "vague_no_actionable_edit_type",
+      "expected": {
+        "edit_type": "ambiguous",
+        "target_day": "all",
+        "note": "No day/slot/edit-type signal at all -- tests whether the classifier defaults sensibly or misfires."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Andhra Bhawan Canteen, Make My Lagan to free up time.",
+      "changed_days": [
+        "day_1",
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 8.45,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Sorento",
+              "category": "restaurant",
+              "arrival_time": "7:17 PM",
+              "travel_min": 17
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 6.07,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Anglow",
+              "category": "restaurant",
+              "arrival_time": "2:04 PM",
+              "travel_min": 34
+            },
+            {
+              "slot": "evening",
+              "name": "Big Chill Restaurant",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "n": 20,
+      "command": "asldkjf change something idk maybe swap a thing??",
+      "category": "edge_case",
+      "probe": "gibberish_low_signal_input",
+      "expected": {
+        "edit_type": "unclear",
+        "target_day": "unknown",
+        "note": "Near-gibberish, low-signal phrasing -- app should not crash and should either ask for clarification or make a conservative, clearly-labeled guess rather than silently mutating the itinerary with no explanation."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": "all",
+          "target_slot": "all",
+          "edit_type": "relax",
+          "constraint": ""
+        },
+        "query": null
+      },
+      "edit_result_ok": true,
+      "edit_result_message": "Made it more relaxed — removed Sorento, Anglow to free up time.",
+      "changed_days": [
+        "day_1",
+        "day_2"
+      ],
+      "edit_correctness": {
+        "pass": true,
+        "drifted_slots": []
+      },
+      "feasibility_after": {
+        "pass": true,
+        "issues": []
+      },
+      "state_after_snapshot": {
+        "day_1": {
+          "total_hours": 6.92,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Janpath New Mini Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "morning",
+              "name": "Local",
+              "category": "restaurant",
+              "arrival_time": "10:40 AM",
+              "travel_min": 10
+            },
+            {
+              "slot": "afternoon",
+              "name": "Khan Market",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Lodhi Gardens",
+              "category": "park",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        },
+        "day_2": {
+          "total_hours": 4.25,
+          "stops": [
+            {
+              "slot": "morning",
+              "name": "Lajpat Nagar Central Market",
+              "category": "market",
+              "arrival_time": "9:00 AM",
+              "travel_min": 0
+            },
+            {
+              "slot": "afternoon",
+              "name": "Chandni Chowk",
+              "category": "market",
+              "arrival_time": "12:00 PM",
+              "travel_min": 0
+            },
+            {
+              "slot": "evening",
+              "name": "Big Chill Restaurant",
+              "category": "restaurant",
+              "arrival_time": "5:00 PM",
+              "travel_min": 0
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

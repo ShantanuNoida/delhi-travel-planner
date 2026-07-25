@@ -1,0 +1,878 @@
+{
+  "spec": {
+    "id": 4,
+    "label": "Architecture + History + Shopping",
+    "interests": [
+      "architecture",
+      "history",
+      "shopping"
+    ],
+    "days": 3,
+    "pace": "relaxed"
+  },
+  "itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/220385654",
+          "name": "Humayun's Tomb",
+          "category": "monument",
+          "lat": 28.5932862,
+          "lon": 77.2506455,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/humayun_tomb.jsp",
+          "wikidata_qid": "Q189648",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Humayun%20Tomb%20UNESCO%20world%20heritage%20site.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+          "kb_best_time_to_visit": "Early morning or golden hour before sunset; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "couples",
+            "photographers",
+            "families",
+            "elderly"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/5297002821",
+          "name": "Masala House",
+          "category": "restaurant",
+          "lat": 28.6026965,
+          "lon": 77.2410926,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "11:10 AM",
+          "meal": "meal ~11:10 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/3424254864",
+          "name": "Nathu Sweets",
+          "category": "restaurant",
+          "lat": 28.6025805,
+          "lon": 77.2409575,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 17,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:09 PM",
+          "meal": "meal ~1:09 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/4628544689",
+          "name": "Gulati",
+          "category": "restaurant",
+          "lat": 28.6078499,
+          "lon": 77.2300673,
+          "opening_hours": "Mo-Su 12:00-24:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 6.2,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Tibetan Medical and Astro Institute",
+        "distance_km": 1.86
+      },
+      "nearest_pharmacy": {
+        "name": "Chemist Shop",
+        "distance_km": 1.14
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 1.13
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/12821028241",
+          "name": "Agasi",
+          "category": "restaurant",
+          "lat": 28.5672316,
+          "lon": 77.246967,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "10:40 AM",
+          "meal": "meal ~10:40 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/44827278",
+          "name": "Lotus Temple",
+          "category": "monument",
+          "lat": 28.5533567,
+          "lon": 77.2586109,
+          "opening_hours": "Tu-Su 09:00-17:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "website": "http://bahaihouseofworship.in",
+          "wikidata_qid": "Q940843",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lotus%20temple%20daytime.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/6112993602",
+          "name": "The Golden Dragon",
+          "category": "restaurant",
+          "lat": 28.5670744,
+          "lon": 77.2464398,
+          "opening_hours": "Mo-Su 12:00-23:30",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:40 PM",
+          "meal": "meal ~1:40 PM"
+        }
+      ],
+      "evening": [],
+      "total_hours": 5.83,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Parivar Sewa Sansthan",
+        "distance_km": 0.36
+      },
+      "nearest_pharmacy": {
+        "name": "Healthy Life Pharmacy",
+        "distance_km": 0.26
+      },
+      "nearest_metro_station": {
+        "name": "Vinobapuri",
+        "distance_km": 0.22
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "way/264863907",
+          "name": "Red Fort",
+          "category": "monument",
+          "lat": 28.6557242,
+          "lon": 77.2407427,
+          "opening_hours": "unknown",
+          "visit_duration_min": 180,
+          "relevance_score": 0.95,
+          "fallback": false,
+          "website": "http://delhitourism.gov.in/delhitourism/tourist_place/red_fort.jsp",
+          "wikidata_qid": "Q45957",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg",
+          "kb_entry_fee": "Indian nationals approx. ₹35–₹50; foreign nationals approx. ₹550–₹600; museum circuit ticketed additionally; children under 15 free at ASI monuments. Verify locally.",
+          "kb_best_time_to_visit": "Morning at opening to beat crowds; October–March",
+          "kb_suitable_for": [
+            "history buffs",
+            "families",
+            "photographers",
+            "first-time visitors",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/11601332069",
+          "name": "Guru Kirpa Restaurant",
+          "category": "restaurant",
+          "lat": 28.6562798,
+          "lon": 77.2329761,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "12:10 PM",
+          "meal": "meal ~12:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/12639638609",
+          "name": "बाबू राम देवी दयाल",
+          "category": "restaurant",
+          "lat": 28.6560917,
+          "lon": 77.23067,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [],
+      "total_hours": 5.67,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Kasturba Hospital",
+        "distance_km": 0.7
+      },
+      "nearest_pharmacy": {
+        "name": "Narang medical store",
+        "distance_km": 0.89
+      },
+      "nearest_metro_station": {
+        "name": "Lal Quila",
+        "distance_km": 0.24
+      }
+    }
+  },
+  "steps": [
+    {
+      "n": 1,
+      "command": "Why did you pick Humayun's Tomb for Day 1?",
+      "category": "justification",
+      "probe": "why_named_stop",
+      "target_stop": "Humayun's Tomb",
+      "expected": {
+        "note": "Should reference the actual scheduled stop, grounded in real source data or an honest no-source admission."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why did you pick Humayun's Tomb for Day 1?"
+      },
+      "answer": {
+        "answer": "Humayun's Tomb was chosen because its site on the banks of the Yamuna River was selected due to its proximity to the Nizamuddin Dargah, as burial near the celebrated Sufi saint was considered auspicious. Additionally, as the first grand garden-tomb on the Indian subcontinent, it is a magnificent UNESCO World Heritage Site featuring a Persian charbagh and striking red sandstone and white marble architecture.",
+        "citations": [
+          {
+            "source_title": "Humayun's tomb",
+            "source_url": "https://en.wikipedia.org/wiki/Humayun's_tomb",
+            "source": "wikipedia"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 2,
+      "command": "Why is Masala House scheduled in the morning instead of another time of day?",
+      "category": "justification",
+      "probe": "why_slot_timing",
+      "target_stop": "Masala House",
+      "expected": {
+        "note": "Tests whether the app can justify slot placement, or honestly says it doesn't have a specific reason."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why is Masala House scheduled in the morning instead of another time of day?"
+      },
+      "answer": {
+        "answer": "I do not have any information about Masala House or why it might be scheduled in the morning.",
+        "citations": [
+          {
+            "source_title": "Delhi/New Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi/New_Delhi",
+            "source": "wikivoyage"
+          },
+          {
+            "source_title": "Purana Qila (Old Fort)",
+            "source_url": "local-kb://delhi_tourist_venues_kb#purana-qila-old-fort",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 3,
+      "command": "Why did you pick this place?",
+      "category": "justification",
+      "probe": "why_vague_referent",
+      "target_stop": null,
+      "expected": {
+        "note": "No place named -- correct behavior is to ask which place, not guess and hallucinate."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why did you pick this place?"
+      },
+      "answer": {
+        "answer": "Which place are you asking about? Your itinerary includes: Humayun's Tomb, Masala House, Nathu Sweets, Gulati, Lajpat Nagar Central Market, Agasi.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 4,
+      "command": "Why is Day 2 themed around architecture?",
+      "category": "justification",
+      "probe": "why_day_theme",
+      "target_stop": null,
+      "expected": {
+        "note": "Trip-level justification tied to the 'architecture' interest actually requested -- tests reasoning above single-stop granularity, not just per-venue answers."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why is Day 2 themed around architecture?"
+      },
+      "answer": {
+        "answer": "Day 2 features architecture because the sites showcase important legacies of Indo-Islamic design. This includes the structure's double-layered dome, intricate stone latticework, symmetrical exterior contrasting with a complex interior floor plan, and pietra dura ornamentation featuring geometrical and arabesque patterns.",
+        "citations": [
+          {
+            "source_title": "Humayun's tomb",
+            "source_url": "https://en.wikipedia.org/wiki/Humayun's_tomb",
+            "source": "wikipedia"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 5,
+      "command": "What if it rains on Day 1?",
+      "category": "contingency",
+      "probe": "weather_rain",
+      "target_stop": null,
+      "expected": {
+        "note": "Should surface indoor-alternative / weather guidance grounded in real source data."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What if it rains on Day 1?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 6,
+      "command": "What happens to my plan if Nathu Sweets is closed for a public holiday?",
+      "category": "contingency",
+      "probe": "closure_holiday",
+      "target_stop": "Nathu Sweets",
+      "expected": {
+        "note": "No dataset field encodes holiday closures -- correct behavior is an honest no-verified-source answer, not a fabricated closure schedule."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What happens to my plan if Nathu Sweets is closed for a public holiday?"
+      },
+      "answer": {
+        "answer": "Nathu's Sweets operates daily from approximately 8:00 AM to 10:30 PM, but you should verify the timings per outlet. If you need alternative options in the market, Bengali Sweet House is another venerable sweet-and-snack institution operating nearby. (Note: I'm not able to confirm this one is in my verified, bookable list of stops for New Delhi -- let me know if you'd like me to search for something similar I can actually add to your itinerary.)",
+        "citations": [
+          {
+            "source_title": "Bengali Market",
+            "source_url": "local-kb://delhi_tourist_venues_kb#bengali-market",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 7,
+      "command": "What if Masala House is packed with visitors when I get there?",
+      "category": "contingency",
+      "probe": "crowds_on_arrival",
+      "target_stop": "Masala House",
+      "expected": {
+        "note": "Immediate on-arrival crowd contingency (distinct from the closure probe) -- checks the app gives situational guidance rather than repeating a generic closure answer."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What if Masala House is packed with visitors when I get there?"
+      },
+      "answer": {
+        "answer": "Yes, this plan looks doable — every day fits within the relaxed pace budget.",
+        "citations": [
+          {
+            "source_title": "Delhi/New Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi/New_Delhi",
+            "source": "wikivoyage"
+          },
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 8,
+      "command": "What are some alternatives to Lotus Temple on Day 2?",
+      "category": "alternatives",
+      "probe": "alt_for_named_stop",
+      "target_stop": "Lotus Temple",
+      "expected": {
+        "note": "Any alternative places named in the answer should be real, not invented."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What are some alternatives to Lotus Temple on Day 2?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 9,
+      "command": "If The Golden Dragon turns out to be too crowded, what else could I do instead?",
+      "category": "alternatives",
+      "probe": "alt_crowds",
+      "target_stop": "The Golden Dragon",
+      "expected": {
+        "note": "Crowd-avoidance framing of the alternatives probe -- checks the app doesn't just pattern-match the word 'alternative'."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "If The Golden Dragon turns out to be too crowded, what else could I do instead?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 10,
+      "command": "What other activities can I do on Day 2 if I have extra time?",
+      "category": "expansion",
+      "probe": "expand_day",
+      "target_stop": null,
+      "expected": {
+        "note": "Should suggest real, groundable options -- not vague filler."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What other activities can I do on Day 2 if I have extra time?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 11,
+      "command": "Is there anything interesting near Humayun's Tomb that isn't on the itinerary?",
+      "category": "expansion",
+      "probe": "expand_near_stop",
+      "target_stop": "Humayun's Tomb",
+      "expected": {
+        "note": "No real geo-proximity RAG lookup exists -- an honest no-source answer is acceptable, a fabricated nearby landmark is not."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is there anything interesting near Humayun's Tomb that isn't on the itinerary?"
+      },
+      "answer": {
+        "answer": "Near Humayun's Tomb, you can find the Dina-panah Citadel (also known as Purana Qila or Old Fort), which Humayun found in 1538. Additionally, the site is located close to the Nizamuddin Dargah, the mausoleum of the celebrated Sufi saint Nizamuddin Auliya, whose surrounding Nizamuddin Basti lanes are lined with flower sellers, kebab shops, and historic structures. (Note: I'm not able to confirm this one is in my verified, bookable list of stops for New Delhi -- let me know if you'd like me to search for something similar I can actually add to your itinerary.)",
+        "citations": [
+          {
+            "source_title": "Humayun's tomb",
+            "source_url": "https://en.wikipedia.org/wiki/Humayun's_tomb",
+            "source": "wikipedia"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 12,
+      "command": "I want a bit of shopping on Day 3 evening — got a good add-on?",
+      "category": "expansion",
+      "probe": "expand_themed_addon",
+      "target_stop": null,
+      "expected": {
+        "note": "Themed expansion tied to the 'shopping' interest actually requested -- any suggested venue should be real/checkable, not invented to fit the theme."
+      },
+      "classification": {
+        "intent": "EDIT",
+        "edit_intent": {
+          "target_day": 3,
+          "target_slot": "evening",
+          "edit_type": "add",
+          "constraint": "shopping"
+        },
+        "query": null
+      },
+      "answer": null,
+      "grounding": null,
+      "_note": "Not routed to explain() -- classified as EDIT, not EXPLAIN."
+    },
+    {
+      "n": 13,
+      "command": "How much does it cost to visit Humayun's Tomb?",
+      "category": "practicalities",
+      "probe": "cost_named_stop",
+      "target_stop": "Humayun's Tomb",
+      "expected": {
+        "note": "Checkable fact when the stop carries kb_entry_fee (dataset says: 'Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.')",
+        "kb_entry_fee": "Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "How much does it cost to visit Humayun's Tomb?"
+      },
+      "answer": {
+        "answer": "Humayun's Tomb's entry fee: Indian nationals approx. ₹35–₹40; foreign nationals approx. ₹550–₹600; children under 15 free; site museum may be ticketed separately. Verify locally.",
+        "citations": [
+          {
+            "source_title": "Humayun's Tomb",
+            "source_url": "local-kb://delhi_tourist_venues_kb#humayun-s-tomb",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 14,
+      "command": "What's the best time of day to visit Humayun's Tomb?",
+      "category": "practicalities",
+      "probe": "best_time_named_stop",
+      "target_stop": "Humayun's Tomb",
+      "expected": {
+        "note": "Checkable fact when the stop carries kb_best_time_to_visit (dataset says: 'Early morning or golden hour before sunset; October–March')",
+        "kb_best_time_to_visit": "Early morning or golden hour before sunset; October–March"
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What's the best time of day to visit Humayun's Tomb?"
+      },
+      "answer": {
+        "answer": "The best time to visit Humayun's Tomb: Early morning or golden hour before sunset; October–March",
+        "citations": [
+          {
+            "source_title": "Humayun's Tomb",
+            "source_url": "local-kb://delhi_tourist_venues_kb#humayun-s-tomb",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 15,
+      "command": "How do I get from Red Fort to Guru Kirpa Restaurant?",
+      "category": "practicalities",
+      "probe": "travel_between_stops",
+      "target_stop": "Red Fort -> Guru Kirpa Restaurant",
+      "expected": {
+        "note": "Answer should be consistent with the itinerary's own computed travel_mode/travel_time when the two stops are adjacent.",
+        "travel_mode_from_prev": "walk",
+        "travel_time_from_prev_min": 10,
+        "adjacent": true
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "How do I get from Red Fort to Guru Kirpa Restaurant?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 16,
+      "command": "How long should I plan to spend at Humayun's Tomb?",
+      "category": "practicalities",
+      "probe": "duration_named_stop",
+      "target_stop": "Humayun's Tomb",
+      "expected": {
+        "note": "Visit-duration question -- tests whether the app grounds this in real data (e.g. the slot's allotted time) or honestly admits it's an estimate, rather than inventing a precise-sounding figure."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "How long should I plan to spend at Humayun's Tomb?"
+      },
+      "answer": {
+        "answer": "You should plan to spend about 1.5 to 2 hours visiting Humayun's Tomb. The best times to explore the complex are during the early morning or the golden hour before sunset.",
+        "citations": [
+          {
+            "source_title": "Humayun's tomb",
+            "source_url": "https://en.wikipedia.org/wiki/Humayun's_tomb",
+            "source": "wikipedia"
+          },
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 17,
+      "command": "Is Humayun's Tomb suitable for elderly travellers?",
+      "category": "suitability",
+      "probe": "suitability_elderly",
+      "target_stop": "Humayun's Tomb",
+      "expected": {
+        "note": "Checkable when the stop carries kb_suitable_for (dataset says: ['history buffs', 'couples', 'photographers', 'families', 'elderly'])",
+        "kb_suitable_for": [
+          "history buffs",
+          "couples",
+          "photographers",
+          "families",
+          "elderly"
+        ]
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is Humayun's Tomb suitable for elderly travellers?"
+      },
+      "answer": {
+        "answer": "Yes — Humayun's Tomb is tagged as suitable for that: it's marked suitable for history buffs, couples, photographers, families, elderly.",
+        "citations": [
+          {
+            "source_title": "Humayun's Tomb",
+            "source_url": "local-kb://delhi_tourist_venues_kb#humayun-s-tomb",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 18,
+      "command": "Is this itinerary suitable for a family with young kids?",
+      "category": "suitability",
+      "probe": "suitability_family_whole_trip",
+      "target_stop": null,
+      "expected": {
+        "note": "Whole-trip suitability question -- tests whether the app can reason across the itinerary or honestly declines rather than answering about one arbitrary stop."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is this itinerary suitable for a family with young kids?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 19,
+      "command": "Would this itinerary feel safe and manageable for a solo female traveller?",
+      "category": "suitability",
+      "probe": "suitability_solo_female_safety",
+      "target_stop": null,
+      "expected": {
+        "note": "Safety-oriented whole-trip suitability -- no dataset field tracks a safety rating, so an honest no-verified-source answer is expected, not a fabricated safety score."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Would this itinerary feel safe and manageable for a solo female traveller?"
+      },
+      "answer": {
+        "answer": "Yes, this plan looks doable — every day fits within the relaxed pace budget.",
+        "citations": [
+          {
+            "source_title": "Delhi/New Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi/New_Delhi",
+            "source": "wikivoyage"
+          },
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 20,
+      "command": "Is बाबू राम देवी दयाल within walking distance of my hotel?",
+      "category": "edge_case",
+      "probe": "unanswerable_missing_context",
+      "target_stop": "बाबू राम देवी दयाल",
+      "expected": {
+        "note": "No hotel/lodging location is tracked anywhere in the app -- correct behavior is an honest 'I don't know where you're staying' answer, not a fabricated walking distance."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is बाबू राम देवी दयाल within walking distance of my hotel?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    }
+  ]
+}

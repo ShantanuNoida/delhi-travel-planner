@@ -1,0 +1,362 @@
+{
+  "spec": {
+    "id": 13,
+    "days": 3,
+    "pace": "intensive",
+    "cuisine": "North Indian",
+    "cuisine_phrase": "I'd love to try some North Indian cuisine",
+    "category_interests": [
+      "shopping"
+    ],
+    "opening_message": "I'm planning a 3-day trip to Delhi, intensive pace. I'd love to try some North Indian cuisine. I'm also interested in shopping."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "cuisine",
+    "shopping"
+  ],
+  "extracted_constraints": {},
+  "num_days_extracted": 3,
+  "pace_extracted": "intensive",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/442156777",
+          "name": "Janpath New Mini Market",
+          "category": "market",
+          "lat": 28.6290954,
+          "lon": 77.2181663,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon; October–March (open-air stalls)",
+          "kb_suitable_for": [
+            "budget travellers",
+            "shoppers",
+            "souvenir hunters",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 25,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:55 AM",
+          "meal": "meal ~10:55 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/80442501",
+          "name": "Khan Market",
+          "category": "market",
+          "lat": 28.600192,
+          "lon": 77.2266065,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon and evening; year-round",
+          "kb_suitable_for": [
+            "foodies",
+            "shoppers",
+            "couples",
+            "book lovers",
+            "upscale travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/1966254717",
+          "name": "Andhra Bhawan Canteen",
+          "category": "restaurant",
+          "lat": 28.6169212,
+          "lon": 77.225998,
+          "opening_hours": "Mo-Su 08:00-22:00, 00:00-15:00, 07:30-22:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "cuisine": "asian;indian",
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "2:10 PM",
+          "meal": "meal ~2:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/2591114289",
+          "name": "Indian Coffee House",
+          "category": "restaurant",
+          "lat": 28.6306895,
+          "lon": 77.2160507,
+          "opening_hours": "08:30-21:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "cuisine": "coffee_shop;indian",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.83,
+      "date": "",
+      "nearest_hospital": {
+        "name": "General Williams Hospital",
+        "distance_km": 1.59
+      },
+      "nearest_pharmacy": {
+        "name": "Youplus",
+        "distance_km": 1.47
+      },
+      "nearest_metro_station": {
+        "name": "Central Secretariat",
+        "distance_km": 1.26
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/44315454",
+          "name": "Dilli Haat",
+          "category": "market",
+          "lat": 28.5731929,
+          "lon": 77.2072531,
+          "opening_hours": "Mo-Su 10:00-22:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.9,
+          "fallback": false,
+          "wikidata_qid": "Q3595641",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Buying%20and%20selling%20at%20Dilli%20Haat%27s%20Nature%20Bazaar.jpg",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/4710222497",
+          "name": "Alkauser ( best biryani)",
+          "category": "restaurant",
+          "lat": 28.6018922,
+          "lon": 77.1936521,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 19,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:49 AM",
+          "meal": "meal ~10:49 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/1796122219",
+          "name": "Lajpat Nagar Central Market",
+          "category": "market",
+          "lat": 28.5689873,
+          "lon": 77.2408267,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/1831954639",
+          "name": "Green Park Market",
+          "category": "market",
+          "lat": 28.5556739,
+          "lon": 77.2021428,
+          "opening_hours": "Tu off",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 22,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:52 PM"
+        },
+        {
+          "osm_id": "node/5136715528",
+          "name": "Hari Prakash Food Point",
+          "category": "restaurant",
+          "lat": 28.6027056,
+          "lon": 77.1865603,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 30,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "3:52 PM",
+          "meal": "meal ~3:52 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/12028989717",
+          "name": "Keventers",
+          "category": "restaurant",
+          "lat": 28.7151011,
+          "lon": 77.1164799,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.75,
+          "fallback": false,
+          "wikidata_qid": "Q110654891",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 9.43,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Primus Super Specialty Hospital",
+        "distance_km": 1.46
+      },
+      "nearest_pharmacy": {
+        "name": "Anand Medical Stores",
+        "distance_km": 0.42
+      },
+      "nearest_metro_station": {
+        "name": "Lok Kalyan Marg",
+        "distance_km": 2.04
+      }
+    },
+    "day_3": {
+      "morning": [
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q17064086",
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "cuisine": "chicken;kebab;curry;indian",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q3236763",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 3.63,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Makkar Multispeciality Hospital",
+        "distance_km": 0.34
+      },
+      "nearest_pharmacy": {
+        "name": "Prem medical store",
+        "distance_km": 0.25
+      },
+      "nearest_metro_station": {
+        "name": "Nirman Vihar",
+        "distance_km": 0.84
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 9,
+    "matched_cuisine": [
+      "Andhra Bhawan Canteen",
+      "Indian Coffee House",
+      "Karim's"
+    ],
+    "unmatched_cuisine": [],
+    "no_cuisine_tag": [
+      "Indian Accent",
+      "Alkauser ( best biryani)",
+      "Hari Prakash Food Point",
+      "Keventers",
+      "Chandni Chowk",
+      "Bukhara"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "shopping"
+    ],
+    "missing": []
+  }
+}

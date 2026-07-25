@@ -1,0 +1,245 @@
+{
+  "spec": {
+    "id": 29,
+    "days": 2,
+    "pace": "relaxed",
+    "cuisine": "Chinese",
+    "cuisine_phrase": "I'm a big fan of Chinese food",
+    "category_interests": [
+      "shopping",
+      "religion"
+    ],
+    "opening_message": "I'm planning a 2-day trip to Delhi, relaxed pace. I'm a big fan of Chinese food. I'm also interested in shopping and religion."
+  },
+  "final_state": "present",
+  "extracted_interests": [
+    "food",
+    "shopping",
+    "culture"
+  ],
+  "extracted_constraints": {
+    "dietary": "Chinese food"
+  },
+  "num_days_extracted": 2,
+  "pace_extracted": "relaxed",
+  "itinerary": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "way/442156777",
+          "name": "Janpath New Mini Market",
+          "category": "market",
+          "lat": 28.6290954,
+          "lon": 77.2181663,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon; October–March (open-air stalls)",
+          "kb_suitable_for": [
+            "budget travellers",
+            "shoppers",
+            "souvenir hunters",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 25,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:55 AM",
+          "meal": "meal ~10:55 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/7282286731",
+          "name": "Khan Market",
+          "category": "market",
+          "lat": 28.6022446,
+          "lon": 77.2291281,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/5109833022",
+          "name": "Pindi restaurant Delhi",
+          "category": "restaurant",
+          "lat": 28.6078554,
+          "lon": 77.2296194,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.5,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "walk",
+          "arrival_time": "1:40 PM",
+          "meal": "meal ~1:40 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [],
+      "total_hours": 6.08,
+      "date": "",
+      "nearest_hospital": {
+        "name": "General Williams Hospital",
+        "distance_km": 2.35
+      },
+      "nearest_pharmacy": {
+        "name": "Youplus",
+        "distance_km": 0.8
+      },
+      "nearest_metro_station": {
+        "name": "Khan Market",
+        "distance_km": 0.61
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q17064086",
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        },
+        {
+          "osm_id": "way/87354076",
+          "name": "Saint James' Anglican Church",
+          "category": "church",
+          "lat": 28.6657462,
+          "lon": 77.2310777,
+          "opening_hours": "Mo-Fr 08:30-20:00",
+          "visit_duration_min": 45,
+          "relevance_score": 0.79,
+          "fallback": false,
+          "wikidata_qid": "Q2985087",
+          "image": "http://commons.wikimedia.org/wiki/Special:FilePath/St.james%20b.jpg",
+          "kb_entry_fee": "Free",
+          "kb_best_time_to_visit": "Weekday mornings for a quiet visit; year-round",
+          "kb_suitable_for": [
+            "history buffs",
+            "photographers",
+            "solo travellers",
+            "budget travellers"
+          ],
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "1:18 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/7018886724",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6584227,
+          "lon": 77.2303375,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "wikidata_qid": "Q5071227",
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 4.55,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Chacha Nehru Bal Chikitsalaya",
+        "distance_km": 0.71
+      },
+      "nearest_pharmacy": {
+        "name": "Prem medical store",
+        "distance_km": 1.59
+      },
+      "nearest_metro_station": {
+        "name": "Laxmi Nagar",
+        "distance_km": 2.1
+      }
+    }
+  },
+  "feasibility": {
+    "pass": true,
+    "issues": []
+  },
+  "grounding": {
+    "pass": true,
+    "ungrounded_pois": [],
+    "uncited_tips": []
+  },
+  "cuisine_accuracy": {
+    "total_restaurants": 5,
+    "matched_cuisine": [],
+    "unmatched_cuisine": [],
+    "no_cuisine_tag": [
+      "Indian Accent",
+      "Pindi restaurant Delhi",
+      "Bukhara",
+      "Karim's",
+      "Chandni Chowk"
+    ]
+  },
+  "category_coverage": {
+    "covered": [
+      "shopping",
+      "religion"
+    ],
+    "missing": []
+  }
+}

@@ -1,0 +1,736 @@
+{
+  "spec": {
+    "id": 16,
+    "label": "Shopping + Food",
+    "interests": [
+      "shopping",
+      "food"
+    ],
+    "days": 2,
+    "pace": "moderate"
+  },
+  "itinerary_full": {
+    "day_1": {
+      "morning": [
+        {
+          "osm_id": "node/1827530953",
+          "name": "Bukhara",
+          "category": "restaurant",
+          "lat": 28.6142041,
+          "lon": 77.3715342,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM",
+          "meal": "meal ~9:00 AM"
+        },
+        {
+          "osm_id": "way/1182839787",
+          "name": "Buddh Bazar",
+          "category": "market",
+          "lat": 28.6222476,
+          "lon": 77.2914319,
+          "opening_hours": "We 16:30-22:30",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 44,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:59 AM",
+          "is_hidden_gem": true
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "node/2106101596",
+          "name": "Karim's",
+          "category": "restaurant",
+          "lat": 28.6494286,
+          "lon": 77.2337411,
+          "opening_hours": "unknown",
+          "visit_duration_min": 68,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person",
+          "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes",
+          "kb_suitable_for": [
+            "foodies",
+            "non-vegetarian diners",
+            "history buffs",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM",
+          "meal": "meal ~12:00 PM"
+        },
+        {
+          "osm_id": "way/302534538",
+          "name": "V3S Mall",
+          "category": "market",
+          "lat": 28.6372006,
+          "lon": 77.2865082,
+          "opening_hours": "Mo-Su 11:00-23:00",
+          "visit_duration_min": 90,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 29,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "1:37 PM"
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/3268564739",
+          "name": "Chandni Chowk",
+          "category": "restaurant",
+          "lat": 28.6559834,
+          "lon": 77.2321937,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.85,
+      "date": "",
+      "nearest_hospital": {
+        "name": "Walia Nursing Home",
+        "distance_km": 0.39
+      },
+      "nearest_pharmacy": {
+        "name": "Jagdamba chemist",
+        "distance_km": 0.15
+      },
+      "nearest_metro_station": {
+        "name": "Nirman Vihar",
+        "distance_km": 0.37
+      }
+    },
+    "day_2": {
+      "morning": [
+        {
+          "osm_id": "way/442156777",
+          "name": "Janpath New Mini Market",
+          "category": "market",
+          "lat": 28.6290954,
+          "lon": 77.2181663,
+          "opening_hours": "unknown",
+          "visit_duration_min": 90,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon; October–March (open-air stalls)",
+          "kb_suitable_for": [
+            "budget travellers",
+            "shoppers",
+            "souvenir hunters",
+            "solo travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "9:00 AM"
+        },
+        {
+          "osm_id": "node/5218620423",
+          "name": "Indian Accent",
+          "category": "restaurant",
+          "lat": 28.5917587,
+          "lon": 77.2379033,
+          "opening_hours": "unknown",
+          "visit_duration_min": 75,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "travel_time_from_prev_min": 25,
+          "travel_mode_from_prev": "metro",
+          "arrival_time": "10:55 AM",
+          "meal": "meal ~10:55 AM"
+        }
+      ],
+      "afternoon": [
+        {
+          "osm_id": "way/80442501",
+          "name": "Khan Market",
+          "category": "market",
+          "lat": 28.600192,
+          "lon": 77.2266065,
+          "opening_hours": "unknown",
+          "visit_duration_min": 120,
+          "relevance_score": 0.8,
+          "fallback": false,
+          "kb_entry_fee": "Free (market area)",
+          "kb_best_time_to_visit": "Late afternoon and evening; year-round",
+          "kb_suitable_for": [
+            "foodies",
+            "shoppers",
+            "couples",
+            "book lovers",
+            "upscale travellers"
+          ],
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "12:00 PM"
+        },
+        {
+          "osm_id": "node/1966254717",
+          "name": "Andhra Bhawan Canteen",
+          "category": "restaurant",
+          "lat": 28.6169212,
+          "lon": 77.225998,
+          "opening_hours": "Mo-Su 08:00-22:00, 00:00-15:00, 07:30-22:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 10,
+          "travel_mode_from_prev": "auto",
+          "arrival_time": "2:10 PM",
+          "meal": "meal ~2:10 PM",
+          "is_hidden_gem": true
+        }
+      ],
+      "evening": [
+        {
+          "osm_id": "node/2591114289",
+          "name": "Indian Coffee House",
+          "category": "restaurant",
+          "lat": 28.6306895,
+          "lon": 77.2160507,
+          "opening_hours": "08:30-21:00",
+          "visit_duration_min": 75,
+          "relevance_score": 0.7,
+          "fallback": false,
+          "travel_time_from_prev_min": 0,
+          "travel_mode_from_prev": null,
+          "arrival_time": "5:00 PM",
+          "meal": "meal ~5:00 PM"
+        }
+      ],
+      "total_hours": 7.83,
+      "date": "",
+      "nearest_hospital": {
+        "name": "General Williams Hospital",
+        "distance_km": 1.59
+      },
+      "nearest_pharmacy": {
+        "name": "Youplus",
+        "distance_km": 1.47
+      },
+      "nearest_metro_station": {
+        "name": "Central Secretariat",
+        "distance_km": 1.26
+      }
+    }
+  },
+  "steps": [
+    {
+      "n": 1,
+      "command": "Why did you pick Bukhara for Day 1?",
+      "category": "justification",
+      "probe": "why_named_stop",
+      "target_stop": "Bukhara",
+      "expected": {
+        "note": "Should reference the actual scheduled stop, grounded in real source data or an honest no-source admission -- not a generic answer about 'this area'."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why did you pick Bukhara for Day 1?"
+      },
+      "answer": {
+        "answer": "The provided source excerpts do not contain any information about Bukhara or why it was picked for Day 1.",
+        "citations": [
+          {
+            "source_title": "Chandni Chowk",
+            "source_url": "https://en.wikipedia.org/wiki/Chandni_Chowk",
+            "source": "wikipedia"
+          },
+          {
+            "source_title": "Swaminarayan Akshardham (Delhi)",
+            "source_url": "https://en.wikipedia.org/wiki/Swaminarayan_Akshardham_(Delhi)",
+            "source": "wikipedia"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 2,
+      "command": "Why is Buddh Bazar scheduled in the morning instead of another time of day?",
+      "category": "justification",
+      "probe": "why_slot_timing",
+      "target_stop": "Buddh Bazar",
+      "expected": {
+        "note": "Tests whether the app can justify slot placement, or honestly says it doesn't have a specific reason for the exact slot."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why is Buddh Bazar scheduled in the morning instead of another time of day?"
+      },
+      "answer": {
+        "answer": "Based on the provided excerpts, there is no mention of a Buddh Bazar or any reasons for it being scheduled in the morning.",
+        "citations": [
+          {
+            "source_title": "Hazrat Nizamuddin Dargah",
+            "source_url": "local-kb://delhi_tourist_venues_kb#hazrat-nizamuddin-dargah",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 3,
+      "command": "Why did you pick this place?",
+      "category": "justification",
+      "probe": "why_vague_referent",
+      "target_stop": null,
+      "expected": {
+        "note": "No place named ('this place') -- correct behavior is to ask which place, not guess and hallucinate a generic answer (R-18/F-13 fix from earlier work)."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Why did you pick this place?"
+      },
+      "answer": {
+        "answer": "Which place are you asking about? Your itinerary includes: Bukhara, Buddh Bazar, Karim's, V3S Mall, Chandni Chowk, Janpath New Mini Market.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 4,
+      "command": "What if it rains on Day 1?",
+      "category": "contingency",
+      "probe": "weather_rain",
+      "target_stop": null,
+      "expected": {
+        "note": "Should surface indoor-alternative / weather guidance grounded in real source data."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What if it rains on Day 1?"
+      },
+      "answer": {
+        "answer": "I cannot answer this question as the provided sources do not contain information about rain on Day 1.",
+        "citations": [
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 5,
+      "command": "What happens to my plan if Karim's is closed for a public holiday?",
+      "category": "contingency",
+      "probe": "closure_holiday",
+      "target_stop": "Karim's",
+      "expected": {
+        "note": "No dataset field encodes holiday closures -- correct behavior is an honest no-verified-source answer, not a fabricated closure schedule."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What happens to my plan if Karim's is closed for a public holiday?"
+      },
+      "answer": {
+        "answer": "I'm sorry, but the provided sources do not contain any information about what happens to your plan if Karim's is closed for a public holiday.",
+        "citations": [
+          {
+            "source_title": "Karim's, Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#karim-s-jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 6,
+      "command": "What are some alternatives to Indian Accent on Day 2?",
+      "category": "alternatives",
+      "probe": "alt_for_named_stop",
+      "target_stop": "Indian Accent",
+      "expected": {
+        "note": "Any alternative places named in the answer should be real (checkable against the POI dataset), not invented."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What are some alternatives to Indian Accent on Day 2?"
+      },
+      "answer": {
+        "answer": "The provided source excerpts do not contain any information about Indian Accent or dining alternatives for Day 2.",
+        "citations": [
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 7,
+      "command": "If Khan Market turns out to be too crowded, what else could I do instead?",
+      "category": "alternatives",
+      "probe": "alt_crowds",
+      "target_stop": "Khan Market",
+      "expected": {
+        "note": "Crowd-avoidance framing of the same alternatives probe -- checks the app doesn't just pattern-match the word 'alternative'."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "If Khan Market turns out to be too crowded, what else could I do instead?"
+      },
+      "answer": {
+        "answer": "If Khan Market is too crowded, you can visit other local shopping markets in the area such as Khanna Market or Meherchand Market. You can also explore nearby places of interest like Lodhi Gardens, India Gate, the Sai Baba Temple of Lodhi Road, or the India Habitat Centre.",
+        "citations": [
+          {
+            "source_title": "Khan Market",
+            "source_url": "local-kb://delhi_tourist_venues_kb#khan-market",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Bengali Market",
+            "source_url": "local-kb://delhi_tourist_venues_kb#bengali-market",
+            "source": "delhi_tourist_venues_kb"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 8,
+      "command": "What other activities can I do on Day 2 if I have extra time?",
+      "category": "expansion",
+      "probe": "expand_day",
+      "target_stop": null,
+      "expected": {
+        "note": "Should suggest real, groundable options -- not vague filler."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What other activities can I do on Day 2 if I have extra time?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 9,
+      "command": "Is there anything interesting near Bukhara that isn't on the itinerary?",
+      "category": "expansion",
+      "probe": "expand_near_stop",
+      "target_stop": "Bukhara",
+      "expected": {
+        "note": "Tests location-aware expansion; the dataset has no real geo-proximity RAG lookup, so an honest no-source answer is acceptable -- a fabricated nearby landmark is not."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is there anything interesting near Bukhara that isn't on the itinerary?"
+      },
+      "answer": {
+        "answer": "Based on the provided information, there are no details available about Bukhara or what might be located near it.",
+        "citations": [
+          {
+            "source_title": "Chandni Chowk",
+            "source_url": "https://en.wikipedia.org/wiki/Chandni_Chowk",
+            "source": "wikipedia"
+          },
+          {
+            "source_title": "Swaminarayan Akshardham (Delhi)",
+            "source_url": "https://en.wikipedia.org/wiki/Swaminarayan_Akshardham_(Delhi)",
+            "source": "wikipedia"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 10,
+      "command": "How much does it cost to visit Karim's?",
+      "category": "practicalities",
+      "probe": "cost_named_stop",
+      "target_stop": "Karim's",
+      "expected": {
+        "note": "Checkable fact when the stop carries kb_entry_fee (dataset says: 'N/A (restaurant); typical meal approx. ₹300–₹600 per person')",
+        "kb_entry_fee": "N/A (restaurant); typical meal approx. ₹300–₹600 per person"
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "How much does it cost to visit Karim's?"
+      },
+      "answer": {
+        "answer": "There is no entry fee to visit Karim's restaurant. A typical meal generally costs approximately ₹300 to ₹600 per person.",
+        "citations": [
+          {
+            "source_title": "Karim's, Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#karim-s-jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 11,
+      "command": "What's the best time of day to visit Karim's?",
+      "category": "practicalities",
+      "probe": "best_time_named_stop",
+      "target_stop": "Karim's",
+      "expected": {
+        "note": "Checkable fact when the stop carries kb_best_time_to_visit (dataset says: 'Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes')",
+        "kb_best_time_to_visit": "Lunch on weekdays; evenings during Ramzan for the special night food scene in surrounding lanes"
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "What's the best time of day to visit Karim's?"
+      },
+      "answer": {
+        "answer": "The best time to visit Karim's is for lunch on weekdays. Alternatively, evenings during Ramzan are recommended if you want to experience the special night food scene in the surrounding lanes.",
+        "citations": [
+          {
+            "source_title": "Karim's, Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#karim-s-jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 12,
+      "command": "How do I get from Andhra Bhawan Canteen to Indian Coffee House?",
+      "category": "practicalities",
+      "probe": "travel_between_stops",
+      "target_stop": "Andhra Bhawan Canteen -> Indian Coffee House",
+      "expected": {
+        "note": "Itinerary already computes travel_mode_from_prev/travel_time_from_prev_min between consecutive stops -- answer should be consistent with that data when the two stops are adjacent.",
+        "travel_mode_from_prev": null,
+        "travel_time_from_prev_min": 0,
+        "adjacent": false
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "How do I get from Andhra Bhawan Canteen to Indian Coffee House?"
+      },
+      "answer": {
+        "answer": "The provided source excerpts do not contain any information about the Andhra Bhawan Canteen or the Indian Coffee House.",
+        "citations": [
+          {
+            "source_title": "Bengali Market",
+            "source_url": "local-kb://delhi_tourist_venues_kb#bengali-market",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Delhi/Old Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi/Old_Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 13,
+      "command": "Is Karim's suitable for elderly travellers?",
+      "category": "suitability",
+      "probe": "suitability_elderly",
+      "target_stop": "Karim's",
+      "expected": {
+        "note": "Checkable when the stop carries kb_suitable_for (dataset says: ['foodies', 'non-vegetarian diners', 'history buffs', 'solo travellers'])",
+        "kb_suitable_for": [
+          "foodies",
+          "non-vegetarian diners",
+          "history buffs",
+          "solo travellers"
+        ]
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is Karim's suitable for elderly travellers?"
+      },
+      "answer": {
+        "answer": "Karim's occupies a cluster of simple dining rooms around a courtyard kitchen in a lane facing Jama Masjid's Gate No. 1, and you should expect queues at weekend lunch and dinner. Visitors can reach it by a 300–400 meter walk from the Jama Masjid Metro Station, by taking a cycle-rickshaw in the lanes, or by bus.",
+        "citations": [
+          {
+            "source_title": "Karim's, Jama Masjid",
+            "source_url": "local-kb://delhi_tourist_venues_kb#karim-s-jama-masjid",
+            "source": "delhi_tourist_venues_kb"
+          },
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 14,
+      "command": "Is this itinerary suitable for a family with young kids?",
+      "category": "suitability",
+      "probe": "suitability_family_whole_trip",
+      "target_stop": null,
+      "expected": {
+        "note": "Whole-trip suitability question, no single named place -- tests whether the app can reason across the itinerary or honestly declines rather than answering about one arbitrary stop."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is this itinerary suitable for a family with young kids?"
+      },
+      "answer": {
+        "answer": "I don't have a verified source for this — treat it as a general suggestion.",
+        "citations": [],
+        "grounded": false
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    },
+    {
+      "n": 15,
+      "command": "Is Bukhara within walking distance of my hotel?",
+      "category": "edge_case",
+      "probe": "unanswerable_missing_context",
+      "target_stop": "Bukhara",
+      "expected": {
+        "note": "No hotel/lodging location is tracked anywhere in the app -- correct behavior is an honest 'I don't know where you're staying' answer, not a fabricated walking distance or an invented hotel location."
+      },
+      "classification": {
+        "intent": "EXPLAIN",
+        "edit_intent": null,
+        "query": "Is Bukhara within walking distance of my hotel?"
+      },
+      "answer": {
+        "answer": "Based on the information provided, there is no mention of Bukhara or whether it is within walking distance of your hotel.",
+        "citations": [
+          {
+            "source_title": "Delhi",
+            "source_url": "https://en.wikivoyage.org/wiki/Delhi",
+            "source": "wikivoyage"
+          }
+        ],
+        "grounded": true
+      },
+      "grounding": {
+        "pass": true,
+        "ungrounded_pois": [],
+        "uncited_tips": []
+      }
+    }
+  ]
+}
