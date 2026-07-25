@@ -1230,7 +1230,7 @@ RAG corpus grew from 147 to 197 chunks (67 wikivoyage + 80 wikipedia + 50 KB, al
 
 ### What this is
 
-Every external and internal source that backs the project's Golden Dataset (the 20 fixed reference itineraries used across every QA round — see `AI-Evaluation-Rubric.md`'s "Golden Dataset" section for the composition table and the adversarial test suite run against it). All links below are real and were fetched/verified as part of building this dataset — none are placeholders.
+Every external and internal source that backs the project's Golden Dataset (the 20 fixed reference itineraries used across every QA round — see `Project Based AI-Evaluation-Rubric and Golden Dataset.md`'s "Golden Dataset" section for the composition table and the adversarial test suite run against it). All links below are real and were fetched/verified as part of building this dataset — none are placeholders.
 
 ### External sources
 

@@ -199,7 +199,7 @@ Added a new `OSM_TAGGED` score band (0.71–0.74), positioned strictly between t
 Checked directly against the live dataset: recommendable venues with **any** real differentiating signal rose from 304/3,593 (8.5%) to **315/3,593 (8.8%) newly crossing into a scored band, plus 46 more re-ranked into a stronger band** — a modest but entirely real, zero-fabrication improvement. The bulk of the coverage gap (the 3,278 remaining ordinary-band venues, concentrated in religious sites and parks, exactly as §4 predicted) is unreachable by Phases A/B alone and needs Phase C's curation or Phase D's cost-gated LLM pass, both still pending by design.
 
 ### Safety
-`phase1/data/pois.json.bak-pre-phaseB` was taken before Phase B's data write (there is no git history to fall back on in this project — see `AI-Evaluation-Rubric.md`'s Deployment & Code Quality finding). All 6 phases' full test suites were re-run after both changes: Phase 1 6/6, Phase 2 7/7, Phase 3 7/7 (agent) + 4/4 (narrator), Phase 4 6/6 + 5/5 (guard regression tests), Phase 5 8/8, Phase 6 5/5 — zero regressions.
+`phase1/data/pois.json.bak-pre-phaseB` was taken before Phase B's data write (there is no git history to fall back on in this project — see `Project Based AI-Evaluation-Rubric and Golden Dataset.md`'s Deployment & Code Quality finding). All 6 phases' full test suites were re-run after both changes: Phase 1 6/6, Phase 2 7/7, Phase 3 7/7 (agent) + 4/4 (narrator), Phase 4 6/6 + 5/5 (guard regression tests), Phase 5 8/8, Phase 6 5/5 — zero regressions.
 
 ## 9. Implementation Update: Phase C Applied (2026-07-23, same day)
 

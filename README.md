@@ -1,6 +1,6 @@
 # Golden Dataset — Links & References
 
-Every external and internal source that backs the project's Golden Dataset (the 20 fixed reference itineraries and the data they're built from — see `AI-Evaluation-Rubric.md`'s "Golden Dataset" section for the composition table and the adversarial test suite run against it). All links below are real and were fetched/verified as part of building this dataset — nothing here is a placeholder.
+Every external and internal source that backs the project's Golden Dataset (the 20 fixed reference itineraries and the data they're built from — see `Project Based AI-Evaluation-Rubric and Golden Dataset.md`'s "Golden Dataset" section for the composition table and the adversarial test suite run against it). All links below are real and were fetched/verified as part of building this dataset — nothing here is a placeholder.
 
 ---
 
