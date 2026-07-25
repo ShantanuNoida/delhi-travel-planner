@@ -327,13 +327,36 @@ PACE_HOURS = {"relaxed": 6.0, "moderate": 8.0, "intensive": 10.0}
 # entirely within the Basic Multilingual Plane) or has fewer than 3 real
 # letters once whitespace and Symbol-category characters are stripped out.
 # Never rejects a name merely for using a non-Latin script.
+# Live-usage report (2026-07-25): a real OSM node in this dataset is
+# literally named "the shopping mall" -- a generic description someone
+# typed into the name tag, not an actual venue name -- and it got added to
+# a real itinerary displaying as "The Shopping Mall" as if that were a
+# specific place. Same class of problem as the decorative-name filter
+# above (a non-name value polluting a "cited, never invented" surface),
+# but the defect here is genericness, not garbage characters, so it needs
+# its own narrow check: reject a name that, once a leading "the"/"a"/"an"
+# article is stripped, is EXACTLY a bare category descriptor with no
+# attached proper noun. Deliberately a short, explicit phrase set rather
+# than a broad "contains 'mall'" rule -- this dataset also has 70+
+# perfectly real, specific venues like "Aditya Mall" and "The Great Kebab
+# Factory" that a broader rule would wrongly reject as generic.
+_GENERIC_NAME_PHRASES = {
+    "mall", "shopping mall", "shopping center", "shopping centre",
+    "market", "shop", "store", "plaza", "complex",
+}
+_LEADING_ARTICLE_RE = re.compile(r"^(the|a|an)\s+", re.IGNORECASE)
+
+
 def _is_presentable_name(name: str) -> bool:
     if not name:
         return False
     if any(ord(c) >= 0x10000 for c in name):
         return False
     real_chars = [c for c in name if not c.isspace() and unicodedata.category(c) != "So"]
-    return len(real_chars) >= 3
+    if len(real_chars) < 3:
+        return False
+    bare = _LEADING_ARTICLE_RE.sub("", name.strip().lower())
+    return bare not in _GENERIC_NAME_PHRASES
 
 
 def _load_pois() -> list[dict]:

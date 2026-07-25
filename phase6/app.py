@@ -824,10 +824,25 @@ with col_itinerary:
         if agent.narrative:
             with st.expander("📖 Full Itinerary (overview, food, budget estimate, practical tips)"):
                 if agent.narrative_stale:
+                    # User report (2026-07-25): this section didn't
+                    # "refresh automatically" after an edit -- true by
+                    # design (QA-2/R-3: regenerating the full narrative on
+                    # every single edit would mean an extra LLM call per
+                    # edit, and this project has hit real Gemini free-tier
+                    # rate limits from far less), but there was previously
+                    # no way to refresh it at all, only a caption saying it
+                    # was stale. Reuses retry_enrichment() -- the same
+                    # explicit, user-triggered-only regeneration already
+                    # used for the enrichment-degraded retry button below --
+                    # against the CURRENT (already-edited) itinerary.
                     st.caption(
                         "⚠️ This overview describes your original plan — the Day tabs above "
                         "already reflect your latest edits."
                     )
+                    if st.button("🔄 Refresh this overview for your latest edits"):
+                        with st.spinner("Regenerating the full overview..."):
+                            agent.retry_enrichment()
+                        st.rerun()
                 st.markdown(agent.narrative)
 
         st.divider()
