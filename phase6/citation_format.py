@@ -1,4 +1,4 @@
-"""Shared citation display formatting — used by app.py and docx_generator.py."""
+"""Shared citation display formatting — used by app.py and pdf_generator.py."""
 
 SOURCE_DISPLAY_NAMES = {
     "wikivoyage": "Wikivoyage",

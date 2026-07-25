@@ -1,4 +1,4 @@
-"""Shared stop-detail display formatting — used by app.py and docx_generator.py."""
+"""Shared stop-detail display formatting — used by app.py and pdf_generator.py."""
 
 import re
 

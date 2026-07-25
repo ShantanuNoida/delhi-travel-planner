@@ -1,5 +1,5 @@
 """
-Orchestrates itinerary delivery: itinerary JSON -> .docx -> email.
+Orchestrates itinerary delivery: itinerary JSON -> .pdf -> email.
 Always saves a local copy of the document; email is best-effort and falls
 back gracefully (with a clear reason) when SMTP isn't configured.
 """
@@ -8,7 +8,7 @@ import os
 import re
 from datetime import datetime
 
-from docx_generator import build_itinerary_docx
+from pdf_generator import build_itinerary_pdf
 from email_sender import send_email_with_attachment
 
 OUTPUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "generated")
@@ -38,11 +38,11 @@ def deliver_itinerary(
     if not is_valid_email(email):
         return {"emailed": False, "message": "That doesn't look like a valid email address.", "file_path": "", "file_bytes": None}
 
-    doc_stream = build_itinerary_docx(itinerary, ctx, citations, narrative)
+    doc_stream = build_itinerary_pdf(itinerary, ctx, citations, narrative)
     doc_bytes = doc_stream.getvalue()
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    filename = f"delhi_itinerary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.docx"
+    filename = f"delhi_itinerary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
     file_path = os.path.join(OUTPUT_DIR, filename)
     with open(file_path, "wb") as f:
         f.write(doc_bytes)

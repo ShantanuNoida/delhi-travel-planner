@@ -859,10 +859,10 @@ with col_itinerary:
 
             if result["file_bytes"]:
                 st.download_button(
-                    "⬇️ Download itinerary (.docx)",
+                    "⬇️ Download itinerary (.pdf)",
                     data=result["file_bytes"],
                     file_name=os.path.basename(result["file_path"]),
-                    mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                    mime="application/pdf",
                 )
     elif not pending_confirm:
         # R-26 (fixes UX-23): a real hero photo + a confident one-line

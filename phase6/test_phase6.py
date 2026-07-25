@@ -33,26 +33,26 @@ def _build_fixture_itinerary() -> dict:
 
 
 # ---------------------------------------------------------------------------
-# T-6.1  Itinerary document rendering (docx equivalent of the Itinerary Panel)
+# T-6.1  Itinerary document rendering (PDF equivalent of the Itinerary Panel)
 # ---------------------------------------------------------------------------
-def test_docx_rendering() -> bool:
+def test_pdf_rendering() -> bool:
     print("\nT-6.1 — Itinerary Document Rendering")
-    from docx import Document
-    from docx_generator import build_itinerary_docx
+    from pypdf import PdfReader
+    from pdf_generator import build_itinerary_pdf
 
     itinerary = _build_fixture_itinerary()
     ctx = {"num_days": 2, "pace": "moderate", "interests": ["history", "food"], "group_size": 2}
 
-    stream = build_itinerary_docx(itinerary, ctx)
-    doc = Document(stream)
+    stream = build_itinerary_pdf(itinerary, ctx)
+    reader = PdfReader(stream)
+    text = "\n".join(page.extract_text() or "" for page in reader.pages)
 
-    headings = [p.text for p in doc.paragraphs if p.style.name.startswith("Heading")]
-    day_headings_present = all(any(f"Day {i}" in h for h in headings) for i in (1, 2))
-    has_slot_headings = any(h in ("Morning", "Afternoon", "Evening") for h in headings)
-    non_empty = len(doc.paragraphs) > 5
+    day_headings_present = all(f"Day {i}" in text for i in (1, 2))
+    has_slot_headings = any(h in text for h in ("Morning", "Afternoon", "Evening"))
+    non_empty = len(text.strip()) > 200
 
-    _result("valid, re-openable .docx produced", non_empty)
-    _result("all days present as headings", day_headings_present, str(headings[:6]))
+    _result("valid, re-openable .pdf produced", non_empty)
+    _result("all days present as headings", day_headings_present)
     _result("time-slot headings present", has_slot_headings)
     return non_empty and day_headings_present and has_slot_headings
 
@@ -62,20 +62,20 @@ def test_docx_rendering() -> bool:
 # ---------------------------------------------------------------------------
 def test_sources_population() -> bool:
     print("\nT-6.3 — Sources Panel Population")
-    from docx import Document
-    from docx_generator import build_itinerary_docx
+    from pypdf import PdfReader
+    from pdf_generator import build_itinerary_pdf
 
     itinerary = _build_fixture_itinerary()
     citations = [
         {"source_title": "Humayun's Tomb", "source_url": "https://en.wikipedia.org/wiki/Humayun%27s_Tomb"},
         {"source_title": "Delhi/Old Delhi", "source_url": "https://en.wikivoyage.org/wiki/Delhi/Old_Delhi"},
     ]
-    stream = build_itinerary_docx(itinerary, {"num_days": 2, "pace": "moderate"}, citations=citations)
-    doc = Document(stream)
+    stream = build_itinerary_pdf(itinerary, {"num_days": 2, "pace": "moderate"}, citations=citations)
+    reader = PdfReader(stream)
+    text = "\n".join(page.extract_text() or "" for page in reader.pages)
 
-    body_text = "\n".join(p.text for p in doc.paragraphs)
-    all_present = all(c["source_title"] in body_text and c["source_url"] in body_text for c in citations)
-    has_sources_heading = any(p.text == "Sources" for p in doc.paragraphs)
+    all_present = all(c["source_title"] in text and c["source_url"] in text for c in citations)
+    has_sources_heading = "Sources" in text
 
     _result("Sources heading present", has_sources_heading)
     _result("every citation's title and URL appear", all_present)
@@ -172,7 +172,7 @@ def run_all() -> dict[str, bool]:
     print("=" * 60)
 
     results = {
-        "T-6.1 Itinerary Document Rendering": test_docx_rendering(),
+        "T-6.1 Itinerary Document Rendering": test_pdf_rendering(),
         "T-6.3 Sources Population":           test_sources_population(),
         "T-6.4 Delivery Fallback":            test_delivery_fallback(),
         "T-6.5 Email Validation":             test_email_validation(),

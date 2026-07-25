@@ -10,7 +10,7 @@ import smtplib
 import ssl
 from email.message import EmailMessage
 
-DOCX_MIME = ("application", "vnd.openxmlformats-officedocument.wordprocessingml.document")
+PDF_MIME = ("application", "pdf")
 
 
 def send_email_with_attachment(
@@ -21,11 +21,17 @@ def send_email_with_attachment(
     attachment_filename: str,
 ) -> dict:
     """Returns {"sent": bool, "reason": str}. reason is "" on success."""
-    host = os.environ.get("SMTP_HOST")
-    user = os.environ.get("SMTP_USER")
-    password = os.environ.get("SMTP_PASSWORD")
-    sender = os.environ.get("SMTP_FROM", user)
-    port = int(os.environ.get("SMTP_PORT", "587"))
+    # .strip() on each: a copy-pasted app password picked up a stray
+    # leading space in practice (Gmail displays it space-grouped, e.g.
+    # "abcd efgh ijkl mnop", and it's easy to grab a leading/trailing space
+    # along with it) -- SMTP AUTH takes the credential literally, so an
+    # unstripped stray space silently turns a correct password into a
+    # wrong one instead of erroring in an obvious way.
+    host = (os.environ.get("SMTP_HOST") or "").strip()
+    user = (os.environ.get("SMTP_USER") or "").strip()
+    password = (os.environ.get("SMTP_PASSWORD") or "").strip()
+    sender = (os.environ.get("SMTP_FROM") or user).strip()
+    port = int((os.environ.get("SMTP_PORT") or "587").strip())
 
     if not (host and user and password):
         return {"sent": False, "reason": "SMTP not configured — set SMTP_HOST, SMTP_USER, SMTP_PASSWORD in .env"}
@@ -35,7 +41,7 @@ def send_email_with_attachment(
     msg["From"] = sender
     msg["To"] = to_email
     msg.set_content(body)
-    maintype, subtype = DOCX_MIME
+    maintype, subtype = PDF_MIME
     msg.add_attachment(attachment_bytes, maintype=maintype, subtype=subtype, filename=attachment_filename)
 
     try:
