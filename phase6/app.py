@@ -207,6 +207,16 @@ if "transcript" not in st.session_state:
     st.session_state.transcript = []
 if "pending_audio_text" not in st.session_state:
     st.session_state.pending_audio_text = None
+if "mic_key_version" not in st.session_state:
+    # User report (2026-07-25): "Start a new trip" left the previous
+    # recording still sitting in the mic widget. st.audio_input() has no
+    # supported way to clear its displayed value directly (unlike a plain
+    # text_input, you can't just reassign its session_state entry) -- the
+    # documented way to reset any such widget is to change its `key`,
+    # which mounts a genuinely fresh instance with no prior value. This
+    # counter is that key's suffix; bumped in the "Start a new trip"
+    # handler below.
+    st.session_state.mic_key_version = 0
 
 agent: TravelAgent = st.session_state.agent
 
@@ -223,6 +233,7 @@ with st.sidebar:
     if st.button("🔄 Start a new trip"):
         agent.reset()
         st.session_state.transcript = []
+        st.session_state.mic_key_version += 1  # discards any previously recorded clip (see init comment above)
         st.rerun()
 
 st.title("🧭 Delhi Travel Planner")
@@ -303,7 +314,7 @@ if not agent.itinerary:
     # interaction in words instead.
     st.caption("🎤 Tap once to start speaking, tap again to end")
     mic_audio = st.audio_input(
-        "Tap to talk", label_visibility="collapsed", key="mic_input",
+        "Tap to talk", label_visibility="collapsed", key=f"mic_input_{st.session_state.mic_key_version}",
         help="Tap once to start speaking, tap again to end and transcribe.",
     )
     # R-29/R-33: text stays fully visible and one action away — never
@@ -312,7 +323,7 @@ if not agent.itinerary:
     st.caption("...or type instead:")
 else:
     mic_audio = st.audio_input(
-        "Tap to talk", label_visibility="collapsed", key="mic_input",
+        "Tap to talk", label_visibility="collapsed", key=f"mic_input_{st.session_state.mic_key_version}",
         help="Tap once to start speaking, tap again to end and transcribe.",
     )
 
@@ -603,10 +614,22 @@ with col_itinerary:
                                 if st.button("↑", key=f"up_{key}_{slot_key}_{stop_idx}",
                                              disabled=up_disabled, help="Move earlier", use_container_width=True):
                                     _move_stop(agent.itinerary, key, slot_key, stop_idx, -1)
+                                    # User report (2026-07-25): moving a stop
+                                    # up/down didn't mark the "Full Itinerary"
+                                    # overview stale the way a chat edit
+                                    # command does (agent.py's own
+                                    # narrative_stale sets) -- same real
+                                    # inconsistency (schedule changed, prose
+                                    # overview didn't), just reached through a
+                                    # different UI control. Mirrors that
+                                    # existing signal so the same refresh
+                                    # button surfaces here too.
+                                    agent.narrative_stale = True
                                     st.rerun()
                                 if st.button("↓", key=f"down_{key}_{slot_key}_{stop_idx}",
                                              disabled=down_disabled, help="Move later", use_container_width=True):
                                     _move_stop(agent.itinerary, key, slot_key, stop_idx, 1)
+                                    agent.narrative_stale = True
                                     st.rerun()
                             with info_col:
                                 gem_badge = " 💎" if stop.get("is_hidden_gem") else ""
@@ -849,6 +872,20 @@ with col_itinerary:
         st.subheader("📧 Email me this plan")
         email = st.text_input("Your email address", key="email_input")
         if st.button("Send itinerary"):
+            # User report (2026-07-25): "once the itinerary is refreshed,
+            # the same should be sent on email" -- the emailed/downloaded
+            # PDF's structured day-by-day section always reads live from
+            # agent.itinerary (already current), but its prose overview
+            # section came from agent.narrative, which can be stale after
+            # an edit command or an up/down move (see narrative_stale sets
+            # above and in agent.py). Refresh it here, once, right before
+            # building the document -- so the two sections of the emailed
+            # PDF can't describe two different plans -- rather than
+            # requiring the user to remember to click the separate
+            # "Refresh this overview" button first.
+            if agent.narrative_stale and agent.narrative:
+                with st.spinner("Updating the overview for your latest edits before sending..."):
+                    agent.retry_enrichment()
             result = deliver_itinerary(agent.itinerary, agent.ctx.to_dict(), email, citations=agent.last_citations, narrative=agent.narrative)
             if result["emailed"]:
                 st.success(result["message"])
