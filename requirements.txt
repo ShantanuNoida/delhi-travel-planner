@@ -48,4 +48,13 @@ python-dotenv>=1.0.0
 openai>=1.0.0
 edge-tts>=7.0.0
 SpeechRecognition>=3.10.0
-mcp>=1.0.0
+#
+# Pinned below 2.0 -- real bug found via a live Cloud deploy
+# (ModuleNotFoundError: No module named 'mcp.server.fastmcp'): mcp 2.0.0
+# dropped FastMCP entirely in favor of a new MCPServer class, an
+# unannounced-in-code breaking change. phase2/poi_search.py,
+# itinerary_builder.py, weather.py, and travel_time.py all instantiate
+# FastMCP(...) unconditionally at import time (only used for their
+# standalone `python poi_search.py` MCP-server mode, never called by the
+# live app), so any 2.x resolve crashes the app before it can even start.
+mcp>=1.0.0,<2.0.0
