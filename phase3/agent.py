@@ -69,6 +69,13 @@ def _is_exit_phrase(text_lower: str) -> bool:
 # bursting past a per-minute cap — this adds latency, not calls.
 BUILD_LLM_CALL_SPACING_SEC = 2.0
 
+# Team Waypoint Voice-First UI review (HIGH-3): the app had no undo at all —
+# every prior round's answer to a bad edit was *prevention* (feasibility/
+# correctness guards that reject before committing), which is real but
+# doesn't help once a legitimate-but-unwanted edit has already gone through.
+# Capped so a long session's undo stack can't grow unbounded.
+MAX_UNDO_HISTORY = 8
+
 
 class State(str, Enum):
     COLLECT = "collect"
@@ -182,6 +189,11 @@ class TravelAgent:
         self.enrichment_degraded = False  # True if narrative/safety/transit hit a real error (not just "nothing grounded") — QA-8/R-13
         self.pending_edit: dict | None = None  # R-41 (QA M2): a previewed-but-not-yet-committed trip-wide edit awaiting yes/no
         self.recently_changed_names: list[str] = []  # R-41 (QA L1): names removed/swapped out this session, for a more transparent "couldn't find X" message
+        self.pending_choice: dict | None = None  # HIGH-2 (Team Waypoint Voice-First UI review): {"edit_intent":..., "candidates":[...]} awaiting the user to pick which ambiguous stop they meant
+        self.itinerary_history: list[dict] = []  # HIGH-3: undo stack — pre-edit itinerary snapshots, most recent last
+        self.last_changed_stops: list[tuple[str, str, int]] = []  # MEDIUM-2: (day_key, slot, idx) touched by the most recent commit, for a one-render "just changed" highlight — cleared at the start of every new turn
+        self.last_referenced_stop_name: str | None = None  # MEDIUM-1: the stop a bare "it"/"that" should resolve to, updated after a named edit or an EXPLAIN that mentions a real stop
+        self._nudged_edit_types: set[str] = set()  # MEDIUM-3: edit_types that have already gotten a one-time "want me to check X?" follow-up suggestion this session
 
     def _get_llm(self):
         if self._llm_client is None:
@@ -260,6 +272,7 @@ class TravelAgent:
         caller (QA-1).
         """
         self.history.append({"role": "user", "content": user_input})
+        self.last_changed_stops = []  # MEDIUM-2: a highlight from a PRIOR turn clears the moment a new one starts
 
         try:
             return self._process_turn_inner(user_input)
@@ -562,6 +575,165 @@ class TravelAgent:
         self.enrichment_degraded = False
         self.pending_edit = None
         self.recently_changed_names = []
+        self.pending_choice = None
+        self.itinerary_history = []
+        self.last_changed_stops = []
+        self.last_referenced_stop_name = None
+        self._nudged_edit_types = set()
+
+    # ------------------------------------------------------------------ #
+    # Undo (HIGH-3, Team Waypoint Voice-First UI review)
+    # ------------------------------------------------------------------ #
+
+    def push_itinerary_snapshot(self, snapshot: dict | None = None) -> None:
+        """Push a pre-edit itinerary snapshot onto the undo stack. Callers
+        that already hold a deep copy (e.g. the correctness-guard check in
+        _commit_edit) pass it in directly rather than paying for a second
+        deepcopy here; UI-driven mutations that don't already have one
+        (app.py's up/down move buttons) call this with no argument."""
+        if snapshot is None:
+            if self.itinerary is None:
+                return
+            snapshot = copy.deepcopy(self.itinerary)
+        self.itinerary_history.append(snapshot)
+        if len(self.itinerary_history) > MAX_UNDO_HISTORY:
+            self.itinerary_history.pop(0)
+
+    def undo_last_edit(self) -> bool:
+        """Reverts to the itinerary state right before the most recent
+        committed edit. Returns False (no-op) when there's nothing to undo."""
+        if not self.itinerary_history:
+            return False
+        self.itinerary = self.itinerary_history.pop()
+        self.narrative_stale = True
+        return True
+
+    # ------------------------------------------------------------------ #
+    # Ambiguous-match choice (HIGH-2, Team Waypoint Voice-First UI review)
+    # ------------------------------------------------------------------ #
+
+    def resolve_pending_choice(self, index: int) -> tuple[str, State]:
+        """Commits the swap using the index-th candidate from
+        self.pending_choice — called directly from the UI (a tapped card,
+        no LLM roundtrip needed) or from a spoken/typed ordinal reply
+        resolved in _handle_post_build_turn. Re-targets the original edit
+        intent at exactly this stop (now unambiguous, since it's an exact
+        name) and runs it through the same commit/guard path as any other
+        edit, via _commit_edit."""
+        self.last_changed_stops = []  # MEDIUM-2: called directly from the UI, not through process_turn, so clear here too
+        if not self.pending_choice or not (0 <= index < len(self.pending_choice["candidates"])):
+            reply = "That choice isn't available anymore — could you say what you'd like to change again?"
+            self.pending_choice = None
+            self._say(reply)
+            return (reply, self.state)
+
+        candidate = self.pending_choice["candidates"][index]
+        edit_intent = dict(self.pending_choice["edit_intent"])
+        edit_intent["target_day"] = candidate["day_key"].split("_")[1]
+        edit_intent["target_slot"] = candidate["slot"]
+        edit_intent["target_stop_name"] = candidate["name"]
+        self.pending_choice = None
+
+        reply, outcome = self._commit_edit(edit_intent)
+        self._say(reply)
+        self.history.append({"role": "assistant", "content": json.dumps(
+            {"type": "edit_result", "ok": outcome["ok"], "text": reply}
+        )})
+        return (reply, self.state)
+
+    def _commit_edit(self, edit_intent: dict) -> tuple[str, dict]:
+        """Runs apply_edit() plus the correctness/feasibility guards,
+        committing on success (with an undo snapshot) or leaving the
+        itinerary untouched on rejection/ambiguity. Extracted from the main
+        EDIT-turn handling below so resolve_pending_choice() (HIGH-2) can
+        replay the exact same commit sequence a second time, once the user
+        has picked which ambiguous stop they meant, instead of duplicating
+        the correctness/feasibility/rollback logic. Returns (reply,
+        outcome) — outcome is apply_edit()'s own dict, kept so the caller
+        can log its raw "ok" value exactly as before this refactor."""
+        sys.path.insert(0, PHASE4_DIR)
+        from edit_engine import apply_edit
+
+        before_itinerary = copy.deepcopy(self.itinerary)
+        outcome = apply_edit(self.itinerary, edit_intent, pace=self.ctx.pace or "moderate", city=self.ctx.city)
+
+        if outcome.get("needs_choice"):
+            self.pending_choice = {"edit_intent": edit_intent, "candidates": outcome["candidates"]}
+            return outcome["message"], outcome
+
+        if not outcome["ok"]:
+            return outcome["message"], outcome
+
+        sys.path.insert(0, PHASE5_DIR)
+        from edit_correctness import check_edit_correctness
+        from feasibility import check_feasibility
+
+        correctness = check_edit_correctness(
+            before_itinerary, outcome["itinerary"],
+            edit_intent.get("target_day", "all"), edit_intent.get("target_slot", "all"),
+        )
+        feasibility = check_feasibility(outcome["itinerary"], self.ctx.pace or "moderate")
+
+        if not correctness["pass"]:
+            reply = (
+                "That edit ended up changing more than intended "
+                f"({', '.join(correctness['drifted_slots'])}), so I've left your itinerary as it was."
+            )
+            if self.log_level == "verbose":
+                print(f"  [eval] edit correctness FAILED, rolled back: {correctness['drifted_slots']}")
+            return reply, outcome
+        if not feasibility["pass"]:
+            problems = "; ".join(f"Day {i['day']}: {i['problem']}" for i in feasibility["issues"])
+            reply = f"That edit would make the plan too packed ({problems}), so I've left your itinerary as it was."
+            if self.log_level == "verbose":
+                print(f"  [eval] feasibility FAILED post-edit, rolled back: {feasibility['issues']}")
+            return reply, outcome
+
+        self.push_itinerary_snapshot(before_itinerary)
+        self.itinerary = outcome["itinerary"]
+        self.narrative_stale = True  # Day tabs now ahead of the "Full Itinerary" overview (QA-2/R-3)
+        reply = outcome["message"]
+        # R-41 (QA L1): a later "remove X" that can't find X gives an
+        # unhelpfully generic message when X was already changed by an
+        # earlier edit THIS session -- remember what just left the
+        # itinerary so that message can say so.
+        if edit_intent.get("edit_type") == "remove" and reply.startswith("Couldn't find anything matching"):
+            constraint_name = (edit_intent.get("constraint") or "").strip().lower()
+            match = next(
+                (n for n in self.recently_changed_names if constraint_name and constraint_name in n.lower()),
+                None,
+            )
+            if match:
+                reply += f" You may have already changed or removed \"{match}\" earlier in this session."
+        else:
+            self.recently_changed_names.extend(_extract_changed_out_names(edit_intent.get("edit_type", ""), reply))
+
+        edit_type = edit_intent.get("edit_type", "")
+
+        # MEDIUM-2 (Team Waypoint Voice-First UI review): so the itinerary
+        # panel can highlight exactly what this edit touched, not just
+        # report it in the chat transcript ("inline highlights on whatever
+        # just changed so the eye is drawn to the edit").
+        self.last_changed_stops = _diff_new_stops(before_itinerary, outcome["itinerary"], outcome["changed_days"])
+
+        # MEDIUM-1: track what a bare "it"/"that" should resolve to next —
+        # the newly swapped/added stop for those edit types, or nothing once
+        # a stop has been removed (there's nothing left for "it" to mean).
+        new_name = _extract_new_stop_name(edit_type, reply)
+        if new_name:
+            self.last_referenced_stop_name = new_name
+        elif edit_type == "remove":
+            self.last_referenced_stop_name = None
+
+        # MEDIUM-3: a one-time-per-session nudge toward the natural next
+        # question for this edit type — "occasionally suggest the next
+        # natural voice command rather than leaving dead air," not on every
+        # single edit (which would read as robotic/naggy).
+        if edit_type in _EDIT_TYPE_NUDGES and edit_type not in self._nudged_edit_types:
+            reply += " " + _EDIT_TYPE_NUDGES[edit_type]
+            self._nudged_edit_types.add(edit_type)
+
+        return reply, outcome
 
     def _handle_post_build_turn(self, user_input: str) -> tuple[str, State]:
         text_lower = user_input.strip().lower()
@@ -573,6 +745,7 @@ class TravelAgent:
         # have moved on from; the turn is then processed normally below.
         if self.pending_edit is not None:
             if _is_affirmative(text_lower):
+                self.push_itinerary_snapshot()  # HIGH-3: snapshot BEFORE committing the preview, so this is undoable too
                 self.itinerary = self.pending_edit["preview_itinerary"]
                 self.narrative_stale = True
                 self.pending_edit = None
@@ -592,6 +765,34 @@ class TravelAgent:
                 return (reply, self.state)
             self.pending_edit = None
 
+        # HIGH-2 (Team Waypoint Voice-First UI review): resolve a pending
+        # ambiguous-stop choice before anything else, same discipline as
+        # pending_edit above. The UI's tappable cards call
+        # resolve_pending_choice() directly and never reach this path; this
+        # only handles a spoken/typed ordinal reply ("the first one", "2").
+        # Anything else drops the pending choice rather than leaving the
+        # user stuck on a question they may have moved on from.
+        if self.pending_choice is not None:
+            idx = _parse_ordinal_choice(text_lower, len(self.pending_choice["candidates"]))
+            if idx is not None:
+                return self.resolve_pending_choice(idx)
+            self.pending_choice = None
+
+        # HIGH-3 (Team Waypoint Voice-First UI review): "undo"/"undo that"
+        # works from anywhere in a post-build turn, without an LLM call —
+        # voice errors are inevitable, so recovery should be as cheap and
+        # immediate as the mistake was.
+        if _is_undo_request(text_lower):
+            if self.undo_last_edit():
+                reply = "Done — undid that last change."
+            else:
+                reply = "There's nothing to undo yet."
+            self._say(reply)
+            self.history.append({"role": "assistant", "content": json.dumps(
+                {"type": "undo_result", "ok": True, "text": reply}
+            )})
+            return (reply, self.state)
+
         if _is_exit_phrase(text_lower):
             self.state = State.DONE
             reply = "Great, enjoy your trip to Delhi! Your itinerary is saved."
@@ -603,7 +804,14 @@ class TravelAgent:
         from edit_engine import apply_edit
         from explain_engine import explain
 
-        result = classify_intent(user_input, itinerary=self.itinerary)
+        # MEDIUM-1 (Team Waypoint Voice-First UI review): resolve a bare
+        # "it"/"that" against whatever stop was last discussed BEFORE
+        # classification, so e.g. "swap it for a market" right after "tell
+        # me about Humayun's Tomb" extracts the real target. The user's
+        # original wording is still what's shown/logged -- only the
+        # classifier's input is rewritten.
+        resolved_input = _resolve_anaphora(user_input, self.last_referenced_stop_name)
+        result = classify_intent(resolved_input, itinerary=self.itinerary)
         intent = result["intent"]
 
         if intent == "NEW_PLAN":
@@ -639,52 +847,17 @@ class TravelAgent:
                 )})
                 return (reply, self.state)
 
-            before_itinerary = copy.deepcopy(self.itinerary)
-            outcome = apply_edit(self.itinerary, edit_intent, pace=self.ctx.pace or "moderate", city=self.ctx.city)
+            reply, outcome = self._commit_edit(edit_intent)
 
-            if outcome["ok"]:
-                sys.path.insert(0, PHASE5_DIR)
-                from edit_correctness import check_edit_correctness
-                from feasibility import check_feasibility
-
-                correctness = check_edit_correctness(
-                    before_itinerary, outcome["itinerary"],
-                    edit_intent.get("target_day", "all"), edit_intent.get("target_slot", "all"),
-                )
-                feasibility = check_feasibility(outcome["itinerary"], self.ctx.pace or "moderate")
-
-                if not correctness["pass"]:
-                    reply = (
-                        "That edit ended up changing more than intended "
-                        f"({', '.join(correctness['drifted_slots'])}), so I've left your itinerary as it was."
-                    )
-                    if self.log_level == "verbose":
-                        print(f"  [eval] edit correctness FAILED, rolled back: {correctness['drifted_slots']}")
-                elif not feasibility["pass"]:
-                    problems = "; ".join(f"Day {i['day']}: {i['problem']}" for i in feasibility["issues"])
-                    reply = f"That edit would make the plan too packed ({problems}), so I've left your itinerary as it was."
-                    if self.log_level == "verbose":
-                        print(f"  [eval] feasibility FAILED post-edit, rolled back: {feasibility['issues']}")
-                else:
-                    self.itinerary = outcome["itinerary"]
-                    self.narrative_stale = True  # Day tabs now ahead of the "Full Itinerary" overview (QA-2/R-3)
-                    reply = outcome["message"]
-                    # R-41 (QA L1): a later "remove X" that can't find X gives
-                    # an unhelpfully generic message when X was already
-                    # changed by an earlier edit THIS session -- remember
-                    # what just left the itinerary so that message can say so.
-                    if edit_intent.get("edit_type") == "remove" and reply.startswith("Couldn't find anything matching"):
-                        constraint_name = (edit_intent.get("constraint") or "").strip().lower()
-                        match = next(
-                            (n for n in self.recently_changed_names if constraint_name and constraint_name in n.lower()),
-                            None,
-                        )
-                        if match:
-                            reply += f" You may have already changed or removed \"{match}\" earlier in this session."
-                    else:
-                        self.recently_changed_names.extend(_extract_changed_out_names(edit_intent.get("edit_type", ""), reply))
-            else:
-                reply = outcome["message"]
+            # HIGH-2: an ambiguous stop reference produces a real choice
+            # (tappable cards in the UI, or a spoken/typed ordinal reply
+            # next turn) instead of a plain success/failure message.
+            if outcome.get("needs_choice"):
+                self._say(reply)
+                self.history.append({"role": "assistant", "content": json.dumps(
+                    {"type": "edit_choice_pending", "ok": False, "text": reply}
+                )})
+                return (reply, self.state)
 
             self._say(reply)
             self.history.append({"role": "assistant", "content": json.dumps(
@@ -693,10 +866,16 @@ class TravelAgent:
             return (reply, self.state)
 
         # EXPLAIN
-        explanation = explain(result.get("query", user_input), self.itinerary, pace=self.ctx.pace or "moderate")
+        explain_query = result.get("query", resolved_input)
+        explanation = explain(explain_query, self.itinerary, pace=self.ctx.pace or "moderate")
         reply = explanation["answer"]
         self._say(reply)
         self.last_citations = explanation.get("citations", [])
+        # MEDIUM-1: if this question was about one specific real stop,
+        # remember it so a FOLLOW-UP "is it worth it?" can resolve.
+        mentioned = _find_mentioned_stop_name(self.itinerary, explain_query)
+        if mentioned:
+            self.last_referenced_stop_name = mentioned
         self.history.append({"role": "assistant", "content": json.dumps(
             {"type": "explain_result", "text": reply, "citations": self.last_citations}
         )})
@@ -842,6 +1021,41 @@ def _is_negative(text: str) -> bool:
     return lower in _NEGATIVE_PHRASES or any(lower.startswith(p) for p in _NEGATIVE_PHRASES)
 
 
+# HIGH-3 (Team Waypoint Voice-First UI review): word-boundary, not a bare
+# substring — "undo" as a whole word only, so it can't misfire the way
+# "stop" once did (R-41) on some unrelated word that happens to contain it.
+_UNDO_RE = re.compile(r"\bundo\b")
+
+
+def _is_undo_request(text_lower: str) -> bool:
+    return bool(_UNDO_RE.search(text_lower))
+
+
+# HIGH-2 (Team Waypoint Voice-First UI review): lets a spoken/typed reply to
+# a pending ambiguous-choice prompt ("I found 2 stops matching X — which one
+# did you mean?") resolve the same way a tapped card does, so the choice
+# flow isn't UI-only — a voice-only user (the accessibility case the docx
+# calls out) can still answer it without touching a button.
+_ORDINAL_WORDS = {
+    "first": 0, "1st": 0, "one": 0,
+    "second": 1, "2nd": 1, "two": 1,
+    "third": 2, "3rd": 2, "three": 2,
+    "fourth": 3, "4th": 3, "four": 3,
+}
+
+
+def _parse_ordinal_choice(text_lower: str, n: int) -> int | None:
+    stripped = text_lower.strip().rstrip(".!?")
+    m = re.match(r"^(?:the\s+)?(\d+)(?:st|nd|rd|th)?(?:\s+one)?$", stripped)
+    if m:
+        idx = int(m.group(1)) - 1
+        return idx if 0 <= idx < n else None
+    for word, idx in _ORDINAL_WORDS.items():
+        if stripped in (word, f"the {word}", f"the {word} one", f"{word} one"):
+            return idx if 0 <= idx < n else None
+    return None
+
+
 def _extract_changed_out_names(edit_type: str, message: str) -> list[str]:
     """
     Best-effort parse of edit_engine.py's own fixed message formats to learn
@@ -862,6 +1076,124 @@ def _extract_changed_out_names(edit_type: str, message: str) -> list[str]:
             if "→" in pair:
                 names.append(pair.split("→", 1)[0].strip())
     return [n for n in names if n]
+
+
+_DAY_SLOTS = ("morning", "afternoon", "evening")
+
+
+def _diff_new_stops(before: dict, after: dict, changed_days: list[str]) -> list[tuple[str, str, int]]:
+    """MEDIUM-2 (Team Waypoint Voice-First UI review): every (day_key, slot,
+    idx) present in `after` but not in `before` (matched by osm_id), across
+    only the days apply_edit() actually reports as changed -- used to
+    highlight exactly what an edit touched in the itinerary panel, since a
+    swap/add changes WHICH stop is there, not just its position. Generic
+    across every edit type (a pure removal or reorder naturally yields an
+    empty diff, which is correct -- nothing new appeared)."""
+    result = []
+    for key in changed_days:
+        before_ids = {
+            s.get("osm_id") for slot in _DAY_SLOTS for s in before.get(key, {}).get(slot, [])
+        }
+        for slot in _DAY_SLOTS:
+            for idx, stop in enumerate(after.get(key, {}).get(slot, [])):
+                if stop.get("osm_id") not in before_ids:
+                    result.append((key, slot, idx))
+    return result
+
+
+# MEDIUM-1 (Team Waypoint Voice-First UI review): what stop a bare "it"
+# should resolve to next, parsed from edit_engine.py's own fixed success
+# message formats (same technique _extract_changed_out_names already uses
+# for the opposite direction -- what LEFT the itinerary).
+def _extract_new_stop_name(edit_type: str, message: str) -> str | None:
+    if edit_type == "swap" and message.startswith("Swapped: "):
+        body = message[len("Swapped: "):].rstrip(".")
+        names = [pair.split("→", 1)[1].strip() for pair in body.split("; ") if "→" in pair]
+        return names[-1] if names else None
+    if edit_type == "add":
+        m = re.search(r"^Added (.+?) to ", message)
+        if m:
+            return m.group(1).strip()
+        m = re.search(r"replaced .+? with (.+?) in ", message)
+        if m:
+            return m.group(1).strip()
+    return None
+
+
+# MEDIUM-3 (Team Waypoint Voice-First UI review): one natural next question
+# per edit type, appended once per session the first time that edit type
+# succeeds -- not every time, which would read as robotic ("occasionally
+# suggest the next natural voice command rather than leaving dead air").
+_EDIT_TYPE_NUDGES = {
+    "swap": "Want me to check the new stop's opening hours?",
+    "add": "Want me to check if that fits your day's pace?",
+    "remove": "Want me to fill that gap with something else?",
+    "reduce_travel": "Want to see the updated map for these days?",
+}
+
+
+# MEDIUM-1: a deliberately narrow set of sentence-initial templates where
+# "it"/"that" almost certainly refers to a specific place, not something
+# else in the sentence (weather, the whole trip, "make it more relaxed").
+# Each pattern must match the WHOLE message, not just a substring, so this
+# can never corrupt an unrelated question that merely contains "it".
+_ANAPHORA_PATTERNS = (
+    re.compile(r"^(swap|replace)\s+(?:it|that|this one|that one)\b(.*)$", re.IGNORECASE),
+    re.compile(r"^(remove|delete)\s+(?:it|that|this one|that one)\s*$", re.IGNORECASE),
+    re.compile(r"^(tell me more about|more about|what about)\s+(?:it|that|this one|that one)\s*\??$", re.IGNORECASE),
+    re.compile(r"^(is)\s+(?:it|that)\s+(worth (?:it|visiting|a visit)|open|free|safe)\s*\??$", re.IGNORECASE),
+    re.compile(r"^(how much (?:is|does))\s+(?:it|that)\s*(.*)$", re.IGNORECASE),
+    re.compile(r"^(when\s+(?:is|does))\s+(?:it|that)\s*(.*)$", re.IGNORECASE),
+)
+
+
+def _resolve_anaphora(text: str, last_stop_name: str | None) -> str:
+    """Rewrites a bare pronoun reference to the tracked stop name before the
+    text reaches classify_intent() -- e.g. "swap it for a market" becomes
+    "swap Humayun's Tomb for a market" when that was the last stop discussed
+    (MEDIUM-1, Team Waypoint Voice-First UI review: "'Move it earlier'
+    should know what 'it' is... anaphora resolution... essential for
+    natural voice flow"). Only ever used for classification -- the original
+    text is still what's shown in the transcript and logged to history."""
+    if not last_stop_name:
+        return text
+    stripped = text.strip()
+    for pat in _ANAPHORA_PATTERNS:
+        m = pat.match(stripped)
+        if m:
+            lead = m.group(1)
+            rest = m.group(2) if m.lastindex and m.lastindex >= 2 else ""
+            # Some templates' capture group starts right after a \s* that
+            # already consumed the separating space (e.g. "how much does it
+            # cost" -> rest="cost", no leading space) while others' start
+            # right after a zero-width \b (e.g. "swap it for a market" ->
+            # rest=" for a market", already spaced) -- normalize here rather
+            # than relying on every pattern to capture it consistently.
+            if rest and not rest.startswith(" "):
+                rest = " " + rest
+            return f"{lead} {last_stop_name}{rest}".strip()
+    return text
+
+
+def _find_mentioned_stop_name(itinerary: dict | None, text: str) -> str | None:
+    """MEDIUM-1: after an EXPLAIN turn, learn which real stop the question
+    was about (if exactly one scheduled stop's name appears in the text) so
+    a FOLLOW-UP "is it worth it?" can resolve. Deliberately only tracks an
+    UNAMBIGUOUS single mention -- a question that happens to name two stops
+    shouldn't guess which one "it" means next."""
+    if not itinerary:
+        return None
+    lower = text.lower()
+    matches = []
+    for key in itinerary:
+        if not key.startswith("day_"):
+            continue
+        for slot in _DAY_SLOTS:
+            for stop in itinerary[key].get(slot, []):
+                name = stop.get("name", "")
+                if name and name.lower() in lower:
+                    matches.append(name)
+    return matches[0] if len(matches) == 1 else None
 
 
 def _day_stops(day: dict) -> list[dict]:

@@ -22,7 +22,11 @@ from itinerary_builder import (
     LANDMARK_RELEVANCE_FLOOR,
     MEAL_BUDGET_OVERRUN_ALLOWANCE_MIN,
     PACE_HOURS,
+    SLOTS,
     _duplicate_of,
+    _format_clock,
+    _haversine_km,
+    _travel_mode,
     _travel_time_min,
     itinerary_builder_logic,
 )
@@ -85,6 +89,19 @@ def _is_cost_constraint(constraint: str) -> bool:
     return any(w in c for w in _COST_CONSTRAINT_WORDS)
 
 
+# LOW-1 (Team Waypoint Voice-First UI review): only ~39 of ~5,076 POIs carry
+# a kb_entry_fee at all (most that do are paid, not free), so this is a
+# real but PARTIAL signal -- only ever trust an EXPLICIT "Free" tag, never
+# assume an untagged POI (the vast majority) is free just because nothing
+# says otherwise. Presenting a guess as a fact is exactly what this app's
+# "cited, never invented" discipline exists to prevent, so a cost-
+# constrained request that finds no explicitly-free candidate still gets
+# the honest decline below, same as before this fix -- it just now actually
+# succeeds for the real cases the data does cover.
+def _is_free_fee(fee) -> bool:
+    return isinstance(fee, str) and fee.strip().lower().startswith("free")
+
+
 # Live-usage report ("swapping a place with another is not working
 # properly"): a constraint like "something else"/"another one" carries no
 # real category information, so it was being searched for literally --
@@ -132,6 +149,75 @@ def _recompute_day_total(day: dict) -> float:
         for stop in day.get(slot, []):
             minutes += stop.get("visit_duration_min", 0) + stop.get("travel_time_from_prev_min", 0)
     return round(minutes / 60, 2)
+
+
+# MEDIUM-4 (Team Waypoint Voice-First UI review): the single shared
+# implementation of "move a stop earlier/later" — previously this only
+# existed in phase6/app.py behind the Day view's up/down buttons (UX3-5).
+# Relocated here so _apply_reorder() below can call the EXACT same logic
+# for a typed/spoken "move X earlier" — a voice-only user (the
+# accessibility case the docx explicitly calls out) was otherwise fully
+# blocked from reordering, since the buttons are mouse/touch-only.
+def recompute_slot_times(day: dict, slot: str) -> None:
+    """Recomputes travel_time_from_prev_min / travel_mode_from_prev /
+    arrival_time (and the restaurant meal timestamp) for every stop in one
+    slot, in its current order -- mirrors itinerary_builder.py's own
+    per-stop arrival-time formula (slot start hour + minutes already used in
+    that slot + travel to reach this stop) so a manually reordered slot
+    shows times consistent with a fresh build, not stale positions with the
+    old order's times."""
+    stops = day.get(slot, [])
+    slot_start_min = SLOTS[slot][0] * 60
+    minutes_used = 0
+    prev = None
+    for stop in stops:
+        if prev is not None:
+            travel = _travel_time_min(prev, stop)
+            road_km = _haversine_km(prev["lat"], prev["lon"], stop["lat"], stop["lon"]) * 1.4
+            mode = _travel_mode(road_km)
+        else:
+            travel, mode = 0, None
+        stop["travel_time_from_prev_min"] = travel
+        stop["travel_mode_from_prev"] = mode
+        arrival_min = slot_start_min + minutes_used + travel
+        stop["arrival_time"] = _format_clock(arrival_min)
+        if stop.get("category") == "restaurant":
+            stop["meal"] = f"meal ~{_format_clock(arrival_min)}"
+        minutes_used += stop.get("visit_duration_min", 0) + travel
+        prev = stop
+
+
+def move_stop(itinerary: dict, day_key: str, slot: str, idx: int, direction: int) -> bool:
+    """Move a stop one position earlier/later through the day's
+    morning->afternoon->evening sequence -- swap within the same slot when
+    possible, otherwise move across the slot boundary onto the end/start of
+    the adjacent slot. direction: -1 = earlier, +1 = later. Returns True if
+    a move actually happened, False when already at the very start/end of
+    the day (nowhere to go)."""
+    day = itinerary[day_key]
+    slot_idx = DAY_SLOTS.index(slot)
+    stops = day[slot]
+    target_idx = idx + direction
+
+    if 0 <= target_idx < len(stops):
+        stops[idx], stops[target_idx] = stops[target_idx], stops[idx]
+        recompute_slot_times(day, slot)
+        day["total_hours"] = _recompute_day_total(day)
+        return True
+
+    neighbor_slot_idx = slot_idx + direction
+    if not (0 <= neighbor_slot_idx < len(DAY_SLOTS)):
+        return False  # already at the very start/end of the day -- nothing to do
+    neighbor_slot = DAY_SLOTS[neighbor_slot_idx]
+    stop = stops.pop(idx)
+    if direction == -1:
+        day[neighbor_slot].append(stop)      # becomes the last stop of the earlier slot
+    else:
+        day[neighbor_slot].insert(0, stop)   # becomes the first stop of the later slot
+    recompute_slot_times(day, slot)
+    recompute_slot_times(day, neighbor_slot)
+    day["total_hours"] = _recompute_day_total(day)
+    return True
 
 
 def _within_budget(day: dict, pace: str) -> bool:
@@ -261,24 +347,36 @@ def _all_scheduled_stops(itin: dict) -> list[dict]:
     return [s for key in _all_day_keys(itin) for slot in DAY_SLOTS for s in itin[key][slot]]
 
 
-def _find_stop_by_name(itin: dict, name: str, preferred_day_keys: list[str] | None = None) -> tuple[str, str, int] | None:
+def resolve_stop_reference(itin: dict, name: str, preferred_day_keys: list[str] | None = None) -> dict:
     """Live-usage report ("swapping a place with another is not working
     well"): locate a specific scheduled stop by name, wherever it actually
     sits (day/slot/position) -- so a request like "swap Humayun's Tomb for
     Qutab Minar" can target the real stop instead of guessing by position.
     Exact case-insensitive match wins immediately; a substring match is only
-    trusted when it's UNAMBIGUOUS (exactly one candidate) -- ambiguous
-    partial matches return None rather than risk swapping the wrong one of
-    several similarly-named stops.
+    trusted when it's UNAMBIGUOUS (exactly one candidate).
+
+    Team Waypoint Voice-First UI review (HIGH-2): a genuinely AMBIGUOUS
+    match (2+ candidates, no exact hit) used to collapse into the exact same
+    "no match" result as zero candidates, so callers had no way to ask the
+    user which one they meant -- they either guessed wrong (falling through
+    to a broad, wrong-scope edit) or silently declined. This now reports
+    ambiguity as its own outcome, with the actual candidate list, so
+    apply_edit() can surface it as a real choice instead of losing the
+    information here.
 
     preferred_day_keys: when the caller already knows which day was named
     (target_day != "all"), pass its resolved day_keys here -- used only to
     disambiguate the category-word fallback below when it would otherwise
     be ambiguous across the whole trip; never overrides a real name match.
+
+    Returns one of:
+      {"status": "unique", "location": (day_key, slot, idx)}
+      {"status": "ambiguous", "candidates": [(day_key, slot, idx), ...]}
+      {"status": "none"}
     """
     target = (name or "").strip().lower()
     if not target:
-        return None
+        return {"status": "none"}
 
     # Real repro ("Replace the restaurant on day 2 evening with a different
     # one" -> target_stop_name="restaurant"): a bare category word is not a
@@ -308,9 +406,11 @@ def _find_stop_by_name(itin: dict, name: str, preferred_day_keys: list[str] | No
                 elif not is_bare_category_word and (target in stop_name or stop_name in target):
                     partial.append((key, slot, idx))
     if exact:
-        return exact[0]
+        return {"status": "unique", "location": exact[0]}
     if len(partial) == 1:
-        return partial[0]
+        return {"status": "unique", "location": partial[0]}
+    if len(partial) > 1:
+        return {"status": "ambiguous", "candidates": partial}
 
     # Live-usage fix: "the market"/"the museum" names a CATEGORY of an
     # existing stop, not its proper name -- real repro: "Instead of the
@@ -330,13 +430,27 @@ def _find_stop_by_name(itin: dict, name: str, preferred_day_keys: list[str] | No
             for idx, stop in enumerate(itin[key][slot])
             if stop.get("category") == cat
         ]
+        candidates = all_matches
         if preferred_day_keys:
             scoped = [m for m in all_matches if m[0] in preferred_day_keys]
-            if len(scoped) == 1:
-                return scoped[0]
-        if len(all_matches) == 1:
-            return all_matches[0]
-    return None
+            if scoped:
+                candidates = scoped
+        if len(candidates) == 1:
+            return {"status": "unique", "location": candidates[0]}
+        if len(candidates) > 1:
+            return {"status": "ambiguous", "candidates": candidates}
+    return {"status": "none"}
+
+
+def _find_stop_by_name(itin: dict, name: str, preferred_day_keys: list[str] | None = None) -> tuple[str, str, int] | None:
+    """Back-compat wrapper around resolve_stop_reference(): unique match
+    only -- both "no match" and "ambiguous" collapse to None here, matching
+    every caller's original contract. _apply_swap() is only ever reached via
+    apply_edit(), which resolves ambiguity itself before calling it (see
+    apply_edit()'s swap branch), so by the time this runs the ambiguous case
+    has already been handled one layer up."""
+    result = resolve_stop_reference(itin, name, preferred_day_keys)
+    return result["location"] if result["status"] == "unique" else None
 
 
 def _apply_swap(itin: dict, day_keys: list[str], target_slot: str, constraint: str, city: str,
@@ -410,11 +524,18 @@ def _apply_swap(itin: dict, day_keys: list[str], target_slot: str, constraint: s
             # "swap the market for something else" etc.: the old stop's own
             # category IS what "something else" means here -- see
             # _is_vague_replacement_constraint's comment for the real repro.
+            # LOW-1: a cost constraint ("something free") gets the same
+            # treatment for the same reason -- "free" isn't a real
+            # INTEREST_MAP category, so searching on it literally would
+            # fall through to the fallback-only path and always come back
+            # empty; the old stop's own category is the right thing to
+            # search, then filtered for an explicit "Free" tag below.
             # Computed per-slot (not once, up top) since it depends on
             # old_stop, which is only known once we're inside this loop.
+            is_cost = _is_cost_constraint(constraint)
             slot_constraint = (
                 old_stop.get("category", norm_constraint)
-                if _is_vague_replacement_constraint(constraint)
+                if (_is_vague_replacement_constraint(constraint) or is_cost)
                 else norm_constraint
             )
             # R-41 (finding M1): a specific named place is tried first; the
@@ -442,10 +563,17 @@ def _apply_swap(itin: dict, day_keys: list[str], target_slot: str, constraint: s
             # an unrelated category — surfaces as the honest "couldn't find
             # a suitable replacement" message below instead of a wrong-type
             # swap with no signal anything went wrong.
-            replacement = next(
-                (p for p in candidates
-                 if not p.get("fallback") and _duplicate_of(p, already_scheduled) is None),
-                None,
+            valid_candidates = [
+                p for p in candidates
+                if not p.get("fallback") and _duplicate_of(p, already_scheduled) is None
+            ]
+            # LOW-1: for a cost constraint, only an explicitly "Free"-tagged
+            # candidate counts -- see _is_free_fee's docstring for why an
+            # untagged one is never treated as free.
+            replacement = (
+                next((p for p in valid_candidates if _is_free_fee(p.get("kb_entry_fee"))), None)
+                if is_cost else
+                (valid_candidates[0] if valid_candidates else None)
             )
             if replacement is None:
                 searched_no_match = True
@@ -460,8 +588,13 @@ def _apply_swap(itin: dict, day_keys: list[str], target_slot: str, constraint: s
     if swapped_desc:
         return ("Swapped: " + "; ".join(swapped_desc) + ".", changed)
     if _is_cost_constraint(constraint):
-        return ("I can't filter places by price yet, so I can't look for something specifically "
-                "free/cheap — I can still swap it for a different category if that helps.", [])
+        # LOW-1: no longer a blanket "can't filter by price" -- this DOES
+        # check for an explicitly free-tagged option now, it just couldn't
+        # find one nearby (only a small slice of the data carries verified
+        # pricing at all, so a real "no free option found" is common).
+        return ("I couldn't find a nearby option specifically tagged as free of charge — "
+                "only a small number of places in my data have verified pricing, so I won't "
+                "guess. I can still swap it for a different category if that helps.", [])
     if empty_slot_notes and not searched_no_match:
         where = " and ".join(empty_slot_notes)
         verb = "is" if len(empty_slot_notes) == 1 else "are"
@@ -491,6 +624,11 @@ def _apply_add(itin: dict, day_keys: list[str], target_slot: str, constraint: st
     # _named_place_candidates' docstring and the matching fix in
     # _apply_swap() above for the real "indoors" -> spurious match this
     # inconsistency caused.
+    # LOW-1 (Team Waypoint Voice-First UI review): a cost constraint ("add
+    # something free") isn't a real INTEREST_MAP category either -- same
+    # reasoning as _apply_swap()'s matching fix, see _is_free_fee's
+    # docstring for why only an explicit "Free" tag counts.
+    is_cost = _is_cost_constraint(constraint)
     norm_constraint = _normalize_constraint(constraint)
     named_candidates = _named_place_candidates(city, norm_constraint)
     category_candidates = poi_search_logic(city, [norm_constraint or "food"], top_n=10)
@@ -498,15 +636,20 @@ def _apply_add(itin: dict, day_keys: list[str], target_slot: str, constraint: st
     candidates = named_candidates + [c for c in category_candidates if c["osm_id"] not in named_ids]
     # R-16 (F-11): same fallback filter as _apply_swap() — don't add a POI
     # from an unmatched-category fallback search.
-    new_poi = next(
-        (p for p in candidates
-         if not p.get("fallback") and _duplicate_of(p, already_scheduled) is None),
-        None,
+    valid_candidates = [
+        p for p in candidates
+        if not p.get("fallback") and _duplicate_of(p, already_scheduled) is None
+    ]
+    new_poi = (
+        next((p for p in valid_candidates if _is_free_fee(p.get("kb_entry_fee"))), None)
+        if is_cost else
+        (valid_candidates[0] if valid_candidates else None)
     )
     if new_poi is None:
-        if _is_cost_constraint(constraint):
-            return ("I can't filter places by price yet, so I can't look for something specifically "
-                    "free/cheap — I can still add a place by category if that helps.", [])
+        if is_cost:
+            return ("I couldn't find a nearby option specifically tagged as free of charge — "
+                    "only a small number of places in my data have verified pricing, so I won't "
+                    "guess. I can still add a place by category if that helps.", [])
         return ("Couldn't find a new place matching that request.", [])
 
     slot = target_slot if target_slot in DAY_SLOTS else "evening"
@@ -563,14 +706,29 @@ def _apply_add(itin: dict, day_keys: list[str], target_slot: str, constraint: st
 # path 16/20 times (returning the actively misleading "Couldn't find a
 # suitable replacement for that swap" -- a message about a completely
 # different operation) or misclassified as EXPLAIN entirely the other 4/20.
-# intent_classifier.py now recognizes "reorder" as its own edit_type. True
-# within-day reordering isn't implemented here (it would need the day's
-# arrival-time schedule recomputed, which only itinerary_builder.py's
-# scheduling loop currently does) -- so this gives an honest, specific
-# decline instead of either the old misleading message or a silent no-op,
-# and points at the real capability: the Day view's per-stop move
-# up/down controls (phase6/app.py, UX3-5).
-def _apply_reorder(itin: dict, day_keys: list[str]) -> tuple[str, list[str]]:
+# intent_classifier.py now recognizes "reorder" as its own edit_type.
+#
+# MEDIUM-4 (Team Waypoint Voice-First UI review): the single most natural
+# phrasing -- "move X earlier/later" -- is now a REAL move, not just an
+# honest decline: intent_classifier.py extracts target_stop_name +
+# direction for this shape, and this calls the exact same move_stop() the
+# Day view's up/down buttons use (UX3-5), so a spoken command and a tapped
+# button produce byte-for-byte identical results. Anything this can't
+# confidently resolve -- no named stop, no clear direction, or a
+# whole-slot-order swap like "swap the order of Day 1's morning and
+# afternoon" -- still gets the original honest decline: broadening further
+# risks silently moving the wrong stop, worse than an honest "not yet" for
+# a feature this low-stakes.
+def _apply_reorder(itin: dict, day_keys: list[str], target_stop_name: str = "", direction: str = "") -> tuple[str, list[str]]:
+    if target_stop_name and direction in ("earlier", "later"):
+        located = _find_stop_by_name(itin, target_stop_name, preferred_day_keys=day_keys)
+        if located:
+            day_key, slot, idx = located
+            moved = move_stop(itin, day_key, slot, idx, -1 if direction == "earlier" else 1)
+            if moved:
+                return (f"Moved {target_stop_name} {direction}.", [day_key])
+            edge = "start" if direction == "earlier" else "end"
+            return (f"{target_stop_name} is already at the {edge} of the day — nowhere {direction} to move it.", [])
     return (
         "I can't reorder stops within a day from a typed or spoken command yet — "
         "but you can use the ↑ / ↓ buttons next to each stop in the Day view to move it.",
@@ -649,6 +807,30 @@ def apply_edit(itinerary: dict, edit_intent: dict, pace: str = "moderate", city:
         message, changed_days = _apply_relax(new_itin, day_keys, target_slot)
     elif edit_type == "swap":
         target_stop_name = edit_intent.get("target_stop_name", "")
+        # Team Waypoint Voice-First UI review (HIGH-2): when the named
+        # target resolves to 2+ real candidates ("swap the temple" with two
+        # temples on the trip), don't guess and don't silently fall through
+        # to the old broad day/slot-based path -- surface the real
+        # candidates so the caller (agent.py) can ask the user which one
+        # they meant, docx's "show tappable choices instead of guessing"
+        # principle. Checked here, before _apply_swap(), so the ambiguous
+        # case never reaches its (unrelated) internal name lookup at all.
+        if target_stop_name:
+            ref = resolve_stop_reference(new_itin, target_stop_name, preferred_day_keys=day_keys)
+            if ref["status"] == "ambiguous":
+                candidates = [
+                    {
+                        "day_key": key, "slot": slot, "idx": idx,
+                        "name": new_itin[key][slot][idx]["name"],
+                        "category": new_itin[key][slot][idx].get("category", ""),
+                    }
+                    for (key, slot, idx) in ref["candidates"][:4]  # cap at 4 tappable choices
+                ]
+                return {
+                    "ok": False, "itinerary": itinerary,
+                    "message": f"I found {len(candidates)} stops matching \"{target_stop_name}\" — which one did you mean?",
+                    "changed_days": [], "needs_choice": True, "candidates": candidates,
+                }
         message, changed_days = _apply_swap(new_itin, day_keys, target_slot, constraint, city, target_stop_name)
     elif edit_type == "add":
         message, changed_days = _apply_add(new_itin, day_keys, target_slot, constraint, city, pace)
@@ -657,7 +839,9 @@ def apply_edit(itinerary: dict, edit_intent: dict, pace: str = "moderate", city:
     elif edit_type == "reduce_travel":
         message, changed_days = _apply_reduce_travel(new_itin, city, pace)
     elif edit_type == "reorder":
-        message, changed_days = _apply_reorder(new_itin, day_keys)
+        message, changed_days = _apply_reorder(
+            new_itin, day_keys, edit_intent.get("target_stop_name", ""), edit_intent.get("direction", ""),
+        )
     else:
         return _fail(itinerary, f"Unknown edit type '{edit_type}'.")
 

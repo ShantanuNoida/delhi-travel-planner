@@ -4,9 +4,12 @@ Companion UI — Phase 6.
 Run with: streamlit run app.py
 """
 
+import base64
 import hashlib
+import html
 import os
 import sys
+from datetime import date
 
 # Windows' default console codepage (cp1252) can't encode many characters
 # that show up in ordinary text — arrows, "approximately equal", smart
@@ -62,6 +65,46 @@ CATEGORY_ICON = {
     "restaurant": "🍽️",
 }
 
+
+# Component audit Tier 3: measured the ACTUAL cached files before shipping
+# this, not assumed — R-22's cache holds original Wikimedia Commons
+# resolution, which ranges 100 KB to 17 MB per photo in this dataset.
+# Inlining several of those as base64 in one carousel would balloon the
+# page payload to tens of MB per rerun, a real performance problem, not a
+# cosmetic one. Thumbnails are generated once (via Pillow, already a hard
+# Streamlit dependency — st.image() itself needs it, so nothing new to
+# install) and disk-cached alongside the originals, so only the FIRST
+# render of a given photo pays the resize cost.
+_CAROUSEL_THUMB_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "image_cache", "_carousel_thumbs")
+_CAROUSEL_THUMB_HEIGHT_PX = 160
+
+
+def _carousel_thumbnail_data_uri(path: str | None) -> str | None:
+    """Small, disk-cached JPEG thumbnail of an already-locally-cached stop
+    photo (image_cache.py, R-22), base64-embedded for the day carousel's raw
+    <img> tags — st.image() has no way to lay multiple images out in a
+    horizontal scroll-snap strip, so this is the one place this file reaches
+    for a raw <img> instead. Returns None (never a fabricated placeholder)
+    on any failure, same discipline as get_cached_image_path itself."""
+    if not path:
+        return None
+    try:
+        os.makedirs(_CAROUSEL_THUMB_DIR, exist_ok=True)
+        thumb_path = os.path.join(_CAROUSEL_THUMB_DIR, os.path.splitext(os.path.basename(path))[0] + ".jpg")
+        if not os.path.exists(thumb_path):
+            from PIL import Image
+
+            with Image.open(path) as img:
+                img = img.convert("RGB")
+                ratio = _CAROUSEL_THUMB_HEIGHT_PX / img.height
+                resized = img.resize((max(1, round(img.width * ratio)), _CAROUSEL_THUMB_HEIGHT_PX))
+                resized.save(thumb_path, "JPEG", quality=72)
+        with open(thumb_path, "rb") as f:
+            data = f.read()
+        return f"data:image/jpeg;base64,{base64.b64encode(data).decode('ascii')}"
+    except Exception:
+        return None
+
 # R-26 (round 4 UX benchmark, UX-23): a real hero photo for the empty state
 # instead of a small info box in an otherwise-blank page — same real,
 # license-clean Wikidata source as every stop's photo (R-22), not a
@@ -86,79 +129,12 @@ _TRANSCRIBING_BANNER = """
 <style>@keyframes lsn-fade {0%{opacity:0.4;} 50%{opacity:1;} 100%{opacity:0.4;}}</style>
 """
 
-DAY_SLOTS = ("morning", "afternoon", "evening")
-
-
-def _day_total_hours(day: dict) -> float:
-    minutes = sum(
-        s.get("visit_duration_min", 0) + s.get("travel_time_from_prev_min", 0)
-        for slot in DAY_SLOTS for s in day.get(slot, [])
-    )
-    return round(minutes / 60, 2)
-
-
-def _recompute_slot_times(day: dict, slot: str) -> None:
-    """UX3-5 (Round 3 QA): recomputes travel_time_from_prev_min /
-    travel_mode_from_prev / arrival_time (and the restaurant meal timestamp)
-    for every stop in one slot, in its current order -- mirrors
-    phase2/itinerary_builder.py's own per-stop arrival-time formula (R-25:
-    slot start hour + minutes already used in that slot + travel to reach
-    this stop) so a manually reordered slot shows times consistent with a
-    fresh build, not stale positions with the old order's times."""
-    from itinerary_builder import SLOTS, _travel_time_min, _travel_mode, _haversine_km, _format_clock
-
-    stops = day.get(slot, [])
-    slot_start_min = SLOTS[slot][0] * 60
-    minutes_used = 0
-    prev = None
-    for stop in stops:
-        if prev is not None:
-            travel = _travel_time_min(prev, stop)
-            road_km = _haversine_km(prev["lat"], prev["lon"], stop["lat"], stop["lon"]) * 1.4
-            mode = _travel_mode(road_km)
-        else:
-            travel, mode = 0, None
-        stop["travel_time_from_prev_min"] = travel
-        stop["travel_mode_from_prev"] = mode
-        arrival_min = slot_start_min + minutes_used + travel
-        stop["arrival_time"] = _format_clock(arrival_min)
-        if stop.get("category") == "restaurant":
-            stop["meal"] = f"meal ~{_format_clock(arrival_min)}"
-        minutes_used += stop.get("visit_duration_min", 0) + travel
-        prev = stop
-
-
-def _move_stop(itinerary: dict, day_key: str, slot: str, idx: int, direction: int) -> None:
-    """UX3-5 (Round 3 QA, fixes the UX side of E-3): move a stop one position
-    earlier/later through the day's morning->afternoon->evening sequence --
-    swap within the same slot when possible, otherwise move across the slot
-    boundary onto the end/start of the adjacent slot. direction: -1 = earlier,
-    +1 = later. No natural-language command does this yet (see E-3/_apply_reorder
-    in phase4/edit_engine.py, which honestly declines and points here) --
-    this is a real, working substitute, not a placeholder."""
-    day = itinerary[day_key]
-    slot_idx = DAY_SLOTS.index(slot)
-    stops = day[slot]
-    target_idx = idx + direction
-
-    if 0 <= target_idx < len(stops):
-        stops[idx], stops[target_idx] = stops[target_idx], stops[idx]
-        _recompute_slot_times(day, slot)
-        day["total_hours"] = _day_total_hours(day)
-        return
-
-    neighbor_slot_idx = slot_idx + direction
-    if not (0 <= neighbor_slot_idx < len(DAY_SLOTS)):
-        return  # already at the very start/end of the day -- nothing to do
-    neighbor_slot = DAY_SLOTS[neighbor_slot_idx]
-    stop = stops.pop(idx)
-    if direction == -1:
-        day[neighbor_slot].append(stop)      # becomes the last stop of the earlier slot
-    else:
-        day[neighbor_slot].insert(0, stop)   # becomes the first stop of the later slot
-    _recompute_slot_times(day, slot)
-    _recompute_slot_times(day, neighbor_slot)
-    day["total_hours"] = _day_total_hours(day)
+# MEDIUM-4 (Team Waypoint Voice-First UI review): move_stop()/
+# recompute_slot_times() now live in phase4/edit_engine.py as the single
+# shared implementation — a typed/spoken "move X earlier" (_apply_reorder)
+# calls the exact same logic these buttons do, so voice-only users aren't
+# blocked from reordering the way they were when this only existed here.
+from edit_engine import move_stop as _move_stop, recompute_slot_times as _recompute_slot_times
 
 
 st.set_page_config(page_title="Delhi Travel Planner", page_icon="🧭", layout="wide")
@@ -180,13 +156,93 @@ st.set_page_config(page_title="Delhi Travel Planner", page_icon="🧭", layout="
 #      also catch the voice-toggle row and the quick-options expander's
 #      columns, which is exactly the kind of fragile, overreaching match
 #      this approach avoids).
+#
+# Team Waypoint theme proposal (2026-08-12, "Team-Waypoint-Voice-First-UI-
+# Design-Review.md" section 2), applied: a type pairing (Fraunces for
+# titles/headers/stop names, Plus Jakarta Sans for body/UI text, JetBrains
+# Mono for tabular data like clock times), a warm neutral page background
+# instead of Streamlit's cool default, a second brand accent (deep indigo)
+# reserved for secondary actions, and rounded-pill buttons with a real
+# primary/secondary hierarchy. Terracotta itself is UNCHANGED (#C2540C /
+# #7A3608, R-26 -- already validated across five rounds) — this only adds
+# the system around it. Selectors verified against the actually-installed
+# Streamlit version (1.57.0)'s own compiled frontend bundle rather than
+# guessed: `stBaseButton-{kind}`, `stAppViewContainer`, `stMarkdown`,
+# `stCaptionContainer` are real data-testid values it emits, not emotion-
+# cache class names, so this follows the same "stable selectors only"
+# discipline as UI3-1/UX3-4 above, just verified against source instead of
+# assumed from other Streamlit apps' conventions (which drift across
+# versions). Light/dark still follows the viewer's OS preference only
+# (`prefers-color-scheme`), same choice R-26 made for the accent color —
+# not locked via config.toml's [theme] base, and not tied to Streamlit's
+# own in-app theme toggle (a real, narrow gap: if a viewer manually
+# overrides Streamlit's toggle against their OS setting, these tokens
+# won't follow — the same trade-off already accepted for the h1 gradient).
 st.markdown(
     """
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Plus+Jakarta+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap');
+/* Component audit Tier 7: Material Symbols, loaded the same way as the
+   type-pairing fonts above -- applied to a small, bounded set of functional
+   icons (the safety/logistics bits below) as a first real slice of an
+   icon-font hybrid, not a wholesale emoji replacement. Emoji stay
+   everywhere else (buttons, badges, the hero tagline) -- they're
+   zero-asset-cost, already work, and carry real warmth a uniform icon set
+   would flatten; this only reaches for a re-tintable, cross-platform-
+   consistent icon where "functional UI chrome, not expressive content" is
+   the clearer read. */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=swap');
+
+:root {
+    --wp-accent: #C2540C;
+    --wp-accent-deep: #7A3608;
+    --wp-secondary: #332F5C;
+    --wp-secondary-deep: #211E3D;
+    --wp-secondary-soft: rgba(51,47,92,0.10);
+    --wp-surface: #FFFFFF;
+    --wp-ink-soft: #746353;
+    --wp-border: #E7DCCB;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --wp-accent: #E0863F;
+        --wp-accent-deep: #F3B57D;
+        --wp-secondary: #9490C9;
+        --wp-secondary-deep: #C3C0E6;
+        --wp-secondary-soft: rgba(148,144,201,0.18);
+        --wp-surface: #221C17;
+        --wp-ink-soft: #C2AF9C;
+        --wp-border: #392F26;
+    }
+}
+
+html, body, [data-testid="stAppViewContainer"], [data-testid="stSidebar"],
+[data-testid="stMarkdown"], [data-testid="stCaptionContainer"] {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', serif;
+}
+code {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+.wp-icon {
+    font-family: 'Material Symbols Outlined';
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    font-size: 1rem;
+    vertical-align: -0.15em;
+    color: var(--wp-accent);
+}
+/* User request (2026-08-12): remove the page background entirely, not just
+   the mic's -- reverts to Streamlit's own default background (no custom
+   color, no watermark pattern). Previously this held a warm-neutral fill
+   plus a self-authored CSS lattice pattern (Component audit Tier 7); both
+   removed rather than lightened further, per the explicit "no colour" ask. */
+
 h1 {
     font-weight: 800 !important;
     letter-spacing: -0.03em;
-    background: linear-gradient(135deg, #C2540C, #7A3608);
+    background: linear-gradient(135deg, var(--wp-accent), var(--wp-accent-deep));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -195,6 +251,100 @@ div[data-testid="stHorizontalBlock"]:has(> div[data-testid="stColumn"] .wp-trans
     position: sticky;
     top: 1rem;
     align-self: flex-start;
+}
+
+/* User request (2026-08-12): "make the mic bigger and more visible" --
+   round 3. Round 1 (scale 1.5) read as too subtle; round 2 (scale 2.3)
+   overshot. Settling on a middle ground. st.audio_input() renders
+   identically (same size) whether the itinerary exists yet or not -- the
+   pre/post-build difference UX3-3 established was about removing the
+   pulsing glyph + extra captions AROUND it, not the widget's own footprint
+   -- so this applies safely to both instances without reopening that fix.
+   Selectors verified against the actually-installed Streamlit version's
+   own compiled frontend (1.57.0), same discipline as every other selector
+   in this file: `stAudioInput` (the widget's outer container) and
+   `stAudioInputActionButton` (the actual record button) are real
+   data-testid values it emits. */
+[data-testid="stAudioInput"] {
+    /* User request (2026-08-12): "still in brown colour theme" -- the real
+       remaining culprit was the box-shadow's terracotta glow (a soft blur
+       reads as a background wash even with the fill itself transparent),
+       not just the background-color. Stripped the border and shadow
+       entirely rather than trying to lighten them further -- no color
+       chrome at all around the control now, just the enlarged button. */
+    background: transparent !important;
+    box-shadow: none !important;
+}
+[data-testid="stAudioInputActionButton"] {
+    transform: scale(1.8);
+    transform-origin: center;
+    margin: 0 0.6rem;
+}
+
+/* Rounded-pill buttons: primary (filled) vs secondary (outlined) hierarchy,
+   so a high-stakes confirm and its escape hatch read as different actions
+   at a glance, not just different words (docx's confirmation-tiering
+   guidance). Covers both plain st.button() and st.form_submit_button()
+   kinds -- Streamlit gives form-submit buttons a distinct "FormSubmit"
+   testid suffix even when styled type="primary"/"secondary". */
+[data-testid="stBaseButton-primary"], [data-testid="stBaseButton-primaryFormSubmit"] {
+    border-radius: 999px !important;
+    font-weight: 600 !important;
+    transition: transform 0.12s ease, box-shadow 0.12s ease !important;
+}
+[data-testid="stBaseButton-primary"]:hover, [data-testid="stBaseButton-primaryFormSubmit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px -4px var(--wp-accent);
+}
+[data-testid="stBaseButton-secondary"], [data-testid="stBaseButton-secondaryFormSubmit"] {
+    border-radius: 999px !important;
+    font-weight: 600 !important;
+    border-color: var(--wp-secondary) !important;
+    color: var(--wp-secondary) !important;
+}
+[data-testid="stBaseButton-secondary"]:hover, [data-testid="stBaseButton-secondaryFormSubmit"]:hover {
+    background-color: var(--wp-secondary-soft) !important;
+}
+
+/* Stop-name / clock-time treatment -- rendered via the .wp-stop-name /
+   .wp-time-chip spans in the Day view's stop cards (below). */
+.wp-stop-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+.wp-time-chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    background: var(--wp-surface);
+    border: 1px solid var(--wp-border);
+    color: var(--wp-ink-soft);
+    border-radius: 999px;
+    padding: 0.05rem 0.6rem;
+    white-space: nowrap;
+}
+
+/* Component audit Tier 3: a horizontal-scroll photo carousel at the top of
+   each Day tab (CSS scroll-snap, no JS component needed) -- reuses the
+   same cached Wikidata photos already loaded per stop card, giving an
+   immediate "mood board" for the day before scrolling into the detailed
+   card list below it. */
+.wp-carousel {
+    display: flex;
+    gap: 0.6rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 0.3rem 0 0.9rem;
+    margin-bottom: 0.2rem;
+}
+.wp-carousel-img {
+    height: 112px;
+    width: auto;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    object-fit: cover;
+    border: 1px solid var(--wp-border);
 }
 </style>
 """,
@@ -207,6 +357,27 @@ if "transcript" not in st.session_state:
     st.session_state.transcript = []
 if "pending_audio_text" not in st.session_state:
     st.session_state.pending_audio_text = None
+if "pending_voice_text" not in st.session_state:
+    # HIGH-1 (Team Waypoint Voice-First UI review): a mic clip that's been
+    # transcribed but not yet sent — the user gets a beat to spot a
+    # misheard word before it's acted on, instead of it firing immediately.
+    st.session_state.pending_voice_text = None
+if "voice_edit_prefill" not in st.session_state:
+    st.session_state.voice_edit_prefill = None
+if "text_input_version" not in st.session_state:
+    # User report (2026-08-12): the "✏️ Edit" button on the voice-heard
+    # banner prefilled `st.session_state["main_text_input"]` before the
+    # widget was created, which is the standard Streamlit pattern and
+    # verified correct in a headless AppTest simulation -- but a live
+    # browser reportedly didn't show the prefilled text. Reassigning a
+    # FIXED widget key's session-state value on a rerun relies on the
+    # browser reusing/re-syncing that exact component instance, the same
+    # class of fragility already hit once in this file for st.audio_input()
+    # (see mic_key_version below, and its own comment on why a fixed key
+    # isn't reliable for this). Bumping the text input's key on every
+    # prefill forces a genuinely fresh widget instance instead, removing
+    # any dependency on same-key re-sync behavior.
+    st.session_state.text_input_version = 0
 if "mic_key_version" not in st.session_state:
     # User report (2026-07-25): "Start a new trip" left the previous
     # recording still sitting in the mic widget. st.audio_input() has no
@@ -217,26 +388,60 @@ if "mic_key_version" not in st.session_state:
     # counter is that key's suffix; bumped in the "Start a new trip"
     # handler below.
     st.session_state.mic_key_version = 0
+if "celebrated_first_build" not in st.session_state:
+    # Component audit Tier 7: st.balloons() only ever fires ONCE per trip —
+    # a build success is worth a real moment; a follow-up edit shouldn't
+    # trigger the same celebration again, which would get old fast (the
+    # same "occasionally, not always" discipline already applied to the
+    # post-edit nudges). Reset alongside everything else in _start_new_trip()
+    # below, so a genuinely new trip earns its own first-build moment.
+    st.session_state.celebrated_first_build = False
 
 agent: TravelAgent = st.session_state.agent
 
-with st.sidebar:
-    st.header("Settings")
-    # R-17/QA-13: never give the agent a "speak" TTS — that used to make
-    # `process_turn` block synchronously on server-side audio playback
-    # (a busy-wait inside `st.spinner`), freezing the whole app for the
-    # entire spoken duration with no way to stop it. Voice output is
-    # handled separately in _send()/_play_reply_audio() below: synthesize
-    # audio bytes (no playback) after the reply is ready, then hand them to
-    # st.audio() for non-blocking browser playback.
-    agent.tts = None
-    if st.button("🔄 Start a new trip"):
-        agent.reset()
-        st.session_state.transcript = []
-        st.session_state.mic_key_version += 1  # discards any previously recorded clip (see init comment above)
-        st.rerun()
+# R-17/QA-13: never give the agent a "speak" TTS — that used to make
+# `process_turn` block synchronously on server-side audio playback
+# (a busy-wait inside `st.spinner`), freezing the whole app for the
+# entire spoken duration with no way to stop it. Voice output is
+# handled separately in _send()/_play_reply_audio() below: synthesize
+# audio bytes (no playback) after the reply is ready, then hand them to
+# st.audio() for non-blocking browser playback.
+agent.tts = None
 
-st.title("🧭 Delhi Travel Planner")
+
+def _start_new_trip() -> None:
+    agent.reset()
+    st.session_state.transcript = []
+    st.session_state.mic_key_version += 1  # discards any previously recorded clip (see init comment above)
+    st.session_state.text_input_version += 1  # discards any unsent, un-submitted text left in the box
+    st.session_state.celebrated_first_build = False  # Tier 7: a fresh trip earns its own first-build celebration
+    st.rerun()
+
+
+# Component audit (2026-08-12, "Team-Waypoint-Component-Level-UI-Audit.md",
+# Tier 6): "Start a new trip" used to live ONLY in the sidebar -- the one
+# place R-31 already found "most users never look," now holding the app's
+# single most consequential destructive action. Promoted to a slim top-bar
+# row next to the title instead, where every benchmark travel app (Wanderlog,
+# TripIt) keeps its "new trip" action visible at all times. The sidebar is
+# repurposed for what sidebars are actually for in those apps -- settings and
+# trust/attribution info -- rather than left holding nothing.
+title_col, newtrip_col = st.columns([5, 1.4])
+with title_col:
+    st.title("🧭 Delhi Travel Planner")
+with newtrip_col:
+    st.write("")  # vertical spacer so the button lines up with the title's baseline, not its top
+    if st.button("🔄 Start a new trip", key="new_trip_topbar", use_container_width=True):
+        _start_new_trip()
+
+with st.sidebar:
+    st.header("About this trip planner")
+    st.caption(
+        "Map & POI data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors, "
+        "ODbL. Landmark details enriched from [Wikidata](https://www.wikidata.org) (CC0). "
+        "Travel guidance from [Wikivoyage](https://en.wikivoyage.org/wiki/Delhi) (CC BY-SA 4.0)."
+    )
+    st.caption("Every stop, distance, and opening hour is cited — nothing is invented.")
 
 # --------------------------------------------------------------------------- #
 # Input area — voice-first (round 5, R-29/R-30/R-31/R-32/R-33)
@@ -258,7 +463,11 @@ with toggle_col:
     # and defaulted on — safe now that playback is non-blocking browser
     # audio (R-17) using free, keyless edge-tts, so defaulting it on adds
     # no freeze risk and no API cost.
-    voice_output = st.checkbox(
+    # Component audit Tier 4: a live on/off setting reads as a switch, not a
+    # form checkbox — st.toggle() renders a real sliding switch (unlike
+    # st.checkbox's square box), matching how comparable apps present this
+    # exact kind of preference.
+    voice_output = st.toggle(
         "🔊 Speak replies", value=True,
         help="Plays right here in your browser after each reply.",
     )
@@ -297,12 +506,15 @@ if not agent.itinerary:
     # "idle, listening for you" presence even before it's pressed, closing
     # the gap where voice previously only appeared as transient spinners
     # during an already-started capture.
+    # User request (2026-08-12): bumped from 1.4rem to 2.6rem and the pulse's
+    # peak scale from 1.18x to 1.3x -- "make the mic bigger and more
+    # visible" applies here too, not just to st.audio_input() itself below.
     st.markdown(
-        '<div style="text-align:center; margin-bottom:2px;">'
-        '<span style="display:inline-block; font-size:1.4rem; '
+        '<div style="text-align:center; margin-bottom:4px;">'
+        '<span style="display:inline-block; font-size:2.6rem; '
         'animation: r30-idle-pulse 2.2s ease-in-out infinite;">🎙️</span></div>'
         '<style>@keyframes r30-idle-pulse '
-        '{0%{opacity:0.55; transform:scale(1);} 50%{opacity:1; transform:scale(1.18);} '
+        '{0%{opacity:0.55; transform:scale(1);} 50%{opacity:1; transform:scale(1.3);} '
         '100%{opacity:0.55; transform:scale(1);}}</style>',
         unsafe_allow_html=True,
     )
@@ -327,19 +539,35 @@ else:
         help="Tap once to start speaking, tap again to end and transcribe.",
     )
 
+# HIGH-1 (Team Waypoint Voice-First UI review): when the "✏️ Edit" button on
+# the voice-heard confirmation banner (below) is tapped, it stashes the
+# heard text here and reruns — consumed HERE, right before the keyed
+# text_input is created, since a widget's session_state value can only be
+# set before that widget renders in this same script run, not after.
+# User report (2026-08-12): also bumps text_input_version so the widget
+# below gets a genuinely NEW key -- forces a fresh component instance
+# rather than relying on the browser re-syncing an existing one with the
+# same key to its new server-provided value, the same fragility class
+# already documented for st.audio_input() (mic_key_version).
+if st.session_state.get("voice_edit_prefill"):
+    st.session_state.text_input_version += 1
+    st.session_state[f"main_text_input_{st.session_state.text_input_version}"] = st.session_state.pop("voice_edit_prefill")
+
+_text_input_key = f"main_text_input_{st.session_state.text_input_version}"
+
 with st.form("message_form", clear_on_submit=True):
     if not agent.itinerary:
         text_cols = st.columns([5, 1])
         user_text = text_cols[0].text_input(
             "Type your trip", placeholder="Plan a 2-day trip to Delhi, I like food and history...",
-            label_visibility="collapsed",
+            label_visibility="collapsed", key=_text_input_key,
         )
         send_clicked = text_cols[1].form_submit_button("Send", use_container_width=True)
     else:
         text_cols = st.columns([5, 1])
         user_text = text_cols[0].text_input(
             "Ask or edit", placeholder="Ask or edit your itinerary — \"make day 1 more relaxed\", \"what if it rains?\"",
-            label_visibility="collapsed",
+            label_visibility="collapsed", key=_text_input_key,
         )
         send_clicked = text_cols[1].form_submit_button("Send", use_container_width=True)
 
@@ -406,8 +634,28 @@ def _play_reply_audio(text: str) -> None:
 def _send(text: str) -> None:
     had_itinerary_before = bool(agent.itinerary)
     st.session_state.transcript.append(("You", text))
-    with st.spinner(THINKING_MESSAGE):
-        reply, _ = agent.process_turn(text)
+    if not had_itinerary_before:
+        # Component audit Tier 5: a build genuinely does these steps in
+        # order (agent.py's _build_itinerary(): poi_search_logic ->
+        # itinerary_builder_logic -> feasibility eval -> weather/safety/
+        # transit enrichment -> the narrator). st.status() can't observe
+        # REAL completion of each one without deeper callback plumbing into
+        # agent.py (process_turn() is one opaque blocking call from here) --
+        # so these render up front as "what a build involves," not a
+        # live-synchronized tracker. Still an honest, real upgrade over one
+        # flat spinner sentence for the whole ~30s wait: a real checkmark on
+        # completion, and it only claims steps a build actually performs —
+        # never shown for a plain edit/question turn, which doesn't do any
+        # of them.
+        with st.status(THINKING_MESSAGE, expanded=True) as status:
+            st.write("🔎 Searching real places that match your interests")
+            st.write("🧭 Checking feasibility and travel times")
+            st.write("📝 Writing your trip overview")
+            reply, _ = agent.process_turn(text)
+            status.update(label="Your itinerary is ready!", state="complete", expanded=False)
+    else:
+        with st.spinner("Thinking..."):
+            reply, _ = agent.process_turn(text)
     st.session_state.transcript.append(("Agent", reply))
     if voice_output:
         # Round 3 QA (UX3-2, "Team-Waypoint-QA-Round3-and-UXUI-Benchmark.md"):
@@ -427,6 +675,18 @@ def _send(text: str) -> None:
         # in this codebase (R-27, the Listening Indicator round).
         st.session_state.pending_audio_text = reply
     if agent.itinerary and not had_itinerary_before:
+        # Component audit Tier 7: a one-time celebration for the moment the
+        # trip actually comes together — st.balloons() is a real, built-in
+        # Streamlit primitive designed for exactly this, unused anywhere in
+        # the app until now. Gated on celebrated_first_build so it fires
+        # once per trip, not on every subsequent edit (which would get old
+        # fast — same restraint already applied to the post-edit nudges).
+        # Called before st.rerun(): the balloons event is flushed as part of
+        # THIS script run's output before the rerun begins, so it isn't
+        # lost the way UI elements would be.
+        if not st.session_state.get("celebrated_first_build"):
+            st.session_state.celebrated_first_build = True
+            st.balloons()
         # R-27: the itinerary-hero column layout is decided once, near the
         # top of the script, before this function (called from a button
         # handler further down) runs in that same execution — so a build
@@ -461,9 +721,36 @@ if mic_audio is not None:
         heard, error = try_transcribe_wav_bytes(_audio_bytes)
         if error:
             listening_slot.warning(error)
+        elif heard:
+            # HIGH-1 (Team Waypoint Voice-First UI review): don't act on a
+            # transcription immediately — surface it for a one-tap
+            # confirm/edit/discard first, so a misheard word ("Nice" for
+            # "Nikko," the docx's own example) never silently executes.
+            # Rendered below, into `listening_slot` again, so it still
+            # appears right under the mic — the placeholder pattern this
+            # file already relies on works from anywhere later in the
+            # script, not just where it's declared.
+            st.session_state.pending_voice_text = heard
+            st.rerun()
         else:
             listening_slot.empty()
-            _send(heard)
+
+if st.session_state.get("pending_voice_text"):
+    with listening_slot.container():
+        st.markdown(f'🎙️ **Heard:** "{st.session_state.pending_voice_text}"')
+        vcol1, vcol2, vcol3 = st.columns([1.6, 1, 1])
+        if vcol1.button("✅ Send", type="primary", use_container_width=True, key="voice_confirm_send"):
+            heard_text = st.session_state.pending_voice_text
+            st.session_state.pending_voice_text = None
+            _send(heard_text)
+            st.rerun()
+        if vcol2.button("✏️ Edit", use_container_width=True, key="voice_confirm_edit"):
+            st.session_state.voice_edit_prefill = st.session_state.pending_voice_text
+            st.session_state.pending_voice_text = None
+            st.rerun()
+        if vcol3.button("✕ Discard", use_container_width=True, key="voice_confirm_discard"):
+            st.session_state.pending_voice_text = None
+            st.rerun()
 
 # --------------------------------------------------------------------------- #
 # Itinerary Panel
@@ -485,9 +772,19 @@ with col_itinerary:
         not agent.itinerary and agent.state == State.CONFIRM and st.session_state.transcript
         and st.session_state.transcript[-1][0] == "Agent"
     )
-    if pending_confirm:
-        last_text = st.session_state.transcript[-1][1]
-        st.info(f"🧭 **{last_text}**")
+
+    # Component audit Tier 1: a real modal instead of an inline banner —
+    # every benchmark app (Wanderlog, TripIt, Airbnb) handles an "are you
+    # sure?" moment as a focused overlay, not a banner competing with
+    # everything else on the page for attention. Calling the decorated
+    # function each rerun while `pending_confirm` stays True is the
+    # documented Streamlit pattern for keeping a dialog open across reruns —
+    # it only actually "reopens" (visually) the first time; once the state
+    # that gates it flips False (here, via _send() advancing agent.state),
+    # the next rerun simply doesn't call it again and it closes.
+    @st.dialog("🧭 Confirm your trip")
+    def _confirm_dialog(last_text: str) -> None:
+        st.write(last_text)
         confirm_cols = st.columns(2)
         if confirm_cols[0].button("✅ Yes, build it", use_container_width=True, type="primary", key="confirm_yes"):
             _send("Yes")
@@ -495,6 +792,9 @@ with col_itinerary:
         if confirm_cols[1].button("✏️ No, let me change something", use_container_width=True, key="confirm_no"):
             _send("No")
             st.rerun()
+
+    if pending_confirm:
+        _confirm_dialog(st.session_state.transcript[-1][1])
     if agent.itinerary:
         day_keys = sorted(
             (k for k in agent.itinerary if k.startswith("day_")),
@@ -518,14 +818,69 @@ with col_itinerary:
         # R-24/UX-21: the app's real differentiator (grounded, real data) as
         # a visible trust marker — previously the only signal was a small
         # attribution line in the page footer.
-        st.badge("Real data — OpenStreetMap + Wikidata + Wikivoyage", icon="✅", color="green")
+        # Component audit Tier 6: a help tooltip explaining what "grounded"
+        # actually means, right where the eye lands on the badge itself —
+        # previously that explanation only lived in the onboarding text and
+        # the page footer, never here.
+        st.badge(
+            "Real data — OpenStreetMap + Wikidata + Wikivoyage", icon="✅", color="green",
+            help="Every stop, distance, and opening hour shown below is sourced from these three "
+                 "real datasets — never invented or guessed.",
+        )
+
+        # HIGH-3 (Team Waypoint Voice-First UI review): a strong,
+        # always-available undo — previously the only recovery from an edit
+        # you regret was issuing another edit command to manually
+        # reconstruct the prior state. Only rendered once there's actually
+        # something to undo.
+        # Component audit Tier 6: shows how many steps of history are
+        # actually available, not just that undo exists — so the depth of
+        # the safety net is visible, not just its presence.
+        if agent.itinerary_history:
+            n_undo = len(agent.itinerary_history)
+            undo_label = f"↩️ Undo last change ({n_undo} available)"
+            if st.button(undo_label, key="undo_last_change"):
+                if agent.undo_last_edit():
+                    st.toast("↩️ Last change undone")  # Tier 5: transient confirmation, not a persistent banner
+                    st.rerun()
+
+        # HIGH-2 (Team Waypoint Voice-First UI review): when a swap names an
+        # existing stop that matches 2+ real candidates ("swap the temple"
+        # with two temples on the trip), edit_engine.py now surfaces them
+        # instead of guessing or silently declining — shown here as
+        # tappable cards (docx: "show three tappable cards instead of
+        # reading options aloud one by one"), resolved instantly with no
+        # LLM roundtrip. A spoken/typed ordinal reply ("the first one")
+        # works too — see agent.py's _parse_ordinal_choice.
+        # Component audit Tier 1: same reasoning as the build-confirm dialog
+        # above — a real modal focuses attention on the choice instead of
+        # competing with the rest of the itinerary panel for it.
+        @st.dialog("🔀 Which one did you mean?")
+        def _choice_dialog(candidates: list[dict]) -> None:
+            st.write(f"I found {len(candidates)} stops matching that — which one did you mean?")
+            choice_cols = st.columns(len(candidates))
+            for i, (choice_col, cand) in enumerate(zip(choice_cols, candidates)):
+                with choice_col:
+                    with st.container(border=True):
+                        st.markdown(f"**{format_display_name(cand['name'])}**")
+                        day_num = cand["day_key"].split("_")[1]
+                        st.caption(f"{cand['category']} · Day {day_num} {cand['slot']}")
+                        if st.button("Choose this", key=f"choice_{i}", use_container_width=True):
+                            choice_reply, _ = agent.resolve_pending_choice(i)
+                            st.session_state.transcript.append(("You", f"(chose: {format_display_name(cand['name'])})"))
+                            st.session_state.transcript.append(("Agent", choice_reply))
+                            st.toast(f"✅ {format_display_name(cand['name'])} selected")  # Tier 5
+                            st.rerun()
+
+        if agent.pending_choice:
+            _choice_dialog(agent.pending_choice["candidates"])
 
         # UX-12/R-14: persistent, always-visible reminder that editing/explain
         # is possible mid-conversation — previously only mentioned once the
         # user already said goodbye (agent.py's DONE-state reply).
         st.caption(
-            "💬 Want changes? Try \"make day 1 more relaxed\" or ask "
-            "\"is the metro safe at night?\" — just type it in below."
+            "💬 Want changes? Just type or say it — \"swap the museum for a market,\" "
+            "\"is the metro safe at night?\", or anything else about your trip."
         )
         # UX-14/R-16: honest note on light/evening-open days instead of
         # letting the narrator's generic "explore the streets" filler paper
@@ -534,14 +889,47 @@ with col_itinerary:
         for note in check_day_balance(agent.itinerary, agent.ctx.pace or "moderate")["notes"]:
             balance_notes_by_day.setdefault(note["day"], []).append(note["note"])
 
-        tabs = st.tabs([f"Day {k.split('_')[1]}" for k in day_keys])
+        # Component audit Tier 6: a stop count in each tab's own label
+        # ("Day 1 (5)") — Streamlit tab labels are plain text with no rich
+        # HTML slot inside them, so this is the one real information-density
+        # lever available in the app's primary navigational element.
+        day_stop_counts = {
+            k: sum(len(agent.itinerary[k].get(slot, [])) for slot in ("morning", "afternoon", "evening"))
+            for k in day_keys
+        }
+        tabs = st.tabs([f"Day {k.split('_')[1]} ({day_stop_counts[k]})" for k in day_keys])
         for tab, key in zip(tabs, day_keys):
             with tab:
                 day = agent.itinerary[key]
                 day_num = int(key.split("_")[1])
                 st.caption(f"Total scheduled time: {day.get('total_hours', 0)}h")
+                # MEDIUM-3 (Team Waypoint Voice-First UI review): "surface
+                # contextual example prompts that change based on where the
+                # person is ('Try: make day 2 more relaxed' while viewing
+                # day 2)." Streamlit's st.tabs() renders every tab's content
+                # in the same script run (the browser just shows/hides them),
+                # so there's no server-side "which tab is active" signal to
+                # key off of — but writing the Day-N-specific line INSIDE
+                # this tab's own block still achieves exactly what the user
+                # sees: whichever tab is open shows its own matching example.
+                st.caption(f"💬 Try: \"make Day {day_num} more relaxed\" or \"swap a Day {day_num} stop for something else\"")
                 for note in balance_notes_by_day.get(day_num, []):
                     st.caption(f"🕓 {note}")
+
+                # Component audit Tier 3: the day's real stop photos as a
+                # scroll-snap carousel, reusing the exact same cache R-22
+                # already populates per stop card (no new fetch, no new
+                # data). Capped at 8 images to keep the base64-inlined
+                # payload bounded even on a long, photo-rich day.
+                day_photo_uris = [
+                    _carousel_thumbnail_data_uri(get_cached_image_path(s.get("image")))
+                    for slot_ in ("morning", "afternoon", "evening")
+                    for s in day.get(slot_, [])
+                ]
+                day_photo_uris = [u for u in day_photo_uris if u][:8]
+                if day_photo_uris:
+                    imgs_html = "".join(f'<img src="{uri}" class="wp-carousel-img">' for uri in day_photo_uris)
+                    st.markdown(f'<div class="wp-carousel">{imgs_html}</div>', unsafe_allow_html=True)
 
                 SLOT_MARKER_COLOR = {
                     "morning": [255, 140, 0],     # orange
@@ -613,6 +1001,7 @@ with col_itinerary:
                                 down_disabled = stop_idx == len(stops) - 1 and slot_key == "evening"
                                 if st.button("↑", key=f"up_{key}_{slot_key}_{stop_idx}",
                                              disabled=up_disabled, help="Move earlier", use_container_width=True):
+                                    agent.push_itinerary_snapshot()  # HIGH-3: undoable like any other edit
                                     _move_stop(agent.itinerary, key, slot_key, stop_idx, -1)
                                     # User report (2026-07-25): moving a stop
                                     # up/down didn't mark the "Full Itinerary"
@@ -628,6 +1017,7 @@ with col_itinerary:
                                     st.rerun()
                                 if st.button("↓", key=f"down_{key}_{slot_key}_{stop_idx}",
                                              disabled=down_disabled, help="Move later", use_container_width=True):
+                                    agent.push_itinerary_snapshot()  # HIGH-3: undoable like any other edit
                                     _move_stop(agent.itinerary, key, slot_key, stop_idx, 1)
                                     agent.narrative_stale = True
                                     st.rerun()
@@ -636,11 +1026,37 @@ with col_itinerary:
                                 # R-25 (fixes UX-22): a real clock time, not
                                 # just a duration — turns the stop list into
                                 # an actual timeline.
+                                # Theme proposal (2026-08-12): the name and
+                                # time render via the .wp-stop-name /
+                                # .wp-time-chip spans (Fraunces display face
+                                # + a JetBrains Mono pill, matching the
+                                # theme mockup's sample card) instead of
+                                # plain markdown bold + backtick-code — the
+                                # one stop-card element this round's
+                                # implementation targets directly rather
+                                # than only via a broad heading/code rule.
+                                # html.escape() guards against a stop name
+                                # containing HTML-special characters (OSM
+                                # data, not sanitized for markup) now that
+                                # this goes through unsafe_allow_html.
+                                escaped_name = html.escape(stop["name"])
                                 arrival = stop.get("arrival_time")
-                                title_line = f"**{stop['name']}**{gem_badge}"
+                                title_line = f"<span class='wp-stop-name'>{escaped_name}</span>{gem_badge}"
                                 if arrival:
-                                    title_line += f"  `{arrival}`"
-                                st.markdown(title_line)
+                                    title_line += f" <span class='wp-time-chip'>{arrival}</span>"
+                                # MEDIUM-2 (Team Waypoint Voice-First UI
+                                # review): "inline highlights on whatever
+                                # just changed so the eye is drawn to the
+                                # edit" — a swap/add changes WHICH stop is
+                                # here, not just its position, so a chat
+                                # confirmation alone is easy to miss if the
+                                # user's eyes are on the itinerary itself.
+                                # agent.last_changed_stops is cleared at the
+                                # start of every new turn, so this only ever
+                                # reflects the edit that JUST landed.
+                                if (key, slot_key, stop_idx) in agent.last_changed_stops:
+                                    title_line += "  :green[✨ Updated]"
+                                st.markdown(title_line, unsafe_allow_html=True)
 
                                 travel = stop.get("travel_time_from_prev_min", 0)
                                 mode = stop.get("travel_mode_from_prev")
@@ -697,20 +1113,37 @@ with col_itinerary:
                 # expander below the day's actual stops — previously this was
                 # the first full-contrast text a user read about their day,
                 # ahead of the attractions themselves.
+                # Component audit Tier 7: a bounded, real slice of the
+                # icon-font hybrid — these three lines are pure functional
+                # chrome (not expressive content), so a re-tintable,
+                # cross-platform-consistent Material Symbols glyph reads
+                # better here than an emoji whose exact rendering (and
+                # color, unrelated to the brand accent) varies by OS.
+                # html.escape() guards the real place names now that this
+                # goes through unsafe_allow_html.
                 emergency_bits = []
                 if day.get("nearest_hospital"):
                     h = day["nearest_hospital"]
-                    emergency_bits.append(f"🏥 Nearest hospital: {format_display_name(h['name'])} ({h['distance_km']} km)")
+                    emergency_bits.append(
+                        f"<span class='wp-icon'>local_hospital</span> Nearest hospital: "
+                        f"{html.escape(format_display_name(h['name']))} ({h['distance_km']} km)"
+                    )
                 if day.get("nearest_pharmacy"):
                     p = day["nearest_pharmacy"]
-                    emergency_bits.append(f"💊 Nearest pharmacy: {format_display_name(p['name'])} ({p['distance_km']} km)")
+                    emergency_bits.append(
+                        f"<span class='wp-icon'>medication</span> Nearest pharmacy: "
+                        f"{html.escape(format_display_name(p['name']))} ({p['distance_km']} km)"
+                    )
                 if day.get("nearest_metro_station"):
                     m = day["nearest_metro_station"]
-                    emergency_bits.append(f"🚇 Nearest metro: {format_display_name(m['name'])} ({m['distance_km']} km)")
+                    emergency_bits.append(
+                        f"<span class='wp-icon'>directions_subway</span> Nearest metro: "
+                        f"{html.escape(format_display_name(m['name']))} ({m['distance_km']} km)"
+                    )
                 if emergency_bits:
                     with st.expander("🚑 Safety & logistics"):
                         for bit in emergency_bits:
-                            st.markdown(bit)
+                            st.markdown(bit, unsafe_allow_html=True)
 
                 if all_stops:
                     numbered = [
@@ -942,20 +1375,44 @@ with col_itinerary:
         # into it, not a parallel system.
         with st.expander("🎛️ Or build your request with quick options"):
             qc1, qc2 = st.columns(2)
-            quick_days = qc1.number_input("Days", min_value=1, max_value=4, value=2, step=1)
-            quick_pace = qc2.selectbox("Pace", ["relaxed", "moderate", "intensive"], index=1)
+            # Component audit Tier 4: Days is a small bounded range (1-4) --
+            # a slider gives larger touch targets and shows the whole range
+            # at a glance, more tactile than a number-entry stepper.
+            quick_days = qc1.slider("Days", min_value=1, max_value=4, value=2)
+            # Component audit Tier 4: three mutually-exclusive options are
+            # exactly the case a dropdown handicaps -- every option should
+            # be visible without a click, the way Kayak renders cabin class.
+            quick_pace = qc2.radio("Pace", ["relaxed", "moderate", "intensive"], index=1, horizontal=True)
             quick_interests = st.multiselect(
                 "Interests",
                 ["food", "history", "culture", "architecture", "shopping", "nature", "religion", "art", "family"],
                 default=["food", "history"],
             )
-            quick_group = st.number_input("Group size", min_value=1, max_value=10, value=1, step=1)
+            quick_group = st.slider("Group size", min_value=1, max_value=10, value=1)
+            # Component audit Tier 2: the single most conspicuous absence
+            # against every mainstream travel app (Kayak, Expedia, Airbnb,
+            # Google Travel, TripIt, Wanderlog all lead with a date picker).
+            # Composes into the same free-text sentence the agent already
+            # parses via TripContext.travel_dates -- no new backend date
+            # logic needed. Left genuinely optional (empty by default): the
+            # itinerary builder doesn't require specific calendar dates, only
+            # the weather lookup benefits from a real one (_resolve_travel_dates
+            # already falls back to "starting tomorrow" when none is given).
+            quick_dates = st.date_input(
+                "Travel dates (optional)", value=(), min_value=date.today(),
+                help="Only used for the weather heads-up — leave blank if you're not sure yet.",
+            )
             if st.button("Build this trip", use_container_width=True):
                 interests_text = ", ".join(quick_interests) if quick_interests else "a mix of culture and food"
                 group_text = "solo" if quick_group == 1 else f"a group of {quick_group}"
+                dates_text = ""
+                if isinstance(quick_dates, (tuple, list)) and len(quick_dates) == 2:
+                    dates_text = f", traveling {quick_dates[0].isoformat()} to {quick_dates[1].isoformat()}"
+                elif isinstance(quick_dates, date):
+                    dates_text = f", traveling around {quick_dates.isoformat()}"
                 composed = (
                     f"Plan a {quick_days}-day trip to Delhi, I like {interests_text}, "
-                    f"{quick_pace} pace, {group_text}."
+                    f"{quick_pace} pace, {group_text}{dates_text}."
                 )
                 _send(composed)
                 st.rerun()
