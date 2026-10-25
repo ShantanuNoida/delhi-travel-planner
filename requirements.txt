@@ -38,7 +38,16 @@ tqdm>=4.65.0
 # needed on a remote host. pypdf is test-only (phase6/test_phase6.py reads
 # the generated PDF back to assert on its content) but is small enough to
 # just keep in the one shared requirements file rather than add a second.
-streamlit>=1.35.0
+#
+# UI/UX review (2026-10-24): was >=1.35.0, a floor that predates every
+# feature the app now actually uses (st.chat_input(accept_audio=...),
+# st.segmented_control, st.pills, st.popover, st.fragment, st.html,
+# container(horizontal=...), pydeck_chart(on_select=...), the config.toml
+# theme keys this review's theming migration relies on). Pinned exactly to
+# the version this app is built and tested against, per the review's own
+# recommendation, instead of an open-ended floor that can't guarantee any
+# of those are present.
+streamlit==1.57.0
 reportlab>=4.0.0
 pypdf>=4.0.0
 pandas>=2.0.0

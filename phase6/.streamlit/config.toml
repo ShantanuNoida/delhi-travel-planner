@@ -20,3 +20,34 @@ toolbarMode = "minimal"
 # follows the viewer's own system preference as before -- only the accent
 # color is opinionated, not the whole palette.
 primaryColor = "#C2540C"
+
+# UI/UX review (2026-10-24), theming migration: fonts, pill-shaped buttons
+# and the light/dark accent now live here instead of injected CSS, so they
+# survive Streamlit upgrades and the dark-mode variants are handled by
+# Streamlit itself rather than a hand-rolled `@media` query. The app's own
+# bespoke --wp-* tokens (badge pills, secondary-accent, card borders) still
+# need a short CSS block in app.py -- native theme keys don't model those --
+# but fonts/radius/accent no longer have to.
+font = "Plus Jakarta Sans:https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+headingFont = "Fraunces:https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap"
+# Positional per heading level (h1, h2, h3, ...), not "load these weights" --
+# only h1 needs 800 (the gradient-clipped brand title); h2-h6 default to 600
+# already, which is the one weight actually loaded for those. This was the
+# UI/UX review's "faux-bold title" bug: h1 asked for 800 via raw CSS while
+# only weight 600 was imported, so the browser synthesized a smeared bold.
+headingFontWeights = [800]
+codeFont = "JetBrains Mono:https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap"
+# "full" makes every button pill-shaped -- replaces the hand-rolled
+# `border-radius: 999px !important` rule that used to target
+# stBaseButton-primary/secondary (and their FormSubmit variants) directly.
+buttonRadius = "full"
+baseRadius = "medium"
+
+[theme.light]
+primaryColor = "#C2540C"
+
+[theme.dark]
+# Same accent values the old `@media (prefers-color-scheme: dark)` CSS block
+# used for --wp-accent -- now native, so Streamlit's own widgets (sliders,
+# toggles, tabs) pick it up too, not just the custom-styled elements.
+primaryColor = "#E0863F"

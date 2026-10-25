@@ -21,6 +21,17 @@ def is_valid_email(email: str) -> bool:
     return bool(EMAIL_RE.match((email or "").strip()))
 
 
+def build_pdf_bytes(itinerary: dict, ctx: dict, citations: list[dict] | None = None, narrative: str | None = None) -> bytes:
+    """
+    UI/UX review (2026-10-24), quick win #4: the download button used to be
+    gated behind a successful (or attempted) email send via deliver_itinerary,
+    which always required a valid email address first. This builds the exact
+    same PDF bytes with no email step at all, so a direct download button can
+    offer the file immediately.
+    """
+    return build_itinerary_pdf(itinerary, ctx, citations, narrative).getvalue()
+
+
 def deliver_itinerary(
     itinerary: dict,
     ctx: dict,
