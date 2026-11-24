@@ -64,33 +64,53 @@ CATEGORY_ICON = {
     "restaurant": "🍽️",
 }
 
-# UI/UX review (2026-10-24), quick win #7: both map palettes used five
-# unrelated, un-branded hues (web-primary blue/purple/crimson for days,
-# separate orange/blue/purple for time-of-day) with no connection to the
-# app's own terracotta/indigo brand colors. These two now lead with the
-# real brand accents (terracotta, indigo) instead of generic web colors,
-# while staying genuinely distinguishable from each other — the two
-# palettes are kept SEPARATE (one slot-based, one day-based; same
-# reasoning as before: collapsing them into a single palette would make
-# two different semantics harder to tell apart at a glance).
+# Travel-planner color identity pass (2026-11-24, T1): groups the categories
+# above into 3 travel-semantic families, reusing DESIGN.md's existing
+# tokens. Deliberately CARD-ONLY (never the map) -- the map's marker colors
+# already carry two other meanings (time-of-day, day-index), and a third
+# meaning on the same 3 hues there would be unreadable.
+CATEGORY_COLOR = {
+    "monument": "#1B2A4A", "museum": "#1B2A4A", "temple": "#1B2A4A",
+    "mosque": "#1B2A4A", "church": "#1B2A4A", "gurdwara": "#1B2A4A",
+    "park": "#0E7C86",
+    "market": "#E3A423", "restaurant": "#E3A423",
+}
+CATEGORY_COLOR_FALLBACK = "#8B8578"
+
+
+def _hex_to_rgba(hex_color: str, alpha: float) -> str:
+    h = hex_color.lstrip("#")
+    r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+    return f"rgba({r},{g},{b},{alpha})"
+
+# Design-alignment pass (2026-11-24, DESIGN.md M7): remapped from the old
+# terracotta/indigo/blue/brick-red set to DESIGN.md §2's palette. Vermilion
+# (#C1442D) is deliberately EXCLUDED from both maps -- DESIGN.md §2/§7
+# reserves it for hard-fail feasibility only, "never decorative"; the old
+# brick-red Day 5 and red slot fallback read as alerts and are replaced with
+# a warm, non-alert tone instead. The two palettes stay SEPARATE (one
+# slot-based, one day-based; collapsing them into one would make the two
+# different semantics harder to tell apart at a glance).
 SLOT_MARKER_COLOR = {
-    "morning": [194, 84, 12],    # terracotta (brand accent)
-    "afternoon": [51, 47, 92],   # indigo (brand secondary accent)
-    "evening": [28, 124, 110],   # teal
+    "morning": [227, 164, 35],   # Turmeric Gold
+    "afternoon": [27, 42, 74],   # Indigo Night
+    "evening": [14, 124, 134],   # Peacock Teal
 }
 DAY_COLORS = [
-    [194, 84, 12],   # terracotta (brand accent) -- Day 1
-    [51, 47, 92],    # indigo (brand secondary accent) -- Day 2
-    [28, 124, 110],  # teal -- Day 3
-    [37, 99, 160],   # blue -- Day 4
-    [178, 58, 42],   # brick red -- Day 5
+    [14, 124, 134],   # Peacock Teal -- Day 1
+    [227, 164, 35],   # Turmeric Gold -- Day 2
+    [27, 42, 74],     # Indigo Night -- Day 3
+    [139, 133, 120],  # Granite Grey -- Day 4
+    [178, 127, 51],   # warm ochre (khadi/cotton family, not alert-red) -- Day 5
 ]
 # UI/UX review (2026-10-24): the legend text (st.markdown's :color[] syntax)
 # now maps to the SAME index as the RGB actually drawn above, each name
 # chosen as the closest built-in Streamlit color keyword to that RGB --
 # no more separate, independently hand-picked label-vs-color mapping that
-# could silently drift apart.
-DAY_COLOR_NAMES = ["orange", "violet", "green", "blue", "red"]
+# could silently drift apart. Streamlit's markdown color syntax only
+# supports {red, orange, yellow, green, blue, violet, gray/grey, primary} --
+# "red" is intentionally never used here (reserved for hard-fail/Vermilion).
+DAY_COLOR_NAMES = ["green", "yellow", "violet", "gray", "orange"]
 
 
 # Component audit Tier 3: measured the ACTUAL cached files before shipping
@@ -152,12 +172,21 @@ HERO_IMAGE_URL = "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%
 # (defined in the :root CSS block above).
 _TRANSCRIBING_BANNER = """
 <div style="border:2px solid var(--wp-accent); background:var(--wp-chip-bg);
-     border-radius:12px; padding:10px 16px; margin:4px 0 12px;
+     border-radius:999px; padding:10px 16px; margin:4px 0 12px;
      display:flex; align-items:center; gap:12px; justify-content:center;">
-  <span style="font-size:1.3rem; display:inline-block; animation:lsn-fade 0.9s ease-in-out infinite;">✍️</span>
+  <span class="wp-lsn-fade" style="font-size:1.3rem; display:inline-block;">✍️</span>
   <span style="font-weight:700; color:var(--wp-accent); font-size:1.05rem;">Transcribing what you said…</span>
 </div>
-<style>@keyframes lsn-fade {0%{opacity:0.4;} 50%{opacity:1;} 100%{opacity:0.4;}}</style>
+<style>
+@keyframes lsn-fade {0%{opacity:0.4;} 50%{opacity:1;} 100%{opacity:0.4;}}
+.wp-lsn-fade { animation: lsn-fade 0.9s ease-in-out infinite; }
+/* Design-alignment pass (2026-11-24, DESIGN.md L1/L4): transient status
+   pill shape (DESIGN.md §4) + honor prefers-reduced-motion for the one
+   looping animation on the page. */
+@media (prefers-reduced-motion: reduce) {
+    .wp-lsn-fade { animation: none; opacity: 1; }
+}
+</style>
 """
 
 # MEDIUM-4 (Team Waypoint Voice-First UI review): move_stop()/
@@ -217,33 +246,87 @@ st.html(
    the clearer read. */
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=swap');
 
+/* Design-alignment pass (2026-11-24, DESIGN.md H2/H3): Peacock Teal primary
+   + Turmeric Gold secondary replace the earlier terracotta/indigo pair, per
+   DESIGN.md §2's color tokens. */
 :root {
-    --wp-accent: #C2540C;
-    --wp-accent-deep: #7A3608;
-    --wp-secondary: #332F5C;
-    --wp-secondary-deep: #211E3D;
-    --wp-secondary-soft: rgba(51,47,92,0.10);
-    --wp-surface: #FFFFFF;
-    --wp-ink-soft: #746353;
-    --wp-border: #E7DCCB;
+    --wp-accent: #0E7C86;
+    --wp-accent-deep: #0A5A62;
+    --wp-secondary: #E3A423;
+    --wp-secondary-deep: #B07E12;
+    --wp-secondary-soft: rgba(227,164,35,0.12);
+    /* Design-alignment pass (2026-11-24, DESIGN.md M2/M3): surfaces/borders/
+       muted text move from a neutral white/off-white family to DESIGN.md
+       §2's warm (light) / Indigo Night (dark) surface and Granite Grey
+       structure color. */
+    --wp-surface: #F5F0E2;
+    --wp-ink-soft: #8B8578;
+    --wp-border: #8B8578;
+    /* Design-alignment pass (2026-11-24, DESIGN.md M5): error/warning chrome
+       tints for the native st.error/st.warning alerts below -- Vermilion is
+       reserved for hard-fail only (DESIGN.md §2/§7), never decorative. */
+    --wp-error: #C1442D;
+    --wp-error-soft: rgba(193,68,45,0.10);
+    /* Design-alignment pass (2026-11-24, DESIGN.md L2): h1's gradient second
+       stop -- Indigo Night instead of the darker-accent-only sweep, for a
+       richer two-color brand gradient per DESIGN.md §2. Only used in light
+       mode: on a dark page, clipping text to a dark-on-dark gradient would
+       lose legibility, so dark mode keeps the existing lightened-teal stop. */
+    --wp-h1-gradient-end: #1B2A4A;
     /* UI/UX review (2026-10-24): fact-chip background -- was a hard-coded
        rgba() literal inline on each badge, same value in light and dark, so
        it never adapted alongside --wp-accent-deep's text color below. */
-    --wp-chip-bg: rgba(194,84,12,.12);
-    --wp-chip-bg-strong: rgba(194,84,12,.28);
+    --wp-chip-bg: rgba(14,124,134,.12);
 }
 @media (prefers-color-scheme: dark) {
     :root {
-        --wp-accent: #E0863F;
-        --wp-accent-deep: #F3B57D;
-        --wp-secondary: #9490C9;
-        --wp-secondary-deep: #C3C0E6;
-        --wp-secondary-soft: rgba(148,144,201,0.18);
-        --wp-surface: #221C17;
-        --wp-ink-soft: #C2AF9C;
-        --wp-border: #392F26;
-        --wp-chip-bg: rgba(224,134,63,.18);
-        --wp-chip-bg-strong: rgba(224,134,63,.32);
+        --wp-accent: #2AA7B0;
+        --wp-accent-deep: #7FD0D6;
+        --wp-secondary: #E3A423;
+        --wp-secondary-deep: #F0C45E;
+        --wp-secondary-soft: rgba(227,164,35,0.18);
+        --wp-surface: #243655;
+        --wp-ink-soft: #A8A394;
+        --wp-border: #5A5445;
+        --wp-error: #E0624A;
+        --wp-error-soft: rgba(224,98,74,0.16);
+        --wp-h1-gradient-end: var(--wp-accent-deep);
+        --wp-chip-bg: rgba(42,167,176,.18);
+    }
+}
+/* User request (2026-11-24): flat Indigo Night read as "just blue," with no
+   particular tie to travel/geography. Replaces the solid dark-mode page
+   background with a deep map-navy -> Indigo Night gradient plus a sparse,
+   fixed-position "night sky" star field -- evokes travel/wanderlust (night
+   flights, stargazing) without competing with the foreground content.
+   Scoped to `.stApp` (verified directly against the installed Streamlit
+   1.57.0 DOM -- it's the one element actually painting the page
+   background; `stAppViewContainer`/`stMain` are both transparent). Stars
+   are a handful of fixed-position radial-gradient dots, not a repeating
+   pattern, so it reads as deliberate rather than noisy; `background-size`
+   keeps them from scaling oddly on resize. */
+@media (prefers-color-scheme: dark) {
+    /* `!important` needed here (unlike most rules in this file): Streamlit's
+       own emotion-generated stylesheet sets `.stApp`'s background-color via
+       an equal-specificity class rule injected later in the DOM, so on a
+       pure specificity/order tie it would otherwise win. Verified directly
+       against the installed 1.57.0 frontend -- without `!important` this
+       rule is silently dropped and the flat color shows through. */
+    .stApp {
+        background-image:
+            radial-gradient(1.5px 1.5px at 12% 18%, rgba(237,231,214,0.55), transparent),
+            radial-gradient(1px 1px at 28% 9%, rgba(237,231,214,0.35), transparent),
+            radial-gradient(2px 2px at 50% 14%, rgba(237,231,214,0.5), transparent),
+            radial-gradient(1px 1px at 68% 6%, rgba(237,231,214,0.3), transparent),
+            radial-gradient(1.5px 1.5px at 83% 20%, rgba(237,231,214,0.45), transparent),
+            radial-gradient(1px 1px at 93% 11%, rgba(237,231,214,0.3), transparent),
+            radial-gradient(1px 1px at 8% 38%, rgba(237,231,214,0.3), transparent),
+            radial-gradient(1.5px 1.5px at 37% 42%, rgba(237,231,214,0.35), transparent),
+            radial-gradient(1px 1px at 72% 36%, rgba(237,231,214,0.3), transparent),
+            radial-gradient(1px 1px at 95% 48%, rgba(237,231,214,0.25), transparent),
+            linear-gradient(180deg, #0B1526 0%, #16243F 45%, #1B2A4A 100%) !important;
+        background-size: 100% 100% !important;
+        background-attachment: fixed !important;
     }
 }
 
@@ -257,7 +340,7 @@ st.html(
 
 h1 {
     letter-spacing: -0.03em;
-    background: linear-gradient(135deg, var(--wp-accent), var(--wp-accent-deep));
+    background: linear-gradient(135deg, var(--wp-accent), var(--wp-h1-gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -297,8 +380,9 @@ h1 {
 
 /* Secondary-button accent: Streamlit's theme has one primary accent, not a
    second one for secondary actions -- this app's two-accent hierarchy
-   (terracotta primary / indigo secondary) has no native key, so it's still
-   set here. Pill shape itself now comes from config.toml's buttonRadius. */
+   (Peacock Teal primary / Turmeric Gold secondary, DESIGN.md §2) has no
+   native key, so it's still set here. Pill shape itself now comes from
+   config.toml's buttonRadius. */
 [data-testid="stBaseButton-secondary"], [data-testid="stBaseButton-secondaryFormSubmit"] {
     border-color: var(--wp-secondary) !important;
     color: var(--wp-secondary) !important;
@@ -306,19 +390,51 @@ h1 {
 [data-testid="stBaseButton-secondary"]:hover, [data-testid="stBaseButton-secondaryFormSubmit"]:hover {
     background-color: var(--wp-secondary-soft) !important;
 }
+/* Design-alignment pass (2026-11-24, DESIGN.md L5): standardized on
+   DESIGN.md §4's single reserved soft-shadow token (Indigo-Night-based) --
+   was an accent-tinted shadow that varied by theme; the app otherwise stays
+   flat-by-default (hairline borders only), so this is kept as the one
+   shadow on the page. */
 [data-testid="stBaseButton-primary"]:hover, [data-testid="stBaseButton-primaryFormSubmit"]:hover {
-    box-shadow: 0 4px 14px -4px var(--wp-accent);
+    box-shadow: 0 4px 16px rgba(27,42,74,0.12);
+}
+
+/* Design-alignment pass (2026-11-24, DESIGN.md M5): recolor native
+   st.error/st.warning chrome toward DESIGN.md §7's severity language
+   (error = Vermilion, warning = Turmeric Gold) instead of Streamlit's stock
+   red/yellow. Selectors verified live against the installed 1.57.0 frontend
+   bundle, same discipline as the mic-button selector above. Only the color
+   changes -- the widgets themselves (st.error/st.warning calls) are
+   untouched. */
+[data-testid="stAlertContainer"]:has([data-testid="stAlertContentError"]) {
+    background-color: var(--wp-error-soft) !important;
+}
+[data-testid="stAlertContentError"] {
+    color: var(--wp-error) !important;
+}
+[data-testid="stAlertContainer"]:has([data-testid="stAlertContentWarning"]) {
+    background-color: var(--wp-secondary-soft) !important;
+}
+[data-testid="stAlertContentWarning"] {
+    color: var(--wp-secondary-deep) !important;
+}
+
+/* Design-alignment pass (2026-11-24, DESIGN.md M8): visible keyboard focus
+   ring on interactive elements, both surfaces. */
+:focus-visible {
+    outline: 2px solid var(--wp-accent);
+    outline-offset: 2px;
 }
 
 /* Stop-name / clock-time treatment -- rendered via the .wp-stop-name /
    .wp-time-chip spans in the Day view's stop cards (below). */
 .wp-stop-name {
-    font-family: 'Fraunces', serif;
+    font-family: 'Baloo 2', sans-serif;
     font-weight: 600;
     font-size: 1.05rem;
 }
 .wp-time-chip {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 0.82rem;
     background: var(--wp-surface);
     border: 1px solid var(--wp-border);
@@ -826,8 +942,20 @@ def _render_day_tab(agent: TravelAgent, key: str, balance_notes_by_day: dict[int
         # achieves exactly what the user sees: whichever tab is open shows
         # its own matching example.
         st.caption(f"💬 Try: \"make Day {day_num} more relaxed\" or \"swap a Day {day_num} stop for something else\"")
+        # Design-alignment pass (2026-11-24, DESIGN.md M4): balance notes are
+        # exactly DESIGN.md §7's never-blocking "warning" severity, whose
+        # prescribed visual is a small Turmeric Gold chip -- was a neutral
+        # grey caption. Styling only; check_day_balance()'s data/text is
+        # unchanged. html.escape() guards the note text the same way the
+        # fact-chip badges below do, since this also goes through st.html.
         for note in balance_notes_by_day.get(day_num, []):
-            st.caption(f"🕓 {note}")
+            st.html(
+                "<div style='display:inline-flex;align-items:center;gap:6px;"
+                "background:var(--wp-secondary-soft);border:1px solid var(--wp-secondary);"
+                "color:var(--wp-secondary-deep);border-radius:999px;"
+                "padding:3px 12px;font-size:0.85rem;margin:2px 0 8px;'>"
+                f"⚠ {html.escape(note)}</div>"
+            )
 
         # Component audit Tier 3: the day's real stop photos as a
         # scroll-snap carousel, reusing the exact same cache R-22 already
@@ -865,6 +993,14 @@ def _render_day_tab(agent: TravelAgent, key: str, balance_notes_by_day: dict[int
                 # this exact card's border via CSS (see the highlight block
                 # at the end of this function).
                 card_key = f"stopcard_{key}_{slot_key}_{stop_idx}"
+                # Travel-planner color identity pass (2026-11-24, T1): a
+                # thin category-colored left border (Indigo=heritage/sacred,
+                # Teal=park, Gold=food/market) -- card-only, see
+                # CATEGORY_COLOR's comment for why this never touches the map.
+                cat_color = CATEGORY_COLOR.get(stop["category"], CATEGORY_COLOR_FALLBACK)
+                st.html(
+                    f"<style>.st-key-{card_key} {{ border-left: 3px solid {cat_color} !important; }}</style>"
+                )
                 with st.container(border=True, key=card_key):
                     img_col, info_col, move_col = st.columns([1, 4, 0.4])
                     with img_col:
@@ -889,9 +1025,17 @@ def _render_day_tab(agent: TravelAgent, key: str, balance_notes_by_day: dict[int
                             # monuments do). A subtle tint of the app's own
                             # brand accent reads as a deliberate, on-brand
                             # placeholder instead of a missing asset.
+                            # Travel-planner color identity pass (2026-11-24,
+                            # T2): was hard-coded to the retired terracotta
+                            # accent (rgba(194,84,12,...)), missed by the
+                            # earlier DESIGN.md migration -- now uses T1's
+                            # category color, so a monument's placeholder is
+                            # indigo, a food stop's is gold, etc.
+                            cat_rgba_strong = _hex_to_rgba(cat_color, 0.20)
+                            cat_rgba_soft = _hex_to_rgba(cat_color, 0.06)
                             st.html(
-                                "<div style='background:linear-gradient(135deg,"
-                                "rgba(194,84,12,0.20),rgba(194,84,12,0.06));"
+                                f"<div style='background:linear-gradient(135deg,"
+                                f"{cat_rgba_strong},{cat_rgba_soft});"
                                 "border-radius:8px;height:90px;display:flex;"
                                 "align-items:center;justify-content:center;"
                                 f"font-size:1.8rem;'>{CATEGORY_ICON.get(stop['category'], '📍')}</div>"
@@ -938,8 +1082,8 @@ def _render_day_tab(agent: TravelAgent, key: str, balance_notes_by_day: dict[int
                         # duration — turns the stop list into an actual
                         # timeline. Theme proposal (2026-08-12): the name
                         # and time render via the .wp-stop-name /
-                        # .wp-time-chip spans (Fraunces display face +
-                        # a JetBrains Mono pill). html.escape() guards
+                        # .wp-time-chip spans (Baloo 2 display face +
+                        # an IBM Plex Mono pill). html.escape() guards
                         # against a stop name containing HTML-special
                         # characters (OSM data, not sanitized for markup)
                         # now that this goes through st.html.
@@ -954,7 +1098,13 @@ def _render_day_tab(agent: TravelAgent, key: str, balance_notes_by_day: dict[int
                         # is cleared at the start of every new turn, so this
                         # only ever reflects the edit that JUST landed.
                         if (key, slot_key, stop_idx) in agent.last_changed_stops:
-                            title_line += "  :green[✨ Updated]"
+                            # Travel-planner color identity pass (2026-11-24,
+                            # T9): DESIGN.md §5 defines the edit affordance as
+                            # Turmeric Gold, not Streamlit's stock green.
+                            # ":orange[]" is the closest built-in markdown
+                            # color keyword to gold (a true #E3A423 would
+                            # need an st.html span instead).
+                            title_line += "  :orange[✨ Updated]"
                         st.markdown(title_line, unsafe_allow_html=True)
 
                         travel = stop.get("travel_time_from_prev_min", 0)
@@ -994,9 +1144,15 @@ def _render_day_tab(agent: TravelAgent, key: str, balance_notes_by_day: dict[int
                             )
                         entry_fee = stop.get("kb_entry_fee")
                         if entry_fee:
+                            # Design-alignment pass (2026-11-24, DESIGN.md
+                            # L3): entry-fee is a "confirm affordance"-style
+                            # fact per DESIGN.md §2, so it uses the Turmeric
+                            # Gold (secondary) family instead of the teal
+                            # accent the hours badge above uses -- the two
+                            # badge kinds now read as visually distinct.
                             badges.append(
-                                "<span style='background:var(--wp-chip-bg-strong);"
-                                "border:1px solid var(--wp-accent);color:var(--wp-accent-deep);"
+                                "<span style='background:var(--wp-secondary-soft);"
+                                "border:1px solid var(--wp-secondary);color:var(--wp-secondary-deep);"
                                 "border-radius:999px;padding:2px 10px;font-size:0.85rem;"
                                 f"display:inline-block;'>🎟️ {entry_fee}</span>"
                             )
@@ -1004,7 +1160,20 @@ def _render_day_tab(agent: TravelAgent, key: str, balance_notes_by_day: dict[int
                             st.html(" ".join(badges))
                         website = stop.get("website")
                         if website:
-                            st.markdown(f"[🌐 Official site]({website})")
+                            # Travel-planner color identity pass (2026-11-24,
+                            # T10): was a default Streamlit markdown link
+                            # (generic link-blue), unrelated to the teal/gold
+                            # badges just above it -- now a matching
+                            # teal-outlined chip, same visual family as the
+                            # hours badge. Still a real <a> (not a button),
+                            # so it stays a genuine clickable link.
+                            st.html(
+                                f"<a href='{html.escape(website)}' target='_blank' "
+                                "rel='noopener noreferrer' style='background:var(--wp-chip-bg);"
+                                "border:1px solid var(--wp-accent);color:var(--wp-accent-deep);"
+                                "border-radius:999px;padding:2px 10px;font-size:0.85rem;"
+                                "display:inline-block;text-decoration:none;'>🌐 Official site</a>"
+                            )
 
         # R-25 (fixes UX-22): safety/logistics moved into a collapsed
         # expander below the day's actual stops — previously this was the
@@ -1054,7 +1223,12 @@ def _render_day_tab(agent: TravelAgent, key: str, balance_notes_by_day: dict[int
                     # honest, immediately-real slice of it.
                     "tooltip_text": f"{s['name']} ({s.get('category', 'stop')})",
                     "num": str(i + 1),
-                    "color": SLOT_MARKER_COLOR.get(s["_slot_key"], [200, 30, 30]),
+                    # Design-alignment pass (2026-11-24, DESIGN.md M7): the
+                    # fallback (an unrecognized slot key) used to be a bright
+                    # red -- reads as an error marker, and Vermilion is
+                    # reserved for hard-fail feasibility only. Granite Grey
+                    # is a neutral "unclassified" fallback instead.
+                    "color": SLOT_MARKER_COLOR.get(s["_slot_key"], [139, 133, 120]),
                 }
                 for i, s in enumerate(all_stops)
             ]
@@ -1072,8 +1246,13 @@ def _render_day_tab(agent: TravelAgent, key: str, balance_notes_by_day: dict[int
                 initial_view_state=view_state,
                 layers=[
                     pdk.Layer(
+                        # Travel-planner color identity pass (2026-11-24,
+                        # T3): Peacock Teal instead of flat grey -- the line
+                        # connecting a day's stops IS the journey, the core
+                        # travel-planner metaphor; grey read as an
+                        # incidental gridline.
                         "PathLayer", data=route_df, get_path="path",
-                        get_color=[120, 120, 120], get_width=3, width_min_pixels=2,
+                        get_color=[14, 124, 134], get_width=3, width_min_pixels=2,
                     ),
                     pdk.Layer(
                         # UI/UX review (2026-10-24), overhaul #2: `id` is
@@ -1106,10 +1285,13 @@ def _render_day_tab(agent: TravelAgent, key: str, balance_notes_by_day: dict[int
                     s = all_stops[sel_indices[0]]
                     selected_card_key = f"stopcard_{key}_{s['_slot_key']}_{s['_stop_idx']}"
             # Text alternative to the map's visual-only info (UX-8/R-10):
-            # marker numbers = visiting order, colors = time of day.
+            # marker numbers = visiting order, colors = time of day. Emoji
+            # dots updated (2026-11-24, DESIGN.md M7) to match the new
+            # SLOT_MARKER_COLOR values -- morning is now Turmeric Gold
+            # (yellow dot), not the old terracotta (orange dot).
             st.caption(
                 "Numbers show visiting order for the day; colors mark time of day "
-                "(🟠 morning · 🟣 afternoon · 🟢 evening). Click a marker to highlight its card."
+                "(🟡 morning · 🟣 afternoon · 🟢 evening). Click a marker to highlight its card."
             )
 
     if selected_card_key:
@@ -1193,8 +1375,11 @@ with col_itinerary:
         # actually means, right where the eye lands on the badge itself —
         # previously that explanation only lived in the onboarding text and
         # the page footer, never here.
+        # Travel-planner color identity pass (2026-11-24, T8): this is the
+        # app's core trust marker -- "primary" ties it to the app's own
+        # Peacock Teal accent instead of Streamlit's unrelated stock green.
         st.badge(
-            "Real data — OpenStreetMap + Wikidata + Wikivoyage", icon="✅", color="green",
+            "Real data — OpenStreetMap + Wikidata + Wikivoyage", icon="✅", color="primary",
             help="Every stop, distance, and opening hour shown below is sourced from these three "
                  "real datasets — never invented or guessed.",
         )
@@ -1345,7 +1530,10 @@ with col_itinerary:
         # R-34/UX-32: the tagline and capability list previously never told a
         # first-time user that speaking is the intended primary mode — every
         # line was framed around typing/chatting. Now leads with the mic.
-        st.markdown("#### 🎤 Tap the mic above and tell me about your trip — real, grounded Delhi itineraries, no guesswork")
+        # Fixed (2026-11-24): "tap the mic above" was stale copy from before
+        # the decorative mic icon above the hero image was removed — the
+        # real mic lives in the chat composer below, not above.
+        st.markdown("#### 🎤 Tell me about your trip — real, grounded Delhi itineraries, no guesswork")
         # UI/UX review (2026-10-24), quick win #6: this attribution caption
         # was one of 4 near-duplicate mentions on the page (sidebar, here,
         # the plan badge, the footer) — dropped in favor of the footer,
@@ -1361,7 +1549,7 @@ with col_itinerary:
             "- Answer questions with real sources — \"is this doable?\", \"what if it rains?\"\n"
             "- Email or download the finished plan as a document"
         )
-        st.caption("🎤 Tap the mic above and say one of these, or type your own trip below:")
+        st.caption("🎤 Say one of these, or type your own trip below:")
         ex_cols = st.columns(len(EXAMPLE_PROMPTS))
         for col, (label, prompt) in zip(ex_cols, EXAMPLE_PROMPTS):
             if col.button(label, key=f"example_{label}", use_container_width=True):
