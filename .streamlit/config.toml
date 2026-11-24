@@ -20,20 +20,27 @@ fileWatcherType = "poll"
 toolbarMode = "minimal"
 
 [theme]
-# Design-alignment pass (2026-11-24, DESIGN.md H1): Peacock Teal replaces the
-# earlier saffron/terracotta accent (R-26) to match DESIGN.md's §2 color
-# tokens. Deliberately does NOT set `base`, so light/dark still follows the
-# viewer's own system preference as before -- only the accent color is
-# opinionated, not the whole palette.
-primaryColor = "#0E7C86"
+# User request (2026-11-24): dark mode only -- light mode removed entirely.
+# `base = "dark"` plus values directly in [theme] (not split across
+# [theme.light]/[theme.dark]) locks the app to a single mode; Streamlit only
+# offers the light/dark switcher in its settings menu when BOTH variants are
+# defined, so removing [theme.light] is what actually removes the toggle,
+# not just a cosmetic default change.
+base = "dark"
+# Lightened Peacock Teal for legibility on the dark surface -- same role the
+# old terracotta tint played for --wp-accent, now native so Streamlit's own
+# widgets (sliders, toggles, tabs) pick it up too, not just custom elements.
+primaryColor = "#2AA7B0"
+# Design-alignment pass (2026-11-24, DESIGN.md M1): Indigo Night page.
+backgroundColor = "#1B2A4A"
+textColor = "#EDE7D6"
+secondaryBackgroundColor = "#243655"
 
 # UI/UX review (2026-10-24), theming migration: fonts, pill-shaped buttons
-# and the light/dark accent now live here instead of injected CSS, so they
-# survive Streamlit upgrades and the dark-mode variants are handled by
-# Streamlit itself rather than a hand-rolled `@media` query. The app's own
-# bespoke --wp-* tokens (badge pills, secondary-accent, card borders) still
-# need a short CSS block in app.py -- native theme keys don't model those --
-# but fonts/radius/accent no longer have to.
+# now live here instead of injected CSS, so they survive Streamlit upgrades.
+# The app's own bespoke --wp-* tokens (badge pills, secondary-accent, card
+# borders) still need a short CSS block in app.py -- native theme keys don't
+# model those -- but fonts/radius/accent no longer have to.
 # Design-alignment pass (2026-11-24, DESIGN.md H4/H5): DESIGN.md §3's type
 # pairing -- Baloo 2 (display), Manrope (body), IBM Plex Mono (utility/data)
 # -- replaces the prior Plus Jakarta Sans/Fraunces/JetBrains Mono trio.
@@ -50,22 +57,3 @@ codeFont = "'IBM Plex Mono':https://fonts.googleapis.com/css2?family=IBM+Plex+Mo
 # not every button. Replaces the earlier "full" (pill-everywhere) setting.
 buttonRadius = "medium"
 baseRadius = "medium"
-
-[theme.light]
-primaryColor = "#0E7C86"
-# Design-alignment pass (2026-11-24, DESIGN.md M1): Handloom White / Charcoal
-# Slate -- neither key was set before, so the app fell back to Streamlit's
-# stock white/near-black regardless of the accent/font work above.
-backgroundColor = "#EDE7D6"
-textColor = "#26241F"
-secondaryBackgroundColor = "#E4DCC9"
-
-[theme.dark]
-# Lightened Peacock Teal for legibility on the dark surface -- same role the
-# old terracotta tint played for --wp-accent, now native so Streamlit's own
-# widgets (sliders, toggles, tabs) pick it up too, not just custom elements.
-primaryColor = "#2AA7B0"
-# Design-alignment pass (2026-11-24, DESIGN.md M1): Indigo Night page.
-backgroundColor = "#1B2A4A"
-textColor = "#EDE7D6"
-secondaryBackgroundColor = "#243655"

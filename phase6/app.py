@@ -238,19 +238,20 @@ st.set_page_config(page_title="Delhi Travel Planner", page_icon="🧭", layout="
 # brand accent (deep indigo) for secondary actions, and pill buttons with a
 # real primary/secondary hierarchy. UI/UX review (2026-10-24) moved what
 # Streamlit's native theme CAN express — fonts, button/base radius, the
-# light/dark accent — into config.toml (both copies, kept in sync by hand;
-# see their header comments), so only what theming genuinely can't do stays
-# here: the --wp-* tokens for bespoke elements (badge pills, secondary
-# accent, card borders, the gradient-clipped h1) that have no native theme
-# key, plus the handful of hand-built components (carousel, sticky map/
-# transcript, enlarged mic, stop-name/time-chip spans). Selectors verified
-# against the actually-installed Streamlit version (1.57.0)'s own compiled
-# frontend bundle rather than guessed: `stBaseButton-{kind}`,
-# `stChatInputMicButton` are real data-testid values it emits, not
-# emotion-cache class names. Light/dark still follows the viewer's OS
-# preference only (`prefers-color-scheme`) for these bespoke tokens, same
-# choice R-26 made for the accent color — config.toml's theme keys above
-# follow the same OS preference independently (no `base` set there either).
+# accent — into config.toml (both copies, kept in sync by hand; see their
+# header comments), so only what theming genuinely can't do stays here: the
+# --wp-* tokens for bespoke elements (badge pills, secondary accent, card
+# borders, the gradient-clipped h1) that have no native theme key, plus the
+# handful of hand-built components (carousel, sticky map/transcript,
+# enlarged mic, stop-name/time-chip spans). Selectors verified against the
+# actually-installed Streamlit version (1.57.0)'s own compiled frontend
+# bundle rather than guessed: `stBaseButton-{kind}`, `stChatInputMicButton`
+# are real data-testid values it emits, not emotion-cache class names.
+# User request (2026-11-24): light mode removed entirely (config.toml now
+# sets `base = "dark"` with no `[theme.light]`) -- the --wp-* tokens below
+# used to be split between a light-mode `:root` default and a
+# `@media (prefers-color-scheme: dark)` override; now there's only one mode,
+# so they're a single unconditional block (the former dark-mode values).
 st.html(
     """
 <style>
@@ -264,88 +265,61 @@ st.html(
    the clearer read. */
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&display=swap');
 
-/* Design-alignment pass (2026-11-24, DESIGN.md H2/H3): Peacock Teal primary
-   + Turmeric Gold secondary replace the earlier terracotta/indigo pair, per
-   DESIGN.md §2's color tokens. */
+/* Design-alignment pass (2026-11-24, DESIGN.md H2/H3/M2/M3/M5/L2): Peacock
+   Teal primary + Turmeric Gold secondary, Indigo Night surfaces, Granite
+   Grey structure, Vermilion reserved for hard-fail only -- the single
+   (dark-only, see the note above) token set. */
 :root {
-    --wp-accent: #0E7C86;
-    --wp-accent-deep: #0A5A62;
+    --wp-accent: #2AA7B0;
+    --wp-accent-deep: #7FD0D6;
     --wp-secondary: #E3A423;
-    --wp-secondary-deep: #B07E12;
-    --wp-secondary-soft: rgba(227,164,35,0.12);
-    /* Design-alignment pass (2026-11-24, DESIGN.md M2/M3): surfaces/borders/
-       muted text move from a neutral white/off-white family to DESIGN.md
-       §2's warm (light) / Indigo Night (dark) surface and Granite Grey
-       structure color. */
-    --wp-surface: #F5F0E2;
-    --wp-ink-soft: #8B8578;
-    --wp-border: #8B8578;
-    /* Design-alignment pass (2026-11-24, DESIGN.md M5): error/warning chrome
-       tints for the native st.error/st.warning alerts below -- Vermilion is
-       reserved for hard-fail only (DESIGN.md §2/§7), never decorative. */
-    --wp-error: #C1442D;
-    --wp-error-soft: rgba(193,68,45,0.10);
-    /* Design-alignment pass (2026-11-24, DESIGN.md L2): h1's gradient second
-       stop -- Indigo Night instead of the darker-accent-only sweep, for a
-       richer two-color brand gradient per DESIGN.md §2. Only used in light
-       mode: on a dark page, clipping text to a dark-on-dark gradient would
-       lose legibility, so dark mode keeps the existing lightened-teal stop. */
-    --wp-h1-gradient-end: #1B2A4A;
+    --wp-secondary-deep: #F0C45E;
+    --wp-secondary-soft: rgba(227,164,35,0.18);
+    --wp-surface: #243655;
+    --wp-ink-soft: #A8A394;
+    --wp-border: #5A5445;
+    --wp-error: #E0624A;
+    --wp-error-soft: rgba(224,98,74,0.16);
+    --wp-h1-gradient-end: var(--wp-accent-deep);
     /* UI/UX review (2026-10-24): fact-chip background -- was a hard-coded
-       rgba() literal inline on each badge, same value in light and dark, so
-       it never adapted alongside --wp-accent-deep's text color below. */
-    --wp-chip-bg: rgba(14,124,134,.12);
-}
-@media (prefers-color-scheme: dark) {
-    :root {
-        --wp-accent: #2AA7B0;
-        --wp-accent-deep: #7FD0D6;
-        --wp-secondary: #E3A423;
-        --wp-secondary-deep: #F0C45E;
-        --wp-secondary-soft: rgba(227,164,35,0.18);
-        --wp-surface: #243655;
-        --wp-ink-soft: #A8A394;
-        --wp-border: #5A5445;
-        --wp-error: #E0624A;
-        --wp-error-soft: rgba(224,98,74,0.16);
-        --wp-h1-gradient-end: var(--wp-accent-deep);
-        --wp-chip-bg: rgba(42,167,176,.18);
-    }
+       rgba() literal inline on each badge, now a token so every badge
+       adapts alongside --wp-accent-deep's text color together. */
+    --wp-chip-bg: rgba(42,167,176,.18);
 }
 /* User request (2026-11-24): flat Indigo Night read as "just blue," with no
-   particular tie to travel/geography. Replaces the solid dark-mode page
-   background with a deep map-navy -> Indigo Night gradient plus a sparse,
-   fixed-position "night sky" star field -- evokes travel/wanderlust (night
+   particular tie to travel/geography. Replaces the solid page background
+   with a deep map-navy -> Indigo Night gradient plus a sparse, fixed-
+   position "night sky" star field -- evokes travel/wanderlust (night
    flights, stargazing) without competing with the foreground content.
    Scoped to `.stApp` (verified directly against the installed Streamlit
    1.57.0 DOM -- it's the one element actually painting the page
    background; `stAppViewContainer`/`stMain` are both transparent). Stars
    are a handful of fixed-position radial-gradient dots, not a repeating
    pattern, so it reads as deliberate rather than noisy; `background-size`
-   keeps them from scaling oddly on resize. */
-@media (prefers-color-scheme: dark) {
-    /* `!important` needed here (unlike most rules in this file): Streamlit's
-       own emotion-generated stylesheet sets `.stApp`'s background-color via
-       an equal-specificity class rule injected later in the DOM, so on a
-       pure specificity/order tie it would otherwise win. Verified directly
-       against the installed 1.57.0 frontend -- without `!important` this
-       rule is silently dropped and the flat color shows through. */
-    .stApp {
-        background-image:
-            radial-gradient(1.5px 1.5px at 12% 18%, rgba(237,231,214,0.55), transparent),
-            radial-gradient(1px 1px at 28% 9%, rgba(237,231,214,0.35), transparent),
-            radial-gradient(2px 2px at 50% 14%, rgba(237,231,214,0.5), transparent),
-            radial-gradient(1px 1px at 68% 6%, rgba(237,231,214,0.3), transparent),
-            radial-gradient(1.5px 1.5px at 83% 20%, rgba(237,231,214,0.45), transparent),
-            radial-gradient(1px 1px at 93% 11%, rgba(237,231,214,0.3), transparent),
-            radial-gradient(1px 1px at 8% 38%, rgba(237,231,214,0.3), transparent),
-            radial-gradient(1.5px 1.5px at 37% 42%, rgba(237,231,214,0.35), transparent),
-            radial-gradient(1px 1px at 72% 36%, rgba(237,231,214,0.3), transparent),
-            radial-gradient(1px 1px at 95% 48%, rgba(237,231,214,0.25), transparent),
-            linear-gradient(180deg, #0B1526 0%, #16243F 45%, #1B2A4A 100%) !important;
-        background-size: 100% 100% !important;
-        background-attachment: fixed !important;
-    }
+   keeps them from scaling oddly on resize. Previously gated behind
+   `@media (prefers-color-scheme: dark)`; unconditional now that dark is the
+   app's only mode. */
+/* `!important` needed here (unlike most rules in this file): Streamlit's
+   own emotion-generated stylesheet sets `.stApp`'s background-color via an
+   equal-specificity class rule injected later in the DOM, so on a pure
+   specificity/order tie it would otherwise win. Verified directly against
+   the installed 1.57.0 frontend -- without `!important` this rule is
+   silently dropped and the flat color shows through. */
+.stApp {
+    background-image:
+        radial-gradient(1.5px 1.5px at 12% 18%, rgba(237,231,214,0.55), transparent),
+        radial-gradient(1px 1px at 28% 9%, rgba(237,231,214,0.35), transparent),
+        radial-gradient(2px 2px at 50% 14%, rgba(237,231,214,0.5), transparent),
+        radial-gradient(1px 1px at 68% 6%, rgba(237,231,214,0.3), transparent),
+        radial-gradient(1.5px 1.5px at 83% 20%, rgba(237,231,214,0.45), transparent),
+        radial-gradient(1px 1px at 93% 11%, rgba(237,231,214,0.3), transparent),
+        radial-gradient(1px 1px at 8% 38%, rgba(237,231,214,0.3), transparent),
+        radial-gradient(1.5px 1.5px at 37% 42%, rgba(237,231,214,0.35), transparent),
+        radial-gradient(1px 1px at 72% 36%, rgba(237,231,214,0.3), transparent),
+        radial-gradient(1px 1px at 95% 48%, rgba(237,231,214,0.25), transparent),
+        linear-gradient(180deg, #0B1526 0%, #16243F 45%, #1B2A4A 100%) !important;
+    background-size: 100% 100% !important;
+    background-attachment: fixed !important;
 }
 
 .wp-icon {
