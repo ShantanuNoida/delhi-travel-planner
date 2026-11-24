@@ -158,22 +158,33 @@ def _carousel_thumbnail_data_uri(path: str | None) -> str | None:
 # licensed stock image this project doesn't have a budget for.
 # Real bug fixed (2026-11-24): "the main home page picture is not loading in
 # streamlit" (i.e. on Streamlit Community Cloud). Root cause, confirmed by
-# fetching this exact URL directly: Wikimedia Commons returned
-# "429 Too many requests" — Community Cloud apps share a small pool of
-# outbound IPs across many unrelated apps, which Wikimedia's abuse
+# fetching the (then single-photo) hero URL directly: Wikimedia Commons
+# returned "429 Too many requests" — Community Cloud apps share a small
+# pool of outbound IPs across many unrelated apps, which Wikimedia's abuse
 # protection rate-limits much more aggressively than an individual home
 # connection. `image_cache.py`'s cache directory (`phase6/image_cache/`) is
 # gitignored by design (it exists to avoid re-fetching PER-POI photos on
 # every rerun, not to ship binaries in the repo) — so on every fresh Cloud
 # deploy the cache starts empty and this fixed, never-changing hero image
 # was being re-fetched live and silently failing (get_cached_image_path()
-# returns None on any fetch error, by design — see its docstring). Unlike a
-# POI photo, the hero image is a single constant asset, so the fix is to
-# ship it as a committed static file instead of fetching it at all; this
-# source URL is kept only as provenance for where `static/hero.jpg` came
-# from (real Wikimedia Commons photo, same licensing as every other photo
-# in the app), not as something the app fetches from at runtime anymore.
-HERO_IMAGE_URL = "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg"
+# returns None on any fetch error, by design — see its docstring). The hero
+# image is a single constant asset, so the fix is to ship it as a committed
+# static file instead of fetching it at all.
+# User request (2026-11-24): a collage of popular Delhi landmarks instead of
+# one photo. `static/hero.jpg` is a 3x2 grid built (scripted, not hand-made)
+# from six real photos already present in this project's own dataset
+# (`phase1/data/pois.json`'s `image` field, the same Wikimedia Commons
+# source every stop photo uses — see image_cache.py/R-22) — never a stock
+# or fabricated image. HERO_IMAGE_SOURCES below is kept only as provenance
+# for where each tile came from, not something the app fetches at runtime.
+HERO_IMAGE_SOURCES = {
+    "Red Fort": "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg",
+    "India Gate": "http://commons.wikimedia.org/wiki/Special:FilePath/India%20Gate%20in%20New%20Delhi%2003-2016.jpg",
+    "Jama Masjid": "http://commons.wikimedia.org/wiki/Special:FilePath/Jama%20Masjid%2C%20Delhi.jpg",
+    "Humayun's Tomb": "http://commons.wikimedia.org/wiki/Special:FilePath/Humayun%20Tomb%20UNESCO%20world%20heritage%20site.jpg",
+    "Lotus Temple": "http://commons.wikimedia.org/wiki/Special:FilePath/Lotus%20temple%20daytime.jpg",
+    "Akshardham": "http://commons.wikimedia.org/wiki/Special:FilePath/Akshardham%20Delhi.jpg",
+}
 HERO_IMAGE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "hero.jpg")
 
 
