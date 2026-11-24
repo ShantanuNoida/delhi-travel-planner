@@ -176,6 +176,32 @@ def _carousel_thumbnail_data_uri(path: str | None) -> str | None:
 HERO_IMAGE_URL = "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg"
 HERO_IMAGE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "hero.jpg")
 
+
+@st.cache_data
+def _hero_image_data_uri() -> str | None:
+    """
+    Further fix (2026-11-24), same bug as above: bundling hero.jpg as a
+    static file stopped the Wikimedia 429s, but on Cloud the image still
+    silently failed -- confirmed live (a temporary debug caption + direct
+    frame inspection) that os.path.exists(HERO_IMAGE_PATH) was True and
+    Streamlit's MediaFileManager had registered it (the <img> tag carried a
+    correct content-hash URL), yet the actual /media/<hash>.jpg HTTP request
+    came back 404/500 right after the app woke from Cloud's sleep -- a
+    serving-layer race, not a code bug. st.image(path) depends on that
+    separate HTTP round-trip; base64-embedding the bytes directly into the
+    page (the same pattern _carousel_thumbnail_data_uri already uses for
+    stop photos) removes that dependency entirely -- the browser decodes it
+    from the HTML it already has, no second request to fail. @st.cache_data
+    avoids re-reading + re-encoding this fixed file on every rerun (the
+    script reruns top-to-bottom on every interaction).
+    """
+    try:
+        with open(HERO_IMAGE_PATH, "rb") as f:
+            data = f.read()
+        return f"data:image/jpeg;base64,{base64.b64encode(data).decode('ascii')}"
+    except Exception:
+        return None
+
 # Transcribing display (user request, 2026-07-16): a prominent indicator
 # shown right under the input (via `listening_slot`, declared before the
 # column split so it anchors under the input rather than at the page bottom
@@ -1521,24 +1547,13 @@ with col_itinerary:
         # silently failing under Wikimedia's Cloud-IP rate limiting (see
         # HERO_IMAGE_PATH's comment above). The hero image never changes, so
         # it ships as a committed file instead of being fetched at runtime.
-        if os.path.exists(HERO_IMAGE_PATH):
-            st.image(HERO_IMAGE_PATH, use_container_width=True)
-        else:
-            # TEMPORARY diagnostic (2026-11-24): the bundled hero.jpg is
-            # reportedly missing specifically on Streamlit Community Cloud
-            # despite being committed to the repo -- this surfaces exactly
-            # what the deployed container's filesystem actually looks like,
-            # since there's no shell/log access from here. Remove once the
-            # real cause is found.
-            _static_dir = os.path.dirname(HERO_IMAGE_PATH)
-            _phase6_dir = os.path.dirname(_static_dir)
-            st.caption(
-                f"[debug] HERO_IMAGE_PATH={HERO_IMAGE_PATH!r} exists={os.path.exists(HERO_IMAGE_PATH)} | "
-                f"static_dir={_static_dir!r} exists={os.path.exists(_static_dir)} "
-                f"contents={os.listdir(_static_dir) if os.path.isdir(_static_dir) else 'N/A'} | "
-                f"phase6_dir={_phase6_dir!r} contents={os.listdir(_phase6_dir) if os.path.isdir(_phase6_dir) else 'N/A'} | "
-                f"cwd={os.getcwd()!r}"
-            )
+        # Further fixed (2026-11-24): st.image(path) still failed on Cloud
+        # specifically (Streamlit's own /media/ serving route, not this
+        # file) -- rendered as a base64 data URI instead, same as every
+        # other photo's _carousel_thumbnail_data_uri (see its docstring).
+        _hero_uri = _hero_image_data_uri()
+        if _hero_uri:
+            st.html(f'<img src="{_hero_uri}" style="width:100%;border-radius:8px;display:block;">')
         # R-34/UX-32: the tagline and capability list previously never told a
         # first-time user that speaking is the intended primary mode — every
         # line was framed around typing/chatting. Now leads with the mic.
