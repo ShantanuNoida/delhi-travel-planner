@@ -1523,6 +1523,22 @@ with col_itinerary:
         # it ships as a committed file instead of being fetched at runtime.
         if os.path.exists(HERO_IMAGE_PATH):
             st.image(HERO_IMAGE_PATH, use_container_width=True)
+        else:
+            # TEMPORARY diagnostic (2026-11-24): the bundled hero.jpg is
+            # reportedly missing specifically on Streamlit Community Cloud
+            # despite being committed to the repo -- this surfaces exactly
+            # what the deployed container's filesystem actually looks like,
+            # since there's no shell/log access from here. Remove once the
+            # real cause is found.
+            _static_dir = os.path.dirname(HERO_IMAGE_PATH)
+            _phase6_dir = os.path.dirname(_static_dir)
+            st.caption(
+                f"[debug] HERO_IMAGE_PATH={HERO_IMAGE_PATH!r} exists={os.path.exists(HERO_IMAGE_PATH)} | "
+                f"static_dir={_static_dir!r} exists={os.path.exists(_static_dir)} "
+                f"contents={os.listdir(_static_dir) if os.path.isdir(_static_dir) else 'N/A'} | "
+                f"phase6_dir={_phase6_dir!r} contents={os.listdir(_phase6_dir) if os.path.isdir(_phase6_dir) else 'N/A'} | "
+                f"cwd={os.getcwd()!r}"
+            )
         # R-34/UX-32: the tagline and capability list previously never told a
         # first-time user that speaking is the intended primary mode — every
         # line was framed around typing/chatting. Now leads with the mic.
