@@ -156,7 +156,25 @@ def _carousel_thumbnail_data_uri(path: str | None) -> str | None:
 # instead of a small info box in an otherwise-blank page — same real,
 # license-clean Wikidata source as every stop's photo (R-22), not a
 # licensed stock image this project doesn't have a budget for.
+# Real bug fixed (2026-11-24): "the main home page picture is not loading in
+# streamlit" (i.e. on Streamlit Community Cloud). Root cause, confirmed by
+# fetching this exact URL directly: Wikimedia Commons returned
+# "429 Too many requests" — Community Cloud apps share a small pool of
+# outbound IPs across many unrelated apps, which Wikimedia's abuse
+# protection rate-limits much more aggressively than an individual home
+# connection. `image_cache.py`'s cache directory (`phase6/image_cache/`) is
+# gitignored by design (it exists to avoid re-fetching PER-POI photos on
+# every rerun, not to ship binaries in the repo) — so on every fresh Cloud
+# deploy the cache starts empty and this fixed, never-changing hero image
+# was being re-fetched live and silently failing (get_cached_image_path()
+# returns None on any fetch error, by design — see its docstring). Unlike a
+# POI photo, the hero image is a single constant asset, so the fix is to
+# ship it as a committed static file instead of fetching it at all; this
+# source URL is kept only as provenance for where `static/hero.jpg` came
+# from (real Wikimedia Commons photo, same licensing as every other photo
+# in the app), not as something the app fetches from at runtime anymore.
 HERO_IMAGE_URL = "http://commons.wikimedia.org/wiki/Special:FilePath/Red%20Fort%2C%20Delhi%20by%20alexfurr.jpg"
+HERO_IMAGE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static", "hero.jpg")
 
 # Transcribing display (user request, 2026-07-16): a prominent indicator
 # shown right under the input (via `listening_slot`, declared before the
@@ -1524,9 +1542,13 @@ with col_itinerary:
         # promise instead of a small info box floating in an empty white
         # void — the landing screen previously had no imagery and no
         # value-prop tagline at all.
-        hero_path = get_cached_image_path(HERO_IMAGE_URL)
-        if hero_path:
-            st.image(hero_path, use_container_width=True)
+        # Fixed (2026-11-24): was get_cached_image_path(HERO_IMAGE_URL) --
+        # a live fetch on every cold start with an empty (gitignored) cache,
+        # silently failing under Wikimedia's Cloud-IP rate limiting (see
+        # HERO_IMAGE_PATH's comment above). The hero image never changes, so
+        # it ships as a committed file instead of being fetched at runtime.
+        if os.path.exists(HERO_IMAGE_PATH):
+            st.image(HERO_IMAGE_PATH, use_container_width=True)
         # R-34/UX-32: the tagline and capability list previously never told a
         # first-time user that speaking is the intended primary mode — every
         # line was framed around typing/chatting. Now leads with the mic.
